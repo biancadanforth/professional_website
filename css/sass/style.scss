@@ -3,8 +3,8 @@
 // ------------ CONSTANTS -------------
 
 // COLORS
-$color-primary: #fbfced; // off-white
-$color-secondary: #418ac9; // blue
+$color-primary: #418ac9; // blue
+$color-secondary: #fbfced; // off-white
 $color-accent: #f1c40f; // yellow
 $color-text-header: #545454; // dark grey
 $color-text-body: #6d6d6d; // grey
@@ -13,7 +13,42 @@ $color-text-body: #6d6d6d; // grey
 $font-main: 'Montserrat', sans-serif;
 
 // MARGIN
-$margin-default: 20px;
+$margin-default: 30px;
+$margin-small: 20px;
+
+// <nav> link styles
+@mixin nav-links {
+margin-top: $margin-default;
+margin-bottom: 0;
+	font: {
+		size: 0.875em;
+		weight: bold;
+	}
+	line-height: 1.5;
+	text: {
+		align: center;
+		transform: uppercase;
+	}
+	color: $color-text-body;
+}
+
+//<h1> styles with defaults
+@mixin section-title($color: $color-text-header) {
+	margin-top: $margin-default;
+	margin-bottom: 0;
+	font: {
+		size: 1.5em;
+		weight: bold;
+	}
+	line-height: 1.25;
+	text: {
+		align: center;
+		transform: uppercase;
+	}
+	// color could alternately be off-white ($color-secondary)
+	// depending on section background color
+	color: $color;
+}
 
 /*
 *-------------------------------------
@@ -26,4 +61,26 @@ body {
 		family: $font-main;
 		size: 100%;
 	}
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+	justify-content: center;
+	@include nav-links;
+	li {
+		margin: 0 $margin-default;
+	}
+	a {
+		text-decoration: none;
+		color: $color-text-body;
+	}
+}
+
+section.primary h1 {
+	@include section-title;
+}
+
+section.secondary h1 {
+	@include section-title($color-secondary);
 }
