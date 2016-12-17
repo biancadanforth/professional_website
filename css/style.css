@@ -1,3 +1,7 @@
+nav ul a {
+  text-decoration: none;
+}
+
 /*
 *-------------------------------------
 *-------------- GLOBAL ---------------
@@ -5,44 +9,109 @@
 */
 body {
   font-family: "Montserrat", sans-serif;
-  font-size: 100%; }
+  font-size: 100%;
+  background: linear-gradient(rgba(251, 252, 237, 0.4), rgba(251, 252, 237, 0.4)), url("../images/pw_maze_white.png");
+  color: #6d6d6d;
+}
+
+header, footer {
+  margin-top: 20px;
+  text-align: center;
+}
+header a, footer a {
+  display: inline-block;
+}
+header tspan, footer tspan {
+  fill: #418ac9;
+}
+header path, footer path {
+  stroke: #418ac9;
+}
 
 nav ul {
   display: flex;
+  justify-content: space-between;
+  margin: 30px 20px 0;
   list-style: none;
-  justify-content: center;
-  margin-top: 30px;
-  margin-bottom: 0;
   font-size: 0.875em;
   font-weight: bold;
   line-height: 1.5;
   text-align: center;
   text-transform: uppercase;
-  color: #6d6d6d; }
-  nav ul li {
-    margin: 0 30px; }
-  nav ul a {
-    text-decoration: none;
-    color: #6d6d6d; }
+  color: #6d6d6d;
+  /* Reserve space for letter-spacing (or any :hover state styles)
+  * content in ::after pseudo element and using title attribute
+  * in HTML as a source for content.
+  */
+}
+nav ul a {
+  color: #6d6d6d;
+  letter-spacing: 1px;
+  transition: letter-spacing .5s;
+}
+nav ul a:hover {
+  letter-spacing: 5px;
+  transition: letter-spacing .5s;
+}
+nav ul a::after {
+  display: block;
+  content: attr(aria-label);
+  letter-spacing: 5px;
+  height: 0;
+  color: transparent;
+  overflow: hidden;
+  visibility: hidden;
+}
 
-section.primary h1 {
+.current-page {
+  margin: 5px 0 0 0;
+  border-color: #f1c40f;
+  border-width: 3px;
+}
+
+.primary, .secondary {
   margin-top: 30px;
-  margin-bottom: 0;
+  text-align: center;
+}
+.primary h1, .secondary h1 {
+  margin: 0;
   font-size: 1.5em;
   font-weight: bold;
   line-height: 1.25;
   text-align: center;
   text-transform: uppercase;
-  color: #545454; }
+  color: #545454;
+}
 
-section.secondary h1 {
-  margin-top: 30px;
-  margin-bottom: 0;
+.secondary {
+  padding-top: 30px;
+  background-color: #418ac9;
+  color: #fbfced;
+}
+.secondary h1 {
+  margin: 0;
   font-size: 1.5em;
   font-weight: bold;
   line-height: 1.25;
   text-align: center;
   text-transform: uppercase;
-  color: #fbfced; }
+  color: #fbfced;
+}
+.secondary svg {
+  width: 20px;
+  fill: #fbfced;
+}
+
+/***************************************** 
+*-------HOME PAGE - WELCOME SECTION-------
+*****************************************/
+.primary .profile, .secondary .profile {
+  border-radius: 50%;
+  margin-top: 30px;
+  width: 50%;
+}
+.primary p, .secondary p {
+  margin: 30px 20px 0;
+}
 
 /*# sourceMappingURL=style.css.map */

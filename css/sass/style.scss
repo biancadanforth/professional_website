@@ -3,8 +3,9 @@
 // ------------ CONSTANTS -------------
 
 // COLORS
-$color-primary: #418ac9; // blue
-$color-secondary: #fbfced; // off-white
+//Made $color-primary rgb for background overlay on <body>
+$color-primary: rgb(251, 252, 237); // off-white
+$color-secondary: #418ac9; // blue
 $color-accent: #f1c40f; // yellow
 $color-text-header: #545454; // dark grey
 $color-text-body: #6d6d6d; // grey
@@ -12,30 +13,20 @@ $color-text-body: #6d6d6d; // grey
 // FONTS
 $font-main: 'Montserrat', sans-serif;
 
-// MARGIN
+// MARGIN & PADDING
 $margin-default: 30px;
 $margin-small: 20px;
+$padding-default: 30px;
 
-// <nav> link styles
-@mixin nav-links {
-margin-top: $margin-default;
-margin-bottom: 0;
-	font: {
-		size: 0.875em;
-		weight: bold;
-	}
-	line-height: 1.5;
-	text: {
-		align: center;
-		transform: uppercase;
-	}
-	color: $color-text-body;
+
+// %placeholder example
+%no-underline {
+	text-decoration: none;
 }
 
 //<h1> styles with defaults
 @mixin section-title($color: $color-text-header) {
-	margin-top: $margin-default;
-	margin-bottom: 0;
+	margin: 0;
 	font: {
 		size: 1.5em;
 		weight: bold;
@@ -45,8 +36,9 @@ margin-bottom: 0;
 		align: center;
 		transform: uppercase;
 	}
-	// color could alternately be off-white ($color-secondary)
-	// depending on section background color
+	// color could alternately be $color-primary or
+	// $color-text-header depending on section
+	// background color
 	color: $color;
 }
 
@@ -61,26 +53,117 @@ body {
 		family: $font-main;
 		size: 100%;
 	}
+	// color overlay applied to background pattern
+	background:
+    /* top, transparent $color-primary, faked with gradient */ 
+    linear-gradient(
+      rgba(251, 252, 237, 0.4), 
+      rgba(251, 252, 237, 0.4)
+    ),
+    /* bottom, image */
+    url("../images/pw_maze_white.png");
+	color: $color-text-body;
+}
+
+header, footer {
+	margin-top: $margin-small;
+	text-align: center;
+	a {
+		display: inline-block;
+	}
+	tspan {
+		fill: $color-secondary;
+	}
+	path {
+		stroke: $color-secondary;
+	}
 }
 
 nav ul {
 	display: flex;
+	justify-content: space-between;
+	margin: $margin-default $margin-small 0;
 	list-style: none;
-	justify-content: center;
-	@include nav-links;
-	li {
-		margin: 0 $margin-default;
+	font: {
+		size: 0.875em;
+		weight: bold;
 	}
+	line-height: 1.5;
+	text: {
+		align: center;
+		transform: uppercase;
+	}
+	color: $color-text-body;
+
 	a {
-		text-decoration: none;
+		@extend %no-underline;
 		color: $color-text-body;
+		letter-spacing: 1px;
+		transition: letter-spacing .5s;
+
+		&:hover {
+			letter-spacing: 5px;
+			transition: letter-spacing .5s;
+		}
+	}
+
+	/* Reserve space for letter-spacing (or any :hover state styles)
+	* content in ::after pseudo element and using title attribute
+	* in HTML as a source for content.
+	*/
+	a::after {
+		display: block;
+		content: attr(aria-label);
+		letter-spacing: 5px;
+		height: 0;
+		color: transparent;
+		overflow: hidden;
+		visibility: hidden;
 	}
 }
 
-section.primary h1 {
-	@include section-title;
+// flags which navigation link corresponds to the current page
+.current-page {
+	margin: 5px 0 0 0;
+	border-color: $color-accent;
+	border-width: 3px;
 }
 
-section.secondary h1 {
-	@include section-title($color-secondary);
+// top page <section>
+.primary {
+	margin-top: $margin-default;
+	text-align: center;
+	h1 {
+		@include section-title;
+	}
+}
+
+// bottom page <section>
+.secondary {
+	@extend .primary;
+	padding-top: $padding-default;
+	background-color: $color-secondary;
+	color: $color-primary;
+	h1 {
+		@include section-title($color-primary);
+	}
+	svg {
+		width: 20px;
+		fill: $color-primary;
+	}
+}
+
+/***************************************** 
+*-------HOME PAGE - WELCOME SECTION-------
+*****************************************/
+
+.primary {
+	.profile {
+		border-radius: 50%;
+		margin-top: $margin-default;
+		width: 50%;
+	}
+	p {
+		margin: $margin-default $margin-small 0;
+	}
 }
