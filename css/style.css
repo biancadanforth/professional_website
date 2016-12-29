@@ -63,6 +63,15 @@ nav ul a::after {
   visibility: hidden;
 }
 
+@media (min-width: 600px) {
+  nav ul {
+    justify-content: center;
+    font-size: 1em;
+  }
+  nav ul li {
+    margin: 0 30px;
+  }
+}
 .current-page {
   margin: 5px 0 0 0;
   border-color: #f1c40f;
@@ -113,5 +122,14 @@ nav ul a::after {
 .primary p, .secondary p {
   margin: 30px 20px 0;
 }
+
+@media (min-width: 600px) {
+  .primary .profile, .secondary .profile {
+    max-width: 325px;
+  }
+}
+/***************************************** 
+*---------HOME PAGE - WORK SECTION--------
+*****************************************/
 
 /*# sourceMappingURL=style.css.map */

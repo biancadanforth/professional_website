@@ -122,6 +122,17 @@ nav ul {
 	}
 }
 
+@media (min-width: 600px) {
+	nav ul {
+		justify-content: center;
+		font-size: 1em;
+
+		li {
+			margin: 0 $margin-default;
+		}
+	}	
+}
+
 // flags which navigation link corresponds to the current page
 .current-page {
 	margin: 5px 0 0 0;
@@ -167,3 +178,14 @@ nav ul {
 		margin: $margin-default $margin-small 0;
 	}
 }
+
+@media (min-width: 600px) {
+	.primary .profile {
+		max-width: 325px;
+	}
+}
+
+
+/***************************************** 
+*---------HOME PAGE - WORK SECTION--------
+*****************************************/
