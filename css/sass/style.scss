@@ -42,6 +42,79 @@ $padding-default: 30px;
 	color: $color;
 }
 
+// diagonal section divider mixin
+// based on example from: https://blog.omgmog.net
+// better to specify a fixed $height than an angle so top/bottom whitespace (margin/padding) doesn't change with viewport width
+@mixin diagonal-background-top($width: 1000px, $height: 60px, $color: $color-secondary) {
+    position: relative;
+   // Because this img is a background img, with no content contained inside the pseudo-element, we need to give it an explicit height so it is visible.
+    // We need the height of the element to be expressed a percentage of its width to ensure it doesn't get cropped anywhere as it scales.
+    // You can’t just apply this using the height property though, as that will set the height as a percentage of the height of the parent element,
+    // so we give the element a padding-top instead, since padding with % units bases it off of the width of the element itself.
+    // Note: to add/remove units to a calculated result, you have to multiply or divide.
+    // to work out the height as a percentage of the width, simply solve for x in (H/W) = (x/100), a basic proportion equivalence:
+    $v-pad: (($height / $width) * 100) * 1%;
+    // add height of diagonal divider section as padding-bottom to <section>
+    padding-bottom: $v-pad;
+    // have to add a margin to the last child in <section> (of any type), because it's an absolute value in px versus a % like v-pad, so it cannot be directly added to the <section>'s padding-bottom as "padding-bottom: $v-pad + $padding-default"
+    & > :last-child {
+    	padding-bottom: $padding-default;
+    }
+    // create a pseudo-element inside of the <section> element (becomes the last child
+    // of the element)
+    &::after {
+  		// place divider immediately underneath the preceding section; positions
+  		// relative to closest positioned ancestor (in this case, the )
+  		position: absolute;
+      bottom: 0;
+      left: 0;
+  		// remove 'px' units from $width and $height by dividing it out for <svg>
+      $w-int: $width / 1px;
+      $h-int: $height / 1px;
+      padding-top: $v-pad;
+      // draw the <svg> based on coordinates and interpolation set by triangle $width and $height. The enclosed area becomes a polygon (our triangle in this case)
+      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="#{$w-int}" height="#{$h-int}"><polygon points="0,#{$h-int} #{$w-int},0 #{$w-int},#{$h-int}" style="fill:#{$color};stroke:#{$color};stroke-width:0"></polygon></svg>');
+      background-repeat: no-repeat;
+      // Scales the image as large as possible and maintains image aspect ratio
+      // (image doesn't get squished). The image "covers" the entire width or height of the container.
+      background-size: cover;
+      width: 100%;
+      // The content CSS property is used with the ::before and ::after pseudo-elements to generate
+      // content in an element. Objects inserted using the content property are anonymous.
+      // if the pseudo-element has no content, it won't display at all
+      content: '';
+    }
+}
+
+// diagonal section divider mixin
+// based on example from: https://blog.omgmog.net
+// better to specify a fixed $height than an angle so top/bottom whitespace (margin/padding) doesn't change with viewport width
+@mixin diagonal-background-bottom($width: 1000px, $height: 60px, $color: $color-secondary) {
+    position: relative;
+    $v-pad: (($height / $width) * 100) * 1%;
+    padding-top: $v-pad;
+    // have to add a margin to the last child in <section> (of any type), because it's an absolute value in px versus a % like v-pad, so it cannot be directly added to the <section>'s padding-bottom as "padding-bottom: $v-pad + $padding-default"
+    & > :last-child {
+    	padding-top: $padding-default;
+    }
+    &::before {
+    	//gives the svg a $color-secondary colored whitespace of $padding-default
+  		height: $padding-default;
+  		position: absolute;
+      top: 0;
+      left: 0;
+      $w-int: $width / 1px;
+      $h-int: $height / 1px;
+      padding-top: $v-pad;
+      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="#{$w-int}" height="#{$h-int}"><polygon points="0,#{$h-int} #{$w-int},0 0,0" style="fill:#{$color};stroke:#{$color};stroke-width:0"></polygon></svg>');
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      content: '';
+    }
+}
+
+
 /*
 *-------------------------------------
 *-------------- GLOBAL ---------------
@@ -66,7 +139,7 @@ body {
 	background-attachment: fixed;
 }
 
-header, footer {
+header {
 	margin-top: $margin-small;
 	text-align: center;
 	a {
@@ -148,12 +221,13 @@ nav ul {
 	h1 {
 		@include section-title;
 	}
+	@include diagonal-background-top;
 }
 
 // bottom page <section>
 .secondary {
-	@extend .primary;
 	padding-top: $padding-default;
+	text-align: center;
 	background-color: $color-secondary;
 	color: $color-primary;
 	h1 {
@@ -163,6 +237,12 @@ nav ul {
 		width: 20px;
 		fill: $color-primary;
 	}
+}
+
+footer {
+	text-align: center;
+	@include diagonal-background-bottom;
+	margin-bottom: $margin-default;
 }
 
 /***************************************** 

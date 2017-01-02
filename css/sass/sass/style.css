@@ -15,17 +15,17 @@ body {
   background-attachment: fixed;
 }
 
-header {
+header, footer {
   margin-top: 20px;
   text-align: center;
 }
-header a {
+header a, footer a {
   display: inline-block;
 }
-header tspan {
+header tspan, footer tspan {
   fill: #418ac9;
 }
-header path {
+header path, footer path {
   stroke: #418ac9;
 }
 
@@ -81,13 +81,11 @@ nav ul a::after {
   border-width: 3px;
 }
 
-.primary {
+.primary, .secondary {
   margin-top: 30px;
   text-align: center;
-  position: relative;
-  padding-bottom: 6%;
 }
-.primary h1 {
+.primary h1, .secondary h1 {
   margin: 0;
   font-size: 1.5em;
   font-weight: bold;
@@ -96,24 +94,9 @@ nav ul a::after {
   text-transform: uppercase;
   color: #545454;
 }
-.primary > :last-child {
-  padding-bottom: 30px;
-}
-.primary::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding-top: 6%;
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="60"><polygon points="0,60 1000,0 1000,60" style="fill:#418ac9;stroke:#418ac9;stroke-width:0"></polygon></svg>');
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  content: '';
-}
 
 .secondary {
   padding-top: 30px;
-  text-align: center;
   background-color: #418ac9;
   color: #fbfced;
 }
@@ -129,28 +112,6 @@ nav ul a::after {
 .secondary svg {
   width: 20px;
   fill: #fbfced;
-}
-
-footer {
-  text-align: center;
-  position: relative;
-  padding-top: 6%;
-  margin-bottom: 30px;
-}
-footer > :last-child {
-  padding-top: 30px;
-}
-footer::before {
-  height: 30px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding-top: 6%;
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="60"><polygon points="0,60 1000,0 0,0" style="fill:#418ac9;stroke:#418ac9;stroke-width:0"></polygon></svg>');
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  content: '';
 }
 
 /***************************************** 
