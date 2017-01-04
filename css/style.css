@@ -13,6 +13,7 @@ body {
   background: linear-gradient(rgba(251, 252, 237, 0.4), rgba(251, 252, 237, 0.4)), url("../images/pw_maze_white.png");
   color: #6d6d6d;
   background-attachment: fixed;
+  line-height: 1.5;
 }
 
 header {
@@ -156,19 +157,33 @@ footer::before {
 /***************************************** 
 *-------HOME PAGE - WELCOME SECTION-------
 *****************************************/
-.profile {
+.primary .split-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 30px 0;
+}
+.primary .split-screen .profile {
   border-radius: 50%;
+  max-width: 250px;
+}
+.primary .split-screen p {
   margin-top: 30px;
-  width: 50%;
+  max-width: 500px;
 }
-@media (min-width: 600px) {
-  .profile {
-    max-width: 325px;
+@media (min-width: 800px) {
+  .primary .split-screen {
+    flex-direction: row-reverse;
+    justify-content: center;
   }
-}
-
-p {
-  margin: 30px 20px 0;
+  .primary .split-screen p {
+    flex: 2 0 67%;
+    margin-right: 20px;
+    margin-top: 0;
+  }
+  .primary .split-screen .profile {
+    flex: 1 0 33%;
+  }
 }
 
 /***************************************** 

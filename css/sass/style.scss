@@ -3,12 +3,12 @@
 // ------------ CONSTANTS -------------
 
 // COLORS
-//Made $color-primary rgb for background overlay on <body>
-$color-primary: rgb(251, 252, 237); // off-white
-$color-secondary: #418ac9; // blue
-$color-accent: #f1c40f; // yellow
-$color-text-header: #545454; // dark grey
-$color-text-body: #6d6d6d; // grey
+//Made $off-white rgb for background overlay on <body>
+$off-white: rgb(251, 252, 237);
+$blue: #418ac9;
+$yellow: #f1c40f;
+$dark-grey: #545454;
+$grey: #6d6d6d;
 
 // FONTS
 $font-main: 'Montserrat', sans-serif;
@@ -24,8 +24,10 @@ $padding-default: 30px;
 	text-decoration: none;
 }
 
+// ------------ MIXINS -------------
+
 //<h1> styles with defaults
-@mixin section-title($color: $color-text-header) {
+@mixin section-title($color: $dark-grey) {
 	margin: 0;
 	font: {
 		size: 1.5em;
@@ -36,8 +38,8 @@ $padding-default: 30px;
 		align: center;
 		transform: uppercase;
 	}
-	// color could alternately be $color-primary or
-	// $color-text-header depending on section
+	// color could alternately be $off-white or
+	// $dark-grey depending on section
 	// background color
 	color: $color;
 }
@@ -45,7 +47,7 @@ $padding-default: 30px;
 // diagonal section divider mixin
 // based on example from: https://blog.omgmog.net
 // better to specify a fixed $height than an angle so top/bottom whitespace (margin/padding) doesn't change with viewport width
-@mixin diagonal-background-top($width: 1000px, $height: 60px, $color: $color-secondary) {
+@mixin diagonal-background-top($width: 1000px, $height: 60px, $color: $blue) {
     position: relative;
    // Because this img is a background img, with no content contained inside the pseudo-element, we need to give it an explicit height so it is visible.
     // We need the height of the element to be expressed a percentage of its width to ensure it doesn't get cropped anywhere as it scales.
@@ -56,7 +58,7 @@ $padding-default: 30px;
     $v-pad: (($height / $width) * 100) * 1%;
     // add height of diagonal divider section as padding-bottom to <section>
     padding-bottom: $v-pad;
-    // have to add a margin to the last child in <section> (of any type), because it's an absolute value in px versus a % like v-pad, so it cannot be directly added to the <section>'s padding-bottom as "padding-bottom: $v-pad + $padding-default"
+    // have to add a margin to the last child in <section> (of any type), because it's an absolute value in px versus a % like v-pad, so it cannot be directly added to the <section>'s padding-bottom as "padding-bottom: $v-pad + $padding-default" are different units! One is relative, %, and the other is absolute (px).
     & > :last-child {
     	padding-bottom: $padding-default;
     }
@@ -68,7 +70,7 @@ $padding-default: 30px;
   		position: absolute;
       bottom: 0;
       left: 0;
-  		// remove 'px' units from $width and $height by dividing it out for <svg>
+  		// remove 'px' units from $width and $height by dividing it out for <svg> interpolation
       $w-int: $width / 1px;
       $h-int: $height / 1px;
       padding-top: $v-pad;
@@ -89,7 +91,7 @@ $padding-default: 30px;
 // diagonal section divider mixin
 // based on example from: https://blog.omgmog.net
 // better to specify a fixed $height than an angle so top/bottom whitespace (margin/padding) doesn't change with viewport width
-@mixin diagonal-background-bottom($width: 1000px, $height: 60px, $color: $color-secondary) {
+@mixin diagonal-background-bottom($width: 1000px, $height: 60px, $color: $blue) {
     position: relative;
     $v-pad: (($height / $width) * 100) * 1%;
     padding-top: $v-pad;
@@ -98,7 +100,7 @@ $padding-default: 30px;
     	padding-top: $padding-default;
     }
     &::before {
-    	//gives the svg a $color-secondary colored whitespace of $padding-default
+    	//gives the svg a $blue colored whitespace of $padding-default vertical height
   		height: $padding-default;
   		position: absolute;
       top: 0;
@@ -114,7 +116,6 @@ $padding-default: 30px;
     }
 }
 
-
 /*
 *-------------------------------------
 *-------------- GLOBAL ---------------
@@ -128,15 +129,16 @@ body {
 	}
 	// color overlay applied to background pattern
 	background:
-    /* top, transparent $color-primary, faked with gradient */ 
+    /* top, transparent $off-white, faked with gradient */ 
     linear-gradient(
       rgba(251, 252, 237, 0.4), 
       rgba(251, 252, 237, 0.4)
     ),
     /* bottom, image */
     url("../images/pw_maze_white.png");
-	color: $color-text-body;
+	color: $grey;
 	background-attachment: fixed;
+	line-height: 1.5;
 }
 
 header {
@@ -146,10 +148,10 @@ header {
 		display: inline-block;
 	}
 	tspan {
-		fill: $color-secondary;
+		fill: $blue;
 	}
 	path {
-		stroke: $color-secondary;
+		stroke: $blue;
 	}
 }
 
@@ -167,7 +169,7 @@ nav ul {
 		align: center;
 		transform: uppercase;
 	}
-	color: $color-text-body;
+	color: $grey;
 
 	@media (min-width: 600px) {
 		justify-content: center;
@@ -182,7 +184,7 @@ nav ul {
 
 	a {
 		@extend %no-underline;
-		color: $color-text-body;
+		color: $grey;
 		letter-spacing: 1px;
 		transition: letter-spacing .5s;
 
@@ -207,10 +209,10 @@ nav ul {
 	}
 }
 
-// flags which navigation link corresponds to the current page
+// flags which nav link corresponds to the current page
 .current-page {
 	margin: 5px 0 0 0;
-	border-color: $color-accent;
+	border-color: $yellow;
 	border-width: 3px;
 }
 
@@ -228,14 +230,14 @@ nav ul {
 .secondary {
 	padding-top: $padding-default;
 	text-align: center;
-	background-color: $color-secondary;
-	color: $color-primary;
+	background-color: $blue;
+	color: $off-white;
 	h1 {
-		@include section-title($color-primary);
+		@include section-title($off-white);
 	}
 	svg {
 		width: 20px;
-		fill: $color-primary;
+		fill: $off-white;
 	}
 }
 
@@ -249,18 +251,35 @@ footer {
 *-------HOME PAGE - WELCOME SECTION-------
 *****************************************/
 
-.profile {
-	border-radius: 50%;
-	margin-top: $margin-default;
-	width: 50%;
-
-	@media (min-width: 600px) {
-		max-width: 325px;
+.primary {
+	.split-screen {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: $margin-default $margin-default 0;
+		.profile {
+			border-radius: 50%;
+			max-width: 250px;
+		}
+		p {
+			margin-top: $margin-default;
+			max-width: 500px;
+		}
+		@media (min-width: 800px) {
+			flex-direction: row-reverse;
+			justify-content: center;
+			p {
+				flex: 2 0 67%;
+				margin-right: $margin-small;
+				margin-top: 0;
+			}
+			.profile {
+				flex: 1 0 33%;
+			}
+		}
 	}
 }
-p {
-	margin: $margin-default $margin-small 0;
-}
+
 
 /***************************************** 
 *---------HOME PAGE - WORK SECTION--------
