@@ -6,7 +6,7 @@
 //Made $off-white rgb for background overlay on <body>
 $off-white: rgb(251, 252, 237);
 $blue: #418ac9;
-$yellow: #f1c40f;
+$yellow: rgb(241,196,15);
 $dark-grey: #545454;
 $grey: #6d6d6d;
 
@@ -129,6 +129,54 @@ box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	border-radius: $radius;
 }
 
+
+/*
+*-----------------------------------------
+* TEMPORARY UNDER CONSTRUCTION NOTIFY BAR
+*-----------------------------------------
+*/
+
+.notify {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: rgba(241,196,15, .85);
+  color: $dark-grey;
+  font-weight: 700;
+  text-align: center;
+  height: 50px;
+  overflow: hidden;
+  transition: height 1s ease;
+  box-shadow: 1px 2px 4px rgba(0,0,0,.2);
+  a {
+  	margin-left: 2*$margin-small;
+  	position: relative;
+  	height: 50px;
+  	width: 15px;
+  	svg {
+	  	position: absolute;
+	  	top: 50%;
+	  	left: 50%;
+	  	width: 15px;
+	  	transform: translate(-50%, -50%);
+	  	pointer-events: none;
+	  	fill: $dark-grey;
+  	}
+  }
+}
+
+.hidden {
+  height: 0;
+  margin: 0;
+  padding: 0;
+  transition: height 1s ease;
+}
+
 /*
 *-------------------------------------
 *-------------- GLOBAL ---------------
@@ -142,6 +190,9 @@ img {
 
 a {
 	display: inline-block;
+	svg {
+		display: block;
+	}
 }
 
 body {
