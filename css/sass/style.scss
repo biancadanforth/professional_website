@@ -14,12 +14,12 @@ $grey: #6d6d6d;
 $font-main: 'Montserrat', sans-serif;
 $letter-spacing: 1px;
 $font-size-header: 1.5em;
+// 
 
 // MARGIN & PADDING
 $margin-default: 30px;
 $margin-small: 20px;
 $padding-default: 30px;
-
 
 // %placeholder example
 %no-underline {
@@ -329,22 +329,34 @@ footer {
 *---------HOME PAGE - WORK SECTION--------
 *****************************************/
 
-.project {
-	max-width: 600px;
+.work-wrapper {
+	display: flex;
+	flex-direction: column;
+	max-width: 850px;
 	margin: 0 auto;
-	.project-header {
-		margin-top: $margin-default;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		span:last-child {
-			margin-left: $margin-small;
+	.project {
+	max-width: 500px;
+	margin: 0 auto;
+		.project-header {
+			margin-top: $margin-default;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			span:last-child {
+				margin-left: $margin-small;
+			}
+		}
+		img {
+			width: 100%;
+			border: 5px solid $off-white;
+			@include shadowed;
+			@include rounded(2px);
 		}
 	}
-	img {
-		width: 100%;
-		border: 5px solid $off-white;
-		@include shadowed;
-		@include rounded(2px);
+	@media (min-width: 800px) {
+		flex-flow: row wrap;
+		.project {
+			max-width: 300px;
+		}
 	}
 }
