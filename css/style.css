@@ -7,6 +7,14 @@ nav ul a {
 *-------------- GLOBAL ---------------
 *-------------------------------------
 */
+img {
+  box-sizing: border-box;
+}
+
+a {
+  display: inline-block;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 100%;
@@ -17,11 +25,9 @@ body {
 }
 
 header {
+  max-width: 100%;
   margin-top: 20px;
   text-align: center;
-}
-header a {
-  display: inline-block;
 }
 header tspan {
   fill: #418ac9;
@@ -66,6 +72,12 @@ nav ul a:hover {
   letter-spacing: 5px;
   transition: letter-spacing .5s;
 }
+@media (max-width: 350px) {
+  nav ul a:hover {
+    letter-spacing: 1px;
+    transition: none;
+  }
+}
 nav ul a::after {
   display: block;
   content: attr(aria-label);
@@ -75,11 +87,28 @@ nav ul a::after {
   overflow: hidden;
   visibility: hidden;
 }
+@media (max-width: 350px) {
+  nav ul a::after {
+    letter-spacing: 0;
+  }
+}
 
 .current-page {
   margin: 5px 0 0 0;
   border-color: #f1c40f;
   border-width: 3px;
+}
+
+h2 {
+  font-size: 1.125em;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-size: 0.9375em;
+  letter-spacing: 1px;
+  margin: 5px 0 10px;
 }
 
 .primary {
@@ -91,10 +120,11 @@ nav ul a::after {
 .primary h1 {
   margin: 0;
   font-size: 1.5em;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 1.25;
   text-align: center;
   text-transform: uppercase;
+  letter-spacing: 1px;
   color: #545454;
 }
 .primary > :last-child {
@@ -113,18 +143,18 @@ nav ul a::after {
 }
 
 .secondary {
-  padding-top: 30px;
-  text-align: center;
+  padding: 30px 30px 0;
   background-color: #418ac9;
   color: #fbfced;
 }
 .secondary h1 {
   margin: 0;
   font-size: 1.5em;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 1.25;
   text-align: center;
   text-transform: uppercase;
+  letter-spacing: 1px;
   color: #fbfced;
 }
 .secondary svg {
@@ -139,7 +169,7 @@ footer {
   margin-bottom: 30px;
 }
 footer > :last-child {
-  padding-top: 30px;
+  padding-top: 60px;
 }
 footer::before {
   height: 30px;
@@ -165,7 +195,9 @@ footer::before {
 }
 .primary .split-screen .profile {
   border-radius: 50%;
+  width: 50%;
   max-width: 250px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 .primary .split-screen p {
   margin-top: 30px;
@@ -189,5 +221,24 @@ footer::before {
 /***************************************** 
 *---------HOME PAGE - WORK SECTION--------
 *****************************************/
+.project {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.project .project-header {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.project .project-header span:last-child {
+  margin-left: 20px;
+}
+.project img {
+  width: 100%;
+  border: 5px solid #fbfced;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 2px;
+}
 
 /*# sourceMappingURL=style.css.map */
