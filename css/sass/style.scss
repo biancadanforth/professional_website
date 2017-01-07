@@ -13,8 +13,6 @@ $grey: #6d6d6d;
 // FONTS
 $font-main: 'Montserrat', sans-serif;
 $letter-spacing: 1px;
-$font-size-header: 1.5em;
-// 
 
 // MARGIN & PADDING
 $margin-default: 30px;
@@ -33,7 +31,7 @@ $padding-small: 20px;
 @mixin section-title($color: $dark-grey) {
 	margin: 0;
 	font: {
-		size: $font-size-header;
+		size: 1.75em;
 		weight: 700;
 	}
 	line-height: 1.25;
@@ -153,7 +151,7 @@ box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   text-align: center;
   max-height: 1000px;
   overflow: hidden;
-  transition: max-height 5s ease;
+  transition: max-height 6s ease;
   box-shadow: 1px 2px 4px rgba(0,0,0,.2);
   padding: 0 $padding-small;
   p {
@@ -307,16 +305,28 @@ nav ul {
 
 h2 {
 	font: {
-		size: .75*$font-size-header;
+		size: 1.5em;
 		weight: 700;
 	}
 	letter-spacing: $letter-spacing;
+	margin-bottom: $margin-small;
 }
 
 h3 {
-	font-size: .625*$font-size-header;
-	letter-spacing: $letter-spacing;
-	margin: 5px 0 .5*$margin-small;
+	font: {
+		size: 1em;
+		weight: 700;
+	}
+	letter-spacing: 1.25*$letter-spacing;
+	margin-bottom: $margin-small;
+	text-transform: uppercase;
+}
+
+p {
+	font: {
+		size: 1em;
+		weight: 400;
+	}
 }
 
 // top page <section>
@@ -387,25 +397,26 @@ footer {
 		flex-direction: column;
 		align-items: center;
 		margin: $margin-default $margin-default 0;
-		.profile {
+		.welcome-profile {
 			border-radius: 50%;
 			width: 50%;
 			max-width: 250px;
 			@include shadowed;
 		}
-		p {
+		.welcome-message {
 			margin-top: $margin-default;
 			max-width: 500px;
+			font-size: 1.125em;
 		}
 		@media (min-width: 800px) {
 			flex-direction: row-reverse;
 			justify-content: center;
-			p {
+			.welcome-message {
 				flex: 2 0 67%;
-				margin-right: $margin-small;
+				margin-right: $margin-default;
 				margin-top: 0;
 			}
-			.profile {
+			.welcome-profile {
 				flex: 1 0 33%;
 			}
 		}
@@ -433,6 +444,9 @@ footer {
 			span:last-child {
 				margin-left: $margin-small;
 			}
+		}
+		.project-description {
+			margin-bottom: $margin-small;
 		}
 		img {
 			width: 100%;
