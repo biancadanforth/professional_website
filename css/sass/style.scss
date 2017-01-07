@@ -100,8 +100,8 @@ $padding-small: 20px;
     $v-pad: (($height / $width) * 100) * 1%;
     padding-top: $v-pad;
     // have to add a margin to the last child in <section> (of any type), because it's an absolute value in px versus a % like v-pad, so it cannot be directly added to the <section>'s padding-bottom as "padding-bottom: $v-pad + $padding-default"
-    & > :last-child {
-    	padding-top: 2*$padding-default;
+    & > :first-child {
+    	padding-top: $padding-default;
     }
     &::before {
     	//gives the svg a $blue colored whitespace of $padding-default vertical height
@@ -346,6 +346,28 @@ footer {
 	text-align: center;
 	@include diagonal-background-bottom;
 	margin-bottom: $margin-default;
+	span {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: $margin-default 0;
+		a {
+			width: 40px;
+			height: 40px;
+			margin: 0 $margin-small;
+			background-color: $yellow;
+			padding: 3px;
+			@include rounded(2px);
+		}
+		svg {
+			width: 100%;
+			height: inherit;
+			fill: $off-white;
+			.outer-ring {
+				fill: transparent;
+			}
+		}
+	}
 }
 
 /***************************************** 
