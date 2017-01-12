@@ -50,7 +50,7 @@ $padding-small: 20px;
 // based on example from: https://blog.omgmog.net
 // better to specify a fixed $height than an angle so top/bottom whitespace (margin/padding) doesn't change with viewport width
 @mixin diagonal-background-top($width: 1000px, $height: 60px, $color: $blue) {
-    position: relative;
+	position: relative;
    // Because this img is a background img, with no content contained inside the pseudo-element, we need to give it an explicit height so it is visible.
     // We need the height of the element to be expressed a percentage of its width to ensure it doesn't get cropped anywhere as it scales.
     // You can’t just apply this using the height property though, as that will set the height as a percentage of the height of the parent element,
@@ -70,12 +70,12 @@ $padding-small: 20px;
   		// place divider immediately underneath the preceding section; positions
   		// relative to closest positioned ancestor (in this case, the )
   		position: absolute;
-      bottom: 0;
-      left: 0;
+  		bottom: 0;
+  		left: 0;
   		// remove 'px' units from $width and $height by dividing it out for <svg> interpolation
-      $w-int: $width / 1px;
-      $h-int: $height / 1px;
-      padding-top: $v-pad;
+  		$w-int: $width / 1px;
+  		$h-int: $height / 1px;
+  		padding-top: $v-pad;
       // draw the <svg> based on coordinates and interpolation set by triangle $width and $height. The enclosed area becomes a polygon (our triangle in this case)
       background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="#{$w-int}" height="#{$h-int}"><polygon points="0,#{$h-int} #{$w-int},0 #{$w-int},#{$h-int}" style="fill:#{$color};stroke:#{$color};stroke-width:0"></polygon></svg>');
       background-repeat: no-repeat;
@@ -88,39 +88,39 @@ $padding-small: 20px;
       // if the pseudo-element has no content, it won't display at all
       content: '';
     }
-}
+  }
 
 // diagonal section divider mixin
 // based on example from: https://blog.omgmog.net
 // better to specify a fixed $height than an angle so top/bottom whitespace (margin/padding) doesn't change with viewport width
 @mixin diagonal-background-bottom($width: 1000px, $height: 60px, $color: $blue) {
-    position: relative;
-    $v-pad: (($height / $width) * 100) * 1%;
-    padding-top: $v-pad;
+	position: relative;
+	$v-pad: (($height / $width) * 100) * 1%;
+	padding-top: $v-pad;
     // have to add a margin to the last child in <section> (of any type), because it's an absolute value in px versus a % like v-pad, so it cannot be directly added to the <section>'s padding-bottom as "padding-bottom: $v-pad + $padding-default"
     & > :first-child {
     	padding-top: $padding-default;
     }
     &::before {
     	//gives the svg a $blue colored whitespace of $padding-default vertical height
-  		height: $padding-default;
-  		position: absolute;
-      top: 0;
-      left: 0;
-      $w-int: $width / 1px;
-      $h-int: $height / 1px;
-      padding-top: $v-pad;
-      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="#{$w-int}" height="#{$h-int}"><polygon points="0,#{$h-int} #{$w-int},0 0,0" style="fill:#{$color};stroke:#{$color};stroke-width:0"></polygon></svg>');
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 100%;
-      content: '';
+    	height: $padding-default;
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	$w-int: $width / 1px;
+    	$h-int: $height / 1px;
+    	padding-top: $v-pad;
+    	background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="#{$w-int}" height="#{$h-int}"><polygon points="0,#{$h-int} #{$w-int},0 0,0" style="fill:#{$color};stroke:#{$color};stroke-width:0"></polygon></svg>');
+    	background-repeat: no-repeat;
+    	background-size: cover;
+    	width: 100%;
+    	content: '';
     }
-}
+  }
 
 // shadow mixin
 @mixin shadowed {
-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 // border radius mixin
@@ -141,47 +141,47 @@ box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	justify-content: center;
 	align-items: center;
 	position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  background-color: rgba(241,196,15, .85);
-  color: $dark-grey;
-  font-weight: 700;
-  text-align: center;
-  max-height: 1000px;
-  overflow: hidden;
-  transition: max-height 6s ease;
-  box-shadow: 1px 2px 4px rgba(0,0,0,.2);
-  padding: 0 $padding-small;
-  p {
-  	line-height: 1.25;
-  	padding: .5*$padding-small 0;
-  }
-  a {
-  	margin-left: 2*$margin-small;
-  	position: relative;
-  	height: 50px;
-  	width: 15px;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	background-color: rgba(241,196,15, .85);
+	color: $dark-grey;
+	font-weight: 700;
+	text-align: center;
+	max-height: 1000px;
+	overflow: hidden;
+	transition: max-height 6s ease;
+	box-shadow: 1px 2px 4px rgba(0,0,0,.2);
+	padding: 0 $padding-small;
+	p {
+		line-height: 1.25;
+		padding: .5*$padding-small 0;
+	}
+	a {
+		margin-left: 2*$margin-small;
+		position: relative;
+		height: 50px;
+		width: 15px;
 
-  	@media (max-width: 700px) {
-  		margin-left: $margin-small;
-  	}
-  	svg {
-	  	position: absolute;
-	  	top: 50%;
-	  	left: 50%;
-	  	width: 15px;
-	  	transform: translate(-50%, -50%);
-	  	pointer-events: none;
-	  	fill: $dark-grey;
-  	}
-  }
+		@media (max-width: 700px) {
+			margin-left: $margin-small;
+		}
+		svg {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 15px;
+			transform: translate(-50%, -50%);
+			pointer-events: none;
+			fill: $dark-grey;
+		}
+	}
 }
 
 .hidden {
-  max-height: 0;
-  transition: max-height 3s ease;
+	max-height: 0;
+	transition: max-height 3s ease;
 }
 
 /*
@@ -209,13 +209,13 @@ body {
 	}
 	// color overlay applied to background pattern
 	background:
-    /* top, transparent $off-white, faked with gradient */ 
-    linear-gradient(
-      rgba(251, 252, 237, 0.4), 
-      rgba(251, 252, 237, 0.4)
-    ),
-    /* bottom, image */
-    url("../images/pw_maze_white.png");
+	/* top, transparent $off-white, faked with gradient */ 
+	linear-gradient(
+		rgba(251, 252, 237, 0.4), 
+		rgba(251, 252, 237, 0.4)
+		),
+	/* bottom, image */
+	url("../images/pw_maze_white.png");
 	color: $grey;
 	background-attachment: fixed;
 	line-height: 1.5;
@@ -363,7 +363,7 @@ footer {
 		align-items: center;
 		margin: $margin-default 0;
 		a {
-    	height: 100%;
+			height: 100%;
 			margin: 0 $margin-small;
 
 			&:hover svg {
@@ -440,8 +440,8 @@ footer {
 	max-width: 850px;
 	margin: 0 auto;
 	.project {
-	max-width: 500px;
-	margin: 0 auto;
+		max-width: 500px;
+		margin: 0 auto;
 		.project-header {
 			margin-top: $margin-default;
 			display: flex;
