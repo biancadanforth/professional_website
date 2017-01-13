@@ -83,6 +83,7 @@ $padding-small: 20px;
       // (image doesn't get squished). The image "covers" the entire width or height of the container.
       background-size: cover;
       width: 100%;
+      background-position: center;
       // The content CSS property is used with the ::before and ::after pseudo-elements to generate
       // content in an element. Objects inserted using the content property are anonymous.
       // if the pseudo-element has no content, it won't display at all
@@ -114,6 +115,7 @@ $padding-small: 20px;
     	background-repeat: no-repeat;
     	background-size: cover;
     	width: 100%;
+      background-position: center;
     	content: '';
     }
   }
@@ -126,62 +128,6 @@ $padding-small: 20px;
 // border radius mixin
 @mixin rounded($radius) {
 	border-radius: $radius;
-}
-
-
-/*
-*-----------------------------------------
-* TEMPORARY UNDER CONSTRUCTION NOTIFY BAR
-*-----------------------------------------
-*/
-
-.notify {
-	box-sizing: border-box;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 1;
-	width: 100%;
-	background-color: rgba(241,196,15, .85);
-	color: $dark-grey;
-	font-weight: 700;
-	text-align: center;
-	max-height: 1000px;
-	overflow: hidden;
-	transition: max-height 6s ease;
-	box-shadow: 1px 2px 4px rgba(0,0,0,.2);
-	padding: 0 $padding-small;
-	p {
-		line-height: 1.25;
-		padding: .5*$padding-small 0;
-	}
-	a {
-		margin-left: 2*$margin-small;
-		position: relative;
-		height: 50px;
-		width: 15px;
-
-		@media (max-width: 700px) {
-			margin-left: $margin-small;
-		}
-		svg {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			width: 15px;
-			transform: translate(-50%, -50%);
-			pointer-events: none;
-			fill: $dark-grey;
-		}
-	}
-}
-
-.hidden {
-	max-height: 0;
-	transition: max-height 3s ease;
 }
 
 /*
@@ -221,9 +167,17 @@ body {
 	line-height: 1.5;
 }
 
+.page-wrap {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
 header {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
 	max-width: 100%;
-	margin-top: $margin-small;
+	margin: $margin-default 0;
 	text-align: center;
 	tspan {
 		fill: $blue;
@@ -231,32 +185,89 @@ header {
 	path {
 		stroke: $blue;
 	}
-}
+	span {
+		display: flex;
+		align-items: baseline;
+		justify-content: flex-start;
+		h1 {
+			margin: 0;
+			margin-left: .5*$margin-small;
+			display: inline-block;
+			color: $dark-grey;
+			letter-spacing: $letter-spacing;
+			font-size: 1.5em;
+			font-weight: bold;
 
-nav ul {
+			@media (max-width: 830px) {
+				display: none;
+			}
+		}
+	}
+
+	@media (max-width: 1260px) {
+		padding: 0 $margin-default;
+	}
+
+	@media (max-width: 560px) {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin: $margin-default $margin-small;
+		
+		span {
+			justify-content: center;
+			align-items: flex-end;
+			h1 {
+				line-height: 1em;
+			}
+		}
+
+		ul {
+			margin-top: $margin-small;
+		}
+		svg {
+			width: 40px;
+		}
+	}
+
+	nav {
+		@media (max-width: 400px) {
+			font-size: .875;
+			}
+	}
+
+	nav ul {
 	display: flex;
 	justify-content: space-between;
-	margin: $margin-default $margin-small 0;
 	list-style: none;
 	font: {
-		size: 0.875em;
 		weight: bold;
 	}
-	line-height: 1.5;
+	line-height: 1em;
 	text: {
 		align: center;
 		transform: uppercase;
 	}
 	color: $grey;
-
-	@media (min-width: 600px) {
-		justify-content: center;
-		font-size: 1em;
+	@media (max-width: 500px) {
+		font-size: .75em;
+		overflow: hidden;
+		//max-width: 280px;
 	}
 
 	li {
-		@media (min-width: 600px) {
-			margin: 0 $margin-default;
+		margin: 0 $margin-small;
+		&:first-child {
+				padding-bottom: 10px;
+				border-bottom: 3px $yellow solid;
+				margin-left: 0;
+			}
+		&:last-child {
+			margin-right: 0;
+		}
+
+		@media (max-width: 500px) {
+			margin: 0 .65*$margin-small;
 		}
 	}
 
@@ -270,12 +281,13 @@ nav ul {
 			letter-spacing: 5px;
 			transition: letter-spacing .5s;
 
-			@media (max-width: 350px) {
+			@media (max-width: 500px) {
 				letter-spacing: $letter-spacing;
 				transition: none;
 			}
 		}
 	}
+}
 
 	/* Reserve space for letter-spacing (or any :hover state styles)
 	* content in ::after pseudo element and using title attribute
@@ -290,26 +302,18 @@ nav ul {
 		overflow: hidden;
 		visibility: hidden;
 
-		@media (max-width: 350px) {
-			letter-spacing: 0;
+		@media (max-width: 500px) {
+			display: none;
 		}
 	}
 }
 
-// flags which nav link corresponds to the current page
-.current-page {
-	margin: 5px 0 0 0;
-	border-color: $yellow;
-	border-width: 3px;
-}
-
 h2 {
 	font: {
-		size: 1.5em;
+		size: 1.25em;
 		weight: 700;
 	}
 	letter-spacing: $letter-spacing;
-	margin-bottom: $margin-small;
 }
 
 h3 {
@@ -341,9 +345,15 @@ p {
 
 // bottom page <section>
 .secondary {
+	margin: 0 -1*$margin-default;
 	padding: $padding-default $padding-default 0;
 	background-color: $blue;
 	color: $off-white;
+
+	@media (min-width: 1200px) {
+		margin: 0;
+	}
+
 	h1 {
 		@include section-title($off-white);
 	}
@@ -398,34 +408,140 @@ footer {
 *****************************************/
 
 .primary {
-	.split-screen {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin: $margin-default $margin-default 0;
-		.welcome-profile {
-			border-radius: 50%;
-			width: 50%;
-			max-width: 250px;
-			@include shadowed;
+	margin: $margin-default auto 0;
+	
+	.welcome-wrapper {
+		position: relative;
+		top: 0;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.welcome-profile-wrapper {
+
+		&::before {
+		  content: "";
+		  display: block;
+		  position: absolute;
+		  top: 0;
+		  bottom: $margin-default + 7px;
+		  left: 0;
+		  right: 0;
+		  background: linear-gradient(
+		rgba(0, 0, 0, 0.4), 
+		rgba(0, 0, 0, 0.4)
+		);
+		  @include rounded(2px);
+
+		  @media (max-width: 800px) {
+		  	border-radius: 0;
+		  }
 		}
-		.welcome-message {
-			margin-top: $margin-default;
-			max-width: 500px;
-			font-size: 1.125em;
-		}
-		@media (min-width: 800px) {
-			flex-direction: row-reverse;
-			justify-content: center;
-			.welcome-message {
-				flex: 2 0 67%;
-				margin-right: $margin-default;
-				margin-top: 0;
+
+		@media (max-width: 490px) {
+			&::before {
+				display: none;
 			}
-			.welcome-profile {
-				flex: 1 0 33%;
+		}
+	}
+
+	.welcome-profile {
+		@include rounded(2px);
+		width: 100%;
+		@include shadowed;
+		
+		@media (max-width: 800px) {
+	  	border-radius: 0;
+	  }
+	}
+	
+	.welcome-message-wrapper {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		//margin-left: $margin-small;
+		max-width: 50%;
+		font-size: 1.125em;
+		color: $off-white;
+
+		@media (max-width: 800px) {
+			top: 0;
+			transform: translateY(0);
+			padding: $padding-default $padding-default 0;
+			text-align: left;
+		}
+
+		@media (max-width: 490px) {
+			font-size: 1em;
+			position: static;
+			max-width: 100%;
+			text-align: center;
+			color: $grey;
+			padding-top: $padding-small;
+		}
+
+		p {
+			margin-top: 15px;
+		}
+
+		span {
+			line-height: 20px;
+
+			&::before {
+				content: "";
+		    display: inline-block;
+		    background: url("../images/heart.svg") no-repeat center;
+		    width: 20px;
+		    height: 20px;
+		    margin: auto 3px 0 0;
+		    vertical-align: middle;
+
+		    @media(max-width: 490px) {
+		    	background: url("../images/heart-grey.svg") no-repeat center;
+		    }
 			}
 		}
+
+		button {
+		  position: relative;
+		  display: inline-block;
+		  background-color: $off-white;
+		  padding: .5*$padding-small $padding-small;
+		  margin-top: $margin-small;
+		  font-size: 1em;
+		  font-weight: bold;
+		  color: $dark-grey;
+		  text-transform: uppercase;
+		  @include rounded(2px);
+		  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+		  border: 1px solid $dark-grey;
+		  transition: background 1s;
+  
+		  &:hover {
+		    background-color: $yellow;
+	    	transition: background 1s;
+		  }
+
+		  @media (max-width: 800px) {
+		  	margin-top: .5*$margin-default;
+		  	//padding: .5*$padding-small;
+		  	//font-size: .875em;
+		  }
+
+		  @media (max-width: 540px) {
+		  	width: 300px;
+		  	//margin-right: $margin-default;
+		  	padding: 10px;
+		  }
+
+		  @media(max-width: 490px) {
+		  	width: 90%;
+		  	background-color: $yellow;
+		  	//background-color: rgba(251, 252, 237, 0.4);
+		  }
+		}
+
 	}
 }
 
@@ -437,20 +553,11 @@ footer {
 .work-wrapper {
 	display: flex;
 	flex-direction: column;
-	max-width: 850px;
+	max-width: 960px;
 	margin: 0 auto;
 	.project {
 		max-width: 500px;
 		margin: 0 auto;
-		.project-header {
-			margin-top: $margin-default;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			span:last-child {
-				margin-left: $margin-small;
-			}
-		}
 		.project-description {
 			margin-bottom: $margin-small;
 		}
