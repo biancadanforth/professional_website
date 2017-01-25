@@ -176,14 +176,44 @@ body {
 	margin: 0 auto;
 }
 
+header.minimize {
+	@include shadowed;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	transition: padding-top 1s ease, padding-bottom 1s ease;
+
+	ul li {
+		&:first-child {
+			padding-bottom: 0;
+			transition: padding-bottom 1s ease;
+		}
+	}
+}
 
 header {
+	box-sizing: border-box;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
 	display: flex;
 	justify-content: space-between;
 	align-items: baseline;
 	max-width: 1200px;
-	margin: $margin-default auto 0;
+	width: 100%;
+	margin-left: auto;
+	padding-top: $padding-default;
+	padding-bottom: $padding-default;
 	text-align: center;
+	background:
+	/* top, transparent $off-white, faked with gradient */ 
+	linear-gradient(
+		rgba(251, 252, 237, 0.4), 
+		rgba(251, 252, 237, 0.4)
+		),
+	/* bottom, image */
+	url("../images/pw_maze_white.png");
+	transition: padding-top 1s ease, padding-bottom 1s ease;
 	tspan {
 		fill: $blue;
 	}
@@ -210,7 +240,8 @@ header {
 	}
 
 	@media (max-width: 1260px) {
-		padding: 0 $margin-default;
+		padding-left: $padding-default;
+		padding-right: $padding-default;
 	}
 
 	@media (max-width: 620px) {
@@ -266,6 +297,7 @@ header {
 				padding-bottom: 10px;
 				border-bottom: 3px $yellow solid;
 				margin-left: 0;
+				transition: padding-bottom 1s ease;
 			}
 		&:last-child {
 			margin-right: 0;
@@ -429,7 +461,7 @@ footer {
 *****************************************/
 
 .primary {
-	margin: $margin-default auto 0;
+	margin: 0 auto;
 	
 	.welcome-wrapper {
 		position: relative;
@@ -584,7 +616,7 @@ footer {
 	max-width: 1200px;
 	margin: 0 auto;
 	.project {
-		max-width: 800px;
+		max-width: 1200px;
 		width: 100%;
 		margin-bottom: (1+1/3)*$margin-default;
 
