@@ -5,7 +5,7 @@
 // COLORS
 //Made $off-white rgb for background overlay on <body>
 $off-white: rgb(251, 252, 237);
-$blue: rgb(65,138,201);
+$blue: rgb(41,128,185);
 $yellow: rgb(241,196,15);
 $dark-grey: rgb(84,84,84);
 $grey: rgb(109,109,109);
@@ -31,7 +31,7 @@ $padding-small: 20px;
 @mixin section-title($color: $dark-grey) {
 	margin: 0;
 	font: {
-		size: 1.75em;
+		size: 3.25em;
 		weight: 700;
 	}
 	line-height: 1.25;
@@ -77,7 +77,7 @@ $padding-small: 20px;
   		$h-int: $height / 1px;
   		padding-top: $v-pad;
       // draw the <svg> based on coordinates and interpolation set by triangle $width and $height. The enclosed area becomes a polygon (our triangle in this case)
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='#{$w-int}' height='#{$h-int}'%3E%3Cpolygon points='0,#{$h-int} #{$w-int},0 #{$w-int},#{$h-int}' style='fill:rgb(65,138,201);stroke:rgb(65,138,201);stroke-width:0'%3E%3C/polygon%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='#{$w-int}' height='#{$h-int}'%3E%3Cpolygon points='0,#{$h-int} #{$w-int},0 #{$w-int},#{$h-int}' style='fill:rgb(41,128,185);stroke:rgb(41,128,185);stroke-width:0'%3E%3C/polygon%3E%3C/svg%3E");
       background-repeat: no-repeat;
       // Scales the image as large as possible and maintains image aspect ratio
       // (image doesn't get squished). The image "covers" the entire width or height of the container.
@@ -100,7 +100,7 @@ $padding-small: 20px;
 	padding-top: $v-pad;
     // have to add a margin to the last child in <section> (of any type), because it's an absolute value in px versus a % like v-pad, so it cannot be directly added to the <section>'s padding-bottom as "padding-bottom: $v-pad + $padding-default"
     & > :first-child {
-    	padding-top: $padding-default;
+    	padding-top: 1.5*$padding-default;
     }
     &::before {
     	//gives the svg a $blue colored whitespace of $padding-default vertical height
@@ -111,7 +111,7 @@ $padding-small: 20px;
     	$w-int: $width / 1px;
     	$h-int: $height / 1px;
     	padding-top: $v-pad;
-    	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='#{$w-int}' height='#{$h-int}'%3E%3Cpolygon points='0,#{$h-int} #{$w-int},0 0,0' fill='rgb(65,138,201)' stroke = 'rgb(65,138,201)'%3E%3C/polygon%3E%3C/svg%3E");
+    	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='#{$w-int}' height='#{$h-int}'%3E%3Cpolygon points='0,#{$h-int} #{$w-int},0 0,0' fill='rgb(41,128,185)' stroke = 'rgb(41,128,185)'%3E%3C/polygon%3E%3C/svg%3E");
     	background-repeat: no-repeat;
     	background-size: cover;
     	width: 100%;
@@ -359,21 +359,35 @@ header {
 
 h2 {
 	font: {
-		size: 1.25em;
-		weight: 700;
+		size: 2.25em;
 	}
 	letter-spacing: $letter-spacing;
-	margin-bottom: .75*$margin-small;
+	margin-bottom: 0;
+	line-height: 1.25;
 }
 
 h3 {
+  font: {
+  	size: 1.4em;
+  	weight: 400;
+  	style: italic;
+  	family: 'Merriweather', serif;
+  }
+  line-height: 1.25;
+  letter-spacing: $letter-spacing;
+  margin-bottom: $margin-default;
+}
+
+h4 {
 	font: {
 		size: 1em;
-		weight: 700;
+		weight: 400;
+		family: 'Merriweather', serif;
 	}
-	letter-spacing: 1.25*$letter-spacing;
-	margin-bottom: .75*$margin-small;
+	letter-spacing: 1.5*$letter-spacing;
+	margin-bottom: $margin-default;
 	text-transform: uppercase;
+	border-bottom: 1px solid $off-white;
 }
 
 p {
@@ -405,7 +419,7 @@ p {
 
 	h1 {
 		@include section-title($off-white);
-		margin-bottom: $margin-default;
+		margin-bottom: 1.5*$margin-default;
 	}
 	svg {
 		width: 20px;
@@ -416,21 +430,7 @@ p {
 footer {
 	text-align: center;
 	@include diagonal-background-bottom;
-	margin-bottom: $margin-default;
-	.resume {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-
-		span {
-			margin: 0 0 0 10px;
-		}
-
-		svg {
-			width: 40px;
-			fill: $yellow;
-		}
-	}
+	margin-bottom: 2*$margin-default;
 
 	span {
 		display: flex;
@@ -478,7 +478,7 @@ footer {
 	.welcome-wrapper {
 		position: relative;
 		top: 0;
-		max-width: 800px;
+		max-width: 1200px;
 		margin: 0 auto;
 
 		@media (max-width: 890px) {
@@ -512,7 +512,7 @@ footer {
 		  }
 		}
 
-		@media (max-width: 565px) {
+		@media (max-width: 725px) {
 			&::before {
 				display: none;
 			}
@@ -545,7 +545,7 @@ footer {
 			text-align: left;
 		}
 
-		@media (max-width: 565px) {
+		@media (max-width: 725px) {
 			font-size: 1em;
 			position: static;
 			max-width: 100%;
@@ -554,8 +554,10 @@ footer {
 			padding-top: $padding-small;
 		}
 
-		p {
+
+		h3 {
 			margin-top: 15px;
+			margin-bottom: 0;
 		}
 
 		span {
@@ -570,7 +572,7 @@ footer {
 		    margin: auto 3px 0 0;
 		    vertical-align: middle;
 
-		    @media(max-width: 565px) {
+		    @media(max-width: 725px) {
 		    	background: url("../images/heart-grey.svg") no-repeat center;
 		    }
 			}
@@ -606,13 +608,22 @@ footer {
 		  	padding: 10px;
 		  }
 
-		  @media(max-width: 565px) {
+		  @media(max-width: 725px) {
 		  	width: 90%;
 		  }
 
 		  @media(max-width: 350px) {
 		  	width: 100%;
 		  }
+		}
+
+		p {
+			color: $off-white;
+			margin-top: $margin-small;
+
+			a {
+				color: $off-white;
+			}
 		}
 	}
 }
@@ -630,11 +641,7 @@ footer {
 	.project {
 		max-width: 1200px;
 		width: 100%;
-		margin-bottom: (1+1/3)*$margin-default;
-
-		&:nth-child(2n) {
-
-		}
+		margin-bottom: 2*$margin-default;
 
 		&:nth-child(2n+1) {
 			margin-right: $margin-default;
@@ -664,7 +671,7 @@ footer {
 		padding-left: 0;
 		padding-right: 0;
 
-		h2, h3, .project-description {
+		h2, h3, h4, .project-description {
 			margin-left: $margin-default;
 			margin-right: $margin-default;
 		}
