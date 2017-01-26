@@ -5,7 +5,7 @@ var header = document.getElementById("header");
 window.addEventListener('scroll', minimizeHeader);
 
 function minimizeHeader() {
-	if (document.body.scrollTop === 0) {
+	if (window.pageYOffset === 0) {
 		header.classList.remove("minimize");
 	} else {
 		header.classList.add("minimize");

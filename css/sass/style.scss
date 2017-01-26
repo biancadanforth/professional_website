@@ -297,7 +297,7 @@ header {
 
 	nav {
 		@media (max-width: 400px) {
-			font-size: .875;
+			font-size: 0.875em;
 			}
 	}
 
@@ -474,7 +474,7 @@ footer {
 			background-color: $yellow;
 			padding: 3px;
 			@include rounded(2px);
-			transform: 0;
+			transform: none;
 			transition: transform .25s linear;
 
 			@media (max-width: 450px) {
