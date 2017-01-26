@@ -3,51 +3,131 @@
 // ------------ CONSTANTS -------------
 
 // COLORS
-$color-primary: #418ac9; // blue
-$color-secondary: #fbfced; // off-white
-$color-accent: #f1c40f; // yellow
-$color-text-header: #545454; // dark grey
-$color-text-body: #6d6d6d; // grey
+//Made $off-white rgb for background overlay on <body>
+$off-white: rgb(251, 252, 237);
+$blue: rgb(41,128,185);
+$yellow: rgb(241,196,15);
+$dark-grey: rgb(84,84,84);
+$grey: rgb(109,109,109);
 
 // FONTS
 $font-main: 'Montserrat', sans-serif;
+$letter-spacing: 1px;
 
-// MARGIN
+// MARGIN & PADDING
 $margin-default: 30px;
 $margin-small: 20px;
+$padding-default: 30px;
+$padding-small: 20px;
 
-// <nav> link styles
-@mixin nav-links {
-margin-top: $margin-default;
-margin-bottom: 0;
-	font: {
-		size: 0.875em;
-		weight: bold;
-	}
-	line-height: 1.5;
-	text: {
-		align: center;
-		transform: uppercase;
-	}
-	color: $color-text-body;
+// %placeholder example
+%no-underline {
+	text-decoration: none;
 }
 
+// ------------ MIXINS -------------
+
 //<h1> styles with defaults
-@mixin section-title($color: $color-text-header) {
-	margin-top: $margin-default;
-	margin-bottom: 0;
+@mixin section-title($color: $dark-grey) {
+	margin: 0;
 	font: {
-		size: 1.5em;
-		weight: bold;
+		size: 3.25em;
+		weight: 700;
 	}
 	line-height: 1.25;
 	text: {
 		align: center;
 		transform: uppercase;
 	}
-	// color could alternately be off-white ($color-secondary)
-	// depending on section background color
+	letter-spacing: $letter-spacing;
+	// color could alternately be $off-white or
+	// $dark-grey depending on section
+	// background color
 	color: $color;
+}
+
+// diagonal section divider mixin
+// based on example from: https://blog.omgmog.net
+// better to specify a fixed $height than an angle so top/bottom whitespace (margin/padding) doesn't change with viewport width
+@mixin diagonal-background-top($width: 1000px, $height: 60px, $color: $blue) {
+	position: relative;
+   // Because this img is a background img, with no content contained inside the pseudo-element, we need to give it an explicit height so it is visible.
+    // We need the height of the element to be expressed a percentage of its width to ensure it doesn't get cropped anywhere as it scales.
+    // You can’t just apply this using the height property though, as that will set the height as a percentage of the height of the parent element,
+    // so we give the element a padding-top instead, since padding with % units bases it off of the width of the element itself.
+    // Note: to add/remove units to a calculated result, you have to multiply or divide.
+    // to work out the height as a percentage of the width, simply solve for x in (H/W) = (x/100), a basic proportion equivalence:
+    $v-pad: (($height / $width) * 100) * 1%;
+    // add height of diagonal divider section as padding-bottom to <section>
+    padding-bottom: $v-pad;
+    // have to add a margin to the last child in <section> (of any type), because it's an absolute value in px versus a % like v-pad, so it cannot be directly added to the <section>'s padding-bottom as "padding-bottom: $v-pad + $padding-default" are different units! One is relative, %, and the other is absolute (px).
+    & > :last-child {
+    	padding-bottom: $padding-default;
+    }
+    // create a pseudo-element inside of the <section> element (becomes the last child
+    // of the element)
+    &::after {
+  		// place divider immediately underneath the preceding section; positions
+  		// relative to closest positioned ancestor (in this case, the )
+  		position: absolute;
+  		bottom: 0;
+  		left: 0;
+  		// remove 'px' units from $width and $height by dividing it out for <svg> interpolation
+  		$w-int: $width / 1px;
+  		$h-int: $height / 1px;
+  		padding-top: $v-pad;
+      // draw the <svg> based on coordinates and interpolation set by triangle $width and $height. The enclosed area becomes a polygon (our triangle in this case)
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='#{$w-int}' height='#{$h-int}'%3E%3Cpolygon points='0,#{$h-int} #{$w-int},0 #{$w-int},#{$h-int}' style='fill:rgb(41,128,185);stroke:rgb(41,128,185);stroke-width:0'%3E%3C/polygon%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      // Scales the image as large as possible and maintains image aspect ratio
+      // (image doesn't get squished). The image "covers" the entire width or height of the container.
+      background-size: cover;
+      width: 100%;
+      background-position: center;
+      // The content CSS property is used with the ::before and ::after pseudo-elements to generate
+      // content in an element. Objects inserted using the content property are anonymous.
+      // if the pseudo-element has no content, it won't display at all
+      content: '';
+    }
+  }
+
+// diagonal section divider mixin
+// based on example from: https://blog.omgmog.net
+// better to specify a fixed $height than an angle so top/bottom whitespace (margin/padding) doesn't change with viewport width
+@mixin diagonal-background-bottom($width: 1000px, $height: 60px, $color: $blue) {
+	position: relative;
+	$v-pad: (($height / $width) * 100) * 1%;
+	padding-top: $v-pad;
+    // have to add a margin to the last child in <section> (of any type), because it's an absolute value in px versus a % like v-pad, so it cannot be directly added to the <section>'s padding-bottom as "padding-bottom: $v-pad + $padding-default"
+    & > :first-child {
+    	padding-top: 1.5*$padding-default;
+    }
+    &::before {
+    	//gives the svg a $blue colored whitespace of $padding-default vertical height
+    	height: $padding-default;
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	$w-int: $width / 1px;
+    	$h-int: $height / 1px;
+    	padding-top: $v-pad;
+    	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='#{$w-int}' height='#{$h-int}'%3E%3Cpolygon points='0,#{$h-int} #{$w-int},0 0,0' fill='rgb(41,128,185)' stroke = 'rgb(41,128,185)'%3E%3C/polygon%3E%3C/svg%3E");
+    	background-repeat: no-repeat;
+    	background-size: cover;
+    	width: 100%;
+      background-position: center;
+    	content: '';
+    }
+  }
+
+// shadow mixin
+@mixin shadowed {
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+// border radius mixin
+@mixin rounded($radius) {
+	border-radius: $radius;
 }
 
 /*
@@ -56,31 +136,565 @@ margin-bottom: 0;
 *-------------------------------------
 */
 
+//Override boilerplate styles
+img {
+	box-sizing: border-box;
+}
+
+a {
+	display: inline-block;
+	color: $grey;
+	svg {
+		display: block;
+	}
+
+	&:visited {
+		color: $grey;
+	}
+}
+
 body {
 	font: {
 		family: $font-main;
 		size: 100%;
 	}
+	// color overlay applied to background pattern
+	background:
+	/* top, transparent $off-white, faked with gradient */ 
+	linear-gradient(
+		rgba(251, 252, 237, 0.4), 
+		rgba(251, 252, 237, 0.4)
+		),
+	/* bottom, image */
+	url("../images/pw_maze_white.png");
+	color: $grey;
+	background-attachment: fixed;
+	line-height: 1.5;
 }
 
-nav ul {
+.page-wrap {
+	margin: 0 auto;
+}
+
+header.minimize {
+	@include shadowed;
+	max-width: 100vw;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	transition: padding-top 0.5s linear, padding-bottom 0.5s linear;
+
+	h1 {
+		font-size: 1.25em;
+		transition: font-size 0.5s linear;
+	}
+
+	svg {
+		width: 30px;
+		transition: width 0.5s linear;
+	}
+
+	@media (max-width: 500px) {
+		padding-bottom: 20px;
+	}
+
+	ul li {
+		&:first-child {
+			padding-bottom: 5px;
+			transition: padding-bottom 0.5s linear;
+		}
+	}
+}
+
+header {
+	box-sizing: border-box;
+	position: fixed;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+	width: 100vw;
+	padding-top: $padding-default;
+	padding-bottom: $padding-default;
+	background:
+	/* top, transparent $off-white, faked with gradient */ 
+	linear-gradient(
+		rgba(251, 252, 237, 0.4), 
+		rgba(251, 252, 237, 0.4)
+		),
+	/* bottom, image */
+	url("../images/pw_maze_white.png");
+	transition: padding-top 0.5s linear, padding-bottom 0.5s linear;
+
+	div {
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		max-width: 1200px;
+		width: 100%;
+
+		svg {
+			width: 50px;
+			transition: width 0.5s linear;
+		}
+
+		@media (max-width: 620px) {
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			
+			span {
+				justify-content: center;
+				align-items: flex-end;
+				h1 {
+					line-height: 1em;
+				}
+			}
+
+			ul {
+				margin-top: $margin-small;
+			}
+			svg {
+				width: 40px;
+			}
+		}
+	}
+
+	tspan {
+		fill: $blue;
+	}
+	
+	path {
+		stroke: $blue;
+	}
+	
+	span {
+		display: flex;
+		align-items: baseline;
+		justify-content: flex-start;
+
+		h1 {
+			margin: 0;
+			margin-left: $margin-small;
+			display: inline-block;
+			color: $dark-grey;
+			letter-spacing: $letter-spacing;
+			font-size: 1.5em;
+			font-weight: bold;
+			font-family: 'Merriweather', serif;
+			transition: font-size 0.5s linear;
+
+			@media (max-width: 830px) {
+				display: none;
+			}
+		}
+	}
+
+	@media (max-width: 1260px) {
+		padding-left: $padding-default;
+		padding-right: $padding-default;
+	}
+
+	nav {
+		@media (max-width: 400px) {
+			font-size: 0.875em;
+			}
+	}
+
+	nav ul {
 	display: flex;
+	justify-content: space-between;
 	list-style: none;
-	justify-content: center;
-	@include nav-links;
+	font: {
+		weight: bold;
+	}
+	line-height: 1em;
+	text: {
+		align: center;
+		transform: uppercase;
+	}
+	color: $grey;
+	
+	@media (max-width: 500px) {
+		font-size: .75em;
+		overflow: hidden;
+	}
+
 	li {
-		margin: 0 $margin-default;
+		margin: 0 $margin-small;
+		&:first-child {
+				padding-bottom: 10px;
+				border-bottom: 3px $yellow solid;
+				margin-left: 0;
+				transition: padding-bottom 0.5s linear;
+			}
+		&:last-child {
+			margin-right: 0;
+		}
+
+		@media (max-width: 500px) {
+			margin: 0 .65*$margin-small;
+		}
 	}
+
 	a {
-		text-decoration: none;
-		color: $color-text-body;
+		@extend %no-underline;
+		color: $grey;
+		letter-spacing: $letter-spacing;
+		transition: letter-spacing .5s;
+
+		&:hover {
+			letter-spacing: 5px;
+			transition: letter-spacing .5s;
+
+			@media (max-width: 500px) {
+				letter-spacing: $letter-spacing;
+				transition: none;
+			}
+		}
 	}
 }
 
-section.primary h1 {
-	@include section-title;
+	/* Reserve space for letter-spacing (or any :hover state styles)
+	* content in ::after pseudo element and using title attribute
+	* in HTML as a source for content.
+	*/
+	a::after {
+		display: block;
+		content: attr(aria-label);
+		letter-spacing: 5px;
+		height: 0;
+		color: transparent;
+		overflow: hidden;
+		visibility: hidden;
+
+		@media (max-width: 500px) {
+			display: none;
+		}
+	}
 }
 
-section.secondary h1 {
-	@include section-title($color-secondary);
+h2 {
+	font: {
+		size: 2.25em;
+	}
+	letter-spacing: $letter-spacing;
+	margin-bottom: 0;
+	line-height: 1.25;
+}
+
+h3 {
+  font: {
+  	size: 1.4em;
+  	weight: 400;
+  	style: italic;
+  	family: 'Merriweather', serif;
+  }
+  line-height: 1.25;
+  letter-spacing: $letter-spacing;
+  margin-bottom: $margin-default;
+}
+
+h4 {
+	font: {
+		size: 1em;
+		weight: 400;
+		family: 'Merriweather', serif;
+	}
+	letter-spacing: 1.5*$letter-spacing;
+	margin-bottom: $margin-default;
+	text-transform: uppercase;
+	border-bottom: 1px solid $off-white;
+}
+
+p {
+	font: {
+		size: 1em;
+		weight: 400;
+	}
+}
+
+// top page <section>
+.primary {
+	margin-top: $margin-default;
+	text-align: center;
+	h1 {
+		@include section-title;
+	}
+	@include diagonal-background-top;
+}
+
+// bottom page <section>
+.secondary {
+	padding: $padding-default $padding-default 0;
+	background-color: $blue;
+	color: $off-white;
+
+	@media (min-width: 1200px) {
+		margin: 0;
+	}
+
+	h1 {
+		@include section-title($off-white);
+		margin-bottom: 1.5*$margin-default;
+	}
+	svg {
+		width: 20px;
+		fill: $off-white;
+	}
+}
+
+footer {
+	text-align: center;
+	@include diagonal-background-bottom;
+	margin-bottom: 2*$margin-default;
+
+	span {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: $margin-default 0;
+		a {
+			height: 100%;
+			margin: 0 $margin-small;
+
+			&:hover svg {
+				transform: scale(1.3);
+				transition: transform .25s linear;
+			}
+
+			@media (max-width: 450px) {
+				margin: 0 .5*$margin-small;
+			}
+		}
+		svg {
+			width: 40px;
+			max-height: 40px;
+			fill: $off-white;
+			background-color: $yellow;
+			padding: 3px;
+			@include rounded(2px);
+			transform: none;
+			transition: transform .25s linear;
+
+			@media (max-width: 450px) {
+				width: 30px;
+				max-height: 30px;
+			}
+		}
+	}
+}
+
+/***************************************** 
+*-------HOME PAGE - WELCOME SECTION-------
+*****************************************/
+
+.primary {
+	margin: 0 auto;
+	
+	.welcome-wrapper {
+		position: relative;
+		top: 0;
+		max-width: 1200px;
+		margin: 0 auto;
+
+		@media (max-width: 890px) {
+			margin: 0 $margin-default;
+		}
+
+		@media (max-width: 400px) {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+
+	.welcome-profile-wrapper {
+
+		&::before {
+		  content: "";
+		  display: block;
+		  position: absolute;
+		  top: 0;
+		  bottom: $margin-default + 7px;
+		  left: 0;
+		  right: 0;
+		  background: linear-gradient(
+		rgba(0, 0, 0, 0.4), 
+		rgba(0, 0, 0, 0.4)
+		);
+		  @include rounded(2px);
+
+		  @media (max-width: 800px) {
+		  	border-radius: 0;
+		  }
+		}
+
+		@media (max-width: 725px) {
+			&::before {
+				display: none;
+			}
+		}
+
+		.welcome-profile {
+			@include rounded(2px);
+			width: 100%;
+			@include shadowed;
+			
+			@media (max-width: 800px) {
+		  	border-radius: 0;
+		  }
+		}
+	}
+	
+	.welcome-message-wrapper {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		max-width: 50%;
+		font-size: 1.125em;
+		color: $off-white;
+
+		@media (max-width: 800px) {
+			top: 0;
+			transform: translateY(0);
+			padding: $padding-default $padding-default 0;
+			text-align: left;
+		}
+
+		@media (max-width: 725px) {
+			font-size: 1em;
+			position: static;
+			max-width: 100%;
+			text-align: center;
+			color: $grey;
+			padding-top: $padding-small;
+		}
+
+
+		h3 {
+			margin-top: 15px;
+			margin-bottom: 0;
+		}
+
+		span {
+			line-height: 20px;
+
+			&::before {
+				content: "";
+		    display: inline-block;
+		    background: url("../images/heart.svg") no-repeat center;
+		    width: 20px;
+		    height: 20px;
+		    margin: auto 3px 0 0;
+		    vertical-align: middle;
+
+		    @media(max-width: 725px) {
+		    	background: url("../images/heart-grey.svg") no-repeat center;
+		    }
+			}
+		}
+
+		button {
+		  position: relative;
+		  display: inline-block;
+		  background-color: $off-white;
+		  padding: .5*$padding-small $padding-small;
+		  margin-top: $margin-small;
+		  font-size: 1em;
+		  font-weight: bold;
+		  color: $dark-grey;
+		  letter-spacing: $letter-spacing;
+		  text-transform: uppercase;
+		  @include rounded(2px);
+		  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+		  border: 1px solid $dark-grey;
+		  transition: background 1s;
+  
+		  &:hover {
+		    background-color: $yellow;
+	    	transition: background 1s;
+		  }
+
+		  @media (max-width: 800px) {
+		  	margin-top: .5*$margin-default;
+		  }
+
+		  @media (max-width: 650px) {
+		  	width: 300px;
+		  	padding: 10px;
+		  }
+
+		  @media(max-width: 725px) {
+		  	width: 90%;
+		  }
+
+		  @media(max-width: 350px) {
+		  	width: 100%;
+		  }
+		}
+
+		p {
+			color: $off-white;
+			margin-top: $margin-small;
+
+			a {
+				color: $off-white;
+			}
+		}
+	}
+}
+
+
+/***************************************** 
+*---------HOME PAGE - WORK SECTION--------
+*****************************************/
+
+.work-wrapper {
+	display: flex;
+	flex-direction: column;
+	max-width: 1200px;
+	margin: 0 auto;
+	.project {
+		max-width: 1200px;
+		width: 100%;
+		margin-bottom: 2*$margin-default;
+
+		&:nth-child(2n+1) {
+			margin-right: $margin-default;
+		}
+
+		.project-description {
+			margin-bottom: .75*$margin-small;
+		}
+		img {
+			width: 100%;
+			@include shadowed;
+			@include rounded(2px);
+		}
+	}
+
+	@media (min-width: 800px) {
+		flex-flow: row wrap;
+		justify-content: flex-start;
+	}
+	.project {
+		flex: 1 0 45%;
+	}
+}
+
+.secondary {
+	@media (max-width: 400px) {
+		padding-left: 0;
+		padding-right: 0;
+
+		h2, h3, h4, .project-description {
+			margin-left: $margin-default;
+			margin-right: $margin-default;
+		}
+
+		.project a img {
+			border-radius: 0;
+		}
+	}
 }

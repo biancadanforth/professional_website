@@ -11,7 +11,7 @@
   </rdf:RDF>
  </metadata>
  <g id="g4210" transform="matrix(1.0576 0 0 1.0576 -15.807 -8.6478)">
-  <text class="logo" id="text3348" style="word-spacing:0px;letter-spacing:0px" line-height="125%" font-size="40px" y="41.058823" x="11.705884" font-family="sans-serif" xml:space="preserve" fill="#000000"><tspan id="tspan3350" y="41.058823" x="11.705884" font-family="montserrat">bd</tspan></text>
+  <text class="logo" id="text3348" style="word-spacing:0px;letter-spacing:0px" line-height="125%" width="50px" height="35px" font-size="40px" y="0" x="0" font-family="sans-serif" xml:space="preserve" fill="#000000"><tspan id="tspan3350" y="41.058823" x="11.705884" font-family="montserrat">bd</tspan></text>
   <path class="logo arch" id="path3366" d="m25.583 23.139a13 13 0 0 1 13 -12.963 13 13 0 0 1 13 12.963" stroke="#000" stroke-width="4" fill="none"/>
  </g>
 </svg>

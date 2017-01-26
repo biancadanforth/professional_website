@@ -1,0 +1,139 @@
+nav ul a {
+  text-decoration: none;
+}
+
+/*
+*-------------------------------------
+*-------------- GLOBAL ---------------
+*-------------------------------------
+*/
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 100%;
+  background: linear-gradient(rgba(251, 252, 237, 0.4), rgba(251, 252, 237, 0.4)), url("../images/pw_maze_white.png");
+  color: #6d6d6d;
+  background-attachment: fixed;
+}
+
+header, footer {
+  margin-top: 20px;
+  text-align: center;
+}
+header a, footer a {
+  display: inline-block;
+}
+header tspan, footer tspan {
+  fill: #418ac9;
+}
+header path, footer path {
+  stroke: #418ac9;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 20px 0;
+  list-style: none;
+  font-size: 0.875em;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: center;
+  text-transform: uppercase;
+  color: #6d6d6d;
+  /* Reserve space for letter-spacing (or any :hover state styles)
+  * content in ::after pseudo element and using title attribute
+  * in HTML as a source for content.
+  */
+}
+@media (min-width: 600px) {
+  nav ul {
+    justify-content: center;
+    font-size: 1em;
+  }
+}
+@media (min-width: 600px) {
+  nav ul li {
+    margin: 0 30px;
+  }
+}
+nav ul a {
+  color: #6d6d6d;
+  letter-spacing: 1px;
+  transition: letter-spacing .5s;
+}
+nav ul a:hover {
+  letter-spacing: 5px;
+  transition: letter-spacing .5s;
+}
+nav ul a::after {
+  display: block;
+  content: attr(aria-label);
+  letter-spacing: 5px;
+  height: 0;
+  color: transparent;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.current-page {
+  margin: 5px 0 0 0;
+  border-color: #f1c40f;
+  border-width: 3px;
+}
+
+.primary, .secondary {
+  margin-top: 30px;
+  text-align: center;
+}
+.primary h1, .secondary h1 {
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 1.25;
+  text-align: center;
+  text-transform: uppercase;
+  color: #545454;
+}
+
+.secondary {
+  padding-top: 30px;
+  background-color: #418ac9;
+  color: #fbfced;
+}
+.secondary h1 {
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 1.25;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fbfced;
+}
+.secondary svg {
+  width: 20px;
+  fill: #fbfced;
+}
+
+/***************************************** 
+*-------HOME PAGE - WELCOME SECTION-------
+*****************************************/
+.profile {
+  border-radius: 50%;
+  margin-top: 30px;
+  width: 50%;
+}
+@media (min-width: 600px) {
+  .profile {
+    max-width: 325px;
+  }
+}
+
+p {
+  margin: 30px 20px 0;
+}
+
+/***************************************** 
+*---------HOME PAGE - WORK SECTION--------
+*****************************************/
+
+/*# sourceMappingURL=style.css.map */
