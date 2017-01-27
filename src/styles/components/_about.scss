@@ -17,6 +17,7 @@
 
 		.about-copy, .about-hero {
 			width: 50%;
+			max-width: 600px;
 		}
 
 		p {
@@ -25,6 +26,9 @@
 		}
 
 		blockquote {
+			position: relative;
+			top: 0;
+			left: 0;
 			border-top: 2px solid lighten($grey, 40%);
 			border-bottom: 2px solid lighten($grey, 40%);
 			margin: 10px 0;
@@ -32,6 +36,20 @@
 			color: $dark-grey;
 			font-size: 1.6em;
 			text-align: start;
+
+			svg {
+				width: 30px;
+				fill: lighten($grey, 40%);
+			}
+
+			svg:first-child {
+				//mirror about x-axis
+				transform: scaleY(-1);
+			}
+
+			svg:last-child {
+				transform: rotate(180deg);
+			}
 		}
 
 		@media (max-width: 1260px) {
@@ -61,6 +79,5 @@
 		@include rounded(2px);
 		@include shadowed;
 		margin-right: $margin-default;
-		max-width: 600px;
 	}
 }

@@ -1,8 +1,8 @@
 // app.bundle.scss
 
 // Boilerplates
-@import 'lib/reset.css';
-@import 'lib/normalize.css';
+@import '../src/styles/lib/reset.css';
+@import '../src/styles/lib/normalize.css';
 
 // Global constants & styles
 @import '_globals';

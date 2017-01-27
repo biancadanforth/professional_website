@@ -20,13 +20,6 @@ header.minimize {
 	@media (max-width: 500px) {
 		padding-bottom: 10px;
 	}
-
-	ul li {
-		&:first-child {
-			padding-bottom: 5px;
-			transition: padding-bottom 0.5s linear;
-		}
-	}
 }
 
 header {
@@ -156,10 +149,7 @@ header {
 	li {
 		margin: 0 $margin-small;
 		&:first-child {
-				padding-bottom: 10px;
-				border-bottom: 3px $yellow solid;
 				margin-left: 0;
-				transition: padding-bottom 0.5s linear;
 			}
 		&:last-child {
 			margin-right: 0;
@@ -204,5 +194,73 @@ header {
 		@media (max-width: 500px) {
 			display: none;
 		}
+	}
+}
+
+// Home page <nav> (nav index 1) styles
+
+header.home-page {
+	ul li:nth-child(1) {
+		padding-bottom: 10px;
+		border-bottom: 3px $yellow solid;
+		transition: padding-bottom 0.5s linear;
+	}
+}
+
+header.home-page.minimize {
+	ul li:nth-child(1) {
+		padding-bottom: 5px;
+		transition: padding-bottom 0.5s linear;
+	}
+}
+
+// Work page <nav> (nav index 2) styles
+
+header.work-page {
+	ul li:nth-child(2) {
+		padding-bottom: 10px;
+		border-bottom: 3px $yellow solid;
+		transition: padding-bottom 0.5s linear;
+	}
+}
+
+header.work-page.minimize {
+	ul li:nth-child(2) {
+		padding-bottom: 5px;
+		transition: padding-bottom 0.5s linear;
+	}
+}
+
+// About page (nav index 3) <nav> styles
+
+header.about-page {
+	ul li:nth-child(3) {
+		padding-bottom: 10px;
+		border-bottom: 3px $yellow solid;
+		transition: padding-bottom 0.5s linear;
+	}
+}
+
+header.about-page.minimize {
+	ul li:nth-child(3) {
+		padding-bottom: 5px;
+		transition: padding-bottom 0.5s linear;
+	}
+}
+
+// Contact page (nav index 4) <nav> styles
+
+header.contact-page {
+	ul li:nth-child(4) {
+		padding-bottom: 10px;
+		border-bottom: 3px $yellow solid;
+		transition: padding-bottom 0.5s linear;
+	}
+}
+
+header.contact-page.minimize {
+	ul li:nth-child(4) {
+		padding-bottom: 5px;
+		transition: padding-bottom 0.5s linear;
 	}
 }
