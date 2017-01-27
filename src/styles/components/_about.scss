@@ -1,0 +1,66 @@
+// about.scss
+
+.about-page {
+	text-align: start;
+
+	.about-body {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		max-width: 1200px;
+		margin: 0 auto;
+
+		h2 {
+			margin-top: 0;
+			color: $dark-grey;
+		}
+
+		.about-copy, .about-hero {
+			width: 50%;
+		}
+
+		p {
+			text-align: start;
+			margin: 0;
+		}
+
+		blockquote {
+			border-top: 2px solid lighten($grey, 40%);
+			border-bottom: 2px solid lighten($grey, 40%);
+			margin: 10px 0;
+			padding: 5px 0;
+			color: $dark-grey;
+			font-size: 1.6em;
+			text-align: start;
+		}
+
+		@media (max-width: 1260px) {
+			margin: 0 $margin-default;
+		}
+
+		@media (max-width: 1000px) {
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			h2 {
+				margin-top: $margin-default;
+			}
+
+			.about-copy, .about-hero {
+				width: 100%;
+			}
+
+			.about-hero {
+				margin-right: 0;
+			}
+		}
+	}
+
+	.about-hero {
+		@include rounded(2px);
+		@include shadowed;
+		margin-right: $margin-default;
+		max-width: 600px;
+	}
+}
