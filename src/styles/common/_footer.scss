@@ -1,0 +1,42 @@
+// footer.scss
+
+footer {
+	text-align: center;
+	@include diagonal-background-bottom;
+	margin-bottom: 2*$margin-default;
+
+	span {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: $margin-default 0;
+		a {
+			height: 100%;
+			margin: 0 $margin-small;
+
+			&:hover svg {
+				transform: scale(1.3);
+				transition: transform .25s linear;
+			}
+
+			@media (max-width: 450px) {
+				margin: 0 .5*$margin-small;
+			}
+		}
+		svg {
+			width: 40px;
+			max-height: 40px;
+			fill: $off-white;
+			background-color: $yellow;
+			padding: 3px;
+			@include rounded(2px);
+			transform: none;
+			transition: transform .25s linear;
+
+			@media (max-width: 450px) {
+				width: 30px;
+				max-height: 30px;
+			}
+		}
+	}
+}

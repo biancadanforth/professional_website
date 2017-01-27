@@ -1,0 +1,116 @@
+// _global.scss
+
+// ------------ CONSTANTS -------------
+
+// COLORS
+//Made $off-white rgb for background overlay on <body>
+$off-white: rgb(251, 252, 237);
+$blue: rgb(41,128,185);
+$yellow: rgb(241,196,15);
+$dark-grey: rgb(84,84,84);
+$grey: rgb(109,109,109);
+
+// FONTS
+$font-main: 'Montserrat', sans-serif;
+$letter-spacing: 1px;
+
+// MARGIN & PADDING
+$margin-default: 30px;
+$margin-small: 20px;
+$padding-default: 30px;
+$padding-small: 20px;
+
+// %placeholder example
+%no-underline {
+	text-decoration: none;
+}
+
+// ------------ BOILERPLATE OVERRIDES -------------
+
+
+body {
+	margin: 0;
+	font: {
+		family: $font-main;
+		size: 100%;
+	}
+	// color overlay applied to background pattern
+	background:
+		/* top, transparent $off-white, faked with gradient */ 
+		linear-gradient(
+			rgba(251, 252, 237, 0.4), 
+			rgba(251, 252, 237, 0.4)
+			),
+		/* bottom, image */
+		url("../src/images/pw_maze_white.png");
+	color: $grey;
+	background-attachment: fixed;
+	line-height: 1.5;
+
+	.page-wrap {
+		margin: 0 auto;
+	}
+	//Override boilerplate styles
+	img {
+		box-sizing: border-box;
+	}
+
+	a {
+		display: inline-block;
+		color: $grey;
+		svg {
+			display: block;
+		}
+
+		&:visited {
+			color: $grey;
+		}
+	}
+
+	ul {
+		padding-left: $padding-small;
+	}
+}
+
+// ------------ TYPOGRAPHY -------------
+
+h2 {
+		font: {
+			size: 2.25em;
+			weight: 400;
+		}
+		letter-spacing: $letter-spacing;
+		margin-bottom: 0;
+		line-height: 1.25;
+	}
+
+	h3 {
+	  font: {
+	  	size: 1.4em;
+	  	weight: 400;
+	  	style: italic;
+	  	family: 'Merriweather', serif;
+	  }
+	  line-height: 1.25;
+	  letter-spacing: $letter-spacing;
+	  margin-bottom: $margin-default;
+	}
+
+	h4 {
+		font: {
+			size: 1em;
+			weight: 400;
+			family: 'Merriweather', serif;
+		}
+		letter-spacing: 1.5*$letter-spacing;
+		margin-bottom: $margin-default;
+		text-transform: uppercase;
+		border-bottom: 1px solid $off-white;
+	}
+
+	p {
+		font: {
+			size: 1em;
+			weight: 400;
+		}
+	}

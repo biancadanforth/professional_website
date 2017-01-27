@@ -1,0 +1,6 @@
+// border-radius.scss
+
+// border radius mixin
+@mixin rounded($radius) {
+	border-radius: $radius;
+}

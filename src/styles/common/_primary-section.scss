@@ -1,0 +1,11 @@
+// primary-section.scss
+
+// top page <section>
+.primary {
+	margin-top: $margin-default;
+	text-align: center;
+	h1 {
+		@include section-title;
+	}
+	@include diagonal-background-top;
+}

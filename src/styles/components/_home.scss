@@ -1,0 +1,215 @@
+// home.scss
+
+/***************************************** 
+*-------HOME PAGE - WELCOME SECTION-------
+*****************************************/
+
+.primary {
+	margin: 0 auto;
+	
+	.welcome-wrapper {
+		position: relative;
+		top: 0;
+		max-width: 1200px;
+		margin: 0 auto;
+
+		@media (max-width: 950px) {
+			margin: 0 $margin-default;
+		}
+
+		@media (max-width: 400px) {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+
+	.welcome-profile-wrapper {
+
+		&::before {
+		  content: "";
+		  display: block;
+		  position: absolute;
+		  top: 0;
+		  bottom: $margin-default + 7px;
+		  left: 0;
+		  right: 0;
+		  background: linear-gradient(
+		rgba(0, 0, 0, 0.4), 
+		rgba(0, 0, 0, 0.4)
+		);
+		  @include rounded(2px);
+
+		  @media (max-width: 800px) {
+		  	border-radius: 0;
+		  }
+		}
+
+		@media (max-width: 800px) {
+			&::before {
+				display: none;
+			}
+		}
+
+		.welcome-profile {
+			@include rounded(2px);
+			width: 100%;
+			@include shadowed;
+			
+			@media (max-width: 800px) {
+		  	border-radius: 0;
+		  }
+		}
+	}
+	
+	.welcome-message-wrapper {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		max-width: 50%;
+		font-size: 1.125em;
+		color: $off-white;
+
+		@media (max-width: 800px) {
+			top: 0;
+			transform: translateY(0);
+			padding: $padding-default $padding-default 0;
+			text-align: left;
+		}
+
+		@media (max-width: 800px) {
+			font-size: 1em;
+			position: static;
+			max-width: 100%;
+			text-align: center;
+			color: $grey;
+			padding-top: $padding-small;
+		}
+
+
+		h3 {
+			margin-top: 15px;
+			margin-bottom: 0;
+		}
+
+		span {
+			line-height: 20px;
+
+			&::before {
+				content: "";
+		    display: inline-block;
+		    background: url("../images/heart.svg") no-repeat center;
+		    width: 20px;
+		    height: 20px;
+		    margin: auto 3px 0 0;
+		    vertical-align: middle;
+
+		    @media(max-width: 800px) {
+		    	background: url("../images/heart-grey.svg") no-repeat center;
+		    }
+			}
+		}
+
+		button {
+		  position: relative;
+		  display: inline-block;
+		  background-color: $off-white;
+		  padding: .5*$padding-small $padding-small;
+		  margin-top: $margin-small;
+		  font-size: 1em;
+		  font-weight: bold;
+		  color: $dark-grey;
+		  letter-spacing: $letter-spacing;
+		  text-transform: uppercase;
+		  @include rounded(2px);
+		  @include shadowed;
+		  border: 1px solid $dark-grey;
+		  transition: background 1s;
+  
+		  &:hover {
+		    background-color: $yellow;
+	    	transition: background 1s;
+		  }
+
+		  @media (max-width: 800px) {
+		  	margin-top: .5*$margin-default;
+		  }
+
+		  @media (max-width: 650px) {
+		  	width: 300px;
+		  	padding: 10px;
+		  }
+
+		  @media(max-width: 800px) {
+		  	width: 90%;
+		  }
+
+		  @media(max-width: 350px) {
+		  	width: 100%;
+		  }
+		}
+
+		p {
+			color: $off-white;
+			margin-top: $margin-small;
+
+			a {
+				color: $off-white;
+			}
+		}
+	}
+}
+
+
+/***************************************** 
+*---------HOME PAGE - WORK SECTION--------
+*****************************************/
+
+.work-wrapper {
+	display: flex;
+	flex-direction: column;
+	max-width: 1200px;
+	margin: 0 auto;
+	.project {
+		max-width: 1200px;
+		width: 100%;
+		margin-bottom: 2*$margin-default;
+
+		&:nth-child(2n+1) {
+			margin-right: $margin-default;
+		}
+
+		.project-description {
+			margin-bottom: .75*$margin-small;
+		}
+		img {
+			width: 100%;
+			@include shadowed;
+			@include rounded(2px);
+		}
+	}
+
+	@media (min-width: 800px) {
+		flex-flow: row wrap;
+		justify-content: flex-start;
+	}
+	.project {
+		flex: 1 0 45%;
+	}
+}
+
+.secondary {
+	@media (max-width: 400px) {
+		padding-left: 0;
+		padding-right: 0;
+
+		h2, h3, h4, .project-description {
+			margin-left: $margin-default;
+			margin-right: $margin-default;
+		}
+
+		.project a img {
+			border-radius: 0;
+		}
+	}
+}

@@ -1,0 +1,25 @@
+// app.bundle.scss
+
+// Boilerplates
+@import 'lib/reset.css';
+@import 'lib/normalize.css';
+
+// Global constants & styles
+@import '_globals';
+
+// Mixins
+@import 'mixins/_diagonal-section-divider';
+@import 'mixins/_section-title';
+@import 'mixins/_box-shadow';
+@import 'mixins/_border-radius';
+
+// Common elements
+@import 'common/_header';
+@import 'common/_primary-section';
+@import 'common/_secondary-section';
+@import 'common/_footer';
+
+// Components
+@import 'components/_home';
+// @import 'components/about';
+// @import 'components/contact';
