@@ -2,7 +2,6 @@
 
 footer {
 	text-align: center;
-	@include diagonal-background-bottom;
 	margin-bottom: 2*$margin-default;
 
 	span {
@@ -39,4 +38,17 @@ footer {
 			}
 		}
 	}
+
+	p {
+		margin: 0;
+	}
+}
+
+footer.home-page {
+	@include diagonal-background-bottom;
+}
+
+footer.about-page {
+	margin-top: 2*$margin-default;
+	text-align: center;
 }
