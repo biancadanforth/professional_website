@@ -44,7 +44,7 @@ footer {
 	}
 }
 
-footer.home-page {
+footer.home-page, footer.work-page {
 	@include diagonal-background-bottom;
 }
 

@@ -1,0 +1,22 @@
+// project.scss
+
+.project-page {
+
+	h3 {
+		margin: 0 auto;
+		max-width: 600px;
+		text-align: left;
+
+		@media (max-width: 660px) {
+			margin: 0 $margin-default;
+		}
+	}
+
+	img {
+		width: 100%;
+		margin-top: $margin-default;
+		margin-bottom: $margin-default;
+		@include shadowed;
+		@include rounded(2px);
+	}
+}

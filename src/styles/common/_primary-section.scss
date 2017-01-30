@@ -9,6 +9,6 @@
 	}
 }
 
-main.home-page .primary {
+main.home-page .primary, main.work-page .primary {
 	@include diagonal-background-top;
 }
