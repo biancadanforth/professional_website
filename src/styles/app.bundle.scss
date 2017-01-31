@@ -12,6 +12,7 @@
 @import 'mixins/_section-title';
 @import 'mixins/_box-shadow';
 @import 'mixins/_border-radius';
+@import 'mixins/_bouncing-arrow';
 
 // Common elements
 @import 'common/_header';
@@ -23,4 +24,4 @@
 @import 'components/_home';
 @import 'components/_about';
 @import 'components/_project';
-// @import 'components/contact';
+@import 'components/_contact';

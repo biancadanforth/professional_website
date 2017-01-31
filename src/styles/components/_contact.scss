@@ -1,0 +1,99 @@
+// _contact.scss
+
+.contact-page {
+	.primary {
+	  display: flex;
+	  margin: 0 auto 2*$margin-default;
+	  max-width: 1200px;
+	  font-family: 'Montserrat';
+	  text-align: start;
+
+	  @media (max-width: 1260px) {
+	  	margin: 0 $margin-default 2*$margin-default;
+	  }
+	}
+
+	form, .contact-header-wrapper {
+	  flex: 0 1 50%;
+	}
+
+	form {
+	  border: 1px solid $dark-grey;
+	  border-radius: 2px;
+	  padding: 0 $margin-default $margin-default;
+	}
+
+	input, textarea {
+	  margin-top: .33*$margin-default;
+	}
+
+	input,
+	textarea, label {
+	  display: block;
+	  font-size: 1em;
+	  line-height: 1.5em;
+	  width: 100%;
+	}
+
+	label,
+	input[type="submit"] {
+	  display: inline-block;
+	  margin-top: $margin-default;
+	  font-family: 'Merriweather';
+	}
+
+	input[type="text"],
+	input[type="email"],
+	textarea, :placeholder-shown {
+	  font-family: 'Montserrat';
+	  height: 1.67*$margin-default;
+	  text-indent: .33*$margin-default;
+	}
+
+	input[type="submit"] {
+	  width: 30%;
+	  height: 1.67*$margin-default;
+	  text-transform: uppercase;
+	  font-size: 1.618em;
+	  padding: 0;
+	}
+
+	.contact-header-wrapper {
+	  position: relative;
+	  top: 0;
+	  left: 0;
+	  text-align: center;
+	  margin-left: $margin-default;
+	}
+
+	.contact-subheader {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	h4 {
+		display: inline-block;
+		width: 67%;
+		border: 0;
+		margin-bottom: $margin-small;
+		order: -1;
+	}
+
+	.contact-header {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 100%;
+		transform: translate(-50%, -50%);
+	  margin-top: 0;
+	  line-height: 1.5em;
+	}
+
+	textarea {
+		height: 3.33*$margin-default !important;
+	}
+
+	@include bouncing-arrow($grey, 20px);
+}

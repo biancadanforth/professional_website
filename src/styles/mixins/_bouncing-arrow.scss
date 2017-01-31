@@ -1,0 +1,42 @@
+// _bouncing-arrow.scss
+
+@mixin bouncing-arrow($color: $grey, $size: 100px) {
+	.down-arrow-wrapper {
+	  display: inline-block;
+	  transform: rotate(45deg);
+	  margin-top: 0.33*$size;
+
+	  .down-arrow {
+		  display: flex;
+		  flex-direction: column;
+		  align-items: center;
+		  justify-content: center;
+
+		  .down-arrow-stem {
+			  /* 2X left offset */
+			  height: $size;
+			  width: 0.8*$size;
+			  background-color: $color;
+			}
+
+			.down-arrow-point {
+			  width: 0px;
+			  height: 0px;
+			  /* 2X left offset for arrow-stem */
+			  border-left: $size solid transparent;
+			  border-right: $size solid transparent;
+			  border-top: $size solid $color;
+			}
+		}
+
+		.bounce {
+		  animation: bounce 2s infinite;
+		}
+
+		@keyframes bounce {
+		 0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+		 40% { transform: translateY(-0.33*$size); }
+		 60% { transform: translateY(-0.15*$size); }
+		}
+	}
+}
