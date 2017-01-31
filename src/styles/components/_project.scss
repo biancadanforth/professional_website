@@ -2,21 +2,41 @@
 
 .project-page {
 
-	h3 {
-		margin: 0 auto;
-		max-width: 600px;
-		text-align: left;
+	img {
+			width: 100%;
+			margin-top: $margin-default;
+			margin-bottom: $margin-default;
+			@include shadowed;
+			@include rounded(2px);
+		}
 
-		@media (max-width: 660px) {
-			margin: 0 $margin-default;
+	.primary {
+
+		img {
+			margin-top: 0;
+		}
+
+		h2, p, h4 {
+			margin: $margin-small auto;
+			max-width: 800px;
+			text-align: left;
+			border-color: $grey;
+
+			span {
+				font-weight: 700;
+				text-transform: uppercase;
+			}
+
+			@media (max-width: 860px) {
+				margin: $margin-small $margin-default;
+			}
 		}
 	}
 
-	img {
-		width: 100%;
-		margin-top: $margin-default;
-		margin-bottom: $margin-default;
-		@include shadowed;
-		@include rounded(2px);
+	.secondary {
+		// embedded codepen wrapper div
+		.cp_embed_wrapper {
+			margin: $margin-small 0;
+		}
 	}
 }

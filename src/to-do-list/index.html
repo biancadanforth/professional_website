@@ -7,7 +7,7 @@
   <meta name="description" content="Web portfolio for Bianca Danforth">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../../build/app.bundle.css">
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700 | Merriweather:300,400,400i,700" rel="stylesheet">
 </head>
@@ -47,11 +47,22 @@
   </header>
   <main id="main" class="work-page project-page" role="main">
     <section class="primary">
-      <h1>Project Name</h1>
+      <h1>To Do List</h1>
+      <h3>UX Design | Visual Design | Front-End Development</h3>
       <a href="/to-do-list" title="Go to live site" aria-label="Go to live site">
         <img class="project-thumbnail" src="../images/to-do-list.png" alt="">
       </a>
-      <h3>Beetroot water spinach okra water chestnut ricebean pea catsear courgette summer purslane. Water spinach arugula pea tatsoi aubergine spring onion bush tomato kale radicchio turnip chicory salsify pea sprouts fava bean.</h3>
+      <h2>Design Brief</h2>
+      <p>
+        <span>When</span> I have life coming at me from all angles.<br />
+        <span>I want to</span> sort out what's really important.</br>
+        <span>So I can</span> focus on the things that really matter and get back to doing what I want to do, not what I have to do.
+      </p>
+      <h4>Developer notes</h4>
+      <p>
+        This application does not rely on any libraries or frameworks; it was written from scratch in plain JavaScript, CSS and HTML.
+      </p>
+        
     </section>
     <section class="secondary">
       <h1 id="work">Process</h1>
@@ -62,7 +73,7 @@
         <!-- <h3></h3> -->
         <img class="project-thumbnail" src="../images/to-do-list-gather-information-cropped.JPG" alt="Benchmarking other to do list applications">
         <p class="project-description">
-          Soko radicchio bunya nuts gram dulse silver beet parsnip napa cabbage lotus root sea lettuce brussels sprout cabbage. Catsear cauliflower garbanzo yarrow salsify chicory garlic bell pepper napa cabbage lettuce tomato kale arugula melon sierra leone bologi rutabaga tigernut.
+          The project's primary goal was to build something useful in JavaScript. As a self-initiated project, I didn't have an explicit customer, but I consulted with professional designers, developers, friends and family who already make use of similar tools to understand what they valued most. I also looked at a number of professional productivity tools, like Todoist shown here, to develop a site map, user flow and information hierarchy.
         </p>
       </div>
       <div class="project">
@@ -71,7 +82,10 @@
         <!-- <h3></h3> -->
         <img class="project-thumbnail" src="../images/to-do-list-ideation-cropped.jpg" alt="">
         <p class="project-description">
-          Sea lettuce gumbo grape kale kombu cauliflower salsify kohlrabi okra sea lettuce broccoli celery lotus root carrot winter purslane turnip greens garlic. Jícama garlic courgette coriander radicchio plantain scallion cauliflower fava bean desert raisin spring onion chicory bunya nuts.
+          I made a list of all the features I could come up with that would be nice to have, and sorted them based on two factors: impact and feasibility.
+        </p>
+        <p>
+          I also took another pass benchmarking other productivity tools, this time looking for inspiration. I created the style tile shown here, which helps translate my application's personality into UI elements.
         </p>
       </div>
       <div class="project">
@@ -80,7 +94,15 @@
         <!-- <h3></h3> -->
         <img class="project-thumbnail" src="../images/to-do-list-prototype-cropped.png" alt="">
         <p class="project-description">
-          Soko radicchio bunya nuts gram dulse silver beet parsnip napa cabbage lotus root sea lettuce brussels sprout cabbage. Catsear cauliflower garbanzo yarrow salsify chicory garlic bell pepper napa cabbage lettuce tomato kale arugula melon sierra leone bologi rutabaga tigernut.
+          I made low- and high-fidelity, clickable wireframes in UXPin and InVision, respectively, and user-tested them with multiple professional web designers.
+        </p>
+        <p>
+          The first iteration, shown here, showed me that menus should be contextual. Deleting a list is a relatively rare occurence. Why not make it part of a list options menu that is accessible, but more visually subdued?
+        </p>
+        <p data-height="400" data-theme-id="light" data-slug-hash="LRrEGp" data-default-tab="result" data-user="biancadanforth" data-embed-version="2" data-pen-title="Search Filter V2" class="codepen">See the Pen <a href="http://codepen.io/biancadanforth/pen/LRrEGp/">Search Filter V2</a> by biancadanforth (<a href="http://codepen.io/biancadanforth">@biancadanforth</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+        <p>
+          I also broke up each major feature of the application into modules, developing them separately in Codepen and testing them in the browser before integrating them into the larger application. One module was the search filter, as shown here.
         </p>
       </div>
       <div class="project">
@@ -89,7 +111,19 @@
         <!-- <h3></h3> -->
         <img class="project-thumbnail" src="../images/to-do-list-refine-cropped.png" alt="">
         <p class="project-description">
-          Sea lettuce gumbo grape kale kombu cauliflower salsify kohlrabi okra sea lettuce broccoli celery lotus root carrot winter purslane turnip greens garlic. Jícama garlic courgette coriander radicchio plantain scallion cauliflower fava bean desert raisin spring onion chicory bunya nuts.
+          Testing of the high-fidelity wireframe, shown here, showed me that I need to minimize the amount of work the user needs to do to achieve a task. For example, rather than have an 'Add Task' button that the user must click to add a task, why not have a new task automatically created when the user submits the previous task?
+        </p>
+      </div>
+      <div class="project">
+         <!-- <h4></h4> -->
+        <h2>Final Thoughts</h2>
+        <!-- <h3></h3> -->
+        <img class="project-thumbnail" src="../images/to-do-list-cropped.png" alt="">
+        <p class="project-description">
+          I learned a great deal by completing this project about usability, testing, design workflow and modular code architecture. I am very happy with the result, but as with all things, there are always improvements that could be made if there were more time and resources to devote to the project.
+        </p>
+        <p>
+          For example, my JavaScript code was very difficult to refactor and debug. This was mostly due to its classical architecture. If I did it again, I would rewrite the code using a different architecture that separates the Model, View and Controller, such as using React.
         </p>
       </div>
     </section>

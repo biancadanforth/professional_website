@@ -32,7 +32,7 @@ body {
 	margin: 0;
 	font: {
 		family: $font-main;
-		size: 100%;
+		size: 1em;
 	}
 	// color overlay applied to background pattern
 	background:
@@ -69,6 +69,10 @@ body {
 
 	ul {
 		padding-left: $padding-small;
+	}
+
+	p {
+		font-size: 1.25em;
 	}
 }
 
