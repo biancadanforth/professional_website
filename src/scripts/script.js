@@ -17,3 +17,43 @@ function minimizeHeader() {
 var h = header.clientHeight;
 var main = document.getElementById("main");
 main.style.paddingTop = h.toString() + "px";
+
+
+// When a nav link is clicked, make that the active page in <nav>
+var homeNavLink = document.getElementById("home-nav-link");
+var workNavLink = document.getElementById("work-nav-link");
+var moreInfoNavLink = document.getElementById("more-info-nav-link");
+
+homeNavLink.onclick = function() {
+	updateActivePage(1);
+};
+
+workNavLink.onclick = function() {
+	updateActivePage(2);
+};
+
+moreInfoNavLink.onclick = function() {
+	updateActivePage(3);
+};
+
+
+function updateActivePage(n){
+	console.log('hi');
+	switch (n) {
+		// user clicked on 'Home' nav link
+		case 1:
+			header.classList.add("home-page");
+			header.classList.remove("work-page", "more-info-page");
+			break;
+		// user clicked on 'Work' nav link
+		case 2:
+			header.classList.add("work-page");
+			header.classList.remove("home-page", "more-info-page");
+			break;
+		// user clicked on 'More Info' nav link
+		case 3:
+			header.classList.add("more-info-page");
+			header.classList.remove("home-page", "work-page");
+			break;
+	}
+}
