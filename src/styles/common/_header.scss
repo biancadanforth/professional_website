@@ -20,13 +20,6 @@ header.minimize {
 	@media (max-width: 500px) {
 		padding-bottom: 10px;
 	}
-
-	ul li {
-		&:first-child {
-			padding-bottom: 5px;
-			transition: padding-bottom 0.5s linear;
-		}
-	}
 }
 
 header {
@@ -149,15 +142,18 @@ header {
 	color: $grey;
 	
 	@media (max-width: 500px) {
-		font-size: .75em;
+		font-size: .9em;
+		padding-left: 0;
 		overflow: hidden;
 	}
 
 	li {
 		margin: 0 $margin-small;
+		padding-bottom: 10px;
+		border-bottom: 3px transparent solid;
+
 		&:first-child {
-				padding-bottom: 10px;
-				border-bottom: 3px $yellow solid;
+				border-color: $yellow;
 				margin-left: 0;
 				transition: padding-bottom 0.5s linear;
 			}
@@ -203,6 +199,48 @@ header {
 
 		@media (max-width: 500px) {
 			display: none;
+		}
+	}
+}
+
+/*******************************************
+******* <nav> Active Page Indicator ********
+*******************************************/
+
+header.home-page {
+	ul li {
+		&:nth-child(1) {
+			padding-bottom: 10px;
+			border-color: $yellow;
+			transition: padding-bottom 0.5s linear;
+		}
+	}
+}
+
+header.work-page {
+	ul li {
+		&:first-child {
+			border-color: transparent;
+		}
+
+		&:nth-child(2) {
+			padding-bottom: 10px;
+			border-color: $yellow;
+			transition: padding-bottom 0.5s linear;
+		}
+	}
+}
+
+header.more-info-page {
+	ul li {
+		&:first-child {
+			border-color: transparent;
+		}
+
+		&:nth-child(3) {
+			padding-bottom: 10px;
+			border-color: $yellow;
+			transition: padding-bottom 0.5s linear;
 		}
 	}
 }
