@@ -6,14 +6,14 @@
   <title>Bianca Danforth: Product Designer turned Web Designer</title>
   <meta name="description" content="Web portfolio for Bianca Danforth">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../build/app.bundle.css">
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../../build/app.bundle.css">
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700 | Merriweather:300,400,400i,700" rel="stylesheet">
 </head>
 <body>
 <div class="page-wrap"> 
-  <header id="header" class="home-page" role="banner">
+  <header id="header" class="contact-page" role="banner">
     <div>
       <span>
         <a href="http://www.biancadanforth.com" class="icon-link">
@@ -44,70 +44,38 @@
       </nav>
     </div>
   </header>
-  <main id="main" class="home-page" role="main">
+  <main id="main" class="contact-page" role="main">
     <section class="primary">
-      <div class="welcome-wrapper">
-        <div class="welcome-profile-wrapper">
-          <img class="welcome-profile" src="images/biancaWeld.jpg" alt="Bianca Danforth">
+      <form action="" method="post">
+        <label>Name
+          <input type="text" name="Name" placeholder="Joe Schmoe" required>
+        </label>
+        <label>E-mail
+          <input type="Email" name="email" placeholder="joeschmoe@example.com" required>
+        </label>
+        <label>Message
+          <textarea name="Message" placeholder="I'd like to hire you." required></textarea>
+        </label>
+        <input type="submit" value="Send">
+      </form>
+      <div class="contact-header-wrapper">
+        <div class="contact-header">
+          <h2>Drop me a line!</h2>
+          <h3>biancadanforth at gmail dot com</h3>
+          <span class="contact-subheader">
+            <span class="down-arrow-wrapper">
+              <span class="down-arrow bounce">
+                <span class="down-arrow-stem"></span>
+                <span class="down-arrow-point"></span>
+              </span>
+            </span>
+            <h4>You can also connect with me on social media</h4>
+          </span>
         </div>
-        <div class="welcome-message-wrapper">
-          <h2 class="welcome-message">Front-end web nerd. Former mechanical engineer.</h2>
-          <h3><span>Tools:</span> JavaScript, Sass, Mild Steel</h3>
-          <button>Let's work together</button>
-          <p><a href="javascript:void(0)">View my resume</a></p>
-        </div>
-      </div>
-    </section>
-    <section class="secondary">
-      <h1 id="work">Work</h1>
-      <div class="work-wrapper">
-      <div class="project">
-        <h4>2016 | Self-Initiated</h4>
-        <h2>To Do List</h2>
-        <h3>Tools: vanilla JavaScript, HTML, CSS, Photoshop</h3>
-        <p class="project-description">
-          A single page application where users can add, edit, delete, complete, undo and search tasks.
-        </p>
-        <a class="project-thumbnail" href="/to-do-list">
-          <img src="images/to-do-list-cropped.png" alt="To Do List application">
-        </a>
-      </div>
-      <div class="project">
-        <h4>2016 | Self-Initiated</h4>
-        <h2>E-mail Sign-up</h2>
-        <h3>Tools: HTML, CSS, Photoshop</h3>
-        <p class="project-description">
-          A static page where users can subscribe to a newsletter, contact, and learn more about Skillcrush.
-        </p>
-        <a class="project-thumbnail" href="#e-mail-sign-up">
-        <img src="images/e-mail-sign-up-cropped.jpg" alt="E-mail Sign Up Page">
-        </a>
-      </div>
-      <div class="project">
-        <h4>2015 | Exploratorium</h4>
-        <h2>Ferrofluid Pool</h2>
-        <h3>Tools: Inventor, Mill, Lathe, Router</h3>
-        <p class="project-description">
-          A science exhibit where visitors can turn a hand crank to watch ferrofluid rise up different sculptures.
-        </p>
-        <a class="project-thumbnail" href="#ferrofluid-pool">
-        <img src="images/ferrofluid-pool-cropped.jpg" alt="Ferrofluid Pool science exhibit">
-        </a>
-      </div>
-      <div class="project">
-        <h4>2012 | Stanford</h4>
-        <h2>Twist</h2>
-        <h3>Tools: SolidWorks, TIG Machine, Tube Bender</h3>
-        <p class="project-description">
-         An ergonomic chair, inspired by M.C. Escher, made of arc-welded steel and lycra.
-        </p>
-        <a class="project-thumbnail" href="#chair">
-          <img src="images/chair-cropped.jpg" alt="Chair">
-        </a>
       </div>
     </section>
   </main>
-<footer class="home-page">
+<footer class="contact-page">
   <span>
     <a href="http://codepen.io/biancadanforth/" target="_blank" aria-label="Codepen" title="Codepen">
       <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -183,6 +151,6 @@
   <p>&#169; Bianca Danforth 2017</p>
 </footer>
 </div>
-<script src="scripts/script.js"></script>
+<script src="../scripts/script.js"></script>
 </body>
 </html>

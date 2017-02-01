@@ -12,7 +12,7 @@
 
 	h1 {
 		@include section-title($off-white);
-		margin-bottom: 1.5*$margin-default;
+		padding-bottom: 1.5*$padding-default;
 	}
 	svg {
 		width: 20px;

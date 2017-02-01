@@ -7,5 +7,8 @@
 	h1 {
 		@include section-title;
 	}
+}
+
+main.home-page .primary, main.work-page .primary {
 	@include diagonal-background-top;
 }

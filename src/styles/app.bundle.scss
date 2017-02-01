@@ -1,8 +1,8 @@
 // app.bundle.scss
 
 // Boilerplates
-@import 'lib/reset.css';
-@import 'lib/normalize.css';
+@import '../src/styles/lib/reset.css';
+@import '../src/styles/lib/normalize.css';
 
 // Global constants & styles
 @import '_globals';
@@ -12,6 +12,7 @@
 @import 'mixins/_section-title';
 @import 'mixins/_box-shadow';
 @import 'mixins/_border-radius';
+@import 'mixins/_bouncing-arrow';
 
 // Common elements
 @import 'common/_header';
@@ -21,5 +22,6 @@
 
 // Components
 @import 'components/_home';
-// @import 'components/about';
-// @import 'components/contact';
+@import 'components/_about';
+@import 'components/_project';
+@import 'components/_contact';
