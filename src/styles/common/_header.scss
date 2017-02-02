@@ -30,8 +30,8 @@ header {
 	transform: translateX(-50%);
 	z-index: 1;
 	width: 100vw;
-	padding-top: $padding-default;
-	padding-bottom: $padding-default;
+	padding-top: $margin-default;
+	padding-bottom: 2*$margin-default;
 	background:
 	/* top, transparent $off-white, faked with gradient */ 
 	linear-gradient(
@@ -41,6 +41,10 @@ header {
 	/* bottom, image */
 	url("../src/images/pw_maze_white.png");
 	transition: padding-top 0.5s linear, padding-bottom 0.5s linear;
+
+	@media (max-width: 1260px) {
+		padding-bottom: 2*$margin-small;
+	}
 
 	@media (max-width:400px) {
 		padding: $padding-small;
@@ -241,6 +245,14 @@ header.more-info-page {
 			padding-bottom: 10px;
 			border-color: $yellow;
 			transition: padding-bottom 0.5s linear;
+		}
+	}
+}
+
+header.project-page {
+	ul li {
+		&:first-child {
+			border-color: transparent;
 		}
 	}
 }

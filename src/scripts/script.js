@@ -43,17 +43,17 @@ function updateActivePage(n){
 		// user clicked on 'Home' nav link
 		case 1:
 			header.classList.add("home-page");
-			header.classList.remove("work-page", "more-info-page");
+			header.classList.remove("work-page", "more-info-page", "project-page");
 			break;
 		// user clicked on 'Work' nav link
 		case 2:
 			header.classList.add("work-page");
-			header.classList.remove("home-page", "more-info-page");
+			header.classList.remove("home-page", "more-info-page", "project-page");
 			break;
 		// user clicked on 'More Info' nav link
 		case 3:
 			header.classList.add("more-info-page");
-			header.classList.remove("home-page", "work-page");
+			header.classList.remove("home-page", "work-page", "project-page");
 			break;
 	}
 }

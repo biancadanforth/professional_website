@@ -13,7 +13,7 @@
 </head>
 <body>
 <div class="page-wrap"> 
-  <header id="header" class="work-page" role="banner">
+  <header id="header" class="project-page" role="banner">
     <div>
       <span>
         <a href="http://www.biancadanforth.com" class="icon-link">
@@ -39,32 +39,37 @@
         <ul>
           <li><a id="home-nav-link" href="#home" aria-label="Home">Home</a></li>
           <li><a id="work-nav-link" href="#work" aria-label="Work">Work</a></li>
-          <li><a id="more-info-nav-link" href="#about" aria-label="More Info">More Info</a></li>
+          <li><a id="more-info-nav-link" href="#more-info" aria-label="More Info">More Info</a></li>
         </ul>
       </nav>
     </div>
   </header>
   <main id="main" class="work-page project-page" role="main">
     <section class="primary">
-      <h1>To Do List</h1>
-      <h3>UX Design | Visual Design | Front-End Development</h3>
-      <a href="/to-do-list" title="Go to live site" aria-label="Go to live site">
-        <img class="project-thumbnail" src="../images/to-do-list.png" alt="">
-      </a>
-      <h2>Design Brief</h2>
-      <p>
-        <span>When</span> I have life coming at me from all angles.<br />
-        <span>I want to</span> sort out what's really important.</br>
-        <span>So I can</span> focus on the things that really matter and get back to doing what I want to do, not what I have to do.
-      </p>
-      <h4>Developer notes</h4>
-      <p>
-        This application does not rely on any libraries or frameworks; it was written from scratch in plain JavaScript, CSS and HTML.
-      </p>
-        
+      <div class="primary-wrapper">
+        <h1>To Do List</h1>
+        <h3>UX Design | Visual Design | Front-End Development</h3>
+        <div class="project-hero-wrapper">
+          <a href="/to-do-list" title="Go to live site" aria-label="Go to live site">
+            <img class="project-thumbnail" src="../images/to-do-list-glamour-final.png" alt="">
+          </a>
+          <div>
+            <h2>Design Brief</h2>
+            <p>
+              <span>When</span> I have life coming at me from all angles.<br />
+              <span>I want to</span> sort out what's really important.</br>
+              <span>So I can</span> focus on the things that really matter and get back to doing what I want to do, not what I have to do.
+            </p>
+            <h4>Developer notes</h4>
+            <p>
+              This application does not rely on any libraries or frameworks; it was written from scratch in plain JavaScript, CSS and HTML.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="secondary">
-      <h1 id="work">Process</h1>
+      <h1>Process</h1>
       <div class="work-wrapper">
       <div class="project">
         <!-- <h4></h4> -->
@@ -89,7 +94,7 @@
       </div>
       <div class="project">
          <!-- <h4></h4> -->
-        <h2>Prototype</h2>
+        <h2>Wireframe</h2>
         <!-- <h3></h3> -->
         <img class="project-thumbnail" src="../images/to-do-list-prototype-cropped.png" alt="">
         <p class="project-description">
@@ -98,6 +103,9 @@
         <p>
           The first iteration, shown here, showed me that menus should be contextual. Deleting a list is a relatively rare occurence. Why not make it part of a list options menu that is accessible, but more visually subdued?
         </p>
+      </div>
+      <div class="project">
+        <h2>Prototype</h2>
         <p data-height="400" data-theme-id="light" data-slug-hash="LRrEGp" data-default-tab="result" data-user="biancadanforth" data-embed-version="2" data-pen-title="Search Filter V2" class="codepen">See the Pen <a href="http://codepen.io/biancadanforth/pen/LRrEGp/">Search Filter V2</a> by biancadanforth (<a href="http://codepen.io/biancadanforth">@biancadanforth</a>) on <a href="http://codepen.io">CodePen</a>.</p>
         <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
         <p>
@@ -106,18 +114,18 @@
       </div>
       <div class="project">
          <!-- <h4></h4> -->
-        <h2>Refine</h2>
+        <h2>Mock-Up & Development</h2>
         <!-- <h3></h3> -->
         <img class="project-thumbnail" src="../images/to-do-list-refine-cropped.png" alt="">
         <p class="project-description">
-          Testing of the high-fidelity wireframe, shown here, showed me that I need to minimize the amount of work the user needs to do to achieve a task. For example, rather than have an 'Add Task' button that the user must click to add a task, why not have a new task automatically created when the user submits the previous task?
+          Testing of the high-fidelity wireframe, based off of a working Photoshop static, showed me that I need to minimize the amount of work the user needs to do to achieve a task. For example, rather than have an 'Add List Item' button that the user must click to add a task, why not have a new task automatically created when the user submits the previous task?
         </p>
       </div>
       <div class="project">
          <!-- <h4></h4> -->
         <h2>Final Thoughts</h2>
         <!-- <h3></h3> -->
-        <img class="project-thumbnail" src="../images/to-do-list-cropped.png" alt="">
+        <img class="project-thumbnail wrap-up" src="../images/to-do-list-glamour-final.png" alt="">
         <p class="project-description">
           I learned a great deal by completing this project about usability, testing, design workflow and modular code architecture. I am very happy with the result, but as with all things, there are always improvements that could be made if there were more time and resources to devote to the project.
         </p>
