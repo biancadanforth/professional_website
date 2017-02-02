@@ -38,7 +38,6 @@ moreInfoNavLink.onclick = function() {
 
 
 function updateActivePage(n){
-	console.log('hi');
 	switch (n) {
 		// user clicked on 'Home' nav link
 		case 1:
