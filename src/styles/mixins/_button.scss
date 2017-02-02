@@ -1,0 +1,24 @@
+// button.scss
+
+@mixin buttoned {
+  position: relative;
+  display: inline-block;
+  background-color: $off-white;
+  padding: .5*$padding-small $padding-small;
+  margin-top: $margin-small;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  color: $dark-grey;
+  letter-spacing: $letter-spacing;
+  text-transform: uppercase;
+  @include rounded(2px);
+  @include shadowed;
+  border: 1px solid $dark-grey;
+  transition: background 1s;
+
+  &:hover {
+    background-color: $yellow;
+  	transition: background 1s;
+  }
+}
