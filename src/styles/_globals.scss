@@ -9,6 +9,7 @@ $blue: rgb(41,128,185);
 $yellow: rgb(241,196,15);
 $dark-grey: rgb(84,84,84);
 $grey: rgb(109,109,109);
+$light-grey: lighten($grey, 40%);
 
 // FONTS
 $font-main: 'Montserrat', sans-serif;
