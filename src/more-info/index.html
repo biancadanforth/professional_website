@@ -36,10 +36,17 @@
         <h1>Bianca Danforth</h1>
       </span>
       <nav role="navigation">
-        <ul>
-          <li><a id="home-nav-link" href="http://biancadanforth.com" aria-label="Home">Home</a></li>
-          <li><a id="work-nav-link" href="../#work" aria-label="Work">Work</a></li>
-          <li><a id="more-info-nav-link" href="/more-info" aria-label="More Info">More Info</a></li>
+        <ul class="menu">
+          <li><a id="home-nav-link" href="javascript:void(0)" aria-label="Home">Home</a></li>
+          <li id="work-nav-list-item"><a id="work-nav-link" href="javascript:void(0)" aria-label="Work">Work</a>
+            <ul class="submenu hidden" id="dropdown-submenu">
+              <li><a href="javascript:void(0)">To Do List</a></li>
+              <li><a href="javascript:void(0)">E-mail Sign-up</a></li>
+              <li><a href="javascript:void(0)">Ferrofluid Pool</a></li>
+              <li><a href="javascript:void(0)">Twist</a></li>
+            </ul>
+          </li>
+          <li><a id="more-info-nav-link" href="javascript:void(0)" aria-label="More Info">More Info</a></li>
         </ul>
       </nav>
     </div>

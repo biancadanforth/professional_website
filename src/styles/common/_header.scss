@@ -134,6 +134,7 @@ header {
 		display: flex;
 		justify-content: space-between;
 		list-style: none;
+		padding-left: 0;
 		margin: 0;
 		font: {
 			weight: bold;
@@ -144,31 +145,25 @@ header {
 			transform: uppercase;
 		}
 		color: $grey;
-		
+
 		@media (max-width: 500px) {
 			font-size: .9em;
-			padding-left: 0;
-			overflow: hidden;
+			//overflow-x: hidden;
 		}
 
 		> li {
-			margin: 0 $margin-small;
-			padding-bottom: 10px;
+			padding-bottom: 5px;
+			margin: 0 1em;
+			border-bottom: 3px transparent solid;
 			
-			&:first-child {
-					
-					border-color: $yellow;
+			&:first-child {	
+					//border-color: $yellow;
 					margin-left: 0;
 					transition: padding-bottom 0.5s linear;
 				}
 
 			&:last-child {
 				margin-right: 0;
-				padding-bottom: 10px;
-			}
-
-			@media (max-width: 500px) {
-				margin: 0 .65*$margin-small;
 			}
 
 			> a {
@@ -200,7 +195,7 @@ header {
 					overflow: hidden;
 					visibility: hidden;
 
-					@media (max-width: 500px) {
+					@media(max-width: 500px) {
 						display: none;
 					}
 				}
@@ -218,17 +213,8 @@ header {
 header.home-page {
 	ul.menu > li {
 		&:nth-child(1) {
-			padding-bottom: 10px;
 			border-color: $yellow;
 			transition: padding-bottom 0.5s linear;
-		}
-	}
-}
-
-header.work-page {
-	ul.menu > li {
-		&:first-child {
-			border-color: transparent;
 		}
 	}
 }
@@ -240,7 +226,6 @@ header.more-info-page {
 		}
 
 		&:nth-child(3) {
-			padding-bottom: 10px;
 			border-color: $yellow;
 			transition: padding-bottom 0.5s linear;
 		}

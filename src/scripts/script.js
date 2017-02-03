@@ -28,19 +28,14 @@ main.style.paddingTop = h.toString() + "px";
 *******************************************************/
 
 var homeNavLink = document.getElementById("home-nav-link");
-var workNavLink = document.getElementById("work-nav-link");
 var moreInfoNavLink = document.getElementById("more-info-nav-link");
 
 homeNavLink.onclick = function() {
 	updateActivePage(1);
 };
 
-workNavLink.onclick = function() {
-	updateActivePage(2);
-};
-
 moreInfoNavLink.onclick = function() {
-	updateActivePage(3);
+	updateActivePage(2);
 };
 
 
@@ -51,13 +46,8 @@ function updateActivePage(n){
 			header.classList.add("home-page");
 			header.classList.remove("work-page", "more-info-page", "project-page");
 			break;
-		// user clicked on 'Work' nav link
-		case 2:
-			header.classList.add("work-page");
-			header.classList.remove("home-page", "more-info-page", "project-page");
-			break;
 		// user clicked on 'More Info' nav link
-		case 3:
+		case 2:
 			header.classList.add("more-info-page");
 			header.classList.remove("home-page", "work-page", "project-page");
 			break;
