@@ -130,81 +130,85 @@ header {
 			}
 	}
 
-	nav ul {
-	display: flex;
-	justify-content: space-between;
-	list-style: none;
-	margin: 0;
-	font: {
-		weight: bold;
-	}
-	line-height: 1em;
-	text: {
-		align: center;
-		transform: uppercase;
-	}
-	color: $grey;
-	
-	@media (max-width: 500px) {
-		font-size: .9em;
-		padding-left: 0;
-		overflow: hidden;
-	}
-
-	li {
-		margin: 0 $margin-small;
-		padding-bottom: 10px;
-		border-bottom: 3px transparent solid;
-
-		&:first-child {
-				border-color: $yellow;
-				margin-left: 0;
-				transition: padding-bottom 0.5s linear;
-			}
-		&:last-child {
-			margin-right: 0;
+	nav > .menu {
+		display: flex;
+		justify-content: space-between;
+		list-style: none;
+		margin: 0;
+		font: {
+			weight: bold;
 		}
-
-		@media (max-width: 500px) {
-			margin: 0 .65*$margin-small;
+		line-height: 1em;
+		text: {
+			align: center;
+			transform: uppercase;
 		}
-	}
-
-	a {
-		@extend %no-underline;
 		color: $grey;
-		letter-spacing: $letter-spacing;
-		transition: letter-spacing .5s;
+		
+		@media (max-width: 500px) {
+			font-size: .9em;
+			padding-left: 0;
+			overflow: hidden;
+		}
 
-		&:hover {
-			letter-spacing: 5px;
-			transition: letter-spacing .5s;
+		> li {
+			margin: 0 $margin-small;
+			padding-bottom: 10px;
+			
+			&:first-child {
+					
+					border-color: $yellow;
+					margin-left: 0;
+					transition: padding-bottom 0.5s linear;
+				}
+
+			&:last-child {
+				margin-right: 0;
+				padding-bottom: 10px;
+			}
 
 			@media (max-width: 500px) {
+				margin: 0 .65*$margin-small;
+			}
+
+			> a {
+				@extend %no-underline;
+				color: $grey;
 				letter-spacing: $letter-spacing;
-				transition: none;
+				transition: letter-spacing .5s;
+
+				&:hover {
+					letter-spacing: 5px;
+					transition: letter-spacing .5s;
+
+					@media (max-width: 500px) {
+						letter-spacing: $letter-spacing;
+						transition: none;
+					}
+				}
+
+				/* Reserve space for letter-spacing (or any :hover state styles)
+				* content in ::after pseudo element and using title attribute
+				* in HTML as a source for content.
+				*/
+				&::after {
+					display: block;
+					content: attr(aria-label);
+					letter-spacing: 5px;
+					height: 0;
+					color: transparent;
+					overflow: hidden;
+					visibility: hidden;
+
+					@media (max-width: 500px) {
+						display: none;
+					}
+				}
 			}
 		}
 	}
-}
 
-	/* Reserve space for letter-spacing (or any :hover state styles)
-	* content in ::after pseudo element and using title attribute
-	* in HTML as a source for content.
-	*/
-	a::after {
-		display: block;
-		content: attr(aria-label);
-		letter-spacing: 5px;
-		height: 0;
-		color: transparent;
-		overflow: hidden;
-		visibility: hidden;
-
-		@media (max-width: 500px) {
-			display: none;
-		}
-	}
+	@include dropdown-menu;
 }
 
 /*******************************************
@@ -212,7 +216,7 @@ header {
 *******************************************/
 
 header.home-page {
-	ul li {
+	ul.menu > li {
 		&:nth-child(1) {
 			padding-bottom: 10px;
 			border-color: $yellow;
@@ -222,21 +226,15 @@ header.home-page {
 }
 
 header.work-page {
-	ul li {
+	ul.menu > li {
 		&:first-child {
 			border-color: transparent;
-		}
-
-		&:nth-child(2) {
-			padding-bottom: 10px;
-			border-color: $yellow;
-			transition: padding-bottom 0.5s linear;
 		}
 	}
 }
 
 header.more-info-page {
-	ul li {
+	ul.menu > li {
 		&:first-child {
 			border-color: transparent;
 		}
@@ -250,7 +248,7 @@ header.more-info-page {
 }
 
 header.project-page {
-	ul li {
+	ul.menu > li {
 		&:first-child {
 			border-color: transparent;
 		}

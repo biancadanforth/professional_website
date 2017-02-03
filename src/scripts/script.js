@@ -1,4 +1,6 @@
-// Header transitions when scrolling
+/*******************************************************
+* Header transitions when scrolling
+*******************************************************/
 
 var header = document.getElementById("header");
 
@@ -12,14 +14,19 @@ function minimizeHeader() {
 	}
 }
 
-// Ensure adequate space at top of page for fixed header
+/*******************************************************
+* Ensure adequate space at top of page for fixed header
+*******************************************************/
 
 var h = header.clientHeight;
 var main = document.getElementById("main");
 main.style.paddingTop = h.toString() + "px";
 
 
-// When a nav link is clicked, make that the active page in <nav>
+/*******************************************************
+* When a nav link is clicked, make that the active page in <nav>
+*******************************************************/
+
 var homeNavLink = document.getElementById("home-nav-link");
 var workNavLink = document.getElementById("work-nav-link");
 var moreInfoNavLink = document.getElementById("more-info-nav-link");
@@ -55,4 +62,33 @@ function updateActivePage(n){
 			header.classList.remove("home-page", "work-page", "project-page");
 			break;
 	}
+}
+
+/*******************************************************
+* <nav> Work link submenu controls
+*******************************************************/
+
+var dropdownSubmenu = document.getElementById("dropdown-submenu");
+var workNavListItem = document.getElementById("work-nav-list-item");
+
+workNavListItem.onclick = showDropdown;
+
+// Hide dropdown menu when user clicks away from workNavListItem
+document.addEventListener('click', function(event) {
+  var isClickInside = workNavListItem.contains(event.target);
+
+  // if the user clicks anywhere other than the workNavListItem
+  if (!isClickInside) {
+    hideDropdown();
+  }
+});
+
+function showDropdown() {
+  dropdownSubmenu.classList.toggle("hidden");
+  workNavListItem.classList.toggle("active");
+}
+
+function hideDropdown() {
+  dropdownSubmenu.classList.add("hidden");
+  workNavListItem.classList.remove("active");
 }

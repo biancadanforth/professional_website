@@ -36,9 +36,16 @@
         <h1>Bianca Danforth</h1>
       </span>
        <nav role="navigation">
-        <ul>
+        <ul class="menu">
           <li><a id="home-nav-link" href="http://biancadanforth.com" aria-label="Home">Home</a></li>
-          <li><a id="work-nav-link" href="#work" aria-label="Work">Work</a></li>
+          <li id="work-nav-list-item"><a id="work-nav-link" href="#" aria-label="Work">Work</a>
+            <ul class="submenu hidden" id="dropdown-submenu">
+              <li><a href="#">Item 1</a></li>
+              <li><a href="#">Item 2</a></li>
+              <li><a href="#">Item 3</a></li>
+              <li><a href="#">Item 4</a></li>
+            </ul>
+          </li>
           <li><a id="more-info-nav-link" href="/more-info" aria-label="More Info">More Info</a></li>
         </ul>
       </nav>
