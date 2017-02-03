@@ -9,6 +9,12 @@
 	}
 }
 
-main.home-page .primary, main.work-page .primary {
+main.home-page .primary {
 	@include diagonal-background-top;
+}
+
+main.more-info-page .primary {
+	@media(max-width: 900px) {
+		@include diagonal-background-top;
+	}
 }

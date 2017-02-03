@@ -51,4 +51,9 @@ footer.home-page, footer.work-page {
 footer.more-info-page {
 	margin-top: 2*$margin-default;
 	text-align: center;
+
+	@media (max-width: 900px) {
+		margin-top: 0;
+		@include diagonal-background-bottom;
+	}
 }

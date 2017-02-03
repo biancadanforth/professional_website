@@ -82,3 +82,18 @@ function hideDropdown() {
   dropdownSubmenu.classList.add("hidden");
   workNavListItem.classList.remove("active");
 }
+
+/*******************************************************
+* 'More Info' page form submission values for Formspree.io
+*******************************************************/
+
+var emailInput = document.getElementById("e-mail");
+var carbonCopy = document.getElementById("carbon-copy");
+
+// Any time the value of the input changes, updateUserEmail()
+emailInput.oninput = updateUserEmail;
+
+function updateUserEmail() {
+	var userEmail = emailInput.value;
+	carbonCopy.setAttribute("value", userEmail);
+}

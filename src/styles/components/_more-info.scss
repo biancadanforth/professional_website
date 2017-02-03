@@ -1,7 +1,33 @@
 // about.scss
 
 .more-info-page {
-		
+
+	.secondary {
+		display: none;
+
+		@media (max-width: 900px) {
+			display: block;
+
+			.contact-body {
+				
+				padding-bottom: 2*$padding-default;
+
+				h2 {
+				color: $off-white !important;
+				padding-top: 2*$margin-default;
+				}
+
+				input[type="email"], input[type="text"], textarea {
+					border-color: $blue;
+
+					&:focus {
+						border-color: $off-white;
+					}
+				}
+			}
+		}
+	}
+
 	.primary {
 		display: flex;
   	margin: 0 auto 2*$margin-default;
@@ -10,25 +36,25 @@
   	@media (max-width: 1260px) {
   		margin-left: $margin-default;
   		margin-right: $margin-default;
-
-  		.contact-body, .about-body {
-  			flex-basis: 50%;
-  		}
   	}
 
   	@media (max-width: 900px) {
   		flex-direction: column;
-  		margin-left: $margin-small;
-  		margin-right: $margin-small;
+  		margin: 0 auto;
 
   		.contact-body, .about-body {
   			flex-basis: 100%;
+  		}
+
+  		.contact-body {
+  			display: none;
   		}
 
   		.about-body {
   			order: -1;
   			margin-bottom: $margin-default;
   			align-items: center;
+  			padding: $padding-default;
 
   			.about-copy {
   				max-width: 600px;
@@ -54,12 +80,27 @@
 
 	.contact-body {
 	  box-sizing: border-box;
-	  flex: 0 1 33%;
-	  text-align: start;
-	  font-family: 'Montserrat';
-	  border: 1px solid lighten($grey, 40%);
-	  border-radius: 2px;
-	  padding: $margin-default;
+	  flex: 0 1 50%;
+	  align-self: stretch;
+	  display: flex;
+	 	flex-direction: column;
+
+	  h2 {
+	  	color: $dark-grey;
+	  }
+
+	  h4 {
+	  	border-bottom: none;
+	  }
+
+	  .form-wrapper {
+		  border: 1px solid lighten($grey, 40%);
+		  border-radius: 2px;
+		  padding: $margin-default;
+		  text-align: start;
+	  	font-family: 'Montserrat';
+	  	height: 100%;
+	  }
 
 		form {
 		  height: 100%;
@@ -91,6 +132,7 @@
 
 			input {
 				min-height: 50px;
+				@include rounded(2px);
 			}
 
 			input[type="text"],
@@ -99,6 +141,7 @@
 				background-color: rgba(255, 255, 255, 0.3);
 				border: 0.5px solid lighten($grey, 40%);
 				box-shadow: inset 1px 1px 0 0.5px rgba(0,0,0,0.3);
+				font-family: 'Montserrat', sans-serif;
 				
 				&:focus {
 					outline: none;
@@ -106,7 +149,7 @@
 				}
 			}
 
-			input, :placeholder-shown {
+			input {
 			  font-family: 'Montserrat';
 			  text-indent: .33*$margin-default;
 			  line-height: 1.5;
@@ -121,6 +164,7 @@
 			input[type="submit"] {
 			  width: 50%;
 			  @include buttoned;
+			  text-indent: 0;
 
 			  @media (max-width: 500px) {
 			  	width: 100%;
@@ -132,16 +176,23 @@
 				flex-direction: column;
 				height: 100%;
 			}
+			
+			input::placeholder, textarea::placeholder {
+				color: $off-white !important;
+			}
 
 			textarea {
 				resize: none;
 				height: 100%;
 				min-height: 150px;
+				@include rounded(2px);
 			}
 
-			.g-recaptcha {
-				margin-top: 20px;
+			.note {
+				font-size: 0.75em;
+				margin-top: 10px;
 			}
+
 		}
 	}
 
@@ -151,7 +202,7 @@
 		flex-flow: column wrap;
 		align-items: flex-start;
 		max-width: 1200px;
-		flex: 0 1 67%;
+		flex: 0 1 50%;
 
 		& > div:first-child {
 			width: 100%;
@@ -160,6 +211,11 @@
 			h2 {
 				margin-top: 0;
 				color: $dark-grey;
+			}
+
+			p {
+				margin-bottom: $margin-default;
+				text-align: center !important;
 			}
 		}
 
