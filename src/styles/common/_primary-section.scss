@@ -9,7 +9,7 @@
 	}
 }
 
-main.home-page .primary {
+main.home-page .primary, main.to-do-list .primary, main.e-mail-sign-up .primary, main.ferrofluid-pool .primary, main.twist .primary {
 	@include diagonal-background-top;
 }
 

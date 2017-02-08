@@ -24,7 +24,8 @@ class Main extends React.Component {
       <main 
         id="main" 
         className={this.props.currentPage} 
-        role="main">
+        role="main"
+        style={{ paddingTop: (this.props.yOffset).toString() + 'px'}}>
         {this.mainContent}
       </main>
     );

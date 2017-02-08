@@ -6,7 +6,19 @@ class Dropdown extends React.Component {
   render() {
     return (
       <ul className= {this.props.isOpen ? 'submenu' : 'submenu hidden'}>
-        <li><a href="javascript:void(0)">To Do List</a></li>
+        <li>
+          <a 
+          href="javascript:void(0)"
+          onClick={() => {
+            // pass this click up to change the state of App, which then propagates the change to its children components
+            this.props.onPageChange('to-do-list');
+            //close dropdown menu when this submenu item is clicked
+            this.props.onClick();
+            }
+          }
+          >To Do List
+          </a>
+          </li>
         <li><a href="javascript:void(0)">E-mail Sign-up</a></li>
         <li><a href="javascript:void(0)">Ferrofluid Pool</a></li>
         <li><a href="javascript:void(0)">Twist</a></li>
@@ -31,6 +43,14 @@ class Header extends React.Component {
         this.setState({dropdownOpen: false});
       }
     });
+
+    let node = ReactDOM.findDOMNode(this.refs['header']);
+    if (node) {
+      console.log(node);
+      let headerHeight = node.clientHeight;
+      console.log(headerHeight);
+      this.props.calculateHeight(headerHeight);
+    }
   }
 
   componentWillUnmount() {
@@ -48,7 +68,7 @@ class Header extends React.Component {
 
   render() {
     return (
-    	<header id="header" className= {this.props.currentPage} role="banner">
+    	<header id="header" className= {this.props.currentPage} ref="header" role="banner">
         <div>
           <span>
             <a href="http://www.biancadanforth.com" className="icon-link">
@@ -58,12 +78,30 @@ class Header extends React.Component {
           </span>
            <nav role="navigation">
             <ul className="menu">
-              <li><a id="home-nav-link" href="javascript:void(0)" onClick={() => this.props.onPageChange('home-page')} aria-label="Home">Home</a></li>
+              <li>
+                <a 
+                  id="home-nav-link"
+                  href="javascript:void(0)"
+                  onClick={() => this.props.onPageChange('home-page')}
+                  aria-label="Home">Home
+                </a>
+              </li>
               <li className={this.state.dropdownOpen ? 'active' : null} id="work-nav-list-item" ref= "workListItem">
                 <a id="work-nav-link" href="javascript:void(0)" onClick={this.handleClick.bind(this)} aria-label="Work">Work</a>
-                <Dropdown isOpen={this.state.dropdownOpen} />
+                <Dropdown
+                  isOpen={this.state.dropdownOpen}
+                  onPageChange={(pageClicked) => this.props.onPageChange(pageClicked)}
+                  onClick = {() => this.handleClick()}
+                  />
               </li>
-              <li><a id="more-info-nav-link" href="javascript:void(0)" onClick={() => this.setState({currentPage: 'more-info-page'})} aria-label="More Info">More Info</a></li>
+              <li>
+                <a
+                  id="more-info-nav-link"
+                  href="javascript:void(0)"
+                  onClick={() => this.props.onPageChange('more-info-page')}
+                  aria-label="More Info">More Info
+                </a>
+              </li>
             </ul>
           </nav>
         </div>

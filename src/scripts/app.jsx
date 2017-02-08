@@ -4,19 +4,29 @@ class App extends React.Component {
   	super();
   	this.state = {
   		currentPage: 'more-info-page',
+  		mainYOffset: 116,
   	}
   }
 
   updateCurrentPage(pageClicked) {
-  	console.log("yo");
   	this.setState({currentPage: pageClicked});
+  }
+
+  setMainYOffset(h) {
+  	console.log("entered setMainOffset() function");
+  	this.setState({mainYOffset: h});
   }
 
   render() {
     return (
     	<div>
-	    	<Header currentPage={this.state.currentPage} onPageChange={(pageClicked) => this.updateCurrentPage(pageClicked)} />
-	    	<Main currentPage={this.state.currentPage} />
+	    	<Header
+	    		currentPage={this.state.currentPage}
+	    		onPageChange={(pageClicked) => this.updateCurrentPage(pageClicked)}
+	    		calculateHeight={(h) => this.setMainYOffset(h)} />
+	    	<Main
+	    	currentPage={this.state.currentPage}
+	    	yOffset={this.state.mainYOffset} />
 	      <Footer currentPage={this.state.currentPage} />
       </div>
     );
