@@ -19,7 +19,6 @@ class Header extends React.Component {
   constructor() {
     super();
     this.state = {
-      currentPage: 'home-page',
       dropdownOpen: false,
     };
   }
@@ -49,7 +48,7 @@ class Header extends React.Component {
 
   render() {
     return (
-    	<header id="header" className= {this.state.currentPage} role="banner">
+    	<header id="header" className= {this.props.currentPage} role="banner">
         <div>
           <span>
             <a href="http://www.biancadanforth.com" className="icon-link">
@@ -59,7 +58,7 @@ class Header extends React.Component {
           </span>
            <nav role="navigation">
             <ul className="menu">
-              <li><a id="home-nav-link" href="javascript:void(0)" onClick={() => this.setState({currentPage: 'home-page'})} aria-label="Home">Home</a></li>
+              <li><a id="home-nav-link" href="javascript:void(0)" onClick={() => this.props.onPageChange('home-page')} aria-label="Home">Home</a></li>
               <li className={this.state.dropdownOpen ? 'active' : null} id="work-nav-list-item" ref= "workListItem">
                 <a id="work-nav-link" href="javascript:void(0)" onClick={this.handleClick.bind(this)} aria-label="Work">Work</a>
                 <Dropdown isOpen={this.state.dropdownOpen} />

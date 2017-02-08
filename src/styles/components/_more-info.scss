@@ -241,17 +241,24 @@
 			text-align: start;
 
 			svg {
+				position: absolute;
 				width: 30px;
 				fill: lighten($grey, 40%);
-			}
 
-			svg:first-child {
-				//mirror about x-axis
-				transform: scaleY(-1);
-			}
+				&:nth-child(1) {
+					top: 0;
+					left: 0;
+					z-index: -1;
+					//mirror about x-axis
+					transform: scaleY(-1);
+				}
 
-			svg:last-child {
-				transform: rotate(180deg);
+				&:nth-child(2) {
+					bottom: 0;
+					right: 0;
+					z-index: -1;
+					transform: rotate(180deg);
+				}
 			}
 
 			@media (max-width: 800px) {
