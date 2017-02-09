@@ -3,7 +3,7 @@ class App extends React.Component {
   constructor() {
   	super();
   	this.state = {
-  		currentPage: 'more-info-page',
+  		currentPage: 'home-page',
   		mainYOffset: 116,
   	}
   }

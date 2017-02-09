@@ -32,10 +32,28 @@ class Header extends React.Component {
     super();
     this.state = {
       dropdownOpen: false,
+      minimize: false,
     };
   }
 
+  minimizeHeader() {
+    if (window.pageYOffset === 0) {
+      this.setState({minimize: false});
+    } else {
+      this.setState({minimize: true})
+    }
+  }
+
+  getClassName() {
+    //initialize className to have current page
+    let className = this.props.currentPage;
+    //add minimize class if user is scrolling
+    this.state.minimize ? className+= ' minimize' : null;
+    return className;
+  }
+
   componentDidMount() {
+    //let clicking outside of the Work <nav> link and its dropdown menu close the dropdown menu
     document.addEventListener('click', (event) => {
       let isClickInside = this.refs.workListItem.contains(event.target);
       // if the user clicks anywhere other than the workListItem element, hide the dropdown menu
@@ -44,6 +62,10 @@ class Header extends React.Component {
       }
     });
 
+    // When user scrolls, minimize header; when user returns to the top of the page, un-minimize
+    window.addEventListener('scroll', this.minimizeHeader.bind(this));
+
+    // compute <header> height and add it as padding-top to <main>
     let node = ReactDOM.findDOMNode(this.refs['header']);
     if (node) {
       console.log(node);
@@ -60,6 +82,9 @@ class Header extends React.Component {
         this.setState({dropdownOpen: false});
       }
     });
+
+     // When user scrolls, minimize header; when user returns to the top of the page, un-minimize
+    window.removeEventListener('scroll', this.minimizeHeader.bind(this));
   }
 
   handleClick() {
@@ -68,7 +93,7 @@ class Header extends React.Component {
 
   render() {
     return (
-    	<header id="header" className= {this.props.currentPage} ref="header" role="banner">
+    	<header id="header" className= {this.getClassName()} ref="header" role="banner">
         <div>
           <span>
             <a href="http://www.biancadanforth.com" className="icon-link">
