@@ -20,7 +20,12 @@ class Footer extends React.Component {
           <a href="https://www.linkedin.com/in/bianca-danforth-62b18439" target="_blank" aria-label="LinkedIn" title="LinkedIn">
             <div dangerouslySetInnerHTML={{__html: linkedInSVG}} />
           </a>
-          <a href="/more-info" aria-label="E-mail" title="E-mail">
+          <a 
+            href="javascript:void(0)"
+            aria-label="E-mail"
+            title="E-mail"
+            onClick={() => this.props.onPageChange('more-info-page')}
+          >
             <div dangerouslySetInnerHTML={{__html: emailSVG}} />
           </a>
           <a href="https://twitter.com/biancadanforth" target="_blank" aria-label="Twitter" title="Twitter">

@@ -1,3 +1,5 @@
+const codePenEmbed = "<iframe class='codepen' height='399' scrolling='no' title='Search Filter V2' src='//codepen.io/biancadanforth/embed/LRrEGp/?height=399&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/biancadanforth/pen/LRrEGp/'>Search Filter V2</a> by biancadanforth (<a href='http://codepen.io/biancadanforth'>@biancadanforth</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>";
+
 class ToDoList extends React.Component {
   render() {
     return(
@@ -58,8 +60,7 @@ class ToDoList extends React.Component {
           <div className="project">
             <h2>Prototype</h2>
             <div >
-            <p data-height="400" data-theme-id="light" data-slug-hash="LRrEGp" data-default-tab="result" data-user="biancadanforth" data-embed-version="2" data-pen-title="Search Filter V2" className="codepen">See the Pen <a href="http://codepen.io/biancadanforth/pen/LRrEGp/">Search Filter V2</a> by biancadanforth (<a href="http://codepen.io/biancadanforth">@biancadanforth</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-              <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+            <div dangerouslySetInnerHTML={{__html: codePenEmbed}} />
             </div>
             <p>
               I also broke up each major feature of the application into modules, developing them separately in Codepen and testing them in the browser before integrating them into the larger application. One module was the search filter, as shown here.

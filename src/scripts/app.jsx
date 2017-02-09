@@ -4,7 +4,7 @@ class App extends React.Component {
   	super();
   	this.state = {
   		currentPage: 'home-page',
-  		mainYOffset: 116,
+  		mainYOffset: 0,
   	}
   }
 
@@ -25,9 +25,13 @@ class App extends React.Component {
 	    		onPageChange={(pageClicked) => this.updateCurrentPage(pageClicked)}
 	    		calculateHeight={(h) => this.setMainYOffset(h)} />
 	    	<Main
-	    	currentPage={this.state.currentPage}
-	    	yOffset={this.state.mainYOffset} />
-	      <Footer currentPage={this.state.currentPage} />
+		    	currentPage={this.state.currentPage}
+		    	yOffset={this.state.mainYOffset}
+	    	/>
+	      <Footer
+		      currentPage={this.state.currentPage}
+		      onPageChange={(pageClicked) => this.updateCurrentPage(pageClicked)}
+	      />
       </div>
     );
   }
