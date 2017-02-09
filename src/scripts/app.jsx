@@ -1,3 +1,5 @@
+// App.jsx
+
 class App extends React.Component {
   
   constructor() {
@@ -13,7 +15,6 @@ class App extends React.Component {
   }
 
   setMainYOffset(h) {
-  	console.log("entered setMainOffset() function");
   	this.setState({mainYOffset: h});
   }
 

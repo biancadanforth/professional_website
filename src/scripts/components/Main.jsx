@@ -1,3 +1,5 @@
+// Main.jsx
+
 class Main extends React.Component {
 
   get mainContent() {
@@ -22,10 +24,10 @@ class Main extends React.Component {
   render() {
     return (
       <main 
-        id="main" 
         className={this.props.currentPage} 
         role="main"
-        style={{ paddingTop: (this.props.yOffset).toString() + 'px'}}>
+        style={{ paddingTop: (this.props.yOffset).toString() + 'px'}}
+      >
         {this.mainContent}
       </main>
     );
