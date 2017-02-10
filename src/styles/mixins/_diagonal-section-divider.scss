@@ -16,7 +16,11 @@
     padding-bottom: $v-pad;
     // have to add a margin to the last child in <section> (of any type), because it's an absolute value in px versus a % like v-pad, so it cannot be directly added to the <section>'s padding-bottom as "padding-bottom: $v-pad + $padding-default" are different units! One is relative, %, and the other is absolute (px).
     & > :last-child {
-    	padding-bottom: $padding-default;
+    	padding-bottom: 2*$padding-default;
+
+      @media(max-width: 900px) {
+        padding-bottom: $padding-default;
+      }
     }
     // create a pseudo-element inside of the <section> element (becomes the last child
     // of the element)

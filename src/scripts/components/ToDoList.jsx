@@ -26,7 +26,7 @@ class ToDoList extends React.Component {
                 <h2>Design Brief</h2>
                 <p>
                   <span>When</span> I have life coming at me from all angles.<br />
-                  <span>I want to</span> sort out what's really important.
+                  <span>I want to</span> sort out what's really important.<br />
                   <span>So I can</span> focus on the things that really matter and get back to doing what I want to do, not what I have to do.
                 </p>
                 <h4>Developer notes</h4>

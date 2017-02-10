@@ -10,6 +10,11 @@ class App extends React.Component {
   	}
   }
 
+  componentWillUpdate() {
+    // scroll window to top when App's state is updated (i.e. when a nav or dropdown menu link is clicked and currentPage is changed)
+    window.scrollTo(0,0);
+  }
+
   updateCurrentPage(pageClicked) {
   	this.setState({currentPage: pageClicked});
   }

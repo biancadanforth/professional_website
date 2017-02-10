@@ -5,16 +5,16 @@ header.minimize {
 	max-width: 100vw;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	transition: padding-top 0.5s linear, padding-bottom 0.5s linear;
+	transition: padding-top 0.25s linear, padding-bottom 0.25s linear;
 
 	h1 {
 		font-size: 1.25em;
-		transition: font-size 0.5s linear;
+		transition: font-size 0.25s linear;
 	}
 
 	svg {
 		width: 30px;
-		transition: width 0.5s linear;
+		transition: width 0.25s linear;
 	}
 
 	@media (max-width: 500px) {
@@ -40,7 +40,7 @@ header {
 		),
 	/* bottom, image */
 	url("../images/pw_maze_white.png");
-	transition: padding-top 0.5s linear, padding-bottom 0.5s linear;
+	transition: padding-top 0.25s linear, padding-bottom 0.25s linear;
 
 	@media (max-width: 1260px) {
 		padding-bottom: 2*$margin-small;
@@ -60,7 +60,7 @@ header {
 
 		svg {
 			width: 50px;
-			transition: width 0.5s linear;
+			transition: width 0.25s linear;
 		}
 
 		@media (max-width: 620px) {
@@ -111,7 +111,7 @@ header {
 			font-size: 1.5em;
 			font-weight: bold;
 			font-family: 'Merriweather', serif;
-			transition: font-size 0.5s linear;
+			transition: font-size 0.25s linear;
 
 			@media (max-width: 850px) {
 				display: none;
@@ -159,7 +159,7 @@ header {
 			&:first-child {	
 					//border-color: $yellow;
 					margin-left: 0;
-					transition: padding-bottom 0.5s linear;
+					transition: padding-bottom 0.25s linear;
 				}
 
 			&:last-child {
@@ -214,7 +214,7 @@ header.home-page {
 	ul.menu > li {
 		&:nth-child(1) {
 			border-color: $yellow;
-			transition: padding-bottom 0.5s linear;
+			transition: padding-bottom 0.25s linear;
 		}
 	}
 }
@@ -227,7 +227,7 @@ header.more-info-page {
 
 		&:nth-child(3) {
 			border-color: $yellow;
-			transition: padding-bottom 0.5s linear;
+			transition: padding-bottom 0.25s linear;
 		}
 	}
 }

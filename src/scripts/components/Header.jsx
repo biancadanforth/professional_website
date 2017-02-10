@@ -92,10 +92,7 @@ class Header extends React.Component {
                   Home
                 </a>
               </li>
-              <li 
-                className={this.state.dropdownOpen ? 'active' : null} 
-                ref= "workListItem"
-              >
+              <li ref= "workListItem">
                 <a 
                   href="javascript:void(0)" 
                   onClick={this.handleClick.bind(this)}
