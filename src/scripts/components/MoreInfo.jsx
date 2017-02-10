@@ -93,9 +93,9 @@ class MoreInfo extends React.Component {
                 Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery bitterleaf wattle seed collard greens nori. Grape wattle seed kombu beetroot horseradish carrot squash brussels sprout chard.
               </p>
               <blockquote>
-                <div dangerouslySetInnerHTML={{__html: quoteSVG}} />
+                <div className="open-quote" dangerouslySetInnerHTML={{__html: quoteSVG}} />
                 Parsley shallot courgette tatsoi pea sprouts fava bean collard.
-                <div dangerouslySetInnerHTML={{__html: quoteSVG}} />
+                <div className="close-quote" dangerouslySetInnerHTML={{__html: quoteSVG}} />
               </blockquote>
               <p>
                 Chickweed okra pea winter purslane coriander yarrow sweet pepper radish garlic brussels sprout groundnut summer purslane earthnut pea tomato spring onion azuki bean gourd.
