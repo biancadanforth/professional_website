@@ -84,13 +84,9 @@ class Header extends React.Component {
            <nav role="navigation">
             <ul className="menu">
               <li>
-                <a 
-                  href="javascript:void(0)"
-                  onClick={() => this.props.onPageChange('home-page')}
-                  aria-label="Home"
-                >
+                <Link to="home">
                   Home
-                </a>
+                </Link>
               </li>
               <li 
                 ref= "workListItem"
@@ -111,11 +107,9 @@ class Header extends React.Component {
                 />
               </li>
               <li>
-                <a
-                  href="javascript:void(0)"
-                  onClick={() => this.props.onPageChange('more-info-page')}
-                  aria-label="More Info">More Info
-                </a>
+                <Link to="more-info">
+                  More Info
+                </Link>
               </li>
             </ul>
           </nav>
