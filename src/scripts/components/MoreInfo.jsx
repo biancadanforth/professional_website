@@ -7,7 +7,12 @@ class MoreInfo extends React.Component {
     super();
     this.state = {
       formSubmitted: false,
+      thankYouHeight: 0,
     }
+  }
+
+  setThankYouHeight(h) {
+    this.setState({thankYouHeight: h});
   }
 
   render() {
@@ -15,7 +20,8 @@ class MoreInfo extends React.Component {
       <div>
         <section className="primary">
           {/* Returns the ContactForm unless the user submits the form, then returns the ThankYou component */}
-          {(this.state.formSubmitted) ? <ThankYou /> : <ContactForm onFormSubmit={() => this.setState({formSubmitted: !(this.state.formSubmitted)})} />}
+          {(this.state.formSubmitted) ? <ThankYou /> : <ContactForm 
+              onFormSubmit={() => this.setState({formSubmitted: !(this.state.formSubmitted)})} />}
           <div className="about-body">
             <div>
               <h2>Say What?</h2>
@@ -42,7 +48,11 @@ class MoreInfo extends React.Component {
           </div>
         </section>
         <section className="secondary">
-          {(this.state.formSubmitted) ? <ThankYou /> : <ContactForm onFormSubmit={() => this.setState({formSubmitted: true})} />}
+          {(this.state.formSubmitted) ? <ThankYou 
+              thankYouHeight={this.state.thankYouHeight}
+            /> : <ContactForm 
+              calculateHeight={(h) => this.setThankYouHeight(h)}
+              onFormSubmit={() => this.setState({formSubmitted: !(this.state.formSubmitted)})} />}
         </section>
       </div>
     )

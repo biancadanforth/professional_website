@@ -1,15 +1,46 @@
 // ContactForm.jsx
 
 class ContactForm extends React.Component {
+  
+  constructor() {
+    super();
+    this.state = {
+      userEmail: '',
+    }
+  }
+
+  componentDidMount() {
+    // compute <ContactForm /> height and set <ThankYou /> height equal to it.
+    let node = ReactDOM.findDOMNode(this.refs['contact-form']);
+    if (node) {
+      let thankYouHeight = node.clientHeight;
+      if (this.props.calculateHeight) {
+        this.props.calculateHeight(thankYouHeight);
+      }
+    }
+  }
+
+  getFormAction() {
+    let formAction = 'https://formspree.io/' + 'biancadanforth' + '@' + 'gmail' + '.' + 'com';
+    return formAction;
+  }
+
+  updateUserEmail() {
+    let emailInput = this.refs.userEmail;
+    let emailAddress = emailInput.value;
+    console.log(emailAddress);
+    this.setState({userEmail: emailAddress});
+  }
+
   render() {
     return(
-      <div className="contact-body">
+      <div className="contact-body" ref="contact-form">
         <h2>Say Hello!</h2>
         <h3>biancadanforth at gmail dot com</h3>
         <h4>or</h4>
         <div className = "form-wrapper">
           <form 
-            action="https://formspree.io/biancadanforth@gmail.com" 
+            action= {this.getFormAction()} 
             method="post"
           >
             <label>Name
@@ -25,7 +56,9 @@ class ContactForm extends React.Component {
                 type="Email" 
                 name="E-mail" 
                 placeholder="joeschmoe@example.com"
-                required 
+                required
+                ref="userEmail"
+                onInput={this.updateUserEmail.bind(this)}
             />
             </label>
             <p className="note">You will receive a copy of your message at this e-mail address.</p>
@@ -43,7 +76,7 @@ class ContactForm extends React.Component {
               onClick={() => { 
                 this.props.onFormSubmit();
                 // Thank You message goes away after a certain amount of time
-                setTimeout(() => this.props.onFormSubmit(), 10000);
+                //setTimeout(() => this.props.onFormSubmit(), 10000);
                 } 
               }
             />
@@ -63,7 +96,7 @@ class ContactForm extends React.Component {
             <input 
               type="hidden" 
               name="_cc" 
-              value="" 
+              value={this.state.userEmail} 
             />
             {/* Add this "honeypot" field to avoid spam by fooling scrapers. If a value is provided, the submission will be silently ignored. The input should be hidden with CSS. */}
             <input 
