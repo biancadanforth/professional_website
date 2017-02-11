@@ -92,7 +92,11 @@ class Header extends React.Component {
                   Home
                 </a>
               </li>
-              <li ref= "workListItem">
+              <li 
+                ref= "workListItem"
+                onMouseOver={() => this.setState({dropdownOpen: true})}
+                onMouseOut={() => this.setState({dropdownOpen: false})}
+                >
                 <a 
                   href="javascript:void(0)" 
                   onClick={this.handleClick.bind(this)}
