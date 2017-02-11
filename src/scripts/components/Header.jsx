@@ -84,7 +84,7 @@ class Header extends React.Component {
            <nav role="navigation">
             <ul className="menu">
               <li>
-                <Link to="home">
+                <Link to="home" aria-label="home">
                   Home
                 </Link>
               </li>
@@ -107,7 +107,7 @@ class Header extends React.Component {
                 />
               </li>
               <li>
-                <Link to="more-info">
+                <Link to="more-info" aria-label="more info">
                   More Info
                 </Link>
               </li>
