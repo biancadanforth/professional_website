@@ -16,11 +16,6 @@ class App extends React.Component {
   	}
   }
 
-  componentWillUpdate() {
-    // scroll window to top when App's state is updated (i.e. when a nav or dropdown menu link is clicked and currentPage is changed)
-    window.scrollTo(0,0);
-  }
-
   setMainYOffset(h) {
   	this.setState({mainYOffset: h});
   }
@@ -30,18 +25,18 @@ class App extends React.Component {
     let pageName = currentPath.replace('\/', '');
     pageName += '-page';
     return (
-    	<div>
+    	<div ref="page">
 	    	<Header
-          currentPage={pageName}
+          currentPage={currentPath === '/' ? 'home-page' : pageName}
 	    		calculateHeight={(h) => this.setMainYOffset(h)} />
 	    	<Main
-          currentPage={pageName}
+          currentPage={currentPath === '/' ? 'home-page' : pageName}
 		    	yOffset={this.state.mainYOffset}
 	    	>
-          {this.props.children}
+          {currentPath === '/' ? <Home /> : this.props.children}
         </Main>
 	      <Footer
-          currentPage={pageName}
+          currentPage={currentPath === '/' ? 'home-page' : pageName}
           />
       </div>
     );
@@ -49,10 +44,11 @@ class App extends React.Component {
 }
 
 render((
-  <Router history={hashHistory}>
+  <Router onUpdate={() => window.scrollTo(0, 0)} history={hashHistory}>
     <Route path="/" component={App}>
       <Route path="home" component={Home} />
       <Route path="more-info" component={MoreInfo} />
+      <Route path="thank-you" component={ThankYou} />
       <Route path="to-do-list" component={ToDoList} />
       {/*<Route path="e-mail-sign-up" component={EmailSignUp} />
       <Route path="ferrofluid-pool" component={FerrofluidPool} />

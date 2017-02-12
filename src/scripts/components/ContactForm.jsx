@@ -9,17 +9,6 @@ class ContactForm extends React.Component {
     }
   }
 
-  componentDidMount() {
-    // compute <ContactForm /> height and set <ThankYou /> height equal to it.
-    let node = ReactDOM.findDOMNode(this.refs['contact-form']);
-    if (node) {
-      let thankYouHeight = node.clientHeight;
-      if (this.props.calculateHeight) {
-        this.props.calculateHeight(thankYouHeight);
-      }
-    }
-  }
-
   getFormAction() {
     let formAction = 'https://formspree.io/' + 'biancadanforth' + '@' + 'gmail' + '.' + 'com';
     return formAction;
@@ -73,18 +62,12 @@ class ContactForm extends React.Component {
             <input
               type="submit" 
               value="Send"
-              onClick={() => { 
-                this.props.onFormSubmit();
-                // Thank You message goes away after a certain amount of time
-                //setTimeout(() => this.props.onFormSubmit(), 10000);
-                } 
-              }
             />
             {/* By default, after submitting a form the user is shown the Formspree "Thank You" page. You can provide an alternative URL for that page. */}
             <input 
               type="hidden" 
               name="_next" 
-              value="#thanks" 
+              value="/#/thank-you" 
             />
             {/* This value is used for the email's subject, so that you can quickly reply to submissions without having to edit the subject line each time. */}
             <input 

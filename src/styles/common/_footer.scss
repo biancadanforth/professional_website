@@ -48,6 +48,11 @@ footer.home-page, footer.to-do-list-page, footer.e-mail-sign-up-page, footer.fer
 	@include diagonal-background-bottom;
 }
 
+footer.thank-you-page {
+	margin-top: 2*$margin-default;
+	text-align: center;
+}
+
 footer.more-info-page {
 	margin-top: 2*$margin-default;
 	text-align: center;
