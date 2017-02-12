@@ -1,6 +1,6 @@
 // project.scss
 
-.project-page {
+.to-do-list-page, .e-mail-sign-up-page, .ferrofluid-pool-page, .twist-page {
 
 	img {
 		width: 100%;
@@ -92,9 +92,8 @@
 	}
 
 	.secondary {
-		// embedded codepen wrapper div
-		.cp_embed_wrapper {
-			margin: $margin-default 0;
+		.codepen {
+			margin: $margin-default 0 !important;
 		}
 	}
 }

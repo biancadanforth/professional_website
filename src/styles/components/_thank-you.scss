@@ -1,0 +1,38 @@
+// _thank-you.scss
+
+.thank-you-page {
+
+	.thank-you-wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		margin: 0 auto;
+
+		.thank-you {
+			box-sizing: border-box;
+			padding: $padding-default;
+			@include rounded(2px);
+			border: 1px solid $blue;
+
+			h2 {
+				padding-bottom: 5px;
+				margin-bottom: $margin-small;
+				border-bottom: 2px solid $yellow;
+			}
+
+			h4 {
+				border: 0;
+
+				span {
+					font-size: 1em;
+					font-weight: 700;
+				}
+			}
+
+			p {
+				margin-bottom: 0.5*$margin-default;
+			}
+		}
+	}
+}
