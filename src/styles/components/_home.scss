@@ -169,6 +169,10 @@
 			@include shadowed;
 			@include rounded(2px);
 		}
+
+		@media(min-width: 1000px) {
+			max-width: 50%;
+		}
 	}
 
 	@media (min-width: 1000px) {
