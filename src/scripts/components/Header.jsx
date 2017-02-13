@@ -76,6 +76,7 @@ class Header extends React.Component {
             <a 
               href="http://www.biancadanforth.com" 
               className="icon-link"
+              aria-label="Go to Bianca Danforth's website"
             >
               <div dangerouslySetInnerHTML={{__html: svgElement}} />
             </a>

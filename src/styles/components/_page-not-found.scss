@@ -1,0 +1,37 @@
+// _page-not-found.scss
+
+header.page-not-found-page {
+	position: static;
+	top: 0;
+	left: 0;
+	transform: none;
+	text-align: center;
+}
+
+div.page-not-found-page {
+	margin: 0 $margin-default $margin-default;
+	max-width: 100%;
+	text-align: center;
+	height: 100vh;
+
+	img {
+		max-width: 600px;
+		width: 100%;
+		@include rounded(2px);
+		@include shadowed;
+		margin-bottom: $margin-default;
+	}
+
+	h2, h3 {
+		max-width: 600px;
+		margin: 0 auto $margin-default;
+	}
+
+	h3 span {
+		border-bottom: 2px solid $yellow;
+	}
+
+	.error-page-link, .error-page-link:visited {
+		color: $blue !important;
+	}
+}

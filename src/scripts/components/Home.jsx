@@ -9,7 +9,7 @@ class Home extends React.Component {
             <div className="welcome-profile-wrapper">
               <img 
                 className="welcome-profile" 
-                src="images/biancaWeld.jpg" 
+                src="images/biancaWeldProg.jpg" 
                 alt="Bianca Danforth" 
               />
             </div>

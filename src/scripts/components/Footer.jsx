@@ -33,7 +33,7 @@ class Footer extends React.Component {
             <div dangerouslySetInnerHTML={{__html: linkedInSVG}} />
           </a>
           <a 
-            href="javascript:void(0)"
+            href="/#/more-info"
             aria-label="E-mail"
             title="E-mail"
             onClick={() => this.props.onPageChange('more-info-page')}
