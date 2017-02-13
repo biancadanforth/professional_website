@@ -1,23 +1,50 @@
 // Home.jsx
 
 class Home extends React.Component {
+  
+  componentDidMount() {
+      var placeholder = document.querySelector('.placeholder');
+      var small = placeholder.querySelector('.img-small');
+  
+      // 1: load small image and show it
+      var imgSmall = new Image();
+      imgSmall.src = small.src;
+      imgSmall.onload = function () {
+       small.classList.add('loaded');
+       placeholder.classList.add('image-loaded');
+      };
+  
+      // 2: load large image
+      var imgLarge = new Image();
+      imgLarge.src = placeholder.getAttribute('data-large'); 
+      imgLarge.onload = function () {
+        imgLarge.classList.add('loaded');
+      };
+      placeholder.appendChild(imgLarge);
+  }
+
   render() {
     return(
       <div>
         <section className="primary">
           <div className="welcome-wrapper">
-            <div className="welcome-profile-wrapper">
+            <div 
+              className="placeholder welcome-profile-wrapper" 
+              data-large="images/biancaWeldProg.jpg"
+              ref="placeholder"
+              >
               <img 
-                className="welcome-profile" 
-                src="images/biancaWeldProg.jpg" 
+                className="welcome-profile img-small" 
+                src="images/biancaWeldProgSmall.jpg" 
                 alt="Bianca Danforth" 
               />
-            </div>
-            <div className="welcome-message-wrapper">
+              <div style={{paddingBottom: '66.67%'}}></div>
+              <div className="welcome-message-wrapper">
               <h2 className="welcome-message">Front-end web nerd. Former mechanical engineer.</h2>
               <h3><span>Tools:</span> JavaScript, Sass, Mild Steel</h3>
               <button>Let's work together</button>
               <p><a href="javascript:void(0)">View my resume</a></p>
+            </div>
             </div>
           </div>
         </section>
