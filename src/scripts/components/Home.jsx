@@ -30,12 +30,12 @@ class Home extends React.Component {
           <div className="welcome-wrapper">
             <div 
               className="placeholder welcome-profile-wrapper" 
-              data-large="images/biancaWeldProg.jpg"
+              data-large="images/biancaWeld.jpg"
               ref="placeholder"
               >
               <img 
                 className="welcome-profile img-small" 
-                src="images/biancaWeldProgSmall.jpg" 
+                src="images/biancaWeldSmall.jpg" 
                 alt="Bianca Danforth" 
               />
               <div style={{paddingBottom: '66.67%'}}></div>
