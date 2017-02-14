@@ -51,8 +51,8 @@ render((
       <Route path="thank-you" component={ThankYou} />
       <Route path="to-do-list" component={ToDoList} />
       <Route path="e-mail-sign-up" component={EmailSignUp} />
-      {/*<Route path="ferrofluid-pool" component={FerrofluidPool} />
-      <Route path="twist" component={Twist} />*/}
+      <Route path="ferrofluid-pool" component={FerrofluidPool} />
+      <Route path="twist" component={Twist} />
     </Route>
   </Router>
   ), document.getElementById('root')

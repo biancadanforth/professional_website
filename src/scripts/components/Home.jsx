@@ -113,7 +113,7 @@ class Home extends React.Component {
                 href="#chair"
               >
                 <img 
-                src="images/chair-cropped.jpg" 
+                src="images/twist-cropped.jpg" 
                 alt="Base of Twist chair" 
                 />
               </a>

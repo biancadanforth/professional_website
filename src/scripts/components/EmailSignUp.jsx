@@ -100,7 +100,7 @@ class EmailSignUp extends React.Component {
               <p className="project-description">
                 Since this was my first web development project, I learned a lot about the myriad approaches that I could take. Each developer has their own process, and my own began to form and evolve.
               </p>
-              <p>
+              <p className="project-description">
                 I started to understand how important the DRY (Don't Repeat Yourself) coding principle was to debugging, and how important it was to stay organized and consistent in my code.
               </p>
             </div>

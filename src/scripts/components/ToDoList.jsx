@@ -1,6 +1,6 @@
 // ToDoList.jsx
 
-const codePenEmbed = "<iframe class='codepen' height='399' scrolling='no' title='Search Filter V2' src='//codepen.io/biancadanforth/embed/LRrEGp/?height=399&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/biancadanforth/pen/LRrEGp/'>Search Filter V2</a> by biancadanforth (<a href='http://codepen.io/biancadanforth'>@biancadanforth</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>";
+const searchFilterCodePen = "<iframe class='codepen' height='400' scrolling='no' title='Search Filter V2' src='//codepen.io/biancadanforth/embed/LRrEGp/?height=400&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/biancadanforth/pen/LRrEGp/'>Search Filter V2</a> by biancadanforth (<a href='http://codepen.io/biancadanforth'>@biancadanforth</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>";
 
 class ToDoList extends React.Component {
   render() {
@@ -17,21 +17,23 @@ class ToDoList extends React.Component {
                 aria-label="Go to live site"
               >
                 <img 
-                  className="project-thumbnail" 
+                  className="project-thumbnail wrap-up" 
                   src="../../images/to-do-list-glamour-final.png" 
                   alt="Final design on different devices"
                 />
               </a>
               <div>
-                <h2>Design Brief</h2>
+                <h2>Overview</h2>
+                <h4>Project goals</h4>
                 <p>
-                  <span>When</span> I have life coming at me from all angles.<br />
-                  <span>I want to</span> sort out what's really important.<br />
-                  <span>So I can</span> focus on the things that really matter and get back to doing what I want to do, not what I have to do.
+                  As a self-initiated project, my primary goal was to build an interactive, useful and usable application in JavaScript.
                 </p>
-                <h4>Developer notes</h4>
+                <h4>Tools and Methods</h4>
+                 <p>
+                  I used Photoshop to make the design mock-ups and UXPin and InVision to build the wireframes.
+                </p>
                 <p>
-                  This application does not rely on any libraries or frameworks; it was written from scratch in plain JavaScript, CSS and HTML.
+                  I wrote this application from scratch in plain JavaScript, CSS and HTML without any libraries or frameworks. I created a local storage API in JavaScript to save the list between sessions.
                 </p>
               </div>
             </div>
@@ -48,7 +50,13 @@ class ToDoList extends React.Component {
                 alt="Benchmarking other to do list applications" 
               />
               <p className="project-description">
-                The project's primary goal was to build something useful in JavaScript. As a self-initiated project, I didn't have an explicit customer, but I consulted with professional designers, developers, friends and family who already make use of similar tools to understand what they valued most. I also looked at a number of professional productivity tools, like Todoist shown here, to develop a site map, user flow and information hierarchy.
+                Since I didn't have an explicit customer, I asked professional designers, developers, friends and family who already make use of similar productivity tools what features they thought were most important and useful.
+              </p>
+              <p className="project-description">
+                At the same time, I was reading the popular usability book by Steven Krug, <span>Don't Make Me Think</span>. Krug talked about some universal usability principles, including the idea that if absolutely unavoidable, it should be as painless and simple as possible for users to recover from a mistake. I decided early that the ability to undo any action would be a priority.
+              </p>
+              <p className="project-description">
+               I also did some benchmarking, which is a Stanford Design School term for checking out the competition. Shown here is one of my favorite competitors, Todoist. Here, in addition to looking at how different kinds of information were organized, I was interested in how these existing applications transitioned between different states. I wanted my application to flow smoothly from one state to the next, so I decided that I would make use of CSS transitions and animations to achieve that.
               </p>
             </div>
             <div className="project">
@@ -59,10 +67,10 @@ class ToDoList extends React.Component {
                 alt="Benchmarking other To Do Lists" 
               />
               <p className="project-description">
-                I made a list of all the features I could come up with that would be nice to have, and sorted them based on two factors: impact and feasibility.
+                From interviewing others and benchmarking, I already had a good start on possible features to include in my application and their relative importance. I brainstormed further on my own, thinking about what I would like to be able to do.
               </p>
-              <p>
-                I also took another pass benchmarking other productivity tools, this time looking for inspiration. I created the style tile shown here, which helps translate my application's personality into UI elements.
+              <p className="project-description">
+                I also took another pass through benchmarking other To Do List applications, this time, with an eye for the design of the user interface. I created the style tile shown here, which helped me translate my application's personality into development-friendly UI, color and typography components.
               </p>
             </div>
             <div className="project">
@@ -73,19 +81,25 @@ class ToDoList extends React.Component {
                 alt="" 
               />
               <p className="project-description">
-                I made low- and high-fidelity, clickable wireframes in UXPin and InVision, respectively, and user-tested them with multiple professional web designers.
+                I made low- and high-fidelity, clickable wireframes, and user-tested them with a few different kinds of users: one web developer, one web designer, one college student and one tech-savvy retiree.
               </p>
-              <p>
-                The first iteration, shown here, showed me that menus should be contextual. Deleting a list is a relatively rare occurence. Why not make it part of a list options menu that is accessible, but more visually subdued?
+              <p className="project-description">
+                The first iteration, shown here, showed me that menus should be contextual. For example, deleting a list is a relatively rare occurrence. Rather than have it a permanent fixture on the page, why not make it part of a 'list options' submenu that is accessible, but more visually subdued?
               </p>
             </div>
             <div className="project">
               <h2>Prototype</h2>
               <div >
-              <div dangerouslySetInnerHTML={{__html: codePenEmbed}} />
+              <div dangerouslySetInnerHTML={{__html: searchFilterCodePen}} />
               </div>
-              <p>
-                I also broke up each major feature of the application into modules, developing them separately in Codepen and testing them in the browser before integrating them into the larger application. One module was the search filter, as shown here.
+              <p className="project-description">
+                I also broke up each major feature of the application into reusable modules and developed them separately in Codepen, a front-end development sandbox. I then integrated them one by one into the larger application. For example, I made a task search filter module.
+              </p>
+              <p className="project-description">
+                One thing I learned rather quickly: just because something works in Codepen doesn't mean it's going to work on its own in the browser. I ended up having to migrate my Codepens to my local machine to cross-browser test each module before integrating them.
+              </p>
+              <p className="project-description">
+                I also learned that there are about 10,000 ways to do everything, and almost all of the code is freely available online through various resources like Stack Exchange, GitHub and Mozilla Developer Network. I had no shortage of information (good and bad) when faced with an implementation challenge.
               </p>
             </div>
             <div className="project">
@@ -96,21 +110,45 @@ class ToDoList extends React.Component {
                 alt="High fidelity Photoshop mock-up" 
               />
               <p className="project-description">
-                Testing of the high fidelity wireframe, based off of a working Photoshop static, showed me that I need to minimize the amount of work the user needs to do to achieve a task. For example, rather than have an 'Add List Item' button that the user must click to add a task, why not have a new task automatically created when the user submits the previous task?
+                I made a high resolution mock-up in Photoshop based on what I gleaned from Wireframing and the Style Tile I made from Ideation.
+              </p>
+              <p className="project-description">
+                From reading various articles about the design of content-heavy websites, I knew I wanted the page to have a clean look with generous amounts of whitespace and a highly readable set of fonts.
+              </p>
+              <p className="project-description">
+                More testing of the high-fidelity wireframe brought even more improvements to my application. Another universal usability principle from Steven Krug's book, <span>Don't Make Me Think</span>, was to save the user steps wherever possible. For example, rather than have an 'Add List Item' link that the user must click to add a task, why not have a new task automatically created when the user submits the previous task?
+              </p>
+              <p className="project-description">
+                My design mentor also reminded me of a key design requirement at this stage: Any context menus that are accessible by hover should also be accessible by tapping on a mobile device. This forced me to re-examine whether these options were always visible, or a tap away.
               </p>
             </div>
             <div className="project">
               <h2>Final Thoughts</h2>
-              <img 
-                className="project-thumbnail wrap-up" 
-                src="../../images/to-do-list-glamour-final.png" 
-                alt="Final design on different devices" 
-              />
+              <a 
+                href="/work/to-do-list/live" 
+                title="Go to live site" 
+                aria-label="Go to live site"
+              >
+                <img 
+                  className="project-thumbnail wrap-up" 
+                  src="../../images/to-do-list-glamour-final.png" 
+                  alt="Final design on different devices" 
+                />
+                </a>
               <p className="project-description">
-                I learned a great deal by completing this project about usability, testing, design workflow and modular code architecture. I am very happy with the result, but as with all things, there are always improvements that could be made if there were more time and resources to devote to the project.
+                I really enjoyed both the artistic and technical side of this project. It showed me how the design and development of a website are inextricably linked.
               </p>
-              <p>
-                For example, my JavaScript code was very difficult to refactor and debug. This was mostly due to its classical architecture. If I did it again, I would rewrite the code using a different architecture that separates the Model, View and Controller, such as using React.
+              <p className="project-description">
+                Each step in my design process brought a new level of understanding and appreciation for the complexity of modern web design and development.
+              </p>
+              <p className="project-description">
+                I also got to take a deep dive into JavaScript for the first time, learning about modular code architecture, APIs, AJAX and why libraries like JQuery and React are so popular and useful.
+              </p>
+              <p className="project-description">
+                Finally, I confronted mobile-friendly design head-on and got a chance to apply usability principles I had only read about in books.
+              </p>
+              <p className="project-description">
+                I'm very proud of the result. I use my To Do List application regularly on my phone.
               </p>
             </div>
           </div>
