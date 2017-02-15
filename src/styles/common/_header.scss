@@ -28,10 +28,8 @@ header {
 	top: 0;
 	left: 50%;
 	transform: translateX(-50%);
-	z-index: 1;
+	z-index: 2;
 	width: 100vw;
-	padding-top: $margin-default;
-	padding-bottom: 2*$margin-default;
 	background:
 	/* top, transparent $off-white, faked with gradient */ 
 	linear-gradient(
@@ -41,14 +39,6 @@ header {
 	/* bottom, image */
 	url("../images/pw_maze_white.png");
 	transition: padding-top 0.25s linear, padding-bottom 0.25s linear;
-
-	@media (max-width: 1260px) {
-		padding-bottom: 2*$margin-small;
-	}
-
-	@media (max-width:400px) {
-		padding: $padding-small;
-	}
 
 	div {
 		margin: 0 auto;

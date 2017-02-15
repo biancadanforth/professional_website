@@ -39,13 +39,6 @@ class Header extends React.Component {
 
     // When user scrolls, minimize header; when user returns to the top of the page, un-minimize
     window.addEventListener('scroll', this.minimizeHeader.bind(this));
-
-    // compute <header> height and add it as padding-top to <main>
-    let node = ReactDOM.findDOMNode(this.refs['header']);
-    if (node) {
-      let headerHeight = node.clientHeight;
-      this.props.calculateHeight(headerHeight);
-    }
   }
 
   componentWillUnmount() {

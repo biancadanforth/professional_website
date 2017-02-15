@@ -20,14 +20,14 @@ class Dropdown extends React.Component {
               E-mail Sign-up
           </Link>
         </li>
-        <li>
+        <li className="past-projects">
           <Link 
             to="ferrofluid-pool"
             onClick={this.props.onClick} >
               Ferrofluid Pool
           </Link>
         </li>
-        <li>
+        <li className="past-projects">
           <Link 
             to="twist"
             onClick={this.props.onClick} >

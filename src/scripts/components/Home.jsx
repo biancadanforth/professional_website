@@ -25,7 +25,7 @@ class Home extends React.Component {
 
   render() {
     return(
-      <div>
+      <div className="home-page-wrapper">
         <section className="primary">
           <div className="welcome-wrapper">
             <div 
@@ -42,8 +42,8 @@ class Home extends React.Component {
               <div className="welcome-message-wrapper">
               <h2 className="welcome-message">Front-end web nerd. Former mechanical engineer.</h2>
               <h3><span>Tools:</span> JavaScript, Sass, Mild Steel</h3>
-              <button>Let's work together</button>
-              <p><a href="javascript:void(0)">View my resume</a></p>
+              <a href="#more-info"><button>Let's work together</button></a>
+              <p><a href="/work/bianca-danforth-resume.pdf">View my resume</a></p>
             </div>
             </div>
           </div>
@@ -60,7 +60,7 @@ class Home extends React.Component {
               </p>
               <a 
                 className="project-thumbnail" 
-                href="/work/to-do-list"
+                href="#to-do-list"
               >
                 <img 
                   src="images/to-do-list-cropped.png" 
@@ -85,6 +85,11 @@ class Home extends React.Component {
               />
               </a>
             </div>
+          </div>
+        </section>
+        <section className="tertiary">
+          <h1>Past Projects</h1>
+          <div className="work-wrapper">
             <div className="project">
               <h4>2015 | Exploratorium</h4>
               <h2>Ferrofluid Pool</h2>
@@ -110,7 +115,7 @@ class Home extends React.Component {
               </p>
               <a 
                 className="project-thumbnail" 
-                href="#chair"
+                href="#twist"
               >
                 <img 
                 src="images/twist-cropped.jpg" 

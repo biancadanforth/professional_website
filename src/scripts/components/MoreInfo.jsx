@@ -13,7 +13,7 @@ class MoreInfo extends React.Component {
             <div>
               <h2>Say What?</h2>
               <h3>I am a<br/>designer, developer & engineer.</h3>
-              <p><a href="javascript:void(0)">View my resume</a></p>
+              <p><a href="/work/bianca-danforth-resume.pdf">View my resume</a></p>
               <img 
                 className="about-hero" 
                 src="../images/bianca.jpg" 
@@ -21,15 +21,18 @@ class MoreInfo extends React.Component {
             </div>
             <div className="about-copy">
               <p>
-                Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery bitterleaf wattle seed collard greens nori. Grape wattle seed kombu beetroot horseradish carrot squash brussels sprout chard.
+                When I went to college, like most students, I had no idea what I wanted to do. All I knew was that I wanted to do <strong>something challenging and worthwhile</strong>. I chose to study mechanical engineering. In fact, I found it so challenging and worthwhile, I chose to study it again in graduate school.
+              </p>
+              <p>
+                Now, several years out, I have stumbled upon something that not only meets those two criteria, but, more importantly, <strong>that I enjoy doing</strong> even more: web design and development.
               </p>
               <blockquote>
                 <div className="open-quote" dangerouslySetInnerHTML={{__html: quoteSVG}} />
-                Parsley shallot courgette tatsoi pea sprouts fava bean collard.
+                In many ways, I'm doing what I have always done: thinking critically and creatively, solving problems, and rolling up my sleeves to get the work done.
                 <div className="close-quote" dangerouslySetInnerHTML={{__html: quoteSVG}} />
               </blockquote>
               <p>
-                Chickweed okra pea winter purslane coriander yarrow sweet pepper radish garlic brussels sprout groundnut summer purslane earthnut pea tomato spring onion azuki bean gourd.
+                Other things I find challenging and worthwhile include: <strong>hiking</strong> with my dog, Mia, <strong>fixing things</strong> around the house and <strong>volunteering</strong> for political organizations whose ideas I believe in.
               </p>
             </div>
           </div>

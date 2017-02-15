@@ -44,7 +44,7 @@ footer {
 	}
 }
 
-footer.home-page, footer.to-do-list-page, footer.e-mail-sign-up-page, footer.ferrofluid-pool-page, footer.twist-page {
+footer.to-do-list-page, footer.e-mail-sign-up-page, footer.ferrofluid-pool-page, footer.twist-page {
 	@include diagonal-background-bottom;
 }
 

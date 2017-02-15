@@ -50,6 +50,49 @@ body {
 	.page-wrap {
 		margin: 0 auto;
 	}
+
+		// ------------ Y-OFFSET <main>  WITH PADDING-TOP FOR FIXED HEADER HEIGHT -------------
+		$header-padding-top: 30px;
+		$header-padding-bottom: 2*$header-padding-top;
+		$header-padding-400px: $padding-small;
+		$content-height: 45px;
+		$header-height: $header-padding-top + $header-padding-bottom + $content-height;
+
+		header {
+			padding-top: $header-padding-top;
+			padding-bottom: $header-padding-bottom;
+		}
+
+		main {
+			padding-top: $header-height;
+		}
+		
+		@media (max-width: 1260px) {
+			$header-padding-bottom: 2*$padding-small;
+			$content-height: 75px;
+			$header-height: $header-padding-top + $header-padding-bottom + $content-height;
+			header {
+				padding-bottom: $header-padding-bottom;
+			}
+			main {
+				padding-top: $header-height;
+			}
+		}
+
+		@media (max-width: 400px) {
+			$header-padding-top: $padding-small;
+			$header-padding-bottom: $padding-small;
+			$content-height: 70px;
+			$header-height: $header-padding-top + $header-padding-bottom + $content-height;
+			header {
+				padding: $padding-small;
+			}
+
+			main {
+				padding-top: $header-height;
+			}
+		}
+
 	//Override boilerplate styles
 	img {
 		box-sizing: border-box;
@@ -86,7 +129,7 @@ h2 {
 
 	h3 {
 	  font: {
-	  	size: 1.4em;
+	  	size: 1.125em;
 	  	weight: 400;
 	  	style: italic;
 	  	family: 'Merriweather', serif;

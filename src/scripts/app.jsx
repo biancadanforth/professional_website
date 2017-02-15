@@ -8,17 +8,6 @@ const hashHistory = ReactRouter.hashHistory;
 
 
 class App extends React.Component {
-  
-  constructor() {
-  	super();
-  	this.state = {
-  		mainYOffset: 0,
-  	}
-  }
-
-  setMainYOffset(h) {
-  	this.setState({mainYOffset: h});
-  }
 
   render() {
     const currentPath = this.props.router.location.pathname;
@@ -28,10 +17,9 @@ class App extends React.Component {
     	<div ref="page">
 	    	<Header
           currentPage={currentPath === '/' ? 'home-page' : pageName}
-	    		calculateHeight={(h) => this.setMainYOffset(h)} />
+          />
 	    	<Main
           currentPage={currentPath === '/' ? 'home-page' : pageName}
-		    	yOffset={this.state.mainYOffset}
 	    	>
           {currentPath === '/' ? <Home /> : this.props.children}
         </Main>

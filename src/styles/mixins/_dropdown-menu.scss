@@ -61,12 +61,11 @@
 	    content:'';
 	    border-left: 10px solid transparent;
 	    border-right: 10px solid transparent;
-	    border-bottom: 10px solid $off-white;
+	    border-bottom: 10px solid lighten($off-white, 1.5%);
 		}
 	    
 	  li {
-	    border-bottom: 1px solid $light-grey;
-	    background-color: $off-white;
+	    background-color: lighten($off-white, 1.5%);
 	    opacity: 0.95;
 	    transition: background-color 0.5s;
 	    
@@ -78,6 +77,14 @@
 	      border: 0;
 	      border-radius: 0 0 2px 2px;
 	    }
+
+	    &:nth-child(2) {
+	    	border-bottom: 1px solid lighten($light-grey, 10%);
+	    }
+
+	    &.past-projects {
+	  		background-color: $off-white;
+	  	}
 
 	    &:hover {
 	      background-color: $yellow;

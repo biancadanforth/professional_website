@@ -18,7 +18,7 @@ class EmailSignUp extends React.Component {
                 aria-label="Go to live site"
               >
                 <img 
-                  className="project-thumbnail" 
+                  className="project-thumbnail wrap-up" 
                   src="../../images/e-mail-sign-up-glamour-final.png" 
                   alt="Final design on different devices"
                 />

@@ -1,0 +1,15 @@
+// tertiary-section.scss
+
+.tertiary {
+	
+	padding: $padding-default $padding-default 0;	
+
+	h1 {
+		@include section-title;
+		padding-bottom: 1.5*$padding-default;
+	}
+
+	h4 {
+		border-bottom-color: $grey;
+	}
+}
