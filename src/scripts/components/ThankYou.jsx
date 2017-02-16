@@ -18,8 +18,8 @@ class ThankYou extends React.Component {
       }
     }, 1000);
 
-    // setTimeout(() => window.location = "/#/more-info"
-    //   , 5000);
+    setTimeout(() => window.location = "/#/more-info"
+      , 5000);
   }
 
   render() {

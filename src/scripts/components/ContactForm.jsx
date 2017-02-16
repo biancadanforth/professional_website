@@ -13,7 +13,7 @@ class ContactForm extends React.Component {
             action= "https://api.formbucket.com/f/buk_wGepCB3HOpSpWK9zrUBcYM5e" 
             method="post"
           >
-            <label>Name
+            <label>First and Last Name
               <input 
                 type="text" 
                 name="Name" 

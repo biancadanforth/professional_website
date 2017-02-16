@@ -20,18 +20,23 @@ class MoreInfo extends React.Component {
               />
             </div>
             <div className="about-copy">
-              <p>
+              <p className="project-description">
                 When I went to college, like most students, I had no idea what I wanted to do. All I knew was that I wanted to do <strong>something challenging and worthwhile</strong>. I chose to study mechanical engineering. In fact, I found it so challenging and worthwhile, I chose to study it again in graduate school.
               </p>
-              <p>
-                Now, several years out, I have stumbled upon something that not only meets those two criteria, but, more importantly, <strong>that I enjoy doing</strong> even more: web design and development.
+              <p className="project-description">
+                Several years later I have now stumbled upon something that not only meets those two criteria, but <strong>that I enjoy doing</strong> even more: web design and development.
               </p>
-              <blockquote>
-                <div className="open-quote" dangerouslySetInnerHTML={{__html: quoteSVG}} />
+              <div className="blockquote-wrapper">
+                <blockquote>
+                  <div className="open-quote" dangerouslySetInnerHTML={{__html: quoteSVG}} />
+                  In many ways, I'm doing what I have always done: thinking critically and creatively, solving problems, and rolling up my sleeves to get the work done.
+                  <div className="close-quote" dangerouslySetInnerHTML={{__html: quoteSVG}} />
+                </blockquote>
+              </div>
+              <p className="project-description">
                 In many ways, I'm doing what I have always done: thinking critically and creatively, solving problems, and rolling up my sleeves to get the work done.
-                <div className="close-quote" dangerouslySetInnerHTML={{__html: quoteSVG}} />
-              </blockquote>
-              <p>
+              </p>
+              <p className="project-description">
                 Other things I find challenging and worthwhile include: <strong>hiking</strong> with my dog, Mia, <strong>fixing things</strong> around the house and <strong>volunteering</strong> for political organizations whose ideas I believe in.
               </p>
             </div>

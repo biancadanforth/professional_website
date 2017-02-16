@@ -54,7 +54,7 @@
   			order: -1;
   			margin-bottom: $margin-default;
   			align-items: center;
-  			padding: $padding-default;
+  			padding: 0 $padding-default $padding-default;
 
   			.about-copy {
   				max-width: 600px;
@@ -122,8 +122,8 @@
 			label,
 			input[type="submit"] {
 			  display: inline-block;
-			  margin-top: $margin-small;
 			  font-family: 'Merriweather';
+			  margin-top: $margin-small;
 			}
 
 			label:first-child {
@@ -188,6 +188,7 @@
 				resize: none;
 				height: 100%;
 				min-height: 150px;
+				margin-bottom: $margin-small;
 				@include rounded(2px);
 			}
 
@@ -197,10 +198,6 @@
 			}
 
 		}
-	}
-
-	.g-recaptcha {
-		margin-top: $margin-small;
 	}
 
 	.secondary {
@@ -242,11 +239,24 @@
 
 		.about-copy {
 			margin-top: $margin-default;
+
+			.project-description {
+				max-width: 600px;
+				margin: 0 auto $margin-small;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
 		}
 
 		p {
 			text-align: start;
 			margin: 0;
+		}
+
+		.blockquote-wrapper {
+			margin: 0 $margin-default;
 		}
 
 		blockquote {
@@ -255,8 +265,8 @@
 			left: 0;
 			border-top: 2px solid lighten($grey, 40%);
 			border-bottom: 2px solid lighten($grey, 40%);
-			margin: 10px 0;
-			padding: 5px $padding-default;
+			margin: 0 10px $margin-small;
+			padding: 5px 2*$padding-small;
 			color: $dark-grey;
 			font-size: 1.6em;
 			text-align: start;
