@@ -13,7 +13,7 @@ class ThankYou extends React.Component {
 
     let interval = setInterval(() => {
       this.setState({countDown: (this.state.countDown-1)})
-      if (this.state.countDown < 1) {
+      if (this.state.countDown <= 1) {
         clearInterval(interval);
       }
     }, 1000);
