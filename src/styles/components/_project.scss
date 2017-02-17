@@ -2,6 +2,13 @@
 
 .to-do-list-page, .e-mail-sign-up-page, .ferrofluid-pool-page, .twist-page {
 
+	@media (max-width: 600px) {
+		.secondary, .primary {
+			padding-left: .5*$padding-small;
+			padding-right: .5*$padding-small;
+		}
+	}
+
 	.project-thumbnail {
 		width: 100%;
 		@include shadowed;
@@ -22,6 +29,11 @@
 		.primary-wrapper {
 			@media (max-width: 1260px) {
 				margin: 0 $margin-default;
+			}
+
+			@media (max-width: 600px) {
+				margin-left: 0;
+				margin-right: 0;
 			}
 		}
 	
@@ -149,6 +161,7 @@
 					.project-thumbnail, .codepen-embed {
 						max-width: 800px;
 						width: 100%;
+						margin-right: 0;
 					}
 
 					.process-description {

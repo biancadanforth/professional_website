@@ -31,6 +31,15 @@ div.page-not-found-page {
 		border-bottom: 2px solid $yellow;
 	}
 
+	h4 {
+		border: 0;
+
+		span {
+			font-size: 1em;
+			font-weight: 700;
+		}
+	}
+
 	.error-page-link, .error-page-link:visited {
 		color: $blue !important;
 	}

@@ -14,7 +14,8 @@ class ToDoList extends React.Component {
               <a 
                 className="project-thumbnail wrap-up"
                 href="/work/to-do-list/live" 
-                title="Go to live site" 
+                title="Go to live site"
+                target="_blank" 
                 aria-label="Go to live site"
               >
                 <img 
@@ -153,7 +154,8 @@ class ToDoList extends React.Component {
                 <a 
                   className="project-thumbnail wrap-up"
                   href="/work/to-do-list/live" 
-                  title="Go to live site" 
+                  title="Go to live site"
+                  target="_blank" 
                   aria-label="Go to live site"
                 >
                   <img 
