@@ -2,15 +2,10 @@
 
 // top page <section>
 .primary {
-	margin-top: $margin-default;
 	text-align: center;
 	h1 {
 		@include section-title;
 	}
-}
-
-main {
-	//padding-top:
 }
 
 main.home-page .primary, main.to-do-list-page .primary, main.e-mail-sign-up-page .primary, main.ferrofluid-pool-page .primary, main.twist-page .primary {

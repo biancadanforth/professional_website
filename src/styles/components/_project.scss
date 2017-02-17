@@ -4,21 +4,17 @@
 
 	.project-thumbnail {
 		width: 100%;
-		margin-top: $margin-default;
-		margin-bottom: $margin-default;
 		@include shadowed;
 		@include rounded(2px);
 	}
 
-	.project-thumbnail.wrap-up {
+	.wrap-up {
 			box-shadow: none;
 			border-radius: none;
 		}
 
-		.project-hero-wrapper {
-			.project-thumbnail {
-				margin-top: 0;
-			}
+		img {
+			max-width: 100%;
 		}
 
 	.primary {
@@ -31,26 +27,30 @@
 	
 		.project-hero-wrapper {
 			display: flex;
+			flex-direction: column;
 			align-items: center;
 			margin: 0 auto;
 			max-width: 1200px;
 
-			img.no-transparency {
-				@include rounded(2px);
-				@include shadowed;
+			.project-thumbnail {
+				margin-top: 0;
 			}
 
-			a {
-				margin-right: $margin-default;
-				flex: 0 1 67%;
+			img {
+				margin-bottom: 2*$margin-small;
 			}
 
-			& > div {
-				flex: 0 1 33%;
-			}
+			// a {
+			// 	margin-right: $margin-default;
+			// 	flex: 0 1 67%;
+			// }
+
+			// & > div {
+			// 	flex: 0 1 33%;
+			// }
 
 			@media (max-width: 1000px) {
-				flex-direction: column;
+				//flex-direction: column;
 
 				a {
 					margin-right: 0;
@@ -93,20 +93,71 @@
 				margin: $margin-small $margin-default;
 			}
 		}
+
+		h4 {
+			margin-top: $margin-default;
+		}
 	}
 
 	.secondary {
-		.project-description {
-			max-width: 600px;
-			margin: 0 auto $margin-small;
-
-			span {
-				font-style: italic;
+		
+		.work-wrapper {
+			.project-wrapper:first-child {
+				h2 {
+					margin-top: 0;
+				}
 			}
 		}
 
-		.codepen {
-			margin: $margin-default 0 !important;
+		.project-wrapper {
+			max-width: 1200px;
+			margin: 0 auto;
+
+			h2 {
+				margin-top: 2*$margin-default;
+				padding-bottom: 5px;
+				border-bottom: 1px solid lighten($off-white, 30%);
+			}
+
+			.project {
+				display: flex;
+				align-items: flex-start;
+				margin-top: $margin-default;
+				text-align: start;
+
+				.project-thumbnail, .codepen-embed {
+					margin-right: $margin-default;
+				}
+
+				.project-thumbnail, .codepen-embed, .process-description {
+					width: 50%;
+				}
+
+				.project-description {
+					margin: 0 auto $margin-small;
+
+					span {
+						font-style: italic;
+					}
+				}
+
+
+				@media (max-width: 1260px) {
+					flex-direction: column;
+					align-items: center;
+
+					.project-thumbnail, .codepen-embed {
+						max-width: 800px;
+						width: 100%;
+					}
+
+					.process-description {
+						max-width: 700px;
+						width: 100%;
+						margin-top: $margin-default;
+					}
+				}
+			}
 		}
 	}
 }

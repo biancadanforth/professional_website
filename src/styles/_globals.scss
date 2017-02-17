@@ -45,7 +45,7 @@ body {
 		url("../images/pw_maze_white.png");
 	color: $grey;
 	background-attachment: fixed;
-	line-height: 1.5;
+	line-height: 1.6;
 
 	.page-wrap {
 		margin: 0 auto;
@@ -174,6 +174,7 @@ h2 {
 			family: 'Merriweather';
 		}
 		color: $dark-grey;
+		line-height: 1.6;
 	}
 
 	.secondary p {

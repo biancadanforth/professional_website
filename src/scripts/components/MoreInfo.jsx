@@ -21,10 +21,10 @@ class MoreInfo extends React.Component {
             </div>
             <div className="about-copy">
               <p className="project-description">
-                When I went to college, like most students, I had no idea what I wanted to do. All I knew was that I wanted to do <strong>something challenging and worthwhile</strong>. I chose to study mechanical engineering. In fact, I found it so challenging and worthwhile, I chose to study it again in graduate school.
+                When I went to college, like most students, I had no idea what I wanted to do. All I knew was that I wanted to do <strong>something challenging and worthwhile</strong>. I chose to study mechanical engineering.
               </p>
               <p className="project-description">
-                Several years later I have now stumbled upon something that not only meets those two criteria, but <strong>that I enjoy doing</strong> even more: web design and development.
+                Several years later I have found something that is not only challenging and worthwhile, but <strong>that I enjoy doing</strong> even more: web design and development.
               </p>
               <div className="blockquote-wrapper">
                 <blockquote>

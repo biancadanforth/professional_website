@@ -256,7 +256,7 @@
 		}
 
 		.blockquote-wrapper {
-			margin: 0 $margin-default;
+			margin: $margin-default 2*$margin-small;
 		}
 
 		blockquote {
@@ -265,10 +265,9 @@
 			left: 0;
 			border-top: 2px solid lighten($grey, 40%);
 			border-bottom: 2px solid lighten($grey, 40%);
-			margin: 0 10px $margin-small;
 			padding: 5px 2*$padding-small;
 			color: $dark-grey;
-			font-size: 1.6em;
+			font-size: 1.25em;
 			text-align: start;
 
 			// Using React, have to wrap <svg> in another element when using dangerouslySetInnerHTML attribute; I used a <div>
