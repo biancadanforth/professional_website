@@ -88,40 +88,42 @@ class Home extends React.Component {
           </div>
         </section>
         <section className="tertiary">
-          <h1>Past Projects</h1>
           <div className="work-wrapper">
-            <div className="project">
-              <h4>2015 | Exploratorium</h4>
-              <h2>Ferrofluid Pool</h2>
-              <h3>Tools: Inventor, Mill, Lathe, Router</h3>
-              <p className="project-description">
-                A science exhibit where visitors can turn a hand crank to watch ferrofluid rise up different sculptures.
-              </p>
-              <a 
-                className="project-thumbnail" 
-                href="#ferrofluid-pool"
-              >
-              <img 
-              src="images/ferrofluid-pool-cropped.jpg" 
-              alt="Ferrofluid Pool science exhibit" />
-              </a>
-            </div>
-            <div className="project">
-              <h4>2012 | Stanford</h4>
-              <h2>Twist</h2>
-              <h3>Tools: SolidWorks, TIG Machine, Tube Bender</h3>
-              <p className="project-description">
-               An ergonomic chair, inspired by M.C. Escher, made of arc-welded steel and lycra.
-              </p>
-              <a 
-                className="project-thumbnail" 
-                href="#twist"
-              >
+            <h1>Past Projects</h1>
+            <div className="work-wrapper">
+              <div className="project">
+                <h4>2015 | Exploratorium</h4>
+                <h2>Ferrofluid Pool</h2>
+                <h3>Tools: Inventor, Mill, Lathe, Router</h3>
+                <p className="project-description">
+                  A science exhibit where visitors can turn a hand crank to watch ferrofluid rise up different sculptures.
+                </p>
+                <a 
+                  className="project-thumbnail" 
+                  href="#ferrofluid-pool"
+                >
                 <img 
-                src="images/twist-cropped.jpg" 
-                alt="Base of Twist chair" 
-                />
-              </a>
+                src="images/ferrofluid-pool-cropped.jpg" 
+                alt="Ferrofluid Pool science exhibit" />
+                </a>
+              </div>
+              <div className="project">
+                <h4>2012 | Stanford</h4>
+                <h2>Twist</h2>
+                <h3>Tools: SolidWorks, TIG Machine, Tube Bender</h3>
+                <p className="project-description">
+                 An ergonomic chair, inspired by M.C. Escher, made of arc-welded steel and lycra.
+                </p>
+                <a 
+                  className="project-thumbnail" 
+                  href="#twist"
+                >
+                  <img 
+                  src="images/twist-cropped.jpg" 
+                  alt="Base of Twist chair" 
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </section>

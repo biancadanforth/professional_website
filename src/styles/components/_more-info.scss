@@ -163,6 +163,18 @@
 			  @include buttoned;
 			  text-indent: 0;
 
+			  &:disabled {
+			  	background-color: $light-grey;
+			  	box-shadow: none;
+			  	color: darken($light-grey, 15%);
+			  	border-color: darken($light-grey, 15%);
+
+			  	&:hover {
+			  		background-color: $light-grey;
+			  		transition: none;
+			  	}
+			  }
+
 			  @media (max-width: 500px) {
 			  	width: 100%;
 			  }

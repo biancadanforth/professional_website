@@ -168,6 +168,10 @@
 			width: 100%;
 			margin-bottom: 2*$margin-default;
 
+			@media(max-width: 620px) {
+				margin-bottom: 2*$margin-small;
+			}
+
 			&:nth-child(2n+1) {
 				margin-right: $margin-default;
 			}
@@ -197,7 +201,12 @@
 		}
 	}
 
-	.secondary {
+	.secondary, .tertiary {
+	
+		h1 {
+				margin: $margin-default $margin-default 0;
+			}
+
 		@media (max-width: 400px) {
 			padding-left: 0;
 			padding-right: 0;
@@ -240,12 +249,12 @@
 	}
 
 	.placeholder.image-loaded {
-		
+
 		.img-small {
 			filter: none;
 		}
 
-		.welcome-message-wrapper {
+		&:after, .welcome-message-wrapper {
 			opacity: 1;
 			transition: opacity 1s linear;
 		}
