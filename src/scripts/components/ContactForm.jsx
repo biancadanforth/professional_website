@@ -5,32 +5,46 @@ class ContactForm extends React.Component {
   constructor() {
     super();
     this.state = {
-      // disabled until all form fields have been completed
-      submitDisabled: true,
       messageIsValid: false,
       nameIsValid: false,
       emailIsValid: false,
+      reCaptchaIsValid: false,
     }
   }
 
-  componentDidUpdate() {
-    this.checkForCompleteForm();
+  checkForReCaptcha() {
+    if (this.refs.recaptcha.clientHeight === 0) {
+      this.setState({reCaptchaIsValid: true});
+      this.refs.message.style.marginBottom = "0";
+    }
   }
 
-  checkForCompleteForm() {
-    // if every field has a value and submit button is disabled, enable the button.
-    if (this.state.messageIsValid && this.state.nameIsValid && this.state.emailIsValid && this.state.submitDisabled) {
-        this.setState({submitDisabled: false});
-    }
-    // if any of the fields don't have a value and the submit button is enabled, disable the button.
-    if ( !(this.state.messageIsValid) || !(this.state.nameIsValid) || !(this.state.emailIsValid) ) {
-      if (!(this.state.submitDisabled)) {
-        this.setState({submitDisabled: true});
-      }
-    }
+  componentDidMount() {
+    // map global function pointed to by grecaptcha data-callback attribute to the handleReCaptcha method in this React component
+    window[this.props.reCaptchaId] = this.handleReCaptcha.bind(this);
+
+    window.addEventListener('load', this.checkForReCaptcha.bind(this));
+  }
+
+  handleReCaptcha() {
+    this.setState({reCaptchaIsValid: true});
+  }
+
+  componentWillUnmount() {
+    window.handleReCaptcha = null;
+
+    window.removeEventListener('load', this.checkForReCaptcha.bind(this));
   }
 
   render() {
+
+    const submitEnabled = (
+      this.state.messageIsValid 
+      && this.state.nameIsValid 
+      && this.state.emailIsValid 
+      && this.state.reCaptchaIsValid
+    );
+
     return(
       <div className="contact-body" ref="contact-form">
         <h2>Say Hello!</h2>
@@ -67,7 +81,6 @@ class ContactForm extends React.Component {
                 }
               />
             </label>
-            <p className="note">You will receive a copy of your message at this e-mail address.</p>
             <label className="textarea-label">Message
               <textarea 
                 name="Message" 
@@ -83,13 +96,14 @@ class ContactForm extends React.Component {
             </label>
             <div 
               className="g-recaptcha"
-              ref="grecaptcha" 
-              data-sitekey="6LeAxRUUAAAAANzTjjVyoz8ZMVQHhX20-PwIwLl5">
+              data-sitekey="6LeAxRUUAAAAANzTjjVyoz8ZMVQHhX20-PwIwLl5"
+              ref="recaptcha"
+              data-callback={this.props.reCaptchaId.toString()}>
             </div>
             <input
               type="submit" 
               value="Send"
-              disabled={this.state.submitDisabled}
+              disabled={!submitEnabled}
             />
           </form>
         </div>
