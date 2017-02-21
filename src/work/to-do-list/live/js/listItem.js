@@ -171,7 +171,7 @@ app.store = {
     var checkmarkIconWrapper = createCheckmarkIconWrapper(taskId);
     fakeCheckbox.appendChild(checkmarkIconWrapper);
 
-    loadIcon('/to-do-list/images/checkmark.svg', checkmarkIconWrapper);
+    loadIcon('/work/to-do-list/live/images/checkmark.svg', checkmarkIconWrapper);
     
     var inputElement = createInputElement(taskId, taskContainerElement);
     taskContainerElement.appendChild(inputElement);
@@ -183,7 +183,7 @@ app.store = {
     var deleteIconWrapper = createDeleteIconWrapper(taskId);
     taskContainerElement.appendChild(deleteIconWrapper);
 
-    loadIcon('/to-do-list/images/delete-icon.svg', deleteIconWrapper);
+    loadIcon('/work/to-do-list/live/images/delete-icon.svg', deleteIconWrapper);
 
     setTimeout(function showTaskContainer() {
       taskContainerElement.classList.remove('hidden');

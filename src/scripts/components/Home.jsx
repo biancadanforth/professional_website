@@ -56,7 +56,7 @@ class Home extends React.Component {
               <h2>To Do List</h2>
               <h3>Tools: vanilla JavaScript, HTML, CSS, Photoshop</h3>
               <p className="project-description">
-                A single page application where users can add, edit, delete, complete, undo and search tasks.
+                A single page application where users can add, edit, delete, complete, undo and filter tasks.
               </p>
               <a 
                 className="project-thumbnail" 

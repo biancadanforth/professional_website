@@ -28,11 +28,20 @@ class EmailSignUp extends React.Component {
                 <h2>Overview</h2>
                 <h4 className="overview-header">Project goals</h4>
                 <p>
-                  This was an extra credit project for a web design course I took from Skillcrush. I was given a Photoshop mock-up and asked to turn it into a responsive webpage.
+                  My goal was to make a static webpage based on a provided Photoshop mock-up.
+                </p>
+                <p>
+                  This was an extra credit project for a web design course I took from Skillcrush.com.
                 </p>
                 <h4 className="overview-header">Tools and Methods</h4>
                  <p>
-                  This is a static page written in plain CSS and HTML. There is no back-end for the forms.
+                  This page is written in HTML and CSS.
+                </p>
+                <p>
+                  I used a modified fluid grid framework along with CSS Flexbox to layout elements on the page.
+                </p>
+                <p>
+                  There is no back-end component for the forms.
                 </p>
               </div>
             </div>
@@ -51,31 +60,16 @@ class EmailSignUp extends React.Component {
                 />
                 <div className="process-description">
                   <p className="project-description">
-                The first thing I needed to do was figure out all of the assets to extract from the Photoshop mock-up. For example, I needed the Wisdom Script and Noticia Text fonts, the background pattern and paper background image and the color values of all the major elements used in the page. 
-              </p>
-              <p className="project-description">
-                I also set up a grid system and re-organized the layers into groups that would represent different HTML elements of the page.
-              </p>
-                </div>
-              </div>
-            </div>
-            <div className="project-wrapper">
-              <h2>Ideation</h2>
-              <div className="project">
-                <img 
-                  className="project-thumbnail" 
-                  src="../../images/e-mail-sign-up-ideation.png"  
-                  alt="Flexbox Froggy game" 
-                />
-                <div className="process-description">
-                  <p className="project-description">
-                    This was my first foray into front-end development. I had to research what approach to use to layout the page in CSS. I did not want to use any third-party frameworks (Bootstrap, Foundation, Skeleton, etc.), since I wanted to make sure I was comfortable working in plain CSS.
+                     The first thing I did was organize the layers in Photoshop into groups that would mirror the major HTML container elements on the page.
                   </p>
                   <p className="project-description">
-                    Though it wasn't covered in the course, I came across a very useful new tool released in CSS3 for flexible layouts called Flexbox.
+                    I then identified all of the assets to extract from the mock-up. For example, I needed the Wisdom Script and Noticia Text fonts, the background pattern and paper background images and the color values of all the major elements used in the page.
                   </p>
                   <p className="project-description">
-                    After going through an excellent tutorial online called Flexbox Froggy, I was confident in moving forward using Flexbox on this project.
+                    I learned that style guides are very handy, and that there's a lot a designer can do to make sure their design is not lost in translation. For example, this mock-up did not tell me how the page should look on a mobile device, or what the buttons should look like in hover or pressed states.
+                  </p>
+                  <p className="project-description">
+                    Thankfully, the mock-up was designed using a grid system. I learned that designing with a grid system accomplishes a lot of things at once: it ensure elements are aligned between horizontal sections, that they are evenly spaced between one another in a row, and most importantly in my case, allows the developer to easily translate widths into percentages in CSS. Using relative size units like percentages makes building a responsive page possible (along with media queries).
                   </p>
                 </div>
               </div>
@@ -85,8 +79,17 @@ class EmailSignUp extends React.Component {
               <div className="project">
                 <div className="codepen-embed"dangerouslySetInnerHTML={{__html: fluidGridCodepen}} />
                 <div className="process-description">
-                  <p>
-                    I made one of my first codepens on this project, modifying some code I found to make a fluid grid in CSS. I used these styles along with Flexbox on the final page.
+                  <p className="project-description">
+                    Since this was my first foray into front-end development, I had to research what approach to use to layout the page in CSS. I did not want to use any third-party frameworks (Bootstrap, Foundation, Skeleton, etc.), since I wanted to make sure I was comfortable working in plain CSS.
+                  </p>
+                  <p className="project-description">
+                    Like many of the frameworks I mentioned, the web design course I was taking during this project relied on the CSS <code>float</code> property to layout a webpage. 
+                  </p>
+                  <p className="project-description">
+                    I experimented with a fluid grid approach, modifying a framework for a 960 pixel grid on Codepen that used <code>float</code> and percentage-based widths to adjust the size of content dynamically. 
+                  </p>
+                  <p className="project-description">
+                    I learned how helpful it is to have frameworks in place, so that common UI elements and layouts can be built quickly and modified as needed. This makes prototyping different ideas much more efficient. 
                   </p>
                 </div>
               </div>
@@ -101,7 +104,13 @@ class EmailSignUp extends React.Component {
                 />
                 <div className="process-description">
                   <p className="project-description">
-                    Finally, I had to put it all together, linking the assets, integrating the fluid grid flexbox layouts and filling in the gaps for information that wasn't provided, like button hover states.
+                    While floating left and right can get the job done, there can be many unexpected behaviors and display issues associated with floated elements.
+                  </p>
+                  <p className="project-description">
+                    Though it wasn't covered in the course, I did some research and came across a very useful new alternative to <code>float</code> released in CSS3 for flexible layouts called Flexbox. After going through an excellent tutorial online called Flexbox Froggy, I was excited to try Flexbox out on this project.
+                  </p>
+                  <p className="project-description">
+                    Once I had the structure planned out, I had to put it all together, linking the assets, establishing layout breakpoints and filling in the gaps for information that wasn't provided, like placeholder text styles in the form input fields.
                   </p>
                 </div>
               </div>
@@ -127,7 +136,10 @@ class EmailSignUp extends React.Component {
                     Since this was my first web development project, I learned a lot about the myriad approaches that I could take. Each developer has their own process, and my own began to form and evolve.
                   </p>
                   <p className="project-description">
-                    I started to understand how important the DRY (Don't Repeat Yourself) coding principle was to debugging, and how important it was to stay organized and consistent in my code.
+                    I also started to get a sense for just how much can be done with HTML and CSS on their own. For example, I made the ribbon for the tagline at the top of the page purely with CSS.
+                  </p>
+                  <p className="project-description">
+                    Finally, I started to understand how important the DRY (Don't Repeat Yourself) coding principle was to debugging, and how important it was to stay organized and consistent in my code.
                   </p>
                 </div>
               </div>
