@@ -8,7 +8,7 @@ class MoreInfo extends React.Component {
     return(
       <div>
         <section className="primary">
-          <ContactForm reCaptchaId="firstForm" />
+          <ContactForm />
           <div className="about-body">
             <div>
               <h2>Say What?</h2>
@@ -41,9 +41,6 @@ class MoreInfo extends React.Component {
               </p>
             </div>
           </div>
-        </section>
-        <section className="secondary">
-          <ContactForm reCaptchaId="secondForm" />
         </section>
       </div>
     )

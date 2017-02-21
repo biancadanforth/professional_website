@@ -12,28 +12,23 @@ class ContactForm extends React.Component {
     }
   }
 
-  checkForReCaptcha() {
-    if (this.refs.recaptcha.clientHeight === 0) {
-      this.setState({reCaptchaIsValid: true});
-      this.refs.message.style.marginBottom = "0";
-    }
-  }
-
   componentDidMount() {
     // map global function pointed to by grecaptcha data-callback attribute to the handleReCaptcha method in this React component
-    window[this.props.reCaptchaId] = this.handleReCaptcha.bind(this);
+    window.handleReCaptcha = this.handleReCaptcha.bind(this);
 
-    window.addEventListener('load', this.checkForReCaptcha.bind(this));
+    this.checkForReCaptcha();
   }
 
   handleReCaptcha() {
     this.setState({reCaptchaIsValid: true});
   }
 
+  checkForReCaptcha() {
+    (document.getElementById('g-recaptcha-response')) ? null : this.setState({reCaptchaIsValid: true});
+  }
+
   componentWillUnmount() {
     window.handleReCaptcha = null;
-
-    window.removeEventListener('load', this.checkForReCaptcha.bind(this));
   }
 
   render() {
@@ -98,7 +93,7 @@ class ContactForm extends React.Component {
               className="g-recaptcha"
               data-sitekey="6LeAxRUUAAAAANzTjjVyoz8ZMVQHhX20-PwIwLl5"
               ref="recaptcha"
-              data-callback={this.props.reCaptchaId.toString()}>
+              data-callback="handleReCaptcha">
             </div>
             <input
               type="submit" 
