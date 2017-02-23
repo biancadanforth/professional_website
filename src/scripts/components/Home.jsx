@@ -43,7 +43,7 @@ class Home extends React.Component {
               <h2 className="welcome-message">Front-end web nerd. Former mechanical engineer.</h2>
               <h3><span>Tools:</span> JavaScript, Sass, Mild Steel</h3>
               <a href="#more-info"><button>Let's work together</button></a>
-              <p><a href="/work/bianca-danforth-resume.pdf">View my resume</a></p>
+              <p><a target="_blank" href="/work/bianca-danforth-resume.pdf">View my resume</a></p>
             </div>
             </div>
           </div>

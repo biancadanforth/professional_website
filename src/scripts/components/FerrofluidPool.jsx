@@ -26,17 +26,20 @@ class FerrofluidPool extends React.Component {
                 <h2>Overview</h2>
                 <h4 className="overview-header">Project goals</h4>
                 <p>
-                  This was an exhibit that I engineered and built from a visual design and materials palette, with mentorship from a senior mechanical and electrical engineer.
+                  The goal of this project was to engineer and build a science exhibit based on a visual design and materials palette.
                 </p>
                 <p>
-                  Users can learn about magnetism first-hand by observing how ferrofluid, an oil-based suspension of microscopic iron particles, follows the magnetic field lines of each sculpture as the crank is turned.
+                  I was the principle engineer, but I received mentorship from a senior mechanical and electrical engineer.
                 </p>
                 <h4 className="overview-header">Tools and Methods</h4>
                  <p>
-                  The hand crank uses a rotary encoder and microprocessor to relate the crank's angular velocity to electrical current. The current is then input into an electromagnet located directly underneath each sculpture, generating the magnetic field.
+                  I made a 3D CAD (Computer-Aided Design) model and production drawings of the exhibit and all its subassemblies in Autodesk Inventor.
                 </p>
                 <p>
-                  At the time of publishing the final drawing linked here, my name was Bianca Morales.
+                  While most parts were fabricated by outside vendors or our in-house woodworker, I also made and modified parts using many traditional and CNC (computer-numerical control) manufacturing processes in the Exploratorium's machine shop.
+                </p>
+                <p>
+                  At the time of publishing the drawing linked here, my name was Bianca Morales.
                 </p>
               </div>
             </div>
@@ -60,6 +63,12 @@ class FerrofluidPool extends React.Component {
                   <p className="project-description">
                     It was my job to make the exhibit a reality. The first thing to do was to figure out the constraints, and if there was any reason why the engineering design would require a change in the visual and/or interaction design.
                   </p>
+                  <p className="project-description">
+                    The challenge for this exhibit was that, unlike many exhibits that the museum has produced for other institutions, we had never built anything like it before. I had to figure out, from scratch, how to reproduce the phenomenon.
+                  </p>
+                  <p className="project-description">
+                    I dug up as much information as I could about Ferrofluid, the phenomena and the electrical and physical requirements I would need to meet to lay the groundwork for future experiments.
+                  </p>
                 </div>
               </div>
             </div>
@@ -73,10 +82,10 @@ class FerrofluidPool extends React.Component {
                 />
                 <div className="process-description">
                   <p className="project-description">
-                    I set about coming up with as many ways as possible to generate the magnetic field for each sculpture by turning a crank.
+                    After gleaning what I could of how others had reproduced the phenomenon, I knew there was an electromagnet placed directly underneath the sculpture, but I needed a way to power them with a crank as the input.
                   </p>
                   <p className="project-description">
-                    The two leading options were to connect the hand crank mechanically to a generator or to add a microprocessor to digitally control how much current went to the electromagnets underneath each sculpture.
+                    I consulted with other engineers and sketched out some ideas on paper. The two leading options were to connect the hand crank mechanically to a generator or to add a microprocessor to digitally control how much current went to the electromagnets.
                   </p>
                 </div>
               </div>
@@ -91,7 +100,13 @@ class FerrofluidPool extends React.Component {
                 />
                 <div className="process-description">
                   <p className="project-description">
-                    After prototyping both solutions, I found that it would not be possible for a person to turn the hand crank fast enough to output the current required to magnetize the sculptures, but the digital control option, shown here, would work.
+                    The critical piece of information to decide between either option was how strong a magnetic field was needed. A hand crank generator is much more limited.
+                  </p>
+                  <p className="project-description">
+                    Using a variable power supply and found materials, I set up a proof-of-concept and was able to reproduce the phenomenon and measure exactly how strong a magnetic field (and how much power) was needed for a given coil.
+                  </p>
+                  <p className="project-description">
+                    This test showed that the mechanical generator solution would be inadequate, so I moved forward with the digital solution.
                   </p>
                 </div>
               </div>
@@ -109,7 +124,7 @@ class FerrofluidPool extends React.Component {
                     After figuring out the technical details, I had to finalize production drawings and either get parts made outside or make them myself.
                   </p>
                   <p className="project-description">
-                    Finally, I got to do the fun part of actually assembling and testing the exhibit. This is the final assembly of one of three hand cranks (handle not shown), along with a custom jig I made. The encoder connects to a microprocessor inside the exhibit cabinet.
+                    Finally, I had to assemble and test the exhibit. This is the final assembly of one of three hand cranks (handle not shown), along with a custom jig I made. The encoder connects to a microprocessor inside the exhibit cabinet.
                   </p>
                 </div>
               </div>
@@ -127,7 +142,7 @@ class FerrofluidPool extends React.Component {
                     I made all or part of nearly 10 exhibits in my years at the Exploratorium, and this one is by far my favorite.
                   </p>
                   <p className="project-description">
-                    I learned how interdependent a product's visual and interaction design are with its engineering design. That is why now, I have focused on web design <span>and</span> development, not just one or the other.
+                    I learned how interdependent a product's visual and interaction design are with its engineering design. That is why now, I have decided to focus on both design and development, not just one or the other. I believe being a good designer makes me a better engineer, and being a good engineer makes me a better designer.
                   </p>
                 </div>
               </div>

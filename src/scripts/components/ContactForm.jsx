@@ -15,18 +15,12 @@ class ContactForm extends React.Component {
   componentDidMount() {
     // map global function pointed to by grecaptcha data-callback attribute to the handleReCaptcha method in this React component
     window.handleReCaptcha = this.handleReCaptcha.bind(this);
-
-    this.checkForReCaptcha();
   }
 
   handleReCaptcha() {
     this.setState({reCaptchaIsValid: true});
   }
-
-  checkForReCaptcha() {
-    (document.getElementById('g-recaptcha-response')) ? null : this.setState({reCaptchaIsValid: true});
-  }
-
+  
   componentWillUnmount() {
     window.handleReCaptcha = null;
   }

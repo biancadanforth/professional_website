@@ -38,7 +38,7 @@ class ToDoList extends React.Component {
                   I wrote this application from scratch in JavaScript, HTML and CSS. I created a local storage API in JavaScript to save the list between sessions.
                 </p>
                 <p>
-                  I had never used any of these tools extensively before, so I was learning them as I went.
+                  I had never used any of these tools extensively before (HTML and CSS excepted), so I was learning them as I went.
                 </p>
                 <p>
                   While I completed all the work on my own, I met weekly with a professional web designer for feedback.

@@ -13,7 +13,7 @@ class MoreInfo extends React.Component {
             <div>
               <h2>Say What?</h2>
               <h3>I am a<br/>designer, developer & engineer.</h3>
-              <p><a href="/work/bianca-danforth-resume.pdf">View my resume</a></p>
+              <p><a target="_blank" href="/work/bianca-danforth-resume.pdf">View my resume</a></p>
               <img 
                 className="about-hero" 
                 src="../images/bianca.jpg" 

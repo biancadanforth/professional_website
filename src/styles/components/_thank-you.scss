@@ -1,5 +1,13 @@
 // _thank-you.scss
 
+header.thank-you-page {
+	position: static;
+	top: 0;
+	left: 0;
+	transform: none;
+	text-align: center;
+}
+
 .thank-you-page {
 
 	.thank-you-wrapper {
@@ -21,6 +29,10 @@
 				border-bottom: 2px solid $yellow;
 			}
 
+			h3 br {
+				display: none;
+			}
+
 			h4 {
 				border: 0;
 
@@ -32,6 +44,14 @@
 
 			p {
 				margin-bottom: 0.5*$margin-default;
+			}
+		}
+
+		@media (max-width: 350px) {
+			margin: 0 $margin-small;
+
+			.thank-you h3 br {
+				display: inline;
 			}
 		}
 	}
