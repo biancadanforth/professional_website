@@ -13,6 +13,9 @@ class ContactForm extends React.Component {
   }
 
   componentDidMount() {
+    
+    grecaptcha.render(ReactDOM.findDOMNode(this.refs.recaptchaTarget), {sitekey: '6LeAxRUUAAAAANzTjjVyoz8ZMVQHhX20-PwIwLl5', callback: 'handleReCaptcha'});
+
     // map global function pointed to by grecaptcha data-callback attribute to the handleReCaptcha method in this React component
     window.handleReCaptcha = this.handleReCaptcha.bind(this);
   }
@@ -83,12 +86,7 @@ class ContactForm extends React.Component {
               >
               </textarea>
             </label>
-            <div 
-              className="g-recaptcha"
-              data-sitekey="6LeAxRUUAAAAANzTjjVyoz8ZMVQHhX20-PwIwLl5"
-              ref="recaptcha"
-              data-callback="handleReCaptcha">
-            </div>
+            <div ref="recaptchaTarget" />
             <input
               type="submit" 
               value="Send"

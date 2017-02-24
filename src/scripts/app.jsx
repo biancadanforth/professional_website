@@ -36,6 +36,7 @@ render((
     <Route path="/" component={App}>
       <Route path="home" component={Home} />
       <Route path="more-info" component={MoreInfo} />
+      <Route path="thank-you" component={ThankYou} />
       <Route path="to-do-list" component={ToDoList} />
       <Route path="e-mail-sign-up" component={EmailSignUp} />
       <Route path="ferrofluid-pool" component={FerrofluidPool} />

@@ -8,7 +8,7 @@ class MoreInfo extends React.Component {
     return(
       <div>
         <section className="primary">
-          <ContactForm />
+          <ContactForm reCaptchaScriptIsLoaded={this.props.reCaptchaScriptIsLoaded}/>
           <div className="about-body">
             <div>
               <h2>Say What?</h2>

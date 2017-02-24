@@ -204,7 +204,7 @@
 	.secondary, .tertiary {
 	
 		h1 {
-				margin: $margin-default $margin-default 0;
+				margin: $margin-default auto 0;
 			}
 
 		@media (max-width: 400px) {
