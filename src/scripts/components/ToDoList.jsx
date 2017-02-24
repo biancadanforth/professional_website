@@ -42,10 +42,7 @@ class ToDoList extends React.Component {
                 </p>
                 <h4 className="overview-header">Tools and Methods</h4>
                  <p>
-                  I used Photoshop to make the design mock-ups and UXPin and InVision to build the wireframes.
-                </p>
-                <p>
-                  I wrote this application from scratch in JavaScript, HTML and CSS. I created a local storage API in JavaScript to save the list between sessions.
+                  I used Photoshop to make the design mock-ups and UXPin and InVision to build the wireframes. I wrote this application from scratch in pure JavaScript ES5, HTML5 and CSS3. I created a local storage API in JavaScript to save the list between sessions.
                 </p>
                 <p>
                   I had never used any of these tools extensively before (HTML and CSS excepted), so I was learning them as I went.
@@ -73,10 +70,10 @@ class ToDoList extends React.Component {
                     Since I didn't have an explicit customer, I asked friends and family what features they thought were most important.
                   </p>
                   <p className="project-description">
-                    At the same time, I was reading the popular usability book by Steven Krug, <span>Don't Make Me Think</span>. Krug talked about some universal usability principles, including the idea that if absolutely unavoidable, it should be as painless and simple as possible for users to recover from a mistake. I decided early that the ability to undo any action would be a priority.
+                    At the same time, I was reading the popular usability book by Steven Krug, <span>Don't Make Me Think</span>. Krug talked about some universal usability principles, including the idea that if absolutely unavoidable, it should be as painless and simple as possible for users to recover from a mistake. I decided that the ability to undo any action would be a priority.
                   </p>
                   <p className="project-description">
-                   I also did some benchmarking, which is a Stanford Design School term for checking out the competition. Shown here is one of my favorite competitors, Todoist. Here, in addition to looking at how different kinds of information were organized, I was interested in how these existing applications transitioned between different states. I wanted my application to flow smoothly from one state to the next, so I decided that I would make use of CSS transitions and animations to achieve that.
+                   I also did some benchmarking, which is a Stanford Design School term for checking out the competition. One of my favorite competitors was Todoist. In addition to looking at how different kinds of information were organized, I was interested in how these existing applications transitioned between different states.
                   </p>
                 </div>
               </div>
@@ -94,7 +91,7 @@ class ToDoList extends React.Component {
                     From interviewing others and benchmarking, I already had a good start on possible features to include in my application and their relative importance. I brainstormed further on my own, thinking about what I would like to be able to do.
                   </p>
                   <p className="project-description">
-                    I also took another pass through benchmarking other To Do List applications, this time, with an eye for the design of the user interface. I created the style tile shown here, which helped me translate my application's personality into development-friendly UI, color and typography elements.
+                    I also took another pass through benchmarking other To Do List applications, this time, with an eye for the design of the user interface. I created a style tile, which helped me translate my application's personality into development-friendly UI, color and typography elements.
                   </p>
                 </div>
               </div>
@@ -112,7 +109,7 @@ class ToDoList extends React.Component {
                     I made low- and high-fidelity, clickable wireframes, and user-tested them with a few different kinds of users: one web developer, one web designer, one college student and one tech-savvy retiree.
                   </p>
                   <p className="project-description">
-                    The first iteration, shown here, showed me that menus should be contextual. For example, deleting a list is a relatively rare occurrence. Rather than have it a permanent fixture on the page, why not make it part of a 'list options' submenu that is accessible, but more visually subdued?
+                    <strong>The first iteration showed me</strong> that menus should be contextual. For example, deleting a list is a relatively rare occurrence. Rather than have it a permanent fixture on the page, I decided to make it part of a 'list options' submenu that is accessible, but more visually subdued.
                   </p>
                 </div>
               </div>
@@ -123,13 +120,10 @@ class ToDoList extends React.Component {
                 <div className="codepen-embed"dangerouslySetInnerHTML={{__html: searchFilterCodePen}} />
                 <div className="process-description">
                   <p className="project-description">
-                    I also broke up each major feature of the application into reusable modules and developed them separately in Codepen, a front-end development sandbox. I then integrated them one by one into the larger application. For example, I made a task search filter module.
+                    I also broke up each major feature of the application into reusable modules and developed them separately in Codepen. I then integrated them one by one into the larger application. For example, I made a task search filter module.
                   </p>
                   <p className="project-description">
-                    One thing I learned rather quickly: just because something works in Codepen doesn't mean it's going to work on its own in the browser. I ended up having to migrate my Codepens to my local machine to cross-browser test each module before integrating them.
-                  </p>
-                  <p className="project-description">
-                    I also learned that there are about 10,000 ways to do everything, and almost all of the code is freely available online through various resources like Stack Exchange, GitHub and Mozilla Developer Network. I had no shortage of information (good and bad) when faced with an implementation challenge.
+                    <strong>One thing I learned</strong> rather quickly: just because something works in Codepen doesn't mean it's going to work on its own in the browser. I ended up having to migrate my Codepens to my local machine to cross-browser test each module before integrating them.
                   </p>
                 </div>
               </div>
@@ -150,10 +144,10 @@ class ToDoList extends React.Component {
                     From reading various articles about the design of content-heavy websites, I knew I wanted the page to have a clean look with generous amounts of whitespace and a highly readable set of fonts.
                   </p>
                   <p className="project-description">
-                    More testing of the high-fidelity wireframe brought even more improvements to my application. Another universal usability principle from Steven Krug's book, <span>Don't Make Me Think</span>, was to save the user steps wherever possible. For example, rather than have an 'Add List Item' link that the user must click to add a task, why not have a new task automatically created when the user submits the previous task?
+                    <strong>More testing</strong> of the high-fidelity wireframe <strong>brought even more improvements</strong> to my application. Another universal usability principle from Steven Krug's book, <span>Don't Make Me Think</span>, was to eliminate steps wherever possible. For example, rather than have a button the user clicks to add a task, the application should automatically add a new task after the user submits one.
                   </p>
                   <p className="project-description">
-                    My design mentor also reminded me of a key design requirement at this stage: Any context menus that are accessible by hover should also be accessible by tapping on a mobile device. This forced me to re-examine whether these options were always visible or a tap away.
+                    My design mentor also reminded me of <strong>a key design requirement</strong> at this stage: Any context menus that are accessible by hover should also be accessible by tapping on a mobile device. This forced me to re-examine whether these options were always visible or a tap away.
                   </p>
                 </div>
               </div>
@@ -192,10 +186,10 @@ class ToDoList extends React.Component {
                     Each step in my design process brought a new level of understanding and appreciation for the complexity of modern web design and development.
                   </p>
                   <p className="project-description">
-                    I also got to take a deep dive into JavaScript for the first time, learning about modular code architecture, APIs, AJAX and why libraries like JQuery and React are so popular and useful.
+                    I also <strong>took a deep dive into JavaScript</strong> for the first time, learning about modular code architecture, APIs, AJAX and why libraries like JQuery and React are so popular and useful.
                   </p>
                   <p className="project-description">
-                    Finally, I confronted mobile-friendly design head-on and got a chance to apply usability principles that I had been reading about.
+                    Finally, I <strong>confronted mobile-friendly design head-on</strong> and got a chance to apply usability principles that I had been reading about.
                   </p>
                   <p className="project-description">
                     I'm very proud of the result. I use my To Do List application regularly on my phone.

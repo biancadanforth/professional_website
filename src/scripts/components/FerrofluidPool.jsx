@@ -43,13 +43,13 @@ class FerrofluidPool extends React.Component {
                 </p>
                 <h4 className="overview-header">Tools and Methods</h4>
                  <p>
-                  I made a 3D CAD (Computer-Aided Design) model and production drawings of the exhibit and all its subassemblies in Autodesk Inventor.
+                  I made a 3D CAD model and production drawings of the exhibit and all its subassemblies in Autodesk Inventor.
                 </p>
                 <p>
                   While most parts were fabricated by outside vendors or our in-house woodworker, I also made and modified parts using many traditional and CNC (computer-numerical control) manufacturing processes in the Exploratorium's machine shop.
                 </p>
                 <p>
-                  At the time of publishing the drawing linked here, my name was Bianca Morales.
+                  At the time of publishing the drawing, my name was Bianca Morales.
                 </p>
               </div>
             </div>
@@ -134,7 +134,7 @@ class FerrofluidPool extends React.Component {
                     After figuring out the technical details, I had to finalize production drawings and either get parts made outside or make them myself.
                   </p>
                   <p className="project-description">
-                    Finally, I had to assemble and test the exhibit. This is the final assembly of one of three hand cranks (handle not shown), along with a custom jig I made. The encoder connects to a microprocessor inside the exhibit cabinet.
+                    Finally, I had to assemble and test the exhibit. I made the subassemblies first, like the three hand cranks. After the subassemblies were ready, they were integrated into the larger exhibit.
                   </p>
                 </div>
               </div>
@@ -152,7 +152,7 @@ class FerrofluidPool extends React.Component {
                     I made all or part of nearly 10 exhibits in my years at the Exploratorium, and this one is by far my favorite.
                   </p>
                   <p className="project-description">
-                    I learned how interdependent a product's visual and interaction design are with its engineering design. That is why now, I have decided to focus on both design and development, not just one or the other. I believe being a good designer makes me a better engineer, and being a good engineer makes me a better designer.
+                    I learned how interdependent a product's visual and interaction design are with its engineering design. That is why now, I have decided to focus on both design and development, not just one or the other.
                   </p>
                 </div>
               </div>

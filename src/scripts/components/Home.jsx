@@ -54,7 +54,7 @@ class Home extends React.Component {
             <div className="project">
               <h4>2016 | Self-Initiated</h4>
               <h2>To Do List</h2>
-              <h3>Tools: vanilla JavaScript, HTML, CSS, Photoshop</h3>
+              <h3>Tools: pure JavaScript, HTML5, CSS5, Photoshop</h3>
               <p className="project-description">
                 A single page application where users can add, edit, delete, complete, undo and filter tasks.
               </p>
@@ -71,7 +71,7 @@ class Home extends React.Component {
             <div className="project">
               <h4>2016 | Self-Initiated</h4>
               <h2>E-mail Sign-up</h2>
-              <h3>Tools: HTML, CSS, Photoshop</h3>
+              <h3>Tools: HTML5, CSS3, Photoshop</h3>
               <p className="project-description">
                 A static page where users can subscribe to a newsletter, contact, and learn more about Skillcrush.
               </p>

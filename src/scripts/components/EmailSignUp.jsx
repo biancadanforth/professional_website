@@ -45,7 +45,7 @@ class EmailSignUp extends React.Component {
                 </p>
                 <h4 className="overview-header">Tools and Methods</h4>
                  <p>
-                  This page is written in HTML and CSS.
+                  This page is written in HTML5 and CSS3.
                 </p>
                 <p>
                   I used a modified fluid grid framework along with CSS Flexbox to layout elements on the page.
@@ -90,7 +90,7 @@ class EmailSignUp extends React.Component {
                 <div className="codepen-embed"dangerouslySetInnerHTML={{__html: fluidGridCodepen}} />
                 <div className="process-description">
                   <p className="project-description">
-                    Since this was my first foray into front-end development, I had to research what approach to use to layout the page in CSS. I did not want to use any third-party frameworks (Bootstrap, Foundation, Skeleton, etc.), since I wanted to make sure I was comfortable working in plain CSS.
+                    Since this was my first foray into front-end development, I had to research what approach to use to layout the page in CSS. I did not want to use any third-party frameworks (Bootstrap, Foundation, Skeleton, etc.), since I wanted to make sure I was comfortable working in pure CSS.
                   </p>
                   <p className="project-description">
                     Like many of the frameworks I mentioned, the web design course I was taking during this project relied on the CSS <code>float</code> property to layout a webpage. 
@@ -156,7 +156,7 @@ class EmailSignUp extends React.Component {
                     Since this was my first web development project, I learned a lot about the myriad approaches that I could take. Each developer has their own process, and my own began to form and evolve.
                   </p>
                   <p className="project-description">
-                    I also started to get a sense for just how much can be done with HTML and CSS on their own. For example, I made the ribbon for the tagline at the top of the page purely with CSS.
+                    I also started to get a sense for just how much can be done with HTML and CSS on their own (i.e. without JavaScript). For example, I made the ribbon for the tagline at the top of the page purely with CSS.
                   </p>
                   <p className="project-description">
                     Finally, I started to understand how important the DRY (Don't Repeat Yourself) coding principle was to debugging, and how important it was to stay organized and consistent in my code.

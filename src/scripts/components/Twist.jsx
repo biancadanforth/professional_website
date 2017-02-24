@@ -18,7 +18,7 @@ class Twist extends React.Component {
                 <h2>Overview</h2>
                 <h4 className="overview-header">Project goals</h4>
                 <p>
-                  I designed and built this chair in an Art Studio class I took in my final quarter as a graduate student in mechanical engineering. It was featured in Stanford's alumni magazine!
+                  I designed and built a chair in an Art Studio class I took in my final quarter as a graduate student in mechanical engineering. It was featured in Stanford's alumni magazine!
                 </p>
                 <p>
                   The Twist chair explores the creation of organic and dynamic forms with unlikely materials.
