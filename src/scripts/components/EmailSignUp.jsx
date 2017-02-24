@@ -11,19 +11,29 @@ class EmailSignUp extends React.Component {
             <h1>E-mail Sign-Up</h1>
             <h3>Front-End Development</h3>
             <div className="project-hero-wrapper">
-              <a 
-                className="project-thumbnail wrap-up"
-                href="/work/e-mail-sign-up/live" 
-                title="Go to live site"
-                target="_blank"
-                aria-label="Go to live site"
-              >
-                <img 
-                  className="wrap-up" 
-                  src="../../images/e-mail-sign-up-glamour-final.png" 
-                  alt="Final design on different devices"
-                />
-              </a>
+              <div className="glamour-shot-wrapper">
+                <a 
+                  className="wrap-up"
+                  href="/work/e-mail-sign-up/live" 
+                  title="See it live"
+                  target="_blank"
+                  aria-label="Go to live site"
+                >
+                  <img 
+                    className="project-thumbnail wrap-up" 
+                    src="../../images/e-mail-sign-up-glamour-final.png" 
+                    alt="Final design on different devices"
+                  />
+                </a>
+                <a
+                  className="button-wrapper"
+                  href="/work/e-mail-sign-up/live" 
+                  target="_blank" 
+                  aria-label="Go to live site"
+                >
+                  <button>See it live</button>
+                </a>
+              </div>
               <div>
                 <h2>Overview</h2>
                 <h4 className="overview-header">Project goals</h4>
@@ -118,19 +128,29 @@ class EmailSignUp extends React.Component {
             <div className="project-wrapper">
               <h2>Final Product</h2>
               <div className="project">
-                <a 
-                  className="project-thumbnail wrap-up"
-                  href="/work/e-mail-sign-up/live" 
-                  title="Go to live site"
-                  target="_blank" 
-                  aria-label="Go to live site"
-                >
-                  <img 
-                    className="wrap-up" 
-                    src="../../images/e-mail-sign-up-glamour-final.png" 
-                    alt="Final design on different devices"
-                  />
-                </a>
+                <div className="glamour-shot-wrapper">
+                  <a 
+                    className="project-thumbnail wrap-up"
+                    href="/work/e-mail-sign-up/live" 
+                    title="Go to live site"
+                    target="_blank" 
+                    aria-label="Go to live site"
+                  >
+                    <img 
+                      className="wrap-up" 
+                      src="../../images/e-mail-sign-up-glamour-final.png" 
+                      alt="Final design on different devices"
+                    />
+                  </a>
+                  <a
+                    className="button-wrapper"
+                    href="/work/e-mail-sign-up/live" 
+                    target="_blank" 
+                    aria-label="Go to live site"
+                  >
+                    <button>See it live</button>
+                  </a>
+                </div>
                 <div className="process-description">
                   <p className="project-description">
                     Since this was my first web development project, I learned a lot about the myriad approaches that I could take. Each developer has their own process, and my own began to form and evolve.

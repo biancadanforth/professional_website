@@ -28,6 +28,10 @@ $padding-small: 20px;
 
 // ------------ BOILERPLATE OVERRIDES -------------
 
+* {
+	box-sizing: border-box;
+}
+
 body {
 	margin: 0;
 	font: {
@@ -95,7 +99,8 @@ body {
 			}
 
 			footer {
-				margin: $margin-small !important;
+				padding: $margin-small !important;
+				margin-bottom: $margin-default;
 			}
 
 

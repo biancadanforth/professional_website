@@ -247,45 +247,60 @@
 
 		.blockquote-wrapper {
 			margin: $margin-default 2*$margin-small;
-		}
 
-		blockquote {
-			position: relative;
-			top: 0;
-			left: 0;
-			border-top: 2px solid lighten($grey, 40%);
-			border-bottom: 2px solid lighten($grey, 40%);
-			padding: 5px 2*$padding-small;
-			color: $dark-grey;
-			font-size: 1.25em;
-			text-align: start;
+			blockquote {
+				position: relative;
+				top: 0;
+				left: 0;
+				border-top: 2px solid lighten($grey, 40%);
+				border-bottom: 2px solid lighten($grey, 40%);
+				padding: 5px 2*$padding-small;
+				color: $dark-grey;
+				font-size: 1.25em;
+				text-align: start;
 
-			// Using React, have to wrap <svg> in another element when using dangerouslySetInnerHTML attribute; I used a <div>
-			div {
-				position: absolute;
-				width: 30px;
-				fill: lighten($grey, 40%);
+				// Using React, have to wrap <svg> in another element when using dangerouslySetInnerHTML attribute; I used a <div>
+				div {
+					position: absolute;
+					width: 30px;
+					fill: lighten($grey, 40%);
 
-				&.open-quote {
-					top: 0;
-					left: 0;
-					z-index: -1;
-					//mirror about x-axis
-					transform: scaleY(-1);
+					&.open-quote {
+						top: 0;
+						left: 0;
+						z-index: -1;
+						//mirror about x-axis
+						transform: scaleY(-1);
+					}
+
+					&.close-quote {
+						bottom: 0;
+						right: 0;
+						z-index: -1;
+						transform: rotate(180deg);
+					}
 				}
 
-				&.close-quote {
-					bottom: 0;
-					right: 0;
-					z-index: -1;
-					transform: rotate(180deg);
+				@media (max-width: 800px) {
+					font-size: 1.125em;
 				}
 			}
 
-			@media (max-width: 800px) {
-				font-size: 1.125em;
+			@media (max-width: 550px) {
+				margin: $margin-small;
+
+				blockquote {
+					padding: 5px 0;
+					font-size: 1em;
+
+					svg {
+						display: none;
+					}
+				}
 			}
 		}
+
+
 
 		@media (max-width: 1000px) {
 			flex-direction: column;

@@ -11,19 +11,29 @@ class ToDoList extends React.Component {
             <h1>To Do List</h1>
             <h3>UX Design | Visual Design | Front-End Development</h3>
             <div className="project-hero-wrapper">
-              <a 
-                className="project-thumbnail wrap-up"
-                href="/work/to-do-list/live" 
-                title="Go to live site"
-                target="_blank" 
-                aria-label="Go to live site"
-              >
-                <img 
-                  className="wrap-up" 
-                  src="../../images/to-do-list-glamour-final.png" 
-                  alt="Final design on different devices"
-                />
-              </a>
+              <div className="glamour-shot-wrapper">
+                <a 
+                  className="wrap-up"
+                  href="/work/to-do-list/live" 
+                  title="See it live"
+                  target="_blank" 
+                  aria-label="Go to live site"
+                >
+                  <img 
+                    className="project-thumbnail wrap-up" 
+                    src="../../images/to-do-list-glamour-final.png" 
+                    alt="Final design on different devices"
+                  />
+                </a>
+                <a
+                  className="button-wrapper"
+                  href="/work/to-do-list/live" 
+                  target="_blank" 
+                  aria-label="Go to live site"
+                >
+                  <button>See it live</button>
+                </a>
+              </div>
               <div>
                 <h2>Overview</h2>
                 <h4 className="overview-header">Project goals</h4>
@@ -151,19 +161,29 @@ class ToDoList extends React.Component {
             <div className="project-wrapper">
               <h2>Final Product</h2>
               <div className="project">
-                <a 
-                  className="project-thumbnail wrap-up"
-                  href="/work/to-do-list/live" 
-                  title="Go to live site"
-                  target="_blank" 
-                  aria-label="Go to live site"
-                >
-                  <img 
-                    className="wrap-up" 
-                    src="../../images/to-do-list-glamour-final.png" 
-                    alt="Final design on different devices" 
-                  />
-                </a>
+                <div className="glamour-shot-wrapper">
+                  <a 
+                    className="project-thumbnail wrap-up"
+                    href="/work/to-do-list/live" 
+                    title="Go to live site"
+                    target="_blank" 
+                    aria-label="Go to live site"
+                  >
+                    <img 
+                      className="wrap-up" 
+                      src="../../images/to-do-list-glamour-final.png" 
+                      alt="Final design on different devices" 
+                    />
+                  </a>
+                  <a
+                    className="button-wrapper"
+                    href="/work/to-do-list/live" 
+                    target="_blank" 
+                    aria-label="Go to live site"
+                  >
+                    <button>See it live</button>
+                  </a>
+                </div>
                 <div className="process-description">
                   <p className="project-description">
                     I really enjoyed both the artistic and technical side of this project. It showed me how the design and development of a website are inextricably linked.

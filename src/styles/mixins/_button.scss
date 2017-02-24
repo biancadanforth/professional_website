@@ -16,6 +16,7 @@
   @include shadowed;
   border: 1px solid $dark-grey;
   transition: background 1s;
+  outline: none;
 
   &:hover {
     background-color: $yellow;

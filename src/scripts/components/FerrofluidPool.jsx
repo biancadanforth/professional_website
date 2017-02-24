@@ -9,19 +9,29 @@ class FerrofluidPool extends React.Component {
             <h1>Ferrofluid Pool</h1>
             <h3>Engineering Design | Production</h3>
             <div className="project-hero-wrapper">
-              <a 
-                className="project-thumbnail wrap-up"
-                href="/work/ferrofluid-pool/final-drawing.pdf" 
-                target="_blank"
-                title="View final assembly drawing" 
-                aria-label="Go to live site"
-              >
-                <img 
-                  className="wrap-up" 
-                  src="../../images/ferrofluid-pool-glamour.png" 
-                  alt="Final design"
-                />
-              </a>
+              <div className="glamour-shot-wrapper">
+                <a 
+                  className="wrap-up"
+                  href="/work/ferrofluid-pool/final-drawing.pdf" 
+                  target="_blank"
+                  title="View final assembly drawing" 
+                  aria-label="See final drawing"
+                >
+                  <img 
+                    className="project-thumbnail" 
+                    src="../../images/ferrofluid-pool-glamour.png" 
+                    alt="Final design"
+                  />
+                </a>
+                <a
+                  className="button-wrapper"
+                  href="/work/ferrofluid-pool/final-drawing.pdf" 
+                  target="_blank" 
+                  aria-label="See final drawing"
+                >
+                  <button>See final drawing</button>
+                </a>
+              </div>
               <div>
                 <h2>Overview</h2>
                 <h4 className="overview-header">Project goals</h4>
