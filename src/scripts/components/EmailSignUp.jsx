@@ -48,7 +48,7 @@ class EmailSignUp extends React.Component {
                   This page is written in HTML5 and CSS3.
                 </p>
                 <p>
-                  I used a modified fluid grid framework along with CSS Flexbox to layout elements on the page.
+                  I used a modified fluid grid framework along with CSS3 Flexbox to layout elements on the page.
                 </p>
                 <p>
                   There is no back-end component for the forms.
@@ -73,13 +73,10 @@ class EmailSignUp extends React.Component {
                      The first thing I did was organize the layers in Photoshop into groups that would mirror the major HTML container elements on the page.
                   </p>
                   <p className="project-description">
-                    I then identified all of the assets to extract from the mock-up. For example, I needed the Wisdom Script and Noticia Text fonts, the background pattern and paper background images and the color values of all the major elements used in the page.
+                    I then identified all of the assets to extract from the mock-up. For example, I needed the Wisdom Script font and the background pattern image.
                   </p>
                   <p className="project-description">
-                    I learned that style guides are very handy, and that there's a lot a designer can do to make sure their design is not lost in translation. For example, this mock-up did not tell me how the page should look on a mobile device, or what the buttons should look like in hover or pressed states.
-                  </p>
-                  <p className="project-description">
-                    Thankfully, the mock-up was designed using a grid system. I learned that designing with a grid system accomplishes a lot of things at once: it ensure elements are aligned between horizontal sections, that they are evenly spaced between one another in a row, and most importantly in my case, allows the developer to easily translate widths into percentages in CSS. Using relative size units like percentages makes building a responsive page possible (along with media queries).
+                    <strong>I learned that</strong> style guides are very handy, and that there's a lot a designer can do to make sure their design is not lost in translation. For example, this mock-up did not tell me what the buttons should look like in hover or pressed states.
                   </p>
                 </div>
               </div>
@@ -90,16 +87,13 @@ class EmailSignUp extends React.Component {
                 <div className="codepen-embed"dangerouslySetInnerHTML={{__html: fluidGridCodepen}} />
                 <div className="process-description">
                   <p className="project-description">
-                    Since this was my first foray into front-end development, I had to research what approach to use to layout the page in CSS. I did not want to use any third-party frameworks (Bootstrap, Foundation, Skeleton, etc.), since I wanted to make sure I was comfortable working in pure CSS.
+                    Since this was my first foray into front-end development, I had to research what approach to use to layout the page in CSS.
                   </p>
                   <p className="project-description">
-                    Like many of the frameworks I mentioned, the web design course I was taking during this project relied on the CSS <code>float</code> property to layout a webpage. 
+                    I did not want to use any third-party frameworks (Bootstrap, Foundation, Skeleton, etc.), since I wanted to make sure I was comfortable working in pure CSS first.
                   </p>
                   <p className="project-description">
-                    I experimented with a fluid grid approach, modifying a framework for a 960 pixel grid on Codepen that used <code>float</code> and percentage-based widths to adjust the size of content dynamically. 
-                  </p>
-                  <p className="project-description">
-                    I learned how helpful it is to have frameworks in place, so that common UI elements and layouts can be built quickly and modified as needed. This makes prototyping different ideas much more efficient. 
+                    I experimented with a fluid grid approach on Codepen that used <code>float</code> and percentage-based widths to adjust the size of content. 
                   </p>
                 </div>
               </div>
@@ -117,7 +111,7 @@ class EmailSignUp extends React.Component {
                     While floating left and right can get the job done, there can be many unexpected behaviors and display issues associated with floated elements.
                   </p>
                   <p className="project-description">
-                    Though it wasn't covered in the course, I did some research and came across a very useful new alternative to <code>float</code> released in CSS3 for flexible layouts called Flexbox. After going through an excellent tutorial online called Flexbox Froggy, I was excited to try Flexbox out on this project.
+                    Though it wasn't covered in the course, I came across a very useful new alternative to <code>float</code> released in CSS3 called Flexbox. After completing an excellent tutorial called Flexbox Froggy, I decided to use it.
                   </p>
                   <p className="project-description">
                     Once I had the structure planned out, I had to put it all together, linking the assets, establishing layout breakpoints and filling in the gaps for information that wasn't provided, like placeholder text styles in the form input fields.
@@ -156,10 +150,7 @@ class EmailSignUp extends React.Component {
                     Since this was my first web development project, I learned a lot about the myriad approaches that I could take. Each developer has their own process, and my own began to form and evolve.
                   </p>
                   <p className="project-description">
-                    I also started to get a sense for just how much can be done with HTML and CSS on their own (i.e. without JavaScript). For example, I made the ribbon for the tagline at the top of the page purely with CSS.
-                  </p>
-                  <p className="project-description">
-                    Finally, I started to understand how important the DRY (Don't Repeat Yourself) coding principle was to debugging, and how important it was to stay organized and consistent in my code.
+                    I also started to get a sense for just how much can be done with HTML and CSS on their own (i.e. without JavaScript). For example, I made the ribbon for the tagline at the top of the page with CSS.
                   </p>
                 </div>
               </div>

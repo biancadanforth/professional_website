@@ -2,11 +2,15 @@
 
 .to-do-list-page, .e-mail-sign-up-page, .ferrofluid-pool-page, .twist-page {
 
-	.project-thumbnail {
+	.project-thumbnail, .codepen-embed {
 		width: 100%;
 		@include shadowed;
 		@include rounded(2px);
 		margin-bottom: $margin-default;
+	}
+
+	.codepen-embed {
+		box-shadow: none;
 	}
 
 	.wrap-up {
@@ -39,6 +43,10 @@
 			}
 
 	.primary {
+
+		a.button-wrapper {
+			margin-bottom: 2*$margin-small;
+		}
 
 		.primary-wrapper {
 			@media (max-width: 1260px) {

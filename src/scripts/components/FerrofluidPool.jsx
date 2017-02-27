@@ -39,17 +39,17 @@ class FerrofluidPool extends React.Component {
                   The goal of this project was to engineer and build a science exhibit based on a visual design and materials palette.
                 </p>
                 <p>
-                  I was the principle engineer, but I received mentorship from a senior mechanical and electrical engineer.
+                  I was the principal engineer, but I received mentorship from a senior mechanical and electrical engineer.
                 </p>
                 <h4 className="overview-header">Tools and Methods</h4>
                  <p>
-                  I made a 3D CAD model and production drawings of the exhibit and all its subassemblies in Autodesk Inventor.
+                  I made a 3D CAD model and production drawings for the exhibit in Autodesk Inventor.
                 </p>
                 <p>
-                  While most parts were fabricated by outside vendors or our in-house woodworker, I also made and modified parts using many traditional and CNC (computer-numerical control) manufacturing processes in the Exploratorium's machine shop.
+                  While most parts were produced by outside vendors, I made and modified some parts myself using a number of traditional and CNC (computer numerical control) manufacturing processes.
                 </p>
                 <p>
-                  At the time of publishing the drawing, my name was Bianca Morales.
+                  At the time of this project, my name was Bianca Morales.
                 </p>
               </div>
             </div>
@@ -71,13 +71,10 @@ class FerrofluidPool extends React.Component {
                     I received a preliminary design guide with outside dimensions, materials and finishes from an industrial design firm. 
                   </p>
                   <p className="project-description">
-                    It was my job to make the exhibit a reality. The first thing to do was to figure out the constraints, and if there was any reason why the engineering design would require a change in the visual and/or interaction design.
+                    Unlike many exhibits that the Exploratorium has produced in the past, we had never built anything like this one before. I had to figure out from scratch how to reproduce the phenomenon.
                   </p>
                   <p className="project-description">
-                    The challenge for this exhibit was that, unlike many exhibits that the museum has produced for other institutions, we had never built anything like it before. I had to figure out, from scratch, how to reproduce the phenomenon.
-                  </p>
-                  <p className="project-description">
-                    I dug up as much information as I could about Ferrofluid, the phenomena and the electrical and physical requirements I would need to meet to lay the groundwork for future experiments.
+                    I dug up as much information as I could about ferrofluid, the phenomenon and the electrical requirements I would need to lay the groundwork for future experiments.
                   </p>
                 </div>
               </div>
@@ -92,10 +89,10 @@ class FerrofluidPool extends React.Component {
                 />
                 <div className="process-description">
                   <p className="project-description">
-                    After gleaning what I could of how others had reproduced the phenomenon, I knew there was an electromagnet placed directly underneath the sculpture, but I needed a way to power them with a crank as the input.
+                    After some research, I knew there was an electromagnet placed directly underneath the sculpture, but I needed a way to magnetize them with a crank as the input.
                   </p>
                   <p className="project-description">
-                    I consulted with other engineers and sketched out some ideas on paper. The two leading options were to connect the hand crank mechanically to a generator or to add a microprocessor to digitally control how much current went to the electromagnets.
+                    I consulted with other engineers and sketched out some ideas on paper. One option was to connect the hand crank mechanically to a generator. The other option was to use a sensor called a rotary encoder and a microcontroller.
                   </p>
                 </div>
               </div>
@@ -110,13 +107,13 @@ class FerrofluidPool extends React.Component {
                 />
                 <div className="process-description">
                   <p className="project-description">
-                    The critical piece of information to decide between either option was how strong a magnetic field was needed. A hand crank generator is much more limited.
+                    To decide which option would work best, I needed to know how strong a magnetic field was needed. A hand crank generator is much more limited.
                   </p>
                   <p className="project-description">
-                    Using a variable power supply and found materials, I set up a proof-of-concept and was able to reproduce the phenomenon and measure exactly how strong a magnetic field (and how much power) was needed for a given coil.
+                    Using a variable power supply and found materials, I set up a proof-of-concept and calculated how strong the field needed to be for a given coil.
                   </p>
                   <p className="project-description">
-                    This test showed that the mechanical generator solution would be inadequate, so I moved forward with the digital solution.
+                    This test showed that the mechanical solution would be inadequate, so I moved forward with the digital solution.
                   </p>
                 </div>
               </div>
@@ -152,7 +149,7 @@ class FerrofluidPool extends React.Component {
                     I made all or part of nearly 10 exhibits in my years at the Exploratorium, and this one is by far my favorite.
                   </p>
                   <p className="project-description">
-                    I learned how interdependent a product's visual and interaction design are with its engineering design. That is why now, I have decided to focus on both design and development, not just one or the other.
+                    I learned how interdependent a product's visual and interaction design are with its engineering design. That is why now, I focus on both web design and development.
                   </p>
                 </div>
               </div>
