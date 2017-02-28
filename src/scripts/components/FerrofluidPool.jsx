@@ -84,7 +84,7 @@ class FerrofluidPool extends React.Component {
               <div className="project">
                 <img 
                   className="project-thumbnail" 
-                  src="../../images/" 
+                  src="../../images/ferrofluid-pool-ideation.png" 
                   alt="Sketching out solutions" 
                 />
                 <div className="process-description">

@@ -21,7 +21,7 @@ class Twist extends React.Component {
                   The goal of this project was to design and build a chair.
                 </p>
                 <p>
-                  This project was part of an Art Studio course I took in my last quarter of graduate school at Stanford University. It was featured in Stanford's alumni magazine!
+                  This project was part of an Art Studio course I took in my last quarter of graduate school at Stanford University. It was <a href="/images/twist-magazine-article.pdf">featured in Stanford's alumni magazine</a>!
                 </p>
                 <h4 className="overview-header">Tools and Methods</h4>
                 <p>
@@ -47,7 +47,10 @@ class Twist extends React.Component {
                     Since we only had two months to design and build the chair, I knew I needed to hone in on a design very quickly. 
                   </p>
                   <p className="project-description">
-                    I decided I would choose one component of my process that I already had experience with and one component that was totally new.
+                    After talking with alumni of the course, I decided I would choose one component of my process that I already had experience with and one component that was totally new.
+                  </p>
+                  <p className="project-description">
+                    I also looked up anthropometry tables from various sources like NASA to ensure the critical dimensions of my chair would be ergonomic for most people.
                   </p>
                 </div>
               </div>
@@ -57,7 +60,7 @@ class Twist extends React.Component {
               <div className="project">
                 <img 
                   className="project-thumbnail" 
-                  src="../../images/" 
+                  src="../../images/twist-ideation.png" 
                   alt="Brainstorming sketches"  
                 />
                 <div className="process-description">
