@@ -10,8 +10,8 @@ class Twist extends React.Component {
             <h3>Visual Design | Engineering Design | Production </h3>
             <div className="project-hero-wrapper">
               <img 
-                className="project-thumbnail" 
-                src="../../images/twist.jpg" 
+                className="project-thumbnail portrait" 
+                src="../../images/twist-glamour.jpg" 
                 alt="Final product"
               />
               <div>
@@ -21,11 +21,14 @@ class Twist extends React.Component {
                   The goal of this project was to design and build a chair.
                 </p>
                 <p>
-                  This project was part of an Art Studio course I took in my last quarter of graduate school at Stanford University. It was <a href="/images/twist-magazine-article.pdf">featured in Stanford's alumni magazine</a>!
+                  This project was part of an Art Studio course I took in my last quarter of graduate school at Stanford University. It was <a target="_blank" href="/work/twist/twist-magazine-article.pdf">featured</a> in Stanford's alumni magazine!
                 </p>
                 <h4 className="overview-header">Tools and Methods</h4>
                 <p>
                   I made a CAD model of the chair's frame in SolidWorks. I TIG-welded the frame, which is made of mild steel square tubing. I upholstered the chair using foam, leather and lycra.
+                </p>
+                <p>
+                  At the time of this project, my name was Bianca Morales.
                 </p>
               </div>
             </div>
@@ -37,11 +40,13 @@ class Twist extends React.Component {
             <div className="project-wrapper">
               <h2>Gather Information</h2>
               <div className="project">
-                <img 
-                  className="project-thumbnail" 
+              <figure>
+                <img  
                   src="../../images/twist-gather-information.jpg" 
-                  alt="Bamboo Steel chair by Nendo"
+                  alt="Drawing with anthropometry for the average American male, year 2000"
                 />
+                <figcaption>Source: NASA</figcaption>
+                </figure>
                 <div className="process-description">
                   <p className="project-description">
                     Since we only had two months to design and build the chair, I knew I needed to hone in on a design very quickly. 
@@ -50,7 +55,7 @@ class Twist extends React.Component {
                     After talking with alumni of the course, I decided I would choose one component of my process that I already had experience with and one component that was totally new.
                   </p>
                   <p className="project-description">
-                    I also looked up anthropometry tables from various sources like NASA to ensure the critical dimensions of my chair would be ergonomic for most people.
+                    I also looked up anthropometry tables from various sources to ensure the critical dimensions of my chair would be ergonomic for most people.
                   </p>
                 </div>
               </div>
@@ -60,7 +65,7 @@ class Twist extends React.Component {
               <div className="project">
                 <img 
                   className="project-thumbnail" 
-                  src="../../images/twist-ideation.png" 
+                  src="../../images/twist-ideation.jpg" 
                   alt="Brainstorming sketches"  
                 />
                 <div className="process-description">
@@ -120,7 +125,7 @@ class Twist extends React.Component {
               <div className="project">
                 <img 
                   className="project-thumbnail" 
-                  src="../../images/twist.jpg" 
+                  src="../../images/twist-glamour.jpg" 
                   alt="Final product" 
                 />
                 <div className="process-description">
@@ -129,9 +134,6 @@ class Twist extends React.Component {
                   </p>
                   <p className="project-description">
                     <strong>I learned</strong> first-hand the tremendous value of human capital. I received so much useful advice from course alumni and their extended networks.
-                  </p>
-                  <p className="project-description">
-                    In addition to the hard skills of basic upholstery and tube bending, I gained some project management skills as well. I surprised myself at times being ahead of schedule on project milestones.
                   </p>
                   <p className="project-description">
                     My half familiar and half new approach was very successful in the end. I see my transition into web design and development along those lines as well: I already know programming and design methodology – what is new are the languages and the medium.

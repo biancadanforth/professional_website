@@ -1,13 +1,33 @@
 // primary-section.scss
 
-// top page <section>
 .primary {
 	text-align: center;
-	h1 {
-		@include section-title;
+	margin: 0 auto;
+
+	h1 { color: $dark-grey; }
+		
+	.primary-wrapper {
+		position: relative;
+		top: 0;
+		max-width: $layout-width;
+		margin: 0 auto;
+
+		@media (max-width: 950px) {
+			margin: 0 $margin-default;
+		}
+
+		@media (max-width: 400px) {
+			margin-left: 0;
+			margin-right: 0;
+		}
 	}
 }
 
-main.home-page .primary, main.to-do-list-page .primary, main.e-mail-sign-up-page .primary, main.ferrofluid-pool-page .primary, main.twist-page .primary {
+// These pages have a .secondary <section>
+main.home-page .primary,
+main.to-do-list-page .primary,
+main.e-mail-sign-up-page .primary,
+main.ferrofluid-pool-page .primary,
+main.twist-page .primary {
 	@include diagonal-background-top;
 }

@@ -12,13 +12,13 @@ class FerrofluidPool extends React.Component {
               <div className="glamour-shot-wrapper">
                 <a 
                   className="wrap-up"
-                  href="/work/ferrofluid-pool/final-drawing.pdf" 
+                  href="/work/ferrofluid-pool/ferrofluid-pool-final-drawing.pdf" 
                   target="_blank"
                   title="View final assembly drawing" 
                   aria-label="See final drawing"
                 >
                   <img 
-                    className="project-thumbnail" 
+                    className="project-thumbnail portrait" 
                     src="../../images/ferrofluid-pool-glamour.png" 
                     alt="Final design"
                   />
@@ -63,7 +63,7 @@ class FerrofluidPool extends React.Component {
               <div className="project">
                 <img 
                   className="project-thumbnail" 
-                  src="../../images/ferrofluid-pool-gather-information.png"
+                  src="../../images/ferrofluid-pool-gather-information.jpg"
                   alt="Industrial design requirements for the exhibit" 
                 />
                 <div className="process-description">
@@ -84,7 +84,7 @@ class FerrofluidPool extends React.Component {
               <div className="project">
                 <img 
                   className="project-thumbnail" 
-                  src="../../images/ferrofluid-pool-ideation.png" 
+                  src="../../images/ferrofluid-pool-ideation.jpg" 
                   alt="Sketching out solutions" 
                 />
                 <div className="process-description">
@@ -141,7 +141,7 @@ class FerrofluidPool extends React.Component {
               <div className="project">
                 <img 
                   className="project-thumbnail" 
-                  src="../../images/ferrofluid-pool.jpg" 
+                  src="../../images/ferrofluid-pool-final-product.jpg" 
                   alt="Final product" 
                 />
                 <div className="process-description">

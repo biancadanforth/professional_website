@@ -5,7 +5,11 @@
 	.primary {
 		display: flex;
   	margin: 0 auto 2*$margin-default;
-  	max-width: 1200px;
+  	max-width: $layout-width;
+
+  	& > div:first-child {
+  		margin-right: $margin-default;
+  	}
 
   	@media (max-width: 1260px) {
   		margin-left: $margin-default;
@@ -42,14 +46,9 @@
   			padding: 0;
   		}
   	}
-
-  	& > div:first-child {
-  		margin-right: $margin-default;
-  	}
-	}
+	} //.primary closed
 
 	.contact-body {
-	  box-sizing: border-box;
 	  flex: 0 1 50%;
 	  align-self: stretch;
 	  display: flex;
@@ -64,7 +63,6 @@
 	  }
 
 	  .form-wrapper {
-		  box-sizing: border-box;
 		  border: 1px solid lighten($grey, 40%);
 		  border-radius: 2px;
 		  padding: $padding-default;
@@ -78,138 +76,125 @@
 	  		margin: 0 auto;
 	  		width: 100%;
 	  	}
-	  }
 
-		form {
-		  height: 100%;
-		  display: flex;
-		  flex-direction: column;
+  		form {
+			  height: 100%;
+			  display: flex;
+			  flex-direction: column;
 
-		  input, textarea {
-		  	margin-top: .33*$margin-default;
-			}
+			  input {
+			  	margin-top: .33*$margin-default;
+			  	display: block;
+				  font-size: 1em;
+				  line-height: 1.5em;
+				  width: 100%;
+					min-height: 50px;
+					@include rounded(2px);
+					font-family: 'Montserrat';
+				  text-indent: .33*$margin-default;
+				  line-height: 1.5;
 
-			input,
-			textarea, label {
-			  display: block;
-			  font-size: 1em;
-			  line-height: 1.5em;
-			  width: 100%;
-			}
+				  &::-webkit-input-placeholder {
+						color: lighten($grey, 20%);
+					}
 
-			label,
-			input[type="submit"] {
-			  display: inline-block;
-			  font-family: 'Merriweather';
-			  margin-top: $margin-small;
-			}
+				  &[type="text"], &[type="email"] {
+						background-color: rgba(255, 255, 255, 0.3);
+						border: 0.5px solid lighten($grey, 40%);
+						box-shadow: inset 1px 1px 0 0.5px rgba(0,0,0,0.3);
+						font-family: 'Montserrat', sans-serif;
+						
+						&:focus {
+							outline: 0.5px solid $blue;
+						}
+				  }
 
-			label:first-child {
-				margin-top: 0;
-			}
+				  &[type="submit"] {
+				  	display: inline-block;
+					  font-family: 'Merriweather';
+					  margin-top: $margin-small;
+					   width: 50%;
+					  @include buttoned;
+					  text-indent: 0;
 
-			input {
-				min-height: 50px;
-				@include rounded(2px);
-				font-family: 'Montserrat';
-			  text-indent: .33*$margin-default;
-			  line-height: 1.5;
-			}
+					  &:disabled {
+					  	background-color: $light-grey;
+					  	box-shadow: none;
+					  	color: darken($light-grey, 15%);
+					  	border-color: darken($light-grey, 15%);
 
-			input[type="text"],
-			input[type="email"],
-			textarea {
-				background-color: rgba(255, 255, 255, 0.3);
-				border: 0.5px solid lighten($grey, 40%);
-				box-shadow: inset 1px 1px 0 0.5px rgba(0,0,0,0.3);
-				font-family: 'Montserrat', sans-serif;
-				
-				&:focus {
-					outline: none;
-					border: 0.5px solid $blue;
-				}
-			}
+					  	&:hover {
+					  		background-color: $light-grey;
+					  		transition: none;
+					  	}
+					  }
 
-			textarea, textarea:placeholder-shown {
-				box-sizing: border-box;
-				padding: 10px;
-				text-indent: 0;
-			}
+					  @media (max-width: 500px) {
+					  	width: 100%;
+					  }
+				  }
+			  } //input closed
 
-			input[type="submit"] {
-			  width: 50%;
-			  @include buttoned;
-			  text-indent: 0;
+			  textarea {
+			  	margin-top: .33*$margin-default;
+			  	display: block;
+				  font-size: 1em;
+				  line-height: 1.5em;
+				  width: 100%;
+				  background-color: rgba(255, 255, 255, 0.3);
+					border: 0.5px solid lighten($grey, 40%);
+					box-shadow: inset 1px 1px 0 0.5px rgba(0,0,0,0.3);
+					font-family: 'Montserrat', sans-serif;
+					padding: 10px;
+					text-indent: 0;
+					resize: none;
+					height: 100%;
+					min-height: 150px;
+					margin-bottom: $margin-small;
+					@include rounded(2px);
+					
+					&:focus {
+						outline: 0.5px solid $blue;
+					}
 
-			  &:disabled {
-			  	background-color: $light-grey;
-			  	box-shadow: none;
-			  	color: darken($light-grey, 15%);
-			  	border-color: darken($light-grey, 15%);
+					&:placeholder-shown {
+						padding: 10px;
+						text-indent: 0;
+					}
 
-			  	&:hover {
-			  		background-color: $light-grey;
-			  		transition: none;
-			  	}
-			  }
+					&::-webkit-input-placeholder {
+						color: lighten($grey, 20%);
+					}
+				} //textarea closed
 
-			  @media (max-width: 500px) {
-			  	width: 100%;
-			  }
-			}
+				label {
+				  font-size: 1em;
+				  line-height: 1.5em;
+				  width: 100%;
+				  display: inline-block;
+				  font-family: 'Merriweather';
+				  margin-top: $margin-small;
 
-			.textarea-label {
-				display: flex;
-				flex-direction: column;
-				height: 100%;
-			}
-			
-			input::-webkit-input-placeholder,  
-			textarea::-webkit-input-placeholder {
-				color: lighten($grey, 20%);
-			}
+				  &:first-child {
+						margin-top: 0;
+				  }
 
-			input::-ms-input-placeholder,
-			textarea::-ms-input-placeholder {
-				color: lighten($grey, 20%);
-			}
-
-			textarea {
-				resize: none;
-				height: 100%;
-				min-height: 150px;
-				margin-bottom: $margin-small;
-				@include rounded(2px);
-			}
-
-			.note {
-				font-size: 0.75em;
-				margin-top: 10px;
-			}
-
-		}
-	}
-
-	.secondary {
-		.contact-body {
-			input::-webkit-input-placeholder,  
-			textarea::-webkit-input-placeholder {
-				color: darken(white, 10%);
-			}
-
-			input::-ms-input-placeholder,
-			textarea::-ms-input-placeholder {
-				color: darken(white, 10%)
-			}
-		}
-	}
+				  &.textarea-label {
+						display: flex;
+						flex-direction: column;
+						height: 100%;
+					}
+				} // label closed
+	  	} // form closed
+	  } // form wrapper closed	
+	} // contact body closed
 
 	.about-body {
 		display: flex;
 		justify-content: center;
 		flex-flow: column wrap;
 		align-items: flex-start;
-		max-width: 1200px;
+		max-width: $layout-width;
 		flex: 0 1 50%;
 
 		& > div:first-child {
@@ -221,106 +206,100 @@
 				color: $dark-grey;
 			}
 
+			.about-hero {
+				@include rounded(50%);
+				@include shadowed;
+				width: 100%;
+				max-width: 300px;
+			}
+
 			p {
 				margin-bottom: $margin-default;
 				text-align: center !important;
 			}
 		}
-
+		
 		.about-copy {
 			margin-top: $margin-default;
+
+			@media (max-width: 1000px) {
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+
+				h2 {
+					margin-top: $margin-default;
+				}
+			}
 
 			.project-description {
 				max-width: 600px;
 				margin: 0 auto $margin-small;
+				text-align: start;
 
 				&:last-child {
 					margin-bottom: 0;
 				}
 			}
-		}
 
-		p {
-			text-align: start;
-			margin: 0;
-		}
+			.blockquote-wrapper {
+				margin: $margin-default 2*$margin-small;
 
-		.blockquote-wrapper {
-			margin: $margin-default 2*$margin-small;
+				@media (max-width: 550px) {
+					margin: $margin-small;
 
-			blockquote {
-				position: relative;
-				top: 0;
-				left: 0;
-				border-top: 2px solid lighten($grey, 40%);
-				border-bottom: 2px solid lighten($grey, 40%);
-				padding: 5px 2*$padding-small;
-				color: $dark-grey;
-				font-size: 1.25em;
-				text-align: start;
+					blockquote {
+						padding: 5px 0;
+						font-size: 1em;
 
-				// Using React, have to wrap <svg> in another element when using dangerouslySetInnerHTML attribute; I used a <div>
-				div {
-					position: absolute;
-					width: 30px;
-					fill: lighten($grey, 40%);
-
-					&.open-quote {
-						top: 0;
-						left: 0;
-						z-index: -1;
-						//mirror about x-axis
-						transform: scaleY(-1);
-					}
-
-					&.close-quote {
-						bottom: 0;
-						right: 0;
-						z-index: -1;
-						transform: rotate(180deg);
+						svg {
+							display: none;
+						}
 					}
 				}
-
-				@media (max-width: 800px) {
-					font-size: 1.125em;
-				}
-			}
-
-			@media (max-width: 550px) {
-				margin: $margin-small;
 
 				blockquote {
-					padding: 5px 0;
-					font-size: 1em;
+					position: relative;
+					top: 0;
+					left: 0;
+					border-top: 2px solid lighten($grey, 40%);
+					border-bottom: 2px solid lighten($grey, 40%);
+					padding: 5px 2*$padding-small;
+					color: $dark-grey;
+					font-size: 1.25em;
+					text-align: start;
 
-					svg {
-						display: none;
+					@media (max-width: $max-img-width) {
+						font-size: 1.125em;
 					}
-				}
-			}
-		}
 
+					/* Using React, have to wrap <svg> in another
+					* element when using dangerouslySetInnerHTML
+					* attribute; I used a <div>
+					*/
+					div {
+						position: absolute;
+						width: 30px;
+						fill: lighten($grey, 40%);
 
+						&.open-quote {
+							top: 0;
+							left: 0;
+							z-index: -1;
+							//mirror about x-axis
+							transform: scaleY(-1);
+						}
 
-		@media (max-width: 1000px) {
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-
-			h2 {
-				margin-top: $margin-default;
-			}
-
-			.about-copy {
-				width: 100%;
-			}
-		}
-	}
-
-	.about-hero {
-		@include rounded(50%);
-		@include shadowed;
-		width: 100%;
-		max-width: 300px;
-	}
+						&.close-quote {
+							bottom: 0;
+							right: 0;
+							z-index: -1;
+							transform: rotate(180deg);
+						}
+					}
+				} //blockquote closed
+			} //blockquote wrapper closed
+		} // about copy closed
+	} // about body closed
 }

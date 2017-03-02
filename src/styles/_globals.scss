@@ -2,6 +2,11 @@
 
 // ------------ CONSTANTS -------------
 
+//LAYOUT
+$layout-width: 1200px;
+$max-img-width: 800px;
+$max-text-width: 700px;
+
 // COLORS
 //Made $off-white rgb for background overlay on <body>
 $off-white: rgb(251, 252, 237);
@@ -28,16 +33,12 @@ $padding-small: 20px;
 
 // ------------ BOILERPLATE OVERRIDES -------------
 
-* {
-	box-sizing: border-box;
-}
+html { box-sizing: border-box; }
+
+*, *:before, *:after { box-sizing: inherit; }
 
 body {
 	margin: 0;
-	font: {
-		family: $font-main;
-		size: 1.1em;
-	}
 	// color overlay applied to background pattern
 	background:
 		/* top, transparent $off-white, faked with gradient */ 
@@ -47,19 +48,59 @@ body {
 			),
 		/* bottom, image */
 		url("../images/pw_maze_white.png");
-	color: $grey;
 	background-attachment: fixed;
-	line-height: 1.6;
+	color: $dark-grey;
 
 	.page-wrap {
 		margin: 0 auto;
 	}
 
-		// ------------ Y-OFFSET <main>  WITH PADDING-TOP FOR FIXED HEADER HEIGHT -------------
-		$header-padding-top: 30px;
-		$header-padding-bottom: 2*$header-padding-top;
-		$header-padding-400px: $padding-small;
-		$content-height: 45px;
+	a {
+		display: inline-block;
+		color: $blue;
+		
+		svg {
+			display: block;
+		}
+
+		&:visited {
+			color: $blue;
+		}
+	}
+
+	/* 
+	* Y-OFFSET <main> WITH PADDING-TOP FOR FIXED HEADER HEIGHT
+	*/
+	$header-padding-top: $margin-default;
+	$header-padding-bottom: 2*$header-padding-top;
+	$header-padding-400px: $padding-small;
+	$content-height: 45px;
+	$header-height: $header-padding-top + $header-padding-bottom + $content-height;
+
+	header {
+		padding-top: $header-padding-top;
+		padding-bottom: $header-padding-bottom;
+	}
+
+	main {
+		padding-top: $header-height;
+	}
+	
+	@media (max-width: 1260px) {
+		$header-padding-bottom: 2*$padding-small;
+		$header-height: $header-padding-top + $header-padding-bottom + $content-height;
+		header {
+			padding-bottom: $header-padding-bottom;
+		}
+		main {
+			padding-top: $header-height;
+		}
+	}
+
+	@media (max-width: 620px) {
+		$header-padding-top: $padding-small;
+		$header-padding-bottom: $padding-small;
+		$content-height: 76px;
 		$header-height: $header-padding-top + $header-padding-bottom + $content-height;
 
 		header {
@@ -70,77 +111,52 @@ body {
 		main {
 			padding-top: $header-height;
 		}
-		
-		@media (max-width: 1260px) {
-			$header-padding-bottom: 2*$padding-small;
-			$content-height: 45px;
-			$header-height: $header-padding-top + $header-padding-bottom + $content-height;
-			header {
-				padding-bottom: $header-padding-bottom;
-			}
-			main {
-				padding-top: $header-height;
-			}
+
+		footer {
+			padding: $margin-small !important;
+			margin-bottom: $margin-default;
 		}
 
-		@media (max-width: 620px) {
-			$header-padding-top: $padding-small;
-			$header-padding-bottom: $padding-small;
-			$content-height: 76px;
-			$header-height: $header-padding-top + $header-padding-bottom + $content-height;
 
-			header {
-				padding-top: $header-padding-top;
-				padding-bottom: $header-padding-bottom;
-			}
-
-			main {
-				padding-top: $header-height;
-			}
-
-			footer {
-				padding: $margin-small !important;
-				margin-bottom: $margin-default;
-			}
-
-
-		}
-
-		@media (max-width: 400px) {
-			$content-height: 70px;
-			$header-height: $header-padding-top + $header-padding-bottom + $content-height;
-			header {
-				padding: $padding-small;
-			}
-
-			main {
-				padding-top: $header-height;
-			}
-		}
-
-	//Override boilerplate styles
-	img {
-		box-sizing: border-box;
 	}
 
-	a {
-		display: inline-block;
-		color: $grey;
-		svg {
-			display: block;
+	@media (max-width: 400px) {
+		$content-height: 70px;
+		$header-height: $header-padding-top + $header-padding-bottom + $content-height;
+		header {
+			padding: $padding-small;
 		}
 
-		&:visited {
-			color: $grey;
+		main {
+			padding-top: $header-height;
 		}
-	}
-
-	ul {
-		padding-left: $padding-small;
 	}
 }
 
 // ------------ TYPOGRAPHY -------------
+
+body {
+	font: {
+		family: $font-main;
+		size: 1.1em;
+	}
+	color: $grey;
+	line-height: 1.6;
+}
+
+h1 {
+	margin: 0;
+	font: {
+		size: 3.25em;
+		weight: 400;
+	}
+	line-height: 1.25;
+	text: {
+		align: center;
+		transform: uppercase;
+	}
+	letter-spacing: $letter-spacing;
+}
 
 h2 {
 		font: {
@@ -173,7 +189,7 @@ h2 {
 		letter-spacing: 1.5*$letter-spacing;
 		margin-bottom: $margin-default;
 		text-transform: uppercase;
-		border-bottom: 1px solid $off-white;
+		border-bottom: 1px solid $grey;
 	}
 
 	p {
@@ -182,17 +198,12 @@ h2 {
 			weight: 300;
 			family: 'Merriweather';
 		}
-		color: $dark-grey;
 		line-height: 1.6;
-	}
-
-	.secondary p {
-		color: $off-white;
 	}
 
 	@media (max-width: 800px) {
 		h1 {
-			font-size: 2.25em !important;
+			font-size: 2.25em;
 		}
 
 		h2 {

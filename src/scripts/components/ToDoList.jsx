@@ -13,15 +13,14 @@ class ToDoList extends React.Component {
             <div className="project-hero-wrapper">
               <div className="glamour-shot-wrapper">
                 <a 
-                  className="wrap-up"
                   href="/work/to-do-list/live" 
                   title="See it live"
                   target="_blank" 
                   aria-label="Go to live site"
                 >
                   <img 
-                    className="project-thumbnail wrap-up" 
-                    src="../../images/to-do-list-glamour-final.png" 
+                    className= "wrap-up" 
+                    src="../../images/to-do-list-glamour.png" 
                     alt="Final design on different devices"
                   />
                 </a>
@@ -60,11 +59,13 @@ class ToDoList extends React.Component {
             <div className="project-wrapper">
               <h2>Gather Information</h2>
               <div className="project">
-                <img 
-                  className="project-thumbnail" 
-                  src="../../images/to-do-list-gather-information-cropped.jpg" 
-                  alt="Benchmarking other to do list applications" 
-                />
+              <figure>
+                  <img 
+                    src="../../images/to-do-list-gather-information.jpg" 
+                    alt="Benchmarking other to do list applications" 
+                  />
+                  <figcaption>Source: Todoist </figcaption>
+                </figure>
                 <div className="process-description">
                   <p className="project-description">
                     Since I didn't have an explicit customer, I asked friends and family what features they thought were most important.
@@ -73,7 +74,7 @@ class ToDoList extends React.Component {
                     Having just read Steven Krug's usability book, <span>Don't Make Me Think</span>, I wanted to apply some of his principles. To that end, I decided to prioritize the ability to undo any action.
                   </p>
                   <p className="project-description">
-                   I also looked at some existing To Do List applications like Todoist to see how different kinds of information were organized and presented.
+                   I also looked at some existing To Do List applications to see how different kinds of information were organized and presented.
                   </p>
                 </div>
               </div>
@@ -83,12 +84,12 @@ class ToDoList extends React.Component {
               <div className="project">
                 <img 
                   className="project-thumbnail" 
-                  src="../../images/to-do-list-ideation-cropped.jpg" 
+                  src="../../images/to-do-list-ideation.jpg" 
                   alt="Benchmarking other To Do Lists" 
                 />
                 <div className="process-description">
                   <p className="project-description">
-                    Incorporating the results of my research and interviews, I came up with as many ideas as possible for what features to include, sorting them based on impact and feasibility.
+                    I came up with as many ideas as possible for what features to include, sorting them based on impact and feasibility.
                   </p>
                   <p className="project-description">
                     After scouring the web for inspiration, I created a style tile. This helped me translate my application's personality into development-friendly UI, color and typography elements.
@@ -101,7 +102,7 @@ class ToDoList extends React.Component {
               <div className="project">
                 <img 
                   className="project-thumbnail" 
-                  src="../../images/to-do-list-prototype-cropped.png" 
+                  src="../../images/to-do-list-prototype.jpg" 
                   alt="" 
                 />
                 <div className="process-description">
@@ -130,7 +131,7 @@ class ToDoList extends React.Component {
               <div className="project">
                 <img 
                   className="project-thumbnail" 
-                  src="../../images/to-do-list-refine-cropped.png" 
+                  src="../../images/to-do-list-refine.jpg" 
                   alt="High fidelity Photoshop mock-up" 
                 />
                 <div className="process-description">
@@ -150,16 +151,15 @@ class ToDoList extends React.Component {
               <h2>Final Product</h2>
               <div className="project">
                 <div className="glamour-shot-wrapper">
-                  <a 
-                    className="project-thumbnail wrap-up"
+                  <a                    
                     href="/work/to-do-list/live" 
-                    title="Go to live site"
+                    title="See it live"
                     target="_blank" 
-                    aria-label="Go to live site"
+                    aria-label="See it live"
                   >
                     <img 
                       className="wrap-up" 
-                      src="../../images/to-do-list-glamour-final.png" 
+                      src="../../images/to-do-list-glamour.png" 
                       alt="Final design on different devices" 
                     />
                   </a>
@@ -167,7 +167,7 @@ class ToDoList extends React.Component {
                     className="button-wrapper"
                     href="/work/to-do-list/live" 
                     target="_blank" 
-                    aria-label="Go to live site"
+                    aria-label="See it live"
                   >
                     <button>See it live</button>
                   </a>

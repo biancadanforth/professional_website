@@ -3,7 +3,9 @@
 class Home extends React.Component {
   
   componentDidMount() {
-      var placeholder = document.querySelector('.placeholder');
+      
+      //PROGRESSIVE IMAGE LOADING
+      var placeholder = document.querySelector('.welcome-profile-wrapper');
       var small = placeholder.querySelector('.img-small');
   
       // 1: load small image and show it
@@ -11,7 +13,7 @@ class Home extends React.Component {
       imgSmall.src = small.src;
       imgSmall.onload = function () {
        small.classList.add('loaded');
-       placeholder.classList.add('image-loaded');
+       placeholder.classList.add('img-small-loaded');
       };
   
       // 2: load large image
@@ -27,7 +29,7 @@ class Home extends React.Component {
     return(
       <div className="home-page-wrapper">
         <section className="primary">
-          <div className="welcome-wrapper">
+          <div className="primary-wrapper">
             <div 
               className="placeholder welcome-profile-wrapper" 
               data-large="images/biancaWeld.jpg"
@@ -52,35 +54,39 @@ class Home extends React.Component {
           <h1>Work</h1>
           <div className="work-wrapper">
             <div className="project">
-              <h4>2016 | Self-Initiated</h4>
-              <h2>To Do List</h2>
-              <h3>Tools: pure JavaScript, HTML5, CSS5, Photoshop</h3>
-              <p className="project-description">
-                A single page application where users can add, edit, delete, complete, undo and filter tasks.
-              </p>
+              <div className="project-details">
+                <h4>2016 | Self-Initiated</h4>
+                <h2>To Do List</h2>
+                <h3>Tools: pure JavaScript, HTML5, CSS5, Photoshop</h3>
+                <p className="project-description">
+                  A single page application where users can add, edit, delete, complete, undo and filter tasks.
+                </p>
+              </div>
               <a 
                 className="project-thumbnail" 
                 href="#to-do-list"
               >
                 <img 
-                  src="images/to-do-list-cropped.png" 
+                  src="images/to-do-list.jpg" 
                   alt="To Do List application" 
                 />
               </a>
             </div>
             <div className="project">
-              <h4>2016 | Self-Initiated</h4>
-              <h2>E-mail Sign-up</h2>
-              <h3>Tools: HTML5, CSS3, Photoshop</h3>
-              <p className="project-description">
-                A static page where users can subscribe to a newsletter, contact, and learn more about Skillcrush.
-              </p>
+              <div className="project-details">
+                <h4>2016 | Self-Initiated</h4>
+                <h2>E-mail Sign-up</h2>
+                <h3>Tools: HTML5, CSS3, Photoshop</h3>
+                <p className="project-description">
+                  A static page where users can subscribe to a newsletter, contact, and learn more about Skillcrush.
+                </p>
+              </div>
               <a 
                 className="project-thumbnail" 
                 href="#e-mail-sign-up"
               >
               <img 
-                src="images/e-mail-sign-up-cropped.jpg" 
+                src="images/e-mail-sign-up.jpg" 
                 alt="E-mail Sign Up Page" 
               />
               </a>
@@ -92,34 +98,38 @@ class Home extends React.Component {
             <h1>Past Projects</h1>
             <div className="work-wrapper">
               <div className="project">
-                <h4>2015 | Exploratorium</h4>
-                <h2>Ferrofluid Pool</h2>
-                <h3>Tools: Inventor, Mill, Lathe, Router</h3>
-                <p className="project-description">
-                  A science exhibit where visitors can turn a hand crank to watch ferrofluid rise up different sculptures.
-                </p>
+                <div className="project-details">
+                  <h4>2015 | Exploratorium</h4>
+                  <h2>Ferrofluid Pool</h2>
+                  <h3>Tools: Inventor, Mill, Lathe, Router</h3>
+                  <p className="project-description">
+                    A science exhibit where visitors can turn a hand crank to watch ferrofluid rise up different sculptures.
+                  </p>
+                </div>
                 <a 
                   className="project-thumbnail" 
                   href="#ferrofluid-pool"
                 >
                 <img 
-                src="images/ferrofluid-pool-cropped.jpg" 
+                src="images/ferrofluid-pool.jpg" 
                 alt="Ferrofluid Pool science exhibit" />
                 </a>
               </div>
               <div className="project">
-                <h4>2012 | Stanford</h4>
-                <h2>Twist</h2>
-                <h3>Tools: SolidWorks, TIG Machine, Tube Bender</h3>
-                <p className="project-description">
-                 An ergonomic chair, inspired by M.C. Escher, made of arc-welded steel and lycra.
-                </p>
+                <div className="project-details">
+                  <h4>2012 | Stanford</h4>
+                  <h2>Twist</h2>
+                  <h3>Tools: SolidWorks, TIG Machine, Tube Bender</h3>
+                  <p className="project-description">
+                   An ergonomic chair, inspired by M.C. Escher, made of arc-welded steel and lycra.
+                  </p>
+                </div>
                 <a 
                   className="project-thumbnail" 
                   href="#twist"
                 >
                   <img 
-                  src="images/twist-cropped.jpg" 
+                  src="images/twist.jpg" 
                   alt="Base of Twist chair" 
                   />
                 </a>

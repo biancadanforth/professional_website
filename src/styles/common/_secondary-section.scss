@@ -6,16 +6,7 @@
 	background-color: $blue;
 	color: $off-white;
 
-	@media (min-width: 1200px) {
-		margin: 0;
-	}
+	h1 { padding-bottom: 1.5*$padding-default; }
 
-	h1 {
-		@include section-title($off-white);
-		padding-bottom: 1.5*$padding-default;
-	}
-	svg {
-		width: 20px;
-		fill: $off-white;
-	}
+	h4 { border-bottom-color: $off-white; }
 }

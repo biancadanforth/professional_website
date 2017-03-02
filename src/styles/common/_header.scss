@@ -1,29 +1,6 @@
 // header.scss
 
-header.minimize {
-	@include shadowed;
-	max-width: 100vw;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	transition: padding-top 0.25s linear, padding-bottom 0.25s linear;
-
-	h1 {
-		font-size: 1.25em;
-		transition: font-size 0.25s linear;
-	}
-
-	svg {
-		width: 30px;
-		transition: width 0.25s linear;
-	}
-
-	@media (max-width: 500px) {
-		padding-bottom: 10px;
-	}
-}
-
 header {
-	box-sizing: border-box;
 	position: fixed;
 	top: 0;
 	left: 50%;
@@ -40,84 +17,74 @@ header {
 	url("../images/pw_maze_white.png");
 	transition: padding-top 0.25s linear, padding-bottom 0.25s linear;
 
+	@media (max-width: 1260px) {
+		padding-left: $padding-default;
+		padding-right: $padding-default;
+	}
+
 	div {
 		margin: 0 auto;
 		display: flex;
 		justify-content: space-between;
 		align-items: baseline;
-		max-width: 1200px;
+		max-width: $layout-width;
 		width: 100%;
 
 		svg {
 			width: 50px;
 			transition: width 0.25s linear;
+
+			tspan {
+				fill: $blue;
+			}
+	
+			path {
+				stroke: $blue;
+			}
+		}
+	
+		span {
+			display: flex;
+			align-items: baseline;
+			justify-content: flex-start;
+
+			h1 {
+				margin: 0;
+				margin-left: $margin-small;
+				display: inline-block;
+				text-transform: none;
+				color: $dark-grey;
+				letter-spacing: $letter-spacing;
+				font-size: 1.5em;
+				font-weight: bold;
+				font-family: 'Merriweather', serif;
+				transition: font-size 0.25s linear;
+
+				@media (max-width: 850px) {
+					display: none;
+				}
+			}
 		}
 
 		@media (max-width: 620px) {
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
-			
-			span:first-child {
-				margin-bottom: 20px;
-			}
 
 			span {
 				justify-content: center;
 				align-items: flex-end;
+				
+				svg {
+					margin-bottom: 20px;
+					width: 40px;
+				}
+
 				h1 {
 					line-height: 1em;
 				}
 			}
-
-			ul {
-				margin-top: $margin-small;
-			}
-			svg {
-				width: 40px;
-			}
 		}
-	}
-
-	tspan {
-		fill: $blue;
-	}
-	
-	path {
-		stroke: $blue;
-	}
-	
-	span {
-		display: flex;
-		align-items: baseline;
-		justify-content: flex-start;
-
-		h1 {
-			margin: 0;
-			margin-left: $margin-small;
-			display: inline-block;
-			color: $dark-grey;
-			letter-spacing: $letter-spacing;
-			font-size: 1.5em;
-			font-weight: bold;
-			font-family: 'Merriweather', serif;
-			transition: font-size 0.25s linear;
-
-			@media (max-width: 850px) {
-				display: none;
-			}
-		}
-	}
-
-	@media (max-width: 1260px) {
-		padding-left: $padding-default;
-		padding-right: $padding-default;
-	}
-
-	nav {
-		@media (max-width: 400px) {
-			font-size: 0.875em;
-			}
 	}
 
 	nav > .menu {
@@ -136,9 +103,8 @@ header {
 		}
 		color: $grey;
 
-		@media (max-width: 500px) {
-			font-size: .9em;
-			//overflow-x: hidden;
+		@media (max-width: 400px) {
+			font-size: 0.875em;
 		}
 
 		> li {
@@ -147,7 +113,6 @@ header {
 			border-bottom: 3px transparent solid;
 			
 			&:first-child {	
-					//border-color: $yellow;
 					margin-left: 0;
 					transition: padding-bottom 0.25s linear;
 				}
@@ -172,9 +137,11 @@ header {
 					}
 				}
 
-				/* Reserve space for letter-spacing (or any :hover state styles)
-				* content in ::after pseudo element and using title attribute
-				* in HTML as a source for content.
+				/*
+				* Reserves space for letter-spacing
+				* content in ::after pseudo element
+				* and uses title attribute in HTML
+				* as a source for content.
 				*/
 				&::after {
 					display: block;
@@ -199,6 +166,7 @@ header {
 /*******************************************
 ******* <nav> Active Page Indicator ********
 *******************************************/
+//Only the Home and More Info pages have indicators.
 
 header.home-page {
 	ul.menu > li {
@@ -222,10 +190,47 @@ header.more-info-page {
 	}
 }
 
-header.thank-you-page, header.to-do-list-page, header.e-mail-sign-up-page, header.ferrofluid-pool-page, header.twist-page {
+/*
+* These pages have no active page indicator;
+* they are sub-pages of the Work <nav> link
+*/
+header.thank-you-page,
+header.to-do-list-page,
+header.e-mail-sign-up-page,
+header.ferrofluid-pool-page,
+header.twist-page {
+	
 	ul.menu > li {
+		
 		&:first-child {
 			border-color: transparent;
 		}
+	}
+}
+
+/*******************************************
+* Minimized Fixed Header Styles on Scroll **
+*******************************************/
+
+header.minimize {
+	@include shadowed;
+	max-width: 100vw;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	transition: padding-top 0.25s linear,
+							padding-bottom 0.25s linear;
+
+	h1 {
+		font-size: 1.25em;
+		transition: font-size 0.25s linear;
+	}
+
+	svg {
+		width: 30px;
+		transition: width 0.25s linear;
+	}
+
+	@media (max-width: 500px) {
+		padding-bottom: 10px;
 	}
 }

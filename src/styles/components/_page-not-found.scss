@@ -27,16 +27,12 @@ div.page-not-found-page {
 		margin: 0 auto $margin-default;
 	}
 
-	h3 span.strikethrough {
-		text-decoration: line-through;
-	}
-
-	h3 span.emphasize {
+	.emphasize {
 		border-bottom: 3px solid $yellow;
 	}
 
 	h4 {
-		border: 0;
+		border-width: 0;
 
 		span {
 			font-size: 1em;

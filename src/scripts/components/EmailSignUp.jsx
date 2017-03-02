@@ -13,15 +13,14 @@ class EmailSignUp extends React.Component {
             <div className="project-hero-wrapper">
               <div className="glamour-shot-wrapper">
                 <a 
-                  className="wrap-up"
                   href="/work/e-mail-sign-up/live" 
                   title="See it live"
                   target="_blank"
                   aria-label="Go to live site"
                 >
                   <img 
-                    className="project-thumbnail wrap-up" 
-                    src="../../images/e-mail-sign-up-glamour-final.png" 
+                    className="wrap-up" 
+                    src="../../images/e-mail-sign-up-glamour.png" 
                     alt="Final design on different devices"
                   />
                 </a>
@@ -103,7 +102,7 @@ class EmailSignUp extends React.Component {
               <div className="project">
                 <img 
                   className="project-thumbnail" 
-                  src="../../images/e-mail-sign-up-development.png"
+                  src="../../images/e-mail-sign-up-development.jpg"
                   alt="Excerpt of final CSS" 
                 />
                 <div className="process-description">
@@ -124,7 +123,6 @@ class EmailSignUp extends React.Component {
               <div className="project">
                 <div className="glamour-shot-wrapper">
                   <a 
-                    className="project-thumbnail wrap-up"
                     href="/work/e-mail-sign-up/live" 
                     title="Go to live site"
                     target="_blank" 
@@ -132,7 +130,7 @@ class EmailSignUp extends React.Component {
                   >
                     <img 
                       className="wrap-up" 
-                      src="../../images/e-mail-sign-up-glamour-final.png" 
+                      src="../../images/e-mail-sign-up-glamour.png" 
                       alt="Final design on different devices"
                     />
                   </a>
@@ -140,7 +138,7 @@ class EmailSignUp extends React.Component {
                     className="button-wrapper"
                     href="/work/e-mail-sign-up/live" 
                     target="_blank" 
-                    aria-label="Go to live site"
+                    aria-label="See it live"
                   >
                     <button>See it live</button>
                   </a>
