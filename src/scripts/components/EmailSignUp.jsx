@@ -1,6 +1,6 @@
 // EmailSignUp.jsx
 
-const fluidGridCodepen = "<iframe class='project-thumbnail' height='400' scrolling='no' title='Fluid Grid' src='//codepen.io/biancadanforth/embed/wWLGRK/?height=400&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/biancadanforth/pen/wWLGRK/'>Fluid Grid</a> by biancadanforth (<a href='http://codepen.io/biancadanforth'>@biancadanforth</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>";
+const fluidGridCodepen = "<iframe height='400' scrolling='no' title='Fluid Grid' src='//codepen.io/biancadanforth/embed/wWLGRK/?height=400&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/biancadanforth/pen/wWLGRK/'>Fluid Grid</a> by biancadanforth (<a href='http://codepen.io/biancadanforth'>@biancadanforth</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>";
 
 class EmailSignUp extends React.Component {
   render() {
@@ -8,8 +8,8 @@ class EmailSignUp extends React.Component {
       <div>
         <section className="primary">
           <div className="primary-wrapper">
-            <h1>E-mail Sign-Up</h1>
-            <h3>Front-End Development</h3>
+            <h1 className="project-header">E-mail Sign-Up</h1>
+            <h3 className="project-subsubheader">Front-End Development</h3>
             <div className="project-hero-wrapper">
               <div className="glamour-shot-wrapper">
                 <a 
@@ -30,26 +30,26 @@ class EmailSignUp extends React.Component {
                   target="_blank" 
                   aria-label="Go to live site"
                 >
-                  <button>See it live</button>
+                  <button className="project-button">See it live</button>
                 </a>
               </div>
-              <div>
-                <h2>Overview</h2>
-                <h4 className="overview-header">Project goals</h4>
-                <p>
+              <div className="project-overview-wrapper">
+                <h2 className="project-overview-header">Overview</h2>
+                <h4 className="project-overview-subheader">Project goals</h4>
+                <p className="project-overview-description">
                   My goal was to make a static webpage based on a provided Photoshop mock-up.
                 </p>
-                <p>
+                <p className="project-overview-description">
                   This was an extra credit project for a web design course I took from Skillcrush.com.
                 </p>
-                <h4 className="overview-header">Tools and Methods</h4>
-                 <p>
+                <h4 className="project-overview-subheader">Tools and Methods</h4>
+                 <p className="project-overview-description">
                   This page is written in HTML5 and CSS3.
                 </p>
-                <p>
+                <p className="project-overview-description">
                   I used a modified fluid grid framework along with CSS3 Flexbox to layout elements on the page.
                 </p>
-                <p>
+                <p className="project-overview-description">
                   There is no back-end component for the forms.
                 </p>
               </div>
@@ -57,10 +57,10 @@ class EmailSignUp extends React.Component {
           </div>
         </section>
         <section className="secondary">
-          <h1>Process</h1>
+          <h1 className="project-header">Process</h1>
           <div className="work-wrapper">
             <div className="project-wrapper">
-              <h2>Gather Information</h2>
+              <h2 className="project-subheader">Gather Information</h2>
               <div className="project">
                 <img 
                   className="project-thumbnail" 
@@ -81,7 +81,7 @@ class EmailSignUp extends React.Component {
               </div>
             </div>
             <div className="project-wrapper">
-              <h2>Prototype</h2>
+              <h2 className="project-subheader">Prototype</h2>
               <div className="project">
                 <div className="codepen-embed"dangerouslySetInnerHTML={{__html: fluidGridCodepen}} />
                 <div className="process-description">
@@ -98,7 +98,7 @@ class EmailSignUp extends React.Component {
               </div>
             </div>
             <div className="project-wrapper">
-              <h2>Development</h2>
+              <h2 className="project-subheader">Development</h2>
               <div className="project">
                 <img 
                   className="project-thumbnail" 
@@ -119,9 +119,9 @@ class EmailSignUp extends React.Component {
               </div>
             </div>
             <div className="project-wrapper">
-              <h2>Final Product</h2>
+              <h2 className="project-subheader">Final Product</h2>
               <div className="project">
-                <div className="glamour-shot-wrapper">
+                <div className="project-glamour-shot-wrapper">
                   <a 
                     href="/work/e-mail-sign-up/live" 
                     title="Go to live site"
@@ -140,7 +140,7 @@ class EmailSignUp extends React.Component {
                     target="_blank" 
                     aria-label="See it live"
                   >
-                    <button>See it live</button>
+                    <button className="project-button">See it live</button>
                   </a>
                 </div>
                 <div className="process-description">

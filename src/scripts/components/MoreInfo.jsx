@@ -8,22 +8,22 @@ class MoreInfo extends React.Component {
     return(
       <div>
         <section className="primary">
-          <ContactForm reCaptchaScriptIsLoaded={this.props.reCaptchaScriptIsLoaded}/>
+          <ContactForm />
           <div className="about-body">
-            <div>
-              <h2>Say What?</h2>
-              <h3>I am a<br/>designer, developer & engineer.</h3>
-              <p><a target="_blank" href="/work/bianca-danforth-resume.pdf">View my resume</a></p>
+            <div className="about-header-wrapper">
+              <h2 className="about-header">Say What?</h2>
+              <h3 className="about-subheader">I am a<br/>designer, developer & engineer.</h3>
+              <p className="about-resume"><a target="_blank" href="/work/bianca-danforth-resume.pdf">View my resume</a></p>
               <img 
                 className="about-hero" 
                 src="../images/bianca.jpg" 
               />
             </div>
             <div className="about-copy">
-              <p className="project-description">
+              <p className="about-project-description">
                 When I went to college, like most students, I had no idea what I wanted to do. All I knew was that I wanted to do <strong>something challenging and worthwhile</strong>. I chose to study mechanical engineering.
               </p>
-              <p className="project-description">
+              <p className="about-project-description">
                 Several years later I have found something that is not only challenging and worthwhile, but <strong>that I enjoy doing</strong> even more: web design and development.
               </p>
               <div className="blockquote-wrapper">
@@ -33,10 +33,10 @@ class MoreInfo extends React.Component {
                   <div className="close-quote" dangerouslySetInnerHTML={{__html: quoteSVG}} />
                 </blockquote>
               </div>
-              <p className="project-description">
+              <p className="about-project-description">
                 In many ways, I'm doing what I have always done: thinking critically and creatively, solving problems, and rolling up my sleeves to get the work done.
               </p>
-              <p className="project-description">
+              <p className="about-project-description">
                 Other things I find challenging and worthwhile include: <strong>hiking</strong> with my dog, Mia, <strong>fixing things</strong> around the house and <strong>volunteering</strong> for political organizations whose ideas I believe in.
               </p>
             </div>

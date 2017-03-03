@@ -6,8 +6,8 @@ class FerrofluidPool extends React.Component {
       <div>
         <section className="primary">
           <div className="primary-wrapper">
-            <h1>Ferrofluid Pool</h1>
-            <h3>Engineering Design | Production</h3>
+            <h1 className="project-header">Ferrofluid Pool</h1>
+            <h3 className="project-subsubheader">Engineering Design | Production</h3>
             <div className="project-hero-wrapper">
               <div className="glamour-shot-wrapper">
                 <a 
@@ -29,26 +29,26 @@ class FerrofluidPool extends React.Component {
                   target="_blank" 
                   aria-label="See final drawing"
                 >
-                  <button>See final drawing</button>
+                  <button className="project-button">See final drawing</button>
                 </a>
               </div>
-              <div>
-                <h2>Overview</h2>
-                <h4 className="overview-header">Project goals</h4>
-                <p>
+              <div className="project-overview-wrapper">
+                <h2 className="project-overview-header">Overview</h2>
+                <h4 className="project-overview-subheader">Project goals</h4>
+                <p className="project-overview-description">
                   The goal of this project was to engineer and build a science exhibit based on a visual design and materials palette.
                 </p>
-                <p>
+                <p className="project-overview-description">
                   I was the principal engineer, but I received mentorship from a senior mechanical and electrical engineer.
                 </p>
-                <h4 className="overview-header">Tools and Methods</h4>
-                 <p>
+                <h4 className="project-overview-subheader">Tools and Methods</h4>
+                 <p className="project-overview-description">
                   I made a 3D CAD model and production drawings for the exhibit in Autodesk Inventor.
                 </p>
-                <p>
+                <p className="project-overview-description">
                   While most parts were produced by outside vendors, I made and modified some parts myself using a number of traditional and CNC (computer numerical control) manufacturing processes.
                 </p>
-                <p>
+                <p className="project-overview-description">
                   At the time of this project, my name was Bianca Morales.
                 </p>
               </div>
@@ -56,10 +56,10 @@ class FerrofluidPool extends React.Component {
           </div>
         </section>
         <section className="secondary">
-          <h1>Process</h1>
+          <h1 className="project-header">Process</h1>
           <div className="work-wrapper">
             <div className="project-wrapper">
-              <h2>Gather Information</h2>
+              <h2 className="project-subheader">Gather Information</h2>
               <div className="project">
                 <img 
                   className="project-thumbnail" 
@@ -80,7 +80,7 @@ class FerrofluidPool extends React.Component {
               </div>
             </div>
             <div className="project-wrapper">
-              <h2>Ideation</h2>
+              <h2 className="project-subheader">Ideation</h2>
               <div className="project">
                 <img 
                   className="project-thumbnail" 
@@ -98,7 +98,7 @@ class FerrofluidPool extends React.Component {
               </div>
             </div>
             <div className="project-wrapper">
-              <h2>Prototype</h2>
+              <h2 className="project-subheader">Prototype</h2>
               <div className="project">
                 <img 
                   className="project-thumbnail" 
@@ -119,7 +119,7 @@ class FerrofluidPool extends React.Component {
               </div>
             </div>
             <div className="project-wrapper">
-              <h2>Development</h2>
+              <h2 className="project-subheader">Development</h2>
               <div className="project">
                 <img 
                   className="project-thumbnail" 
@@ -137,7 +137,7 @@ class FerrofluidPool extends React.Component {
               </div>
             </div>
             <div className="project-wrapper">
-              <h2>Final Product</h2>
+              <h2 className="project-subheader">Final Product</h2>
               <div className="project">
                 <img 
                   className="project-thumbnail" 

@@ -8,8 +8,8 @@ class ToDoList extends React.Component {
       <div>
         <section className="primary">
           <div className="primary-wrapper">
-            <h1>To Do List</h1>
-            <h3>UX Design | Visual Design | Front-End Development</h3>
+            <h1 className="project-header">To Do List</h1>
+            <h3 className="project-subsubheader">UX Design | Visual Design | Front-End Development</h3>
             <div className="project-hero-wrapper">
               <div className="glamour-shot-wrapper">
                 <a 
@@ -30,23 +30,23 @@ class ToDoList extends React.Component {
                   target="_blank" 
                   aria-label="Go to live site"
                 >
-                  <button>See it live</button>
+                  <button className="project-button">See it live</button>
                 </a>
               </div>
-              <div>
-                <h2>Overview</h2>
-                <h4 className="overview-header">Project goals</h4>
-                <p>
+              <div className="project-overview-wrapper">
+                <h2 className="project-overview-header">Overview</h2>
+                <h4 className="project-overview-subheader">Project goals</h4>
+                <p className="project-overview-description">
                   My goal was to build an interactive, useful and usable application in JavaScript.
                 </p>
-                <h4 className="overview-header">Tools and Methods</h4>
-                 <p>
+                <h4 className="project-overview-subheader">Tools and Methods</h4>
+                 <p className="project-overview-description">
                   I used Photoshop, UXPin and InVision for the design. I used pure JavaScript ES5, HTML5 and CSS3 for the development.
                 </p>
-                <p>
+                <p className="project-overview-description">
                   I had never used any of these tools extensively before (HTML and CSS excepted), so I was learning them as I went.
                 </p>
-                <p>
+                <p className="project-overview-description">
                   While I completed all the work on my own, I met weekly with a professional web designer for feedback.
                 </p>
               </div>
@@ -54,10 +54,10 @@ class ToDoList extends React.Component {
           </div>
         </section>
         <section className="secondary">
-          <h1>Process</h1>
+          <h1 className="project-header">Process</h1>
           <div className="work-wrapper">
             <div className="project-wrapper">
-              <h2>Gather Information</h2>
+              <h2 className="project-subheader">Gather Information</h2>
               <div className="project">
               <figure>
                   <img 
@@ -80,7 +80,7 @@ class ToDoList extends React.Component {
               </div>
             </div>
             <div className="project-wrapper">
-              <h2>Ideation</h2>
+              <h2 className="project-subheader">Ideation</h2>
               <div className="project">
                 <img 
                   className="project-thumbnail" 
@@ -98,7 +98,7 @@ class ToDoList extends React.Component {
               </div>
             </div>
             <div className="project-wrapper">
-              <h2>Wireframe</h2>
+              <h2 className="project-subheader">Wireframe</h2>
               <div className="project">
                 <img 
                   className="project-thumbnail" 
@@ -116,7 +116,7 @@ class ToDoList extends React.Component {
               </div>
             </div>
             <div className="project-wrapper">
-              <h2>Prototype</h2>
+              <h2 className="project-subheader">Prototype</h2>
               <div className="project">
                 <div className="codepen-embed"dangerouslySetInnerHTML={{__html: searchFilterCodePen}} />
                 <div className="process-description">
@@ -127,7 +127,7 @@ class ToDoList extends React.Component {
               </div>
             </div>
             <div className="project-wrapper">
-              <h2>Mock-Up & Development</h2>
+              <h2 className="project-subheader">Mock-Up & Development</h2>
               <div className="project">
                 <img 
                   className="project-thumbnail" 
@@ -148,9 +148,9 @@ class ToDoList extends React.Component {
               </div>
             </div>
             <div className="project-wrapper">
-              <h2>Final Product</h2>
+              <h2 className="project-subheader">Final Product</h2>
               <div className="project">
-                <div className="glamour-shot-wrapper">
+                <div className="project-glamour-shot-wrapper">
                   <a                    
                     href="/work/to-do-list/live" 
                     title="See it live"
@@ -169,7 +169,7 @@ class ToDoList extends React.Component {
                     target="_blank" 
                     aria-label="See it live"
                   >
-                    <button>See it live</button>
+                    <button className="project-button">See it live</button>
                   </a>
                 </div>
                 <div className="process-description">

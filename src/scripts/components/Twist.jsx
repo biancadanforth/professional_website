@@ -6,28 +6,28 @@ class Twist extends React.Component {
       <div>
         <section className="primary">
           <div className="primary-wrapper">
-            <h1>Twist</h1>
-            <h3>Visual Design | Engineering Design | Production </h3>
+            <h1 className="project-header">Twist</h1>
+            <h3 className="project-subsubheader">Visual Design | Engineering Design | Production </h3>
             <div className="project-hero-wrapper">
               <img 
-                className="project-thumbnail portrait" 
+                className="portrait no-button" 
                 src="../../images/twist-glamour.jpg" 
                 alt="Final product"
               />
-              <div>
-                <h2>Overview</h2>
-                <h4 className="overview-header">Project goals</h4>
-                <p>
+              <div className="project-overview-wrapper">
+                <h2 className="project-overview-header">Overview</h2>
+                <h4 className="project-overview-subheader">Project goals</h4>
+                <p className="project-overview-description">
                   The goal of this project was to design and build a chair.
                 </p>
-                <p>
+                <p className="project-overview-description">
                   This project was part of an Art Studio course I took in my last quarter of graduate school at Stanford University. It was <a target="_blank" href="/work/twist/twist-magazine-article.pdf">featured</a> in Stanford's alumni magazine!
                 </p>
-                <h4 className="overview-header">Tools and Methods</h4>
-                <p>
+                <h4 className="project-overview-subheader">Tools and Methods</h4>
+                <p className="project-overview-description">
                   I made a CAD model of the chair's frame in SolidWorks. I TIG-welded the frame, which is made of mild steel square tubing. I upholstered the chair using foam, leather and lycra.
                 </p>
-                <p>
+                <p className="project-overview-description">
                   At the time of this project, my name was Bianca Morales.
                 </p>
               </div>
@@ -35,10 +35,10 @@ class Twist extends React.Component {
           </div>
         </section>
         <section className="secondary">
-          <h1>Process</h1>
+          <h1 className="project-header">Process</h1>
           <div className="work-wrapper">
             <div className="project-wrapper">
-              <h2>Gather Information</h2>
+              <h2 className="project-subheader">Gather Information</h2>
               <div className="project">
               <figure>
                 <img  
@@ -61,7 +61,7 @@ class Twist extends React.Component {
               </div>
             </div>
             <div className="project-wrapper">
-              <h2>Ideation</h2>
+              <h2 className="project-subheader">Ideation</h2>
               <div className="project">
                 <img 
                   className="project-thumbnail" 
@@ -82,7 +82,7 @@ class Twist extends React.Component {
               </div>
             </div>
             <div className="project-wrapper">
-              <h2>Prototype</h2>
+              <h2 className="project-subheader">Prototype</h2>
               <div className="project">
                 <img 
                   className="project-thumbnail" 
@@ -100,7 +100,7 @@ class Twist extends React.Component {
               </div>
             </div>
             <div className="project-wrapper">
-              <h2>Development</h2>
+              <h2 className="project-subheader">Development</h2>
               <div className="project">
                 <img 
                   className="project-thumbnail" 
@@ -121,7 +121,7 @@ class Twist extends React.Component {
               </div>
             </div>
             <div className="project-wrapper">
-              <h2>Final Product</h2>
+              <h2 className="project-subheader">Final Product</h2>
               <div className="project">
                 <img 
                   className="project-thumbnail" 

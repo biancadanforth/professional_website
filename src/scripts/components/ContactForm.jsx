@@ -39,16 +39,18 @@ class ContactForm extends React.Component {
 
     return(
       <div className="contact-body" ref="contact-form">
-        <h2>Say Hello!</h2>
-        <h3>biancadanforth at gmail dot com</h3>
-        <h4>or</h4>
-        <div className = "form-wrapper">
+        <h2 className="contact-header">Say Hello!</h2>
+        <h3 className="contact-subheader">biancadanforth at gmail dot com</h3>
+        <h4 className="contact-subsubheader">or</h4>
+        <div className = "contact-form-wrapper">
           <form 
+            className="contact-form"
             action= "https://api.formbucket.com/f/buk_wGepCB3HOpSpWK9zrUBcYM5e" 
             method="post"
           >
-            <label>First and Last Name
+            <label className="contact-form-label">First and Last Name
               <input 
+                className="contact-form-input"
                 type="text" 
                 name="Name" 
                 ref="name"
@@ -60,8 +62,9 @@ class ContactForm extends React.Component {
                 }
               />
             </label>
-            <label>E-mail
+            <label className="contact-form-label">E-mail
               <input 
+                className="contact-form-input"
                 type="email" 
                 name="E-mail"
                 ref="email" 
@@ -73,8 +76,9 @@ class ContactForm extends React.Component {
                 }
               />
             </label>
-            <label className="textarea-label">Message
+            <label className="contact-form-label textarea-label">Message
               <textarea 
+                className="contact-form-textarea"
                 name="Message" 
                 placeholder="I'd like to hire you."
                 required
@@ -88,6 +92,7 @@ class ContactForm extends React.Component {
             </label>
             <div ref="recaptchaTarget" />
             <input
+              className="contact-form-input"
               type="submit" 
               value="Send"
               disabled={!submitEnabled}

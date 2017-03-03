@@ -1,307 +1,301 @@
 // about.scss
 
-.more-info-page {
+.more-info-page .primary {
+	display: flex;
+	margin: 0 auto (2 * $margin-default);
+	max-width: $layout-width;
 
-	.primary {
-		display: flex;
-  	margin: 0 auto (2 * $margin-default);
-  	max-width: $layout-width;
-
-  	& > div:first-child {
-  		margin-right: $margin-default;
-  	}
-
-  	@media (max-width: 1260px) {
-  		margin-left: $margin-default;
-  		margin-right: $margin-default;
-  	}
-
-  	@media (max-width: 900px) {
-  		flex-direction: column;
-  		margin: 0 auto;
-
-  		.contact-body,
-  		.about-body {
-  			flex-basis: 100%;
-  		}
-
-  		.about-body {
-  			order: -1;
-  			margin-bottom: $margin-default;
-  			align-items: center;
-  			padding: 0 $padding-default $padding-default;
-
-  			.about-copy {
-  				max-width: 600px;
-  			}
-  		}
-
-  		.contact-body {
-  			margin-right: 0 !important;
-  		}
-  	}
-
-  	@media (max-width: 600px) {
-  		.contact-body {
-  			padding: 0;
-  			border: 0;
-  		}
-  	}
+	@media (max-width: 1260px) {
+		margin-left: $margin-default;
+		margin-right: $margin-default;
 	}
 
-	.contact-body {
-	  display: flex;
-	  flex: 0 1 50%;
-	  align-self: stretch;
-	 	flex-direction: column;
+	@media (max-width: 900px) {
+		flex-direction: column;
+		margin: 0 auto;
 
-	  h2 {
-	  	color: $dark-grey;
-	  }
-
-	  h4 {
-	  	border-bottom: none;
-	  }
-
-	  .form-wrapper {
-		  height: 100%;
-		  padding: $padding-default;
-		  text-align: start;
-	  	font-family: 'Montserrat';
-	  	border: 1px solid lighten($grey, 40%);
-		  border-radius: 2px;
-
-	  	@media (max-width: 900px) {
-	  		max-width: 600px;
-	  		margin: 0 auto;
-	  		width: 100%;
-	  		border: none;
-	  	}
-
-  		form {
-			  display: flex;
-			  flex-direction: column;
-			  height: 100%;
-
-			  input {
-			  	display: block;
-			  	margin-top: .33*$margin-default;
-			  	width: 100%;
-					min-height: 50px;
-				  font-size: 1em;
-				  line-height: 1.5em;
-					font-family: 'Montserrat';
-				  text-indent: (.33 * $margin-default);
-				  line-height: 1.5;
-				  @include rounded(2px);
-
-				  &::-webkit-input-placeholder {
-						color: lighten($grey, 20%);
-					}
-
-				  &[type="text"], &[type="email"] {
-						font-family: 'Montserrat', sans-serif;
-						background-color: rgba(255, 255, 255, .3);
-						border: .5px solid lighten($grey, 40%);
-						box-shadow: inset 1px 1px 0 .5px rgba(0,0,0,.3);
-
-						&:focus {
-							outline: .5px solid $blue;
-						}
-				  }
-
-				  &[type="submit"] {
-				  	display: inline-block;
-					  margin-top: $margin-small;
-					   width: 50%;
-					  font-family: 'Merriweather';
-					  text-indent: 0;
-					  @include buttoned;
-
-					  &:disabled {
-					  	color: darken($light-grey, 15%);
-					  	background-color: $light-grey;
-					  	box-shadow: none;
-					  	border-color: darken($light-grey, 15%);
-
-					  	&:hover {
-					  		background-color: $light-grey;
-					  		transition: none;
-					  	}
-					  }
-
-					  @media (max-width: 500px) {
-					  	width: 100%;
-					  }
-				  }
-			  }
-
-			  textarea {
-			  	display: block;
-			  	margin-top: (.33 * $margin-default);
-				  width: 100%;
-				  resize: none;
-					height: 100%;
-					min-height: 150px;
-					margin-bottom: $margin-small;
-				  font-size: 1em;
-				  line-height: 1.5em;
-				  font-family: 'Montserrat', sans-serif;
-					padding: 10px;
-					text-indent: 0;
-					background-color: rgba(255, 255, 255, .3);
-					border: .5px solid lighten($grey, 40%);
-					box-shadow: inset 1px 1px 0 .5px rgba(0,0,0,.3);
-					@include rounded(2px);
-					
-					&:focus {
-						outline: .5px solid $blue;
-					}
-
-					&:placeholder-shown {
-						padding: 10px;
-						text-indent: 0;
-					}
-
-					&::-webkit-input-placeholder {
-						color: lighten($grey, 20%);
-					}
-				}
-
-				label {
-				  display: inline-block;
-				  width: 100%;
-				  margin-top: $margin-small;
-				  font-size: 1em;
-				  line-height: 1.5em;
-				  font-family: 'Merriweather';
-				  
-
-				  &:first-child {
-						margin-top: 0;
-				  }
-
-				  &.textarea-label {
-						display: flex;
-						flex-direction: column;
-						height: 100%;
-					}
-				}
-	  	}
-	  }
-	}
-
-	.about-body {
-		display: flex;
-		justify-content: center;
-		flex-flow: column wrap;
-		align-items: flex-start;
-		max-width: $layout-width;
-		flex: 0 1 50%;
-
-		& > div:first-child {
-			width: 100%;
-			text-align: center;
-
-			h2 {
-				margin-top: 0;
-				color: $dark-grey;
-			}
-
-			.about-hero {
-				width: 100%;
-				max-width: 300px;
-				@include rounded(50%);
-				@include shadowed;
-			}
-
-			p {
-				margin-bottom: $margin-default;
-				text-align: center !important;
-			}
+		.contact-body,
+		.about-body {
+			flex-basis: 100%;
 		}
-		
-		.about-copy {
-			margin-top: $margin-default;
 
-			@media (max-width: 1000px) {
-				flex-direction: column;
-				align-items: center;
-				justify-content: center;
-				width: 100%;
+		.about-body {
+			order: -1;
+			margin-bottom: $margin-default;
+			align-items: center;
+			padding: 0 $padding-default $padding-default;
 
-				h2 {
-					margin-top: $margin-default;
-				}
-			}
-
-			.project-description {
+			.about-copy {
 				max-width: 600px;
-				margin: 0 auto $margin-small;
-				text-align: start;
-
-				&:last-child {
-					margin-bottom: 0;
-				}
 			}
+		}
 
-			.blockquote-wrapper {
-				margin: $margin-default (2 * $margin-small);
+		.contact-body {
+			margin-right: 0 !important;
+		}
+	}
 
-				@media (max-width: 550px) {
-					margin: $margin-small;
+	@media (max-width: 600px) {
+		.contact-body {
+			padding: 0;
+			border: 0;
+		}
+	}
+}
 
-					blockquote {
-						padding: 5px 0;
-						font-size: 1em;
+// CONTACT SECTION
 
-						svg {
-							display: none;
-						}
-					}
-				}
+.contact-body {
+  display: flex;
+  flex: 0 1 50%;
+  align-self: stretch;
+ 	flex-direction: column;
+	margin-right: $margin-default;
+}
 
-				blockquote {
-					position: relative;
-					top: 0;
-					left: 0;
-					padding: 5px (2 * $padding-small);
-					color: $dark-grey;
-					font-size: 1.25em;
-					text-align: start;
-					border-top: 2px solid lighten($grey, 40%);
-					border-bottom: 2px solid lighten($grey, 40%);
-					
-					@media (max-width: $max-img-width) {
-						font-size: 1.125em;
-					}
+.contact-header {
+	color: $dark-grey;
+}
 
-					/* Using React, have to wrap <svg> in another
-					* element when using dangerouslySetInnerHTML
-					* attribute; I used a <div>
-					*/
-					div {
-						position: absolute;
-						width: 30px;
-						fill: lighten($grey, 40%);
+.contact-subsubheader {
+	border-bottom: none;
+}
 
-						&.open-quote {
-							top: 0;
-							left: 0;
-							z-index: -1;
-							//mirror about x-axis
-							transform: scaleY(-1);
-						}
+.contact-form-wrapper {
+  height: 100%;
+  padding: $padding-default;
+  text-align: start;
+	font-family: 'Montserrat';
+	border: 1px solid lighten($grey, 40%);
+  border-radius: 2px;
 
-						&.close-quote {
-							bottom: 0;
-							right: 0;
-							z-index: -1;
-							transform: rotate(180deg);
-						}
-					}
-				}
+	@media (max-width: 900px) {
+		max-width: 600px;
+		margin: 0 auto;
+		width: 100%;
+		border: none;
+	}
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.contact-form-input {
+	display: block;
+	margin-top: .33*$margin-default;
+	width: 100%;
+	min-height: 50px;
+  font-size: 1em;
+  line-height: 1.5em;
+	font-family: 'Montserrat';
+  text-indent: (.33 * $margin-default);
+  line-height: 1.5;
+  @include rounded(2px);
+
+  &::-webkit-input-placeholder {
+		color: lighten($grey, 20%);
+	}
+
+  &[type="text"], &[type="email"] {
+		font-family: 'Montserrat', sans-serif;
+		background-color: rgba(255, 255, 255, .3);
+		border: .5px solid lighten($grey, 40%);
+		box-shadow: inset 1px 1px 0 .5px rgba(0,0,0,.3);
+
+		&:focus {
+			outline: .5px solid $blue;
+		}
+  }
+
+  &[type="submit"] {
+  	display: inline-block;
+	  margin-top: $margin-small;
+	   width: 50%;
+	  font-family: 'Merriweather';
+	  text-indent: 0;
+	  @include buttoned;
+
+	  &:disabled {
+	  	color: darken($light-grey, 15%);
+	  	background-color: $light-grey;
+	  	box-shadow: none;
+	  	border-color: darken($light-grey, 15%);
+
+	  	&:hover {
+	  		background-color: $light-grey;
+	  		transition: none;
+	  	}
+	  }
+
+	  @media (max-width: 500px) {
+	  	width: 100%;
+	  }
+  }
+}
+
+.contact-form-textarea {
+	display: block;
+	margin-top: (.33 * $margin-default);
+  width: 100%;
+  resize: none;
+	height: 100%;
+	min-height: 150px;
+	margin-bottom: $margin-small;
+  font-size: 1em;
+  line-height: 1.5em;
+  font-family: 'Montserrat', sans-serif;
+	padding: 10px;
+	text-indent: 0;
+	background-color: rgba(255, 255, 255, .3);
+	border: .5px solid lighten($grey, 40%);
+	box-shadow: inset 1px 1px 0 .5px rgba(0,0,0,.3);
+	@include rounded(2px);
+	
+	&:focus {
+		outline: .5px solid $blue;
+	}
+
+	&:placeholder-shown {
+		padding: 10px;
+		text-indent: 0;
+	}
+
+	&::-webkit-input-placeholder {
+		color: lighten($grey, 20%);
+	}
+}
+
+.contact-form-label {
+  display: inline-block;
+  width: 100%;
+  margin-top: $margin-small;
+  font-size: 1em;
+  line-height: 1.5em;
+  font-family: 'Merriweather';
+  
+  &:first-child {
+		margin-top: 0;
+  }
+
+  &.textarea-label {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+}
+
+// ABOUT SECTION
+
+.about-body {
+	display: flex;
+	justify-content: center;
+	flex-flow: column wrap;
+	align-items: flex-start;
+	max-width: $layout-width;
+	flex: 0 1 50%;
+}
+
+.about-header-wrapper {
+	width: 100%;
+	text-align: center;
+}
+
+.about-header {
+	margin-top: 0;
+	color: $dark-grey;
+}
+
+.about-hero {
+	width: 100%;
+	max-width: 300px;
+	@include rounded(50%);
+	@include shadowed;
+}
+
+.about-resume {
+	margin-bottom: $margin-default;
+	text-align: center !important;
+}
+
+.about-copy {
+	margin-top: $margin-default;
+
+	@media (max-width: 1000px) {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
+}
+
+.about-project-description {
+	max-width: 600px;
+	margin: 0 auto (.75 * $margin-small);
+	text-align: start;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.blockquote-wrapper {
+	margin: $margin-default (2 * $margin-small);
+
+	@media (max-width: 550px) {
+		margin: $margin-small;
+
+		blockquote {
+			padding: 5px 0;
+			font-size: 1em;
+
+			svg {
+				display: none;
 			}
 		}
 	}
+}
+
+blockquote {
+	position: relative;
+	top: 0;
+	left: 0;
+	padding: 5px (2 * $padding-small);
+	color: $dark-grey;
+	font-size: 1.25em;
+	text-align: start;
+	border-top: 2px solid lighten($grey, 40%);
+	border-bottom: 2px solid lighten($grey, 40%);
+	
+	@media (max-width: $max-img-width) {
+		font-size: 1.125em;
+	}
+}
+
+/* Using React, have to wrap <svg> in another
+* element when using dangerouslySetInnerHTML
+* attribute; I used a <div>
+*/
+.open-quote,
+.close-quote {
+	position: absolute;
+	width: 30px;
+	fill: lighten($grey, 40%);
+}
+
+.open-quote {
+	top: 0;
+	left: 0;
+	z-index: -1;
+	//mirror about x-axis
+	transform: scaleY(-1);
+}
+
+.close-quote {
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+	transform: rotate(180deg);
 }
