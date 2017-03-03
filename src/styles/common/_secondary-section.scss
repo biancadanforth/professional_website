@@ -3,10 +3,10 @@
 // bottom page <section>
 .secondary {
 	padding: $padding-default $padding-default 0;
-	background-color: $blue;
 	color: $off-white;
+	background-color: $blue;
 
-	h1 { padding-bottom: 1.5*$padding-default; }
+	h1 { padding-bottom: (1.5 * $padding-default); }
 
 	h4 { border-bottom-color: $off-white; }
 }

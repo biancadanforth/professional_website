@@ -1,49 +1,38 @@
 // _thank-you.scss
 
-.thank-you-page {
+.thank-you-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin: 5px auto 0;
 
-	.thank-you-wrapper {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		margin: 5px auto 0;
-
-		.thank-you {
-			padding: $padding-default;
-			@include rounded(2px);
-			border: 1px solid $blue;
-
-			h2 {
-				padding-bottom: 5px;
-				margin-bottom: $margin-small;
-				border-bottom: 2px solid $yellow;
-			}
-
-			h3 br {
-				display: none;
-			}
-
-			h4 {
-				border: 0;
-
-				span {
-					font-size: 1em;
-					font-weight: 700;
-				}
-			}
-
-			p {
-				margin-bottom: 0.5*$margin-default;
-			}
-		}
-
-		@media (max-width: 350px) {
-			margin: 0 $margin-small;
-
-			.thank-you h3 br {
-				display: inline;
-			}
-		}
+	@media (max-width: 350px) {
+		margin: 0 $margin-small;
 	}
+}
+
+.thank-you {
+	padding: $padding-default;
+	@include rounded(2px);
+	border: 1px solid $blue;
+}
+
+.thank-you-header {
+		padding-bottom: 5px;
+		margin-bottom: $margin-small;
+		border-bottom: 2px solid $yellow;
+}
+
+.thank-you-subsubheader {
+	border: 0;
+
+	span {
+		font-size: 1em;
+		font-weight: 700;
+	}
+}
+
+.thank-you-paragraph {
+	margin-bottom: (.5 * $margin-default);
 }

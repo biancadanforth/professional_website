@@ -8,39 +8,41 @@ header.page-not-found-page {
 	text-align: center;
 }
 
-div.page-not-found-page {
+.page-not-found-wrapper {
 	margin: 0 $margin-default $margin-default;
 	max-width: 100%;
-	text-align: center;
 	height: 100vh;
+	text-align: center;
+}
 
-	img {
-		max-width: 600px;
-		width: 100%;
-		@include rounded(2px);
-		@include shadowed;
-		margin-bottom: $margin-default;
+.page-not-found-img {
+	max-width: 600px;
+	width: 100%;
+	margin-bottom: $margin-default;
+	@include rounded(2px);
+	@include shadowed;
+}
+
+.page-not-found-header {
+	max-width: 600px;
+	margin: 0 auto $margin-default;
+}
+
+@media (max-width: 600px) {
+	h2.page-not-found-header {
+		font-size: 1.5em;
 	}
+}
 
-	h2, h3 {
-		max-width: 600px;
-		margin: 0 auto $margin-default;
-	}
+.emphasize {
+	border-bottom: 3px solid $yellow;
+}
 
-	.emphasize {
-		border-bottom: 3px solid $yellow;
-	}
+.page-not-found-subheader {
+	border-width: 0;
 
-	h4 {
-		border-width: 0;
-
-		span {
-			font-size: 1em;
-			font-weight: 700;
-		}
-	}
-
-	.error-page-link, .error-page-link:visited {
-		color: $blue !important;
+	span {
+		font-size: 1em;
+		font-weight: 700;
 	}
 }

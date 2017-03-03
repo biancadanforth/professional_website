@@ -6,29 +6,33 @@ class Dropdown extends React.Component {
   render() {
     return (
       <ul className= {this.props.isOpen ? 'submenu' : 'submenu hidden'}>
-        <li>
-          <Link 
+        <li className="submenu-item">
+          <Link
+            className="submenu-link" 
             to="to-do-list"
             onClick={this.props.onClick} >
               To-Do List
           </Link>
         </li>
-        <li>
+        <li className="submenu-item">
           <Link 
+            className="submenu-link"
             to="e-mail-sign-up"
             onClick={this.props.onClick} >
               E-mail Sign-up
           </Link>
         </li>
-        <li className="past-projects">
+        <li className="submenu-item past-projects">
           <Link 
+            className="submenu-link"
             to="ferrofluid-pool"
             onClick={this.props.onClick} >
               Ferrofluid Pool
           </Link>
         </li>
-        <li className="past-projects">
+        <li className="submenu-item past-projects">
           <Link 
+            className="submenu-link"
             to="twist"
             onClick={this.props.onClick} >
               Twist

@@ -5,7 +5,7 @@ class Home extends React.Component {
   componentDidMount() {
       
       //PROGRESSIVE IMAGE LOADING
-      var placeholder = document.querySelector('.welcome-profile-wrapper');
+      var placeholder = document.querySelector('.welcome-placeholder');
       var small = placeholder.querySelector('.img-small');
   
       // 1: load small image and show it
@@ -18,7 +18,8 @@ class Home extends React.Component {
   
       // 2: load large image
       var imgLarge = new Image();
-      imgLarge.src = placeholder.getAttribute('data-large'); 
+      imgLarge.src = placeholder.getAttribute('data-large');
+      imgLarge.classList.add('welcome-img'); 
       imgLarge.onload = function () {
         imgLarge.classList.add('loaded');
       };
@@ -31,61 +32,63 @@ class Home extends React.Component {
         <section className="primary">
           <div className="primary-wrapper">
             <div 
-              className="placeholder welcome-profile-wrapper" 
+              className="welcome-placeholder" 
               data-large="images/biancaWeld.jpg"
               ref="placeholder"
               >
               <img 
-                className="welcome-profile img-small" 
+                className="welcome-img img-small" 
                 src="images/biancaWeldSmall.jpg" 
                 alt="Bianca Danforth" 
               />
               <div style={{paddingBottom: '66.67%'}}></div>
               <div className="welcome-message-wrapper">
-              <h2 className="welcome-message">Front-end web nerd. Former mechanical engineer.</h2>
-              <h3><span>Tools:</span> JavaScript, Sass, Mild Steel</h3>
-              <a href="#more-info"><button>Let's work together</button></a>
-              <p><a target="_blank" href="/work/bianca-danforth-resume.pdf">View my resume</a></p>
-            </div>
+                <h2 className="welcome-message-header">Front-end web nerd. Former mechanical engineer.</h2>
+                <h3 className="welcome-message-subheader"><span className="welcome-message-span">Tools:</span> JavaScript, Sass, Mild Steel</h3>
+                <a href="#more-info"><button className="welcome-button">Let's work together</button></a>
+                <p className="welcome-message-paragraph"><a className="welcome-message-link" target="_blank" href="/work/bianca-danforth-resume.pdf">View my resume</a></p>
+              </div>
             </div>
           </div>
         </section>
         <section className="secondary">
           <h1>Work</h1>
-          <div className="work-wrapper">
-            <div className="project">
-              <div className="project-details">
+          <div className="home-work-wrapper">
+            <div className="home-project">
+              <div className="home-project-details">
                 <h4>2016 | Self-Initiated</h4>
                 <h2>To Do List</h2>
                 <h3>Tools: pure JavaScript, HTML5, CSS5, Photoshop</h3>
-                <p className="project-description">
+                <p className="home-project-description">
                   A single page application where users can add, edit, delete, complete, undo and filter tasks.
                 </p>
               </div>
               <a 
-                className="project-thumbnail" 
+                className="home-project-link" 
                 href="#to-do-list"
               >
-                <img 
+                <img
+                  className="home-project-image" 
                   src="images/to-do-list.jpg" 
                   alt="To Do List application" 
                 />
               </a>
             </div>
-            <div className="project">
-              <div className="project-details">
+            <div className="home-project">
+              <div className="home-project-details">
                 <h4>2016 | Self-Initiated</h4>
                 <h2>E-mail Sign-up</h2>
                 <h3>Tools: HTML5, CSS3, Photoshop</h3>
-                <p className="project-description">
+                <p className="home-project-description">
                   A static page where users can subscribe to a newsletter, contact, and learn more about Skillcrush.
                 </p>
               </div>
               <a 
-                className="project-thumbnail" 
+                className="home-project-link" 
                 href="#e-mail-sign-up"
               >
               <img 
+                className="home-project-image"
                 src="images/e-mail-sign-up.jpg" 
                 alt="E-mail Sign Up Page" 
               />
@@ -94,43 +97,45 @@ class Home extends React.Component {
           </div>
         </section>
         <section className="tertiary">
-          <div className="work-wrapper">
+          <div className="home-work-wrapper">
             <h1>Past Projects</h1>
-            <div className="work-wrapper">
-              <div className="project">
-                <div className="project-details">
+            <div className="home-work-wrapper">
+              <div className="home-project">
+                <div className="home-project-details">
                   <h4>2015 | Exploratorium</h4>
                   <h2>Ferrofluid Pool</h2>
                   <h3>Tools: Inventor, Mill, Lathe, Router</h3>
-                  <p className="project-description">
+                  <p className="home-project-description">
                     A science exhibit where visitors can turn a hand crank to watch ferrofluid rise up different sculptures.
                   </p>
                 </div>
                 <a 
-                  className="project-thumbnail" 
+                  className="home-project-link" 
                   href="#ferrofluid-pool"
                 >
                 <img 
-                src="images/ferrofluid-pool.jpg" 
-                alt="Ferrofluid Pool science exhibit" />
+                  className="home-project-image"
+                  src="images/ferrofluid-pool.jpg" 
+                  alt="Ferrofluid Pool science exhibit" />
                 </a>
               </div>
-              <div className="project">
-                <div className="project-details">
+              <div className="home-project">
+                <div className="home-project-details">
                   <h4>2012 | Stanford</h4>
                   <h2>Twist</h2>
                   <h3>Tools: SolidWorks, TIG Machine, Tube Bender</h3>
-                  <p className="project-description">
+                  <p className="home-project-description">
                    An ergonomic chair, inspired by M.C. Escher, made of arc-welded steel and lycra.
                   </p>
                 </div>
                 <a 
-                  className="project-thumbnail" 
+                  className="home-project-link" 
                   href="#twist"
                 >
                   <img 
-                  src="images/twist.jpg" 
-                  alt="Base of Twist chair" 
+                    className="home-project-image"
+                    src="images/twist.jpg" 
+                    alt="Base of Twist chair" 
                   />
                 </a>
               </div>

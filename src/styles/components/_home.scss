@@ -3,252 +3,249 @@
 /***************************************** 
 *-------HOME PAGE - WELCOME SECTION-------
 *****************************************/
-.home-page {
 
-	.welcome-profile-wrapper {
-		//PROGRESSIVE IMAGE LOADING STYLES
-		background-repeat: no-repeat;
-	  position: relative;
-	  overflow: hidden;
+.welcome-img {
+	position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+	@include rounded(2px);
+	@include shadowed;
+  opacity: 0;
+  transition: opacity 1s linear;
 
-  	img {
-	  	position: absolute;
-		  opacity: 0;
-		  top: 0;
-		  left: 0;
-		  z-index: -1;
-		  width: 100%;
-		  transition: opacity 1s linear;
+  @media (max-width: 900px) {
+  	border-radius: 0;
+  }
 
-		  &.img-small {
-				filter: blur(50px);
-			  /* this is needed so Safari keeps sharp edges */
-			  transform: scale(1);
+  &.img-small {
+		filter: blur(50px);
+	  /* this is needed so Safari keeps sharp edges */
+	  transform: scale(1);
 
-			  @media (max-width: 900px) {
-			  	filter: none;
-			  }
-			}
+	  @media (max-width: 900px) {
+	  	filter: none;
+	  }
+	}
 
-		  &.loaded {
-	  		opacity: 1;
-	  	}
-  	}
+  &.loaded {
+		opacity: 1;
+	}
+}
 
-	  &.img-small-loaded {
+.welcome-placeholder.img-small-loaded {
 
-			&:after, .welcome-message-wrapper {
-				opacity: 1;
-				transition: opacity 1s linear;
-			}
-		}
-		//END PROGRESSIVE IMAGE LOADING STYLES  	
+	&:after,
+	.welcome-message-wrapper {
+		opacity: 1;
+		transition: opacity 1s linear;
+	}
+}
 
-		.welcome-profile {
-			@include rounded(2px);
-			width: 100%;
-			@include shadowed;
-			
-			@media (max-width: 900px) {
-		  	border-radius: 0;
-		  }
-		}
+.welcome-placeholder {
+  position: relative;
+  background-repeat: no-repeat;
+  overflow: hidden;	
 
-		&::after {
-		  content: "";
-		  display: block;
-		  position: absolute;
-		  top: 0;
-		  bottom: 0;
-		  left: 0;
-		  right: 0;
-		  opacity: 0;
-		  background:linear-gradient(
-				rgba(0, 0, 0, 0.4), 
-				rgba(0, 0, 0, 0.4)
-			);
-			@include rounded(2px);
+	&::after {
+	  position: absolute;
+	  top: 0;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  display: block;
+	  content: "";
+	  background:linear-gradient(
+			rgba(0, 0, 0, .4), 
+			rgba(0, 0, 0, .4)
+		);
+		@include rounded(2px);
+		opacity: 0;
 
-			@media (max-width: 900px) {
-				display: none;
-			}
-		}
-
-		.welcome-message-wrapper {
-			position: absolute;
-			top: 50%;
-			left: 0;
-			z-index: 1;
-			transform: translateY(-50%);
-			max-width: 50%;
-			padding: 0 $padding-default;
-			font-size: 1.125em;
-			color: $off-white;
-			opacity: 0;
-
-			@media (max-width: 900px) {
-				opacity: 1;
-				top: 0;
-				transform: translateY(0);
-				font-size: 1em;
-				position: static;
-				max-width: 100%;
-				text-align: center;
-				color: $grey;
-				padding-top: $padding-small;
-			}
-
-			h3 {
-				margin-top: 15px;
-				margin-bottom: 0;
-			}
-
-			span {
-				line-height: 20px;
-
-				&::before {
-					content: "";
-			    display: inline-block;
-			    background: url("../images/heart.svg") no-repeat center;
-			    width: 20px;
-			    height: 20px;
-			    margin: auto 3px 0 0;
-			    vertical-align: middle;
-
-			    @media(max-width: 900px) {
-			    	background: url("../images/heart-grey.svg") no-repeat center;
-			    }
-				}
-			}
-
-			button {
-			 @include buttoned;
-
-			  @media (max-width: 900px) {
-			  	margin-top: .5*$margin-default;
-			  }
-
-			  @media (max-width: 650px) {
-			  	width: 300px;
-			  	padding: 10px;
-			  }
-
-			  @media(max-width: 900px) {
-			  	width: 90%;
-			  }
-
-			  @media(max-width: 350px) {
-			  	width: 100%;
-			  }
-			}
-
-			p {
-				color: $off-white;
-				margin-top: $margin-small;
-
-				a {
-					color: $off-white;
-
-					@media(max-width: 900px) {
-						color: $grey;
-					}
-				}
-			}
+		@media (max-width: 900px) {
+			display: none;
 		}
 	}
 }
 
+.welcome-message-wrapper {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	z-index: 1;
+	transform: translateY(-50%);
+	max-width: 50%;
+	padding: 0 $padding-default;
+	font-size: 1.125em;
+	color: $off-white;
+	opacity: 0;
 
+	@media (max-width: 900px) {
+		position: static;
+		top: 0;
+		transform: translateY(0);
+		padding-top: $padding-small;
+		max-width: 100%;
+		font-size: 1em;
+		text-align: center;
+		color: $grey;
+		opacity: 1;
+	}
+}
 
+.welcome-message-subheader {
+	margin-top: 15px;
+	margin-bottom: 0;
+}
+
+.welcome-message-span {
+	line-height: 20px;
+
+	&::before {
+		display: inline-block;
+		content: "";
+    width: 20px;
+    height: 20px;
+    margin: auto 3px 0 0;
+    vertical-align: middle;
+    background: url("../images/heart.svg") no-repeat center;
+
+    @media(max-width: 900px) {
+    	background: url("../images/heart-grey.svg") no-repeat center;
+    }
+	}
+}
+
+.welcome-button {
+ @include buttoned;
+
+  @media (max-width: 900px) {
+  	margin-top: (.5 * $margin-default);
+  }
+
+  @media (max-width: 650px) {
+  	width: 300px;
+  	padding: 10px;
+  }
+
+  @media(max-width: 900px) {
+  	width: 90%;
+  }
+
+  @media(max-width: 350px) {
+  	width: 100%;
+  }
+}
+
+.welcome-message-paragraph {
+	color: $off-white;
+	margin-top: $margin-small;
+}
+
+.welcome-message-link {
+	color: $off-white;
+
+	&:visited {
+		color: $off-white;
+	}
+
+	@media(max-width: 900px) {
+		color: $blue;
+	}
+}
 
 /***************************************** 
 *---------HOME PAGE - WORK SECTION--------
 *****************************************/
 
-.home-page {
+//Have to wrap in .home-page because the same class names are used in _project.scss
 
-	.work-wrapper {
-		display: flex;
-		flex-direction: column;
-		max-width: $layout-width;
-		margin: 0 auto;
+.home-project-details {
+	max-width: $max-img-width;
+	width: 100%;
+	margin: 0 auto;
+}
 
-		@media (min-width: 1000px) {
-			flex-flow: row wrap;
-			justify-content: flex-start;
-		}
-		
-		.project {
-			flex: 1 0 45%;
-			display: flex;
-			flex-direction: column;
-			max-width: $layout-width;
-			width: 100%;
-			margin-bottom: 2*$margin-default;
+.home-work-wrapper {
+	display: flex;
+	flex-direction: column;
+	max-width: $layout-width;
+	margin: 0 auto;
 
-			@media(min-width: 1000px) {
-				max-width: 50%;
-			}
+	@media (min-width: 1000px) {
+		flex-flow: row wrap;
+		justify-content: flex-start;
+	}
+}
 
-			@media(max-width: 620px) {
-				margin-bottom: 2*$margin-small;
-			}
+.home-project {
+	display: flex;
+	flex: 1 0 45%;
+	flex-direction: column;
+	max-width: $layout-width;
+	width: 100%;
+	margin-bottom: (2 * $margin-default);
 
-			.project-details {
-				max-width: $max-img-width;
-				width: 100%;
-				margin: 0 auto;
-
-			}
-
-			&:nth-child(2n+1) {
-				margin-right: $margin-default;
-
-				@media (max-width: 999px) {
-					margin-right: 0;
-				}
-			}
-
-			.project-description {
-				margin-bottom: .75*$margin-small;
-			}
-
-			.project-thumbnail {
-				align-self: center;
-			}
-			
-			img {
-				width: 100%;
-				max-width: $max-img-width;
-				@include shadowed;
-				@include rounded(2px);
-			}
-		}
+	@media(min-width: 1000px) {
+		max-width: 50%;
 	}
 
-	/*
-	* These styles are unique to Home page, because of 
-	* differences in the flexbox layouts between the Home
-	* page and the Project pages
-	*/
-	.secondary, .tertiary {
+	@media(max-width: 620px) {
+		margin-bottom: (2 * $margin-small);
+	}
+
+	&:nth-child(2n+1) {
+		margin-right: $margin-default;
+
+		@media (max-width: 999px) {
+			margin-right: 0;
+		}
+	}
+}
+
+.home-project-description {
+	margin-bottom: (.75 * $margin-small);
+}
+
+.home-project-link {
+	align-self: center;
+}
+
+.home-project-image {
+	width: 100%;
+	max-width: $max-img-width;
+	@include shadowed;
+	@include rounded(2px);
+}
+
+/*
+* These styles are unique to Home page, because of 
+* differences in the flexbox layouts between the Home
+* page and the Project pages.
+* As of 03/02/17 .tertiary only exists on the 'Home' page
+*/
 	
-		@media (max-width: 400px) {
-			padding-left: 0;
-			padding-right: 0;
+.home-page .secondary, .tertiary {
 
-			h1 {
-					margin: $margin-default auto 0;
-			}
+	@media (max-width: 400px) {
+		padding-left: 0;
+		padding-right: 0;
 
-			h2, h3, h4, .project-description {
-				margin-left: $margin-default;
-				margin-right: $margin-default;
-			}
+		h1 {
+				margin: $margin-default auto 0;
+		}
 
-			.project a img {
-				border-radius: 0;
-			}
+		h2,
+		h3,
+		h4,
+		.home-project-description {
+			margin-left: $margin-default;
+			margin-right: $margin-default;
+		}
+
+		.home-project-image {
+			border-radius: 0;
 		}
 	}
 }

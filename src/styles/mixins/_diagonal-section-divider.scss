@@ -16,7 +16,7 @@
     padding-bottom: $v-pad;
     // have to add a margin to the last child in <section> (of any type), because it's an absolute value in px versus a % like v-pad, so it cannot be directly added to the <section>'s padding-bottom as "padding-bottom: $v-pad + $padding-default" are different units! One is relative, %, and the other is absolute (px).
     & > :last-child {
-    	padding-bottom: 2*$padding-default;
+    	padding-bottom: (2 * $padding-default);
 
       @media(max-width: 900px) {
         padding-bottom: $padding-default;
@@ -34,18 +34,18 @@
   		$w-int: $width / 1px;
   		$h-int: $height / 1px;
   		padding-top: $v-pad;
+      width: 100%;
+      // The content CSS property is used with the ::before and ::after pseudo-elements to generate
+      // content in an element. Objects inserted using the content property are anonymous.
+      // if the pseudo-element has no content, it won't display at all
+      content: '';
       // draw the <svg> based on coordinates and interpolation set by triangle $width and $height. The enclosed area becomes a polygon (our triangle in this case)
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='#{$w-int}' height='#{$h-int}'%3E%3Cpolygon points='0,#{$h-int} #{$w-int},0 #{$w-int},#{$h-int}' style='fill:rgb(41,128,185);stroke:rgb(41,128,185);stroke-width:0'%3E%3C/polygon%3E%3C/svg%3E");
       background-repeat: no-repeat;
       // Scales the image as large as possible and maintains image aspect ratio
       // (image doesn't get squished). The image "covers" the entire width or height of the container.
       background-size: cover;
-      width: 100%;
       background-position: center;
-      // The content CSS property is used with the ::before and ::after pseudo-elements to generate
-      // content in an element. Objects inserted using the content property are anonymous.
-      // if the pseudo-element has no content, it won't display at all
-      content: '';
     }
   }
 
@@ -61,19 +61,20 @@
     	padding-top: $padding-default;
     }
     &::before {
-    	//gives the svg a $blue colored whitespace of $padding-default vertical height
-    	height: $padding-default;
     	position: absolute;
     	top: 0;
     	left: 0;
+      //gives the svg a $blue colored whitespace of $padding-default vertical height
+      height: $padding-default;
     	$w-int: $width / 1px;
     	$h-int: $height / 1px;
     	padding-top: $v-pad;
+      width: 100%;
+      content: '';
     	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='#{$w-int}' height='#{$h-int}'%3E%3Cpolygon points='0,#{$h-int} #{$w-int},0 0,0' fill='rgb(41,128,185)' stroke = 'rgb(41,128,185)'%3E%3C/polygon%3E%3C/svg%3E");
     	background-repeat: no-repeat;
     	background-size: cover;
-    	width: 100%;
-      background-position: center;
-    	content: '';
+    	background-position: center;	
     }
   }
+  

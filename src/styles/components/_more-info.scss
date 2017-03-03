@@ -4,7 +4,7 @@
 
 	.primary {
 		display: flex;
-  	margin: 0 auto 2*$margin-default;
+  	margin: 0 auto (2 * $margin-default);
   	max-width: $layout-width;
 
   	& > div:first-child {
@@ -20,7 +20,8 @@
   		flex-direction: column;
   		margin: 0 auto;
 
-  		.contact-body, .about-body {
+  		.contact-body,
+  		.about-body {
   			flex-basis: 100%;
   		}
 
@@ -42,16 +43,16 @@
 
   	@media (max-width: 600px) {
   		.contact-body {
-  			border: 0;
   			padding: 0;
+  			border: 0;
   		}
   	}
-	} //.primary closed
+	}
 
 	.contact-body {
+	  display: flex;
 	  flex: 0 1 50%;
 	  align-self: stretch;
-	  display: flex;
 	 	flex-direction: column;
 
 	  h2 {
@@ -63,64 +64,64 @@
 	  }
 
 	  .form-wrapper {
-		  border: 1px solid lighten($grey, 40%);
-		  border-radius: 2px;
+		  height: 100%;
 		  padding: $padding-default;
 		  text-align: start;
 	  	font-family: 'Montserrat';
-	  	height: 100%;
+	  	border: 1px solid lighten($grey, 40%);
+		  border-radius: 2px;
 
 	  	@media (max-width: 900px) {
-	  		border: none;
 	  		max-width: 600px;
 	  		margin: 0 auto;
 	  		width: 100%;
+	  		border: none;
 	  	}
 
   		form {
-			  height: 100%;
 			  display: flex;
 			  flex-direction: column;
+			  height: 100%;
 
 			  input {
-			  	margin-top: .33*$margin-default;
 			  	display: block;
+			  	margin-top: .33*$margin-default;
+			  	width: 100%;
+					min-height: 50px;
 				  font-size: 1em;
 				  line-height: 1.5em;
-				  width: 100%;
-					min-height: 50px;
-					@include rounded(2px);
 					font-family: 'Montserrat';
-				  text-indent: .33*$margin-default;
+				  text-indent: (.33 * $margin-default);
 				  line-height: 1.5;
+				  @include rounded(2px);
 
 				  &::-webkit-input-placeholder {
 						color: lighten($grey, 20%);
 					}
 
 				  &[type="text"], &[type="email"] {
-						background-color: rgba(255, 255, 255, 0.3);
-						border: 0.5px solid lighten($grey, 40%);
-						box-shadow: inset 1px 1px 0 0.5px rgba(0,0,0,0.3);
 						font-family: 'Montserrat', sans-serif;
-						
+						background-color: rgba(255, 255, 255, .3);
+						border: .5px solid lighten($grey, 40%);
+						box-shadow: inset 1px 1px 0 .5px rgba(0,0,0,.3);
+
 						&:focus {
-							outline: 0.5px solid $blue;
+							outline: .5px solid $blue;
 						}
 				  }
 
 				  &[type="submit"] {
 				  	display: inline-block;
-					  font-family: 'Merriweather';
 					  margin-top: $margin-small;
 					   width: 50%;
-					  @include buttoned;
+					  font-family: 'Merriweather';
 					  text-indent: 0;
+					  @include buttoned;
 
 					  &:disabled {
+					  	color: darken($light-grey, 15%);
 					  	background-color: $light-grey;
 					  	box-shadow: none;
-					  	color: darken($light-grey, 15%);
 					  	border-color: darken($light-grey, 15%);
 
 					  	&:hover {
@@ -133,28 +134,28 @@
 					  	width: 100%;
 					  }
 				  }
-			  } //input closed
+			  }
 
 			  textarea {
-			  	margin-top: .33*$margin-default;
 			  	display: block;
-				  font-size: 1em;
-				  line-height: 1.5em;
+			  	margin-top: (.33 * $margin-default);
 				  width: 100%;
-				  background-color: rgba(255, 255, 255, 0.3);
-					border: 0.5px solid lighten($grey, 40%);
-					box-shadow: inset 1px 1px 0 0.5px rgba(0,0,0,0.3);
-					font-family: 'Montserrat', sans-serif;
-					padding: 10px;
-					text-indent: 0;
-					resize: none;
+				  resize: none;
 					height: 100%;
 					min-height: 150px;
 					margin-bottom: $margin-small;
+				  font-size: 1em;
+				  line-height: 1.5em;
+				  font-family: 'Montserrat', sans-serif;
+					padding: 10px;
+					text-indent: 0;
+					background-color: rgba(255, 255, 255, .3);
+					border: .5px solid lighten($grey, 40%);
+					box-shadow: inset 1px 1px 0 .5px rgba(0,0,0,.3);
 					@include rounded(2px);
 					
 					&:focus {
-						outline: 0.5px solid $blue;
+						outline: .5px solid $blue;
 					}
 
 					&:placeholder-shown {
@@ -165,15 +166,16 @@
 					&::-webkit-input-placeholder {
 						color: lighten($grey, 20%);
 					}
-				} //textarea closed
+				}
 
 				label {
+				  display: inline-block;
+				  width: 100%;
+				  margin-top: $margin-small;
 				  font-size: 1em;
 				  line-height: 1.5em;
-				  width: 100%;
-				  display: inline-block;
 				  font-family: 'Merriweather';
-				  margin-top: $margin-small;
+				  
 
 				  &:first-child {
 						margin-top: 0;
@@ -184,10 +186,10 @@
 						flex-direction: column;
 						height: 100%;
 					}
-				} // label closed
-	  	} // form closed
-	  } // form wrapper closed	
-	} // contact body closed
+				}
+	  	}
+	  }
+	}
 
 	.about-body {
 		display: flex;
@@ -207,10 +209,10 @@
 			}
 
 			.about-hero {
-				@include rounded(50%);
-				@include shadowed;
 				width: 100%;
 				max-width: 300px;
+				@include rounded(50%);
+				@include shadowed;
 			}
 
 			p {
@@ -244,7 +246,7 @@
 			}
 
 			.blockquote-wrapper {
-				margin: $margin-default 2*$margin-small;
+				margin: $margin-default (2 * $margin-small);
 
 				@media (max-width: 550px) {
 					margin: $margin-small;
@@ -263,13 +265,13 @@
 					position: relative;
 					top: 0;
 					left: 0;
-					border-top: 2px solid lighten($grey, 40%);
-					border-bottom: 2px solid lighten($grey, 40%);
-					padding: 5px 2*$padding-small;
+					padding: 5px (2 * $padding-small);
 					color: $dark-grey;
 					font-size: 1.25em;
 					text-align: start;
-
+					border-top: 2px solid lighten($grey, 40%);
+					border-bottom: 2px solid lighten($grey, 40%);
+					
 					@media (max-width: $max-img-width) {
 						font-size: 1.125em;
 					}
@@ -298,8 +300,8 @@
 							transform: rotate(180deg);
 						}
 					}
-				} //blockquote closed
-			} //blockquote wrapper closed
-		} // about copy closed
-	} // about body closed
+				}
+			}
+		}
+	}
 }

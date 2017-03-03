@@ -4,7 +4,7 @@
 	padding: $padding-default $padding-default 0;	
 
 	h1 {
-		padding-bottom: 1.5*$padding-default;
+		padding-bottom: (1.5 * $padding-default);
 	}
 
 	@include diagonal-background-bottom;

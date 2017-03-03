@@ -15,8 +15,9 @@ class Footer extends React.Component {
   render() {
     return (
     	<footer className={this.props.currentPage}>
-        <span>
-          <a 
+        <span className="footer-wrapper">
+          <a
+            className="footer-link"
             href="http://codepen.io/biancadanforth/" 
             target="_blank" 
             aria-label="Codepen" 
@@ -25,6 +26,7 @@ class Footer extends React.Component {
             <div dangerouslySetInnerHTML={{__html: codepenSVG}} />
           </a>
           <a 
+            className="footer-link"
             href="https://www.linkedin.com/in/bianca-danforth-62b18439" 
             target="_blank" 
             aria-label="LinkedIn" 
@@ -33,6 +35,7 @@ class Footer extends React.Component {
             <div dangerouslySetInnerHTML={{__html: linkedInSVG}} />
           </a>
           <a 
+            className="footer-link"
             href="/#/more-info"
             aria-label="E-mail"
             title="E-mail"
@@ -41,6 +44,7 @@ class Footer extends React.Component {
             <div dangerouslySetInnerHTML={{__html: emailSVG}} />
           </a>
           <a 
+            className="footer-link"
             href="https://twitter.com/biancadanforth" 
             target="_blank" 
             aria-label="Twitter" 
@@ -49,6 +53,7 @@ class Footer extends React.Component {
             <div dangerouslySetInnerHTML={{__html: twitterSVG}} />
           </a>
           <a 
+            className="footer-link"
             href="https://github.com/biancadanforth" 
             target="_blank" 
             aria-label="GitHub"
@@ -57,7 +62,7 @@ class Footer extends React.Component {
             <div dangerouslySetInnerHTML={{__html: gitHubSVG}} />
           </a>
         </span>
-        <p>&#169; Bianca Danforth 2017</p>
+        <p className="footer-copyright">&#169; Bianca Danforth 2017</p>
       </footer>
     );
   }

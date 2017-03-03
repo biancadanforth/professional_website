@@ -9,12 +9,12 @@ $max-text-width: 700px;
 
 // COLORS
 //Made $off-white rgb for background overlay on <body>
-$off-white: rgb(251, 252, 237);
+$off-white: rgb(251,252,237);
 $blue: rgb(41,128,185);
 $yellow: rgb(241,196,15);
 $dark-grey: rgb(84,84,84);
 $grey: rgb(109,109,109);
-$light-grey: lighten($grey, 40%);
+$light-grey: lighten($grey,40%);
 
 // FONTS
 $font-main: 'Montserrat', sans-serif;
@@ -39,42 +39,59 @@ html { box-sizing: border-box; }
 
 body {
 	margin: 0;
+	color: $dark-grey;
+	font: {
+		family: $font-main;
+		size: 1.1em;
+	}
+	color: $grey;
+	line-height: 1.6;
 	// color overlay applied to background pattern
 	background:
 		/* top, transparent $off-white, faked with gradient */ 
 		linear-gradient(
-			rgba(251, 252, 237, 0.4), 
-			rgba(251, 252, 237, 0.4)
+			rgba(251, 252, 237, .4), 
+			rgba(251, 252, 237, .4)
 			),
 		/* bottom, image */
 		url("../images/pw_maze_white.png");
 	background-attachment: fixed;
-	color: $dark-grey;
+}
 
-	.page-wrap {
-		margin: 0 auto;
+/* 
+* Y-OFFSET <main> WITH PADDING-TOP FOR FIXED
+* HEADER HEIGHT
+*/
+$header-padding-top: $margin-default;
+$header-padding-bottom: 2*$header-padding-top;
+$header-padding-400px: $padding-small;
+$content-height: 45px;
+$header-height: $header-padding-top + $header-padding-bottom + $content-height;
+
+header {
+	padding-top: $header-padding-top;
+	padding-bottom: $header-padding-bottom;
+}
+
+main {
+	padding-top: $header-height;
+}
+
+@media (max-width: 1260px) {
+	$header-padding-bottom: (2 * $padding-small);
+	$header-height: $header-padding-top + $header-padding-bottom + $content-height;
+	header {
+		padding-bottom: $header-padding-bottom;
 	}
-
-	a {
-		display: inline-block;
-		color: $blue;
-		
-		svg {
-			display: block;
-		}
-
-		&:visited {
-			color: $blue;
-		}
+	main {
+		padding-top: $header-height;
 	}
+}
 
-	/* 
-	* Y-OFFSET <main> WITH PADDING-TOP FOR FIXED HEADER HEIGHT
-	*/
-	$header-padding-top: $margin-default;
-	$header-padding-bottom: 2*$header-padding-top;
-	$header-padding-400px: $padding-small;
-	$content-height: 45px;
+@media (max-width: 620px) {
+	$header-padding-top: $padding-small;
+	$header-padding-bottom: $padding-small;
+	$content-height: 76px;
 	$header-height: $header-padding-top + $header-padding-bottom + $content-height;
 
 	header {
@@ -85,67 +102,46 @@ body {
 	main {
 		padding-top: $header-height;
 	}
+
+	footer {
+		padding: $margin-small !important;
+		margin-bottom: $margin-default;
+	}
+}
+
+@media (max-width: 400px) {
+	$content-height: 70px;
+	$header-height: $header-padding-top + $header-padding-bottom + $content-height;
+	header {
+		padding: $padding-small;
+	}
+
+	main {
+		padding-top: $header-height;
+	}
+}
+
+.page-wrap {
+		margin: 0 auto;
+}
+
+a {
+	display: inline-block;
+	color: $blue;
 	
-	@media (max-width: 1260px) {
-		$header-padding-bottom: 2*$padding-small;
-		$header-height: $header-padding-top + $header-padding-bottom + $content-height;
-		header {
-			padding-bottom: $header-padding-bottom;
-		}
-		main {
-			padding-top: $header-height;
-		}
+	svg {
+		display: block;
 	}
 
-	@media (max-width: 620px) {
-		$header-padding-top: $padding-small;
-		$header-padding-bottom: $padding-small;
-		$content-height: 76px;
-		$header-height: $header-padding-top + $header-padding-bottom + $content-height;
-
-		header {
-			padding-top: $header-padding-top;
-			padding-bottom: $header-padding-bottom;
-		}
-
-		main {
-			padding-top: $header-height;
-		}
-
-		footer {
-			padding: $margin-small !important;
-			margin-bottom: $margin-default;
-		}
-
-
-	}
-
-	@media (max-width: 400px) {
-		$content-height: 70px;
-		$header-height: $header-padding-top + $header-padding-bottom + $content-height;
-		header {
-			padding: $padding-small;
-		}
-
-		main {
-			padding-top: $header-height;
-		}
+	&:visited {
+		color: darken($blue, 10%);
 	}
 }
 
 // ------------ TYPOGRAPHY -------------
 
-body {
-	font: {
-		family: $font-main;
-		size: 1.1em;
-	}
-	color: $grey;
-	line-height: 1.6;
-}
-
 h1 {
-	margin: 0;
+	margin: 0 auto;
 	font: {
 		size: 3.25em;
 		weight: 400;
@@ -168,53 +164,54 @@ h2 {
 		line-height: 1.25;
 	}
 
+h3 {
+  font: {
+  	size: 1.125em;
+  	weight: 400;
+  	style: italic;
+  	family: 'Merriweather', serif;
+  }
+  line-height: 1.25;
+  letter-spacing: $letter-spacing;
+  margin-bottom: $margin-default;
+}
+
+h4 {
+	font: {
+		size: .875em;
+		weight: 400;
+		family: 'Montserrat', sans-serif;
+	}
+	letter-spacing: (1.5 * $letter-spacing);
+	margin-bottom: $margin-default;
+	text-transform: uppercase;
+	border-bottom: 1px solid $grey;
+}
+
+p {
+	font: {
+		size: 1em;
+		weight: 300;
+		family: 'Merriweather';
+	}
+	line-height: 1.6;
+}
+
+@media (max-width: 800px) {
+	h1 {
+		font-size: 2.25em;
+	}
+
+	h2 {
+		font-size: 1.875em;
+	}
+
 	h3 {
-	  font: {
-	  	size: 1.125em;
-	  	weight: 400;
-	  	style: italic;
-	  	family: 'Merriweather', serif;
-	  }
-	  line-height: 1.25;
-	  letter-spacing: $letter-spacing;
-	  margin-bottom: $margin-default;
+		font-size: 1em;
 	}
 
-	h4 {
-		font: {
-			size: 0.875em;
-			weight: 400;
-			family: 'Montserrat', sans-serif;
-		}
-		letter-spacing: 1.5*$letter-spacing;
-		margin-bottom: $margin-default;
-		text-transform: uppercase;
-		border-bottom: 1px solid $grey;
-	}
-
+	h4,
 	p {
-		font: {
-			size: 1em;
-			weight: 300;
-			family: 'Merriweather';
-		}
-		line-height: 1.6;
+		font-size: .9em;
 	}
-
-	@media (max-width: 800px) {
-		h1 {
-			font-size: 2.25em;
-		}
-
-		h2 {
-			font-size: 1.875em;
-		}
-
-		h3 {
-			font-size: 1em;
-		}
-
-		h4, p {
-			font-size: 0.9em;
-		}
-	}
+}

@@ -1,49 +1,49 @@
 // footer.scss
 
 footer {
+	margin-bottom: (2 * $margin-default);
 	text-align: center;
-	margin-bottom: 2*$margin-default;
+}
 
-	span {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin: $margin-default 0;
-		a {
-			height: 100%;
-			margin: 0 $margin-small;
+.footer-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: $margin-default 0;
+}
 
-			svg {
-				width: 40px;
-				max-height: 40px;
-				fill: $off-white;
-				background-color: $yellow;
-				padding: 3px;
-				@include rounded(2px);
-				transform: none;
-				transition: transform .25s linear;
+.footer-link {
+	height: 100%;
+	margin: 0 $margin-small;
 
-				@media (max-width: 450px) {
-					width: 30px;
-					max-height: 30px;
-				}
-			}
+	svg {
+		width: 40px;
+		padding: 3px;
+		max-height: 40px;
+		fill: $off-white;
+		background-color: $yellow;
+		@include rounded(2px);
+		transform: none;
+		transition: transform .25s linear;
 
-			&:hover svg {
-				transform: scale(1.3);
-				transition: transform .25s linear;
-			}
-
-			@media (max-width: 450px) {
-				margin: 0 .5*$margin-small;
-			}
+		@media (max-width: 450px) {
+			width: 30px;
+			max-height: 30px;
 		}
-		
 	}
 
-	p {
-		margin: 0;
+	&:hover svg {
+		transform: scale(1.3);
+		transition: transform .25s linear;
 	}
+
+	@media (max-width: 450px) {
+		margin: 0 (.5 * $margin-small);
+	}
+}
+
+.footer-copyright {
+	margin: 0;
 }
 
 // These pages have a .secondary <section>
@@ -56,7 +56,8 @@ footer.twist-page {
 
 
 // These pages do NOT have a .secondary <section>
-footer.thank-you-page, footer.more-info-page {
-	margin-top: 2*$margin-default;
+footer.thank-you-page,
+footer.more-info-page {
+	margin-top: (2 * $margin-default);
 	text-align: center;
 }

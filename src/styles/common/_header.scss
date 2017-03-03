@@ -10,157 +10,161 @@ header {
 	background:
 	/* top, transparent $off-white, faked with gradient */ 
 	linear-gradient(
-		rgba(251, 252, 237, 0.4), 
-		rgba(251, 252, 237, 0.4)
+		rgba(251, 252, 237, .4), 
+		rgba(251, 252, 237, .4)
 		),
 	/* bottom, image */
 	url("../images/pw_maze_white.png");
-	transition: padding-top 0.25s linear, padding-bottom 0.25s linear;
+	transition: padding-top .25s linear, padding-bottom .25s linear;
+	@include dropdown-menu;
 
 	@media (max-width: 1260px) {
 		padding-left: $padding-default;
 		padding-right: $padding-default;
 	}
+}
 
-	div {
-		margin: 0 auto;
-		display: flex;
-		justify-content: space-between;
-		align-items: baseline;
-		max-width: $layout-width;
-		width: 100%;
+.header-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	margin: 0 auto;
+	max-width: $layout-width;
+	width: 100%;
 
-		svg {
-			width: 50px;
-			transition: width 0.25s linear;
+	@media (max-width: 620px) {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 
-			tspan {
-				fill: $blue;
-			}
-	
-			path {
-				stroke: $blue;
-			}
-		}
-	
-		span {
-			display: flex;
-			align-items: baseline;
-			justify-content: flex-start;
-
-			h1 {
-				margin: 0;
-				margin-left: $margin-small;
-				display: inline-block;
-				text-transform: none;
-				color: $dark-grey;
-				letter-spacing: $letter-spacing;
-				font-size: 1.5em;
-				font-weight: bold;
-				font-family: 'Merriweather', serif;
-				transition: font-size 0.25s linear;
-
-				@media (max-width: 850px) {
-					display: none;
-				}
-			}
-		}
-
-		@media (max-width: 620px) {
-			flex-direction: column;
-			align-items: center;
+		.header-brand-wrapper {
 			justify-content: center;
-
-			span {
-				justify-content: center;
-				align-items: flex-end;
-				
-				svg {
-					margin-bottom: 20px;
-					width: 40px;
-				}
-
-				h1 {
-					line-height: 1em;
-				}
-			}
-		}
-	}
-
-	nav > .menu {
-		display: flex;
-		justify-content: space-between;
-		list-style: none;
-		padding-left: 0;
-		margin: 0;
-		font: {
-			weight: bold;
-		}
-		line-height: 1em;
-		text: {
-			align: center;
-			transform: uppercase;
-		}
-		color: $grey;
-
-		@media (max-width: 400px) {
-			font-size: 0.875em;
-		}
-
-		> li {
-			padding-bottom: 5px;
-			margin: 0 1em;
-			border-bottom: 3px transparent solid;
+			align-items: flex-end;
 			
-			&:first-child {	
-					margin-left: 0;
-					transition: padding-bottom 0.25s linear;
-				}
-
-			&:last-child {
-				margin-right: 0;
+			.header-logo {
+				margin-bottom: 20px;
+				width: 40px;
 			}
 
-			> a {
-				@extend %no-underline;
-				color: $grey;
-				letter-spacing: $letter-spacing;
-				transition: letter-spacing .5s;
-
-				&:hover {
-					letter-spacing: 5px;
-					transition: letter-spacing .5s;
-
-					@media (max-width: 500px) {
-						letter-spacing: $letter-spacing;
-						transition: none;
-					}
-				}
-
-				/*
-				* Reserves space for letter-spacing
-				* content in ::after pseudo element
-				* and uses title attribute in HTML
-				* as a source for content.
-				*/
-				&::after {
-					display: block;
-					content: attr(aria-label);
-					letter-spacing: 5px;
-					height: 0;
-					color: transparent;
-					overflow: hidden;
-					visibility: hidden;
-
-					@media(max-width: 500px) {
-						display: none;
-					}
-				}
+			.header-name {
+				line-height: 1em;
 			}
 		}
 	}
+}
 
-	@include dropdown-menu;
+.header-brand-wrapper {
+	display: flex;
+	align-items: baseline;
+	justify-content: flex-start;
+}
+
+
+.header-logo {
+	width: 50px;
+	transition: width .25s linear;
+
+	tspan {
+		fill: $blue;
+	}
+
+	path {
+		stroke: $blue;
+	}
+}
+
+.header-name {
+	display: inline-block;
+	margin: 0;
+	margin-left: $margin-small;
+	text-transform: none;
+	color: $dark-grey;
+	letter-spacing: $letter-spacing;
+	font-size: 1.5em;
+	font-weight: bold;
+	font-family: 'Merriweather', serif;
+	transition: font-size .25s linear;
+
+	@media (max-width: 850px) {
+		display: none;
+	}
+}
+
+.menu {
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	padding-left: 0;
+	margin: 0;
+	font: {
+		weight: bold;
+	}
+	line-height: 1em;
+	text: {
+		align: center;
+		transform: uppercase;
+	}
+	color: $grey;
+
+	@media (max-width: 400px) {
+		font-size: .875em;
+	}
+}
+
+.menu-item {
+	padding-bottom: 5px;
+	margin: 0 1em;
+	border-bottom: 3px transparent solid;
+	
+	&:first-child {	
+			margin-left: 0;
+			transition: padding-bottom .25s linear;
+		}
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.menu-link {
+	@extend %no-underline;
+	color: $grey;
+	letter-spacing: $letter-spacing;
+	transition: letter-spacing .5s;
+
+	&:visited {
+		color: $grey;
+	}
+
+	&:hover {
+		letter-spacing: 5px;
+		transition: letter-spacing .5s;
+
+		@media (max-width: 500px) {
+			letter-spacing: $letter-spacing;
+			transition: none;
+		}
+	}
+
+	/*
+	* Reserves space for letter-spacing
+	* content in ::after pseudo element
+	* and uses title attribute in HTML
+	* as a source for content.
+	*/
+	&::after {
+		display: block;
+		content: attr(aria-label);
+		height: 0;
+		letter-spacing: 5px;
+		color: transparent;
+		overflow: hidden;
+		visibility: hidden;
+
+		@media(max-width: 500px) {
+			display: none;
+		}
+	}
 }
 
 /*******************************************
@@ -169,24 +173,22 @@ header {
 //Only the Home and More Info pages have indicators.
 
 header.home-page {
-	ul.menu > li {
-		&:nth-child(1) {
-			border-color: $yellow;
-			transition: padding-bottom 0.25s linear;
-		}
+	
+	.menu-item:first-child {
+		border-color: $yellow;
+		transition: padding-bottom .25s linear;
 	}
 }
 
 header.more-info-page {
-	ul.menu > li {
-		&:first-child {
-			border-color: transparent;
-		}
+	
+	.menu-item:first-child {
+		border-color: transparent;
+	}
 
-		&:nth-child(3) {
-			border-color: $yellow;
-			transition: padding-bottom 0.25s linear;
-		}
+	.menu-item:last-child {
+		border-color: $yellow;
+		transition: padding-bottom .25s linear;
 	}
 }
 
@@ -200,11 +202,9 @@ header.e-mail-sign-up-page,
 header.ferrofluid-pool-page,
 header.twist-page {
 	
-	ul.menu > li {
-		
-		&:first-child {
-			border-color: transparent;
-		}
+	.menu-item:first-child,
+	.menu-item:last-child {
+		border-color: transparent;
 	}
 }
 
@@ -217,17 +217,17 @@ header.minimize {
 	max-width: 100vw;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	transition: padding-top 0.25s linear,
-							padding-bottom 0.25s linear;
+	transition: padding-top .25s linear,
+							padding-bottom .25s linear;
 
-	h1 {
+	.header-name {
 		font-size: 1.25em;
-		transition: font-size 0.25s linear;
+		transition: font-size .25s linear;
 	}
 
-	svg {
+	.header-logo {
 		width: 30px;
-		transition: width 0.25s linear;
+		transition: width .25s linear;
 	}
 
 	@media (max-width: 500px) {
