@@ -18,7 +18,7 @@ class FerrofluidPool extends React.Component {
                   aria-label="See final drawing"
                 >
                   <img 
-                    className="project-thumbnail portrait" 
+                    className="portrait" 
                     src="../../images/ferrofluid-pool-glamour.png" 
                     alt="Final design"
                   />

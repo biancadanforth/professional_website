@@ -3,6 +3,10 @@
 footer {
 	margin-bottom: (2 * $margin-default);
 	text-align: center;
+
+	@media (max-width: 620px) {
+		margin-bottom: (2 * $margin-small);
+	}
 }
 
 .footer-wrapper {

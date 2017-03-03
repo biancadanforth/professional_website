@@ -29,10 +29,6 @@
 				max-width: 600px;
 			}
 		}
-
-		.contact-body {
-			margin-right: 0 !important;
-		}
 	}
 
 	@media (max-width: 600px) {
@@ -51,6 +47,10 @@
   align-self: stretch;
  	flex-direction: column;
 	margin-right: $margin-default;
+
+	@media(max-width: 900px) {
+		margin-right: 0;
+	}
 }
 
 .contact-header {
@@ -217,7 +217,6 @@
 
 .about-resume {
 	margin-bottom: $margin-default;
-	text-align: center !important;
 }
 
 .about-copy {
