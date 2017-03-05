@@ -5,7 +5,7 @@ if(window.addEventListener) {
 }
 
 function startTimer() {
-  let countdown = 19;
+  let countdown = 14;
   let interval = setInterval(function() {
     document.getElementById("timer-readout").textContent = countdown.toString();
     console.log(countdown.toString());
@@ -16,6 +16,6 @@ function startTimer() {
   }, 1000);
 
   setTimeout(() => window.location = "/#/home"
-    , 20000);
+    , 15000);
 }
 

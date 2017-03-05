@@ -14,7 +14,7 @@ class App extends React.Component {
     let pageName = currentPath.replace('\/', '');
     pageName += '-page';
     return (
-    	<div ref="page">
+    	<div ref='page'>
 	    	<Header
           currentPage={currentPath === '/' ? 'home-page' : pageName}
           />
@@ -33,14 +33,14 @@ class App extends React.Component {
 
 render((
   <Router onUpdate={() => window.scrollTo(0, 0)} history={hashHistory}>
-    <Route path="/" component={App}>
-      <Route path="home" component={Home} />
-      <Route path="more-info" component={MoreInfo} />
-      <Route path="thank-you" component={ThankYou} />
-      <Route path="to-do-list" component={ToDoList} />
-      <Route path="e-mail-sign-up" component={EmailSignUp} />
-      <Route path="ferrofluid-pool" component={FerrofluidPool} />
-      <Route path="twist" component={Twist} />
+    <Route path='/' component={App}>
+      <Route path='home' component={Home} />
+      <Route path='more-info' component={MoreInfo} />
+      <Route path='thank-you' component={ThankYou} />
+      <Route path='to-do-list' component={ToDoList} />
+      <Route path='e-mail-sign-up' component={EmailSignUp} />
+      <Route path='ferrofluid-pool' component={FerrofluidPool} />
+      <Route path='twist' component={Twist} />
     </Route>
   </Router>
   ), document.getElementById('root')

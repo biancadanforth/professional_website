@@ -213,7 +213,7 @@
 		text-align: center;
 	}
 
-	figure > img, iframe {
+	figure > img, .codepen-embed iframe {
 		margin: 0;
 		width: 100%;
 		max-width: $max-img-width;

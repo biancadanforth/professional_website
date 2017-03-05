@@ -5,7 +5,7 @@ class Main extends React.Component {
     return (
       <main 
         className={this.props.currentPage} 
-        role="main"
+        role='main'
       >
         {this.props.children}
       </main>
