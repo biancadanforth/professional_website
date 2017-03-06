@@ -61,9 +61,7 @@ class ContactForm extends React.Component {
                 ref='name'
                 placeholder='Joe Schmoe' 
                 required
-                onKeyUp={ () =>
-                  this.setState({nameIsValid: this.refs.name.checkValidity()})
-                }
+                onKeyUp={ () => this.setState({nameIsValid: this.refs.name.checkValidity()}) }
               />
             </label>
             <label className='contact-form-label'>E-mail
@@ -74,9 +72,7 @@ class ContactForm extends React.Component {
                 ref='email' 
                 placeholder='joeschmoe@example.com'
                 required
-                onKeyUp={ () =>
-                  this.setState({emailIsValid: this.refs.email.checkValidity()})
-                }
+                onKeyUp={ () => this.setState({emailIsValid: this.refs.email.checkValidity()}) }
               />
             </label>
             <label className='contact-form-label textarea-label'>
@@ -87,9 +83,7 @@ class ContactForm extends React.Component {
                 placeholder="I'd like to hire you."
                 required
                 ref='message'
-                onKeyUp={ () =>
-                  this.setState({messageIsValid: this.refs.message.checkValidity()})
-                }>
+                onKeyUp={ () => this.setState({messageIsValid: this.refs.message.checkValidity()}) }>
               </textarea>
             </label>
             <div ref='recaptchaTarget' />
