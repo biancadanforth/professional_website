@@ -1,5 +1,3 @@
-// ThankYou.jsx
-
 class ThankYou extends React.Component {
 
 constructor() {
@@ -18,15 +16,12 @@ constructor() {
       }
     }, 1000);
 
-    setTimeout(() => window.location = '/#/more-info'
-      , 5000);
+    setTimeout(() => window.location = '/#/more-info', 5000);
   }
 
   render() {
     return(
-      <div
-        className='contact-body thank-you-wrapper'
-      >
+      <div className='contact-body thank-you-wrapper'>
         <div className='thank-you'>
           <h2 className='thank-you-header'>Thank You!</h2>
           <h3 className='thank-you-subheader'>Your message has been sent.</h3>

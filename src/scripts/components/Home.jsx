@@ -1,24 +1,24 @@
-// Home.jsx
-
 class Home extends React.Component {
   
   componentDidMount() {
       
       //PROGRESSIVE IMAGE LOADING
-      var placeholder = document.querySelector('.welcome-placeholder');
+      var placeholder = document
+        .querySelector('.welcome-placeholder');
       var small = placeholder.querySelector('.img-small');
   
-      // 1: load small image and show it
+      // 1. load small image and show it
       var imgSmall = new Image();
       imgSmall.src = small.src;
       imgSmall.onload = function () {
-       small.classList.add('loaded');
-       placeholder.classList.add('img-small-loaded');
+        small.classList.add('loaded');
+        placeholder.classList.add('img-small-loaded');
       };
   
-      // 2: load large image
+      // 2. load large image
       var imgLarge = new Image();
-      imgLarge.src = placeholder.getAttribute('data-large');
+      imgLarge.src = placeholder
+        .getAttribute('data-large');
       imgLarge.classList.add('welcome-img'); 
       imgLarge.onload = function () {
         imgLarge.classList.add('loaded');
@@ -34,14 +34,13 @@ class Home extends React.Component {
             <div 
               className='welcome-placeholder' 
               data-large='images/biancaWeld.jpg'
-              ref='placeholder'
-              >
+              ref='placeholder'>
               <img 
                 className='welcome-img img-small' 
                 src='images/biancaWeldSmall.jpg' 
                 alt='Bianca Danforth' 
               />
-              <div style={{paddingBottom: '66.67%'}}></div>
+              <div className="welcome-spaceholder"></div>
               <div className='welcome-message-wrapper'>
                 <h2 className='welcome-message-header'>Front-end web nerd. Former mechanical engineer.</h2>
                 <h3 className='welcome-message-subheader'><span className='welcome-message-span'>Tools:</span> JavaScript, Sass, Mild Steel</h3>
@@ -65,8 +64,7 @@ class Home extends React.Component {
               </div>
               <a 
                 className='home-project-link' 
-                href='#to-do-list'
-              >
+                href='#to-do-list'>
                 <img
                   className='home-project-image' 
                   src='images/to-do-list.jpg' 
@@ -85,8 +83,7 @@ class Home extends React.Component {
               </div>
               <a 
                 className='home-project-link' 
-                href='#e-mail-sign-up'
-              >
+                href='#e-mail-sign-up'>
               <img 
                 className='home-project-image'
                 src='images/e-mail-sign-up.jpg' 
@@ -111,8 +108,7 @@ class Home extends React.Component {
                 </div>
                 <a 
                   className='home-project-link' 
-                  href='#ferrofluid-pool'
-                >
+                  href='#ferrofluid-pool'>
                 <img 
                   className='home-project-image'
                   src='images/ferrofluid-pool.jpg' 
@@ -130,8 +126,7 @@ class Home extends React.Component {
                 </div>
                 <a 
                   className='home-project-link' 
-                  href='#twist'
-                >
+                  href='#twist'>
                   <img 
                     className='home-project-image'
                     src='images/twist.jpg' 

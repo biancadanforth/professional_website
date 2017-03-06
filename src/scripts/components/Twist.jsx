@@ -1,6 +1,5 @@
-// Twist.jsx
-
 class Twist extends React.Component {
+  
   render() {
     return(
       <div>
@@ -11,7 +10,7 @@ class Twist extends React.Component {
             <div className='project-hero-wrapper'>
               <img 
                 className='portrait no-button' 
-                src='../../images/twist-glamour.jpg' 
+                src='/images/twist-glamour.jpg' 
                 alt='Final product'
               />
               <div className='project-overview-wrapper'>
@@ -42,7 +41,7 @@ class Twist extends React.Component {
               <div className='project'>
               <figure>
                 <img  
-                  src='../../images/twist-gather-information.jpg' 
+                  src='/images/twist-gather-information.jpg' 
                   alt='Drawing with anthropometry for the average American male, year 2000'
                 />
                 <figcaption>Source: NASA</figcaption>
@@ -65,7 +64,7 @@ class Twist extends React.Component {
               <div className='project'>
                 <img 
                   className='project-thumbnail' 
-                  src='../../images/twist-ideation.jpg' 
+                  src='/images/twist-ideation.jpg' 
                   alt='Brainstorming sketches'  
                 />
                 <div className='process-description'>
@@ -86,7 +85,7 @@ class Twist extends React.Component {
               <div className='project'>
                 <img 
                   className='project-thumbnail' 
-                  src='../../images/twist-prototype.jpg' 
+                  src='/images/twist-prototype.jpg' 
                   alt='Practice welds' 
                 />
                 <div className='process-description'>
@@ -104,7 +103,7 @@ class Twist extends React.Component {
               <div className='project'>
                 <img 
                   className='project-thumbnail' 
-                  src='../../images/twist-development.jpg' 
+                  src='/images/twist-development.jpg' 
                   alt='Welding the base'  
                 />
                 <div className='process-description'>
@@ -125,7 +124,7 @@ class Twist extends React.Component {
               <div className='project'>
                 <img 
                   className='project-thumbnail' 
-                  src='../../images/twist-glamour.jpg' 
+                  src='/images/twist-glamour.jpg' 
                   alt='Final product' 
                 />
                 <div className='process-description'>

@@ -1,11 +1,10 @@
-// Dropdown.jsx
-
 // The Dropdown component goes inside the Header component
 class Dropdown extends React.Component {
 
   render() {
     return (
-      <ul className= {this.props.isOpen ? 'submenu' : 'submenu hidden'}>
+      <ul className= 
+        {this.props.isOpen ? 'submenu' : 'submenu hidden'}>
         <li className='submenu-item'>
           <Link
             className='submenu-link' 

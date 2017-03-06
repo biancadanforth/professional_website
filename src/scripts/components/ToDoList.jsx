@@ -1,8 +1,7 @@
-// ToDoList.jsx
-
 const searchFilterCodePen = "<iframe height='410' scrolling='no' title='Search Filter V2' src='//codepen.io/biancadanforth/embed/LRrEGp/?height=410&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/biancadanforth/pen/LRrEGp/'>Search Filter V2</a> by biancadanforth (<a href='http://codepen.io/biancadanforth'>@biancadanforth</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>";
 
 class ToDoList extends React.Component {
+  
   render() {
     return(
       <div>
@@ -16,11 +15,10 @@ class ToDoList extends React.Component {
                   href='/work/to-do-list/live' 
                   title='See it live'
                   target='_blank' 
-                  aria-label='Go to live site'
-                >
+                  aria-label='Go to live site'>
                   <img 
                     className= 'wrap-up' 
-                    src='../../images/to-do-list-glamour.png' 
+                    src='/images/to-do-list-glamour.png' 
                     alt='Final design on different devices'
                   />
                 </a>
@@ -28,8 +26,7 @@ class ToDoList extends React.Component {
                   className='button-wrapper'
                   href='/work/to-do-list/live' 
                   target='_blank' 
-                  aria-label='Go to live site'
-                >
+                  aria-label='Go to live site'>
                   <button className='project-button'>See it live</button>
                 </a>
               </div>
@@ -61,7 +58,7 @@ class ToDoList extends React.Component {
               <div className='project'>
               <figure>
                   <img 
-                    src='../../images/to-do-list-gather-information.jpg' 
+                    src='/images/to-do-list-gather-information.jpg' 
                     alt='Benchmarking other to do list applications' 
                   />
                   <figcaption>Source: Todoist </figcaption>
@@ -84,7 +81,7 @@ class ToDoList extends React.Component {
               <div className='project'>
                 <img 
                   className='project-thumbnail' 
-                  src='../../images/to-do-list-ideation.jpg' 
+                  src='/images/to-do-list-ideation.jpg' 
                   alt='Benchmarking other To Do Lists' 
                 />
                 <div className='process-description'>
@@ -102,7 +99,7 @@ class ToDoList extends React.Component {
               <div className='project'>
                 <img 
                   className='project-thumbnail' 
-                  src='../../images/to-do-list-prototype.jpg' 
+                  src='/images/to-do-list-prototype.jpg' 
                   alt='' 
                 />
                 <div className='process-description'>
@@ -131,7 +128,7 @@ class ToDoList extends React.Component {
               <div className='project'>
                 <img 
                   className='project-thumbnail' 
-                  src='../../images/to-do-list-refine.jpg' 
+                  src='/images/to-do-list-refine.jpg' 
                   alt='High fidelity Photoshop mock-up' 
                 />
                 <div className='process-description'>
@@ -155,11 +152,10 @@ class ToDoList extends React.Component {
                     href='/work/to-do-list/live' 
                     title='See it live'
                     target='_blank' 
-                    aria-label='See it live'
-                  >
+                    aria-label='See it live'>
                     <img 
                       className='wrap-up' 
-                      src='../../images/to-do-list-glamour.png' 
+                      src='/images/to-do-list-glamour.png' 
                       alt='Final design on different devices' 
                     />
                   </a>
@@ -167,8 +163,7 @@ class ToDoList extends React.Component {
                     className='button-wrapper'
                     href='/work/to-do-list/live' 
                     target='_blank' 
-                    aria-label='See it live'
-                  >
+                    aria-label='See it live'>
                     <button className='project-button'>See it live</button>
                   </a>
                 </div>

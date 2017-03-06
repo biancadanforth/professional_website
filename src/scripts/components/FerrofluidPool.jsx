@@ -1,6 +1,5 @@
-// FerrofluidPool.jsx
-
 class FerrofluidPool extends React.Component {
+  
   render() {
     return(
       <div>
@@ -15,20 +14,18 @@ class FerrofluidPool extends React.Component {
                   href='/work/ferrofluid-pool/ferrofluid-pool-final-drawing.pdf' 
                   target='_blank'
                   title='View final assembly drawing' 
-                  aria-label='See final drawing'
-                >
+                  aria-label='See final drawing'>
                   <img 
                     className='portrait' 
-                    src='../../images/ferrofluid-pool-glamour.png' 
+                    src='/images/ferrofluid-pool-glamour.png' 
                     alt='Final design'
                   />
                 </a>
                 <a
                   className='button-wrapper'
-                  href='/work/ferrofluid-pool/final-drawing.pdf' 
+                  href='/work/ferrofluid-pool/ferrofluid-pool-final-drawing.pdf' 
                   target='_blank' 
-                  aria-label='See final drawing'
-                >
+                  aria-label='See final drawing'>
                   <button className='project-button'>See final drawing</button>
                 </a>
               </div>
@@ -63,7 +60,7 @@ class FerrofluidPool extends React.Component {
               <div className='project'>
                 <img 
                   className='project-thumbnail' 
-                  src='../../images/ferrofluid-pool-gather-information.jpg'
+                  src='/images/ferrofluid-pool-gather-information.jpg'
                   alt='Industrial design requirements for the exhibit' 
                 />
                 <div className='process-description'>
@@ -84,7 +81,7 @@ class FerrofluidPool extends React.Component {
               <div className='project'>
                 <img 
                   className='project-thumbnail' 
-                  src='../../images/ferrofluid-pool-ideation.jpg' 
+                  src='/images/ferrofluid-pool-ideation.jpg' 
                   alt='Sketching out solutions' 
                 />
                 <div className='process-description'>
@@ -102,7 +99,7 @@ class FerrofluidPool extends React.Component {
               <div className='project'>
                 <img 
                   className='project-thumbnail' 
-                  src='../../images/ferrofluid-pool-prototype.jpg' 
+                  src='/images/ferrofluid-pool-prototype.jpg' 
                   alt='Early proof-of-concept to magnetize sculptures' 
                 />
                 <div className='process-description'>
@@ -123,7 +120,7 @@ class FerrofluidPool extends React.Component {
               <div className='project'>
                 <img 
                   className='project-thumbnail' 
-                  src='../../images/ferrofluid-pool-development.jpg' 
+                  src='/images/ferrofluid-pool-development.jpg' 
                   alt='The hand crank subassembly' 
                 />
                 <div className='process-description'>
@@ -141,7 +138,7 @@ class FerrofluidPool extends React.Component {
               <div className='project'>
                 <img 
                   className='project-thumbnail' 
-                  src='../../images/ferrofluid-pool-final-product.jpg' 
+                  src='/images/ferrofluid-pool-final-product.jpg' 
                   alt='Final product' 
                 />
                 <div className='process-description'>
