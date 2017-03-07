@@ -1,8 +1,26 @@
+// App.jsx
+
+// Imports
+import React            from 'react';
+import ReactDOM         from 'react-dom';
+import { Router }       from 'react-router';
+import { Route }        from 'react-router';
+import { hashHistory }  from 'react-router';
+
+import ContactForm      from './components/ContactForm.jsx';
+import Dropdown         from './components/Dropdown.jsx';
+import EmailSignUp      from './components/EmailSignUp.jsx';
+import FerrofluidPool   from './components/FerrofluidPool.jsx';
+import Footer           from './components/Footer.jsx';
+import Header           from './components/Header.jsx';
+import Home             from './components/Home.jsx';
+import Main             from './components/Main.jsx';
+import MoreInfo         from './components/MoreInfo.jsx';
+import ThankYou         from './components/ThankYou.jsx';
+import ToDoList         from './components/ToDoList.jsx';
+import Twist            from './components/Twist.jsx';
+
 const render = ReactDOM.render;
-const Router = ReactRouter.Router;
-const Route = ReactRouter.Route;
-const Link = ReactRouter.Link;
-const hashHistory = ReactRouter.hashHistory;
 
 class App extends React.Component {
 

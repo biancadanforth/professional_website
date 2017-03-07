@@ -1,6 +1,10 @@
+// ThankYou.jsx
+
+import React from 'react';
+
 class ThankYou extends React.Component {
 
-constructor() {
+  constructor() {
     super();
     this.state = {
       countDown: 5,
@@ -32,3 +36,5 @@ constructor() {
     )
   }
 }
+
+export default ThankYou;

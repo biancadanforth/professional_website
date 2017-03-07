@@ -1,3 +1,7 @@
+// ContactForm.jsx
+
+import React from 'react';
+
 // The ContactForm component goes inside the MoreInfo component
 class ContactForm extends React.Component {
 
@@ -12,7 +16,6 @@ class ContactForm extends React.Component {
   }
 
   componentDidMount() {
-    
     grecaptcha.render(ReactDOM
       .findDOMNode(this.refs.recaptchaTarget),
       {sitekey: '6LeAxRUUAAAAANzTjjVyoz8ZMVQHhX20-PwIwLl5',
@@ -26,7 +29,7 @@ class ContactForm extends React.Component {
   handleReCaptcha() {
     this.setState({reCaptchaIsValid: true});
   }
-  
+
   componentWillUnmount() {
     window.handleReCaptcha = null;
   }
@@ -34,9 +37,9 @@ class ContactForm extends React.Component {
   render() {
 
     const submitEnabled = (
-      this.state.messageIsValid 
-      && this.state.nameIsValid 
-      && this.state.emailIsValid 
+      this.state.messageIsValid
+      && this.state.nameIsValid
+      && this.state.emailIsValid
       && this.state.reCaptchaIsValid
     );
 
@@ -64,13 +67,13 @@ class ContactForm extends React.Component {
                 onKeyUp={ () => this.setState({nameIsValid: this.refs.name.checkValidity()}) }
               />
             </label>
-            <label className='contact-form-label'>E-mail
-              <input 
-                className='contact-form-input'
-                type='email' 
-                name='E-mail'
-                ref='email' 
-                placeholder='joeschmoe@example.com'
+            <label className="contact-form-label">E-mail
+              <input
+                className="contact-form-input"
+                type="email"
+                name="E-mail"
+                ref="email"
+                placeholder="joeschmoe@example.com"
                 required
                 onKeyUp={ () => this.setState({emailIsValid: this.refs.email.checkValidity()}) }
               />
@@ -86,11 +89,11 @@ class ContactForm extends React.Component {
                 onKeyUp={ () => this.setState({messageIsValid: this.refs.message.checkValidity()}) }>
               </textarea>
             </label>
-            <div ref='recaptchaTarget' />
+            <div ref="recaptchaTarget" />
             <input
-              className='contact-form-input'
-              type='submit' 
-              value='Send'
+              className="contact-form-input"
+              type="submit"
+              value="Send"
               disabled={!submitEnabled}
             />
           </form>
@@ -99,3 +102,5 @@ class ContactForm extends React.Component {
     )
   }
 }
+
+export default ContactForm;

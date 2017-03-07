@@ -1,3 +1,7 @@
+// Twist.jsx
+
+import React from 'react';
+
 class Twist extends React.Component {
   
   render() {
@@ -48,7 +52,7 @@ class Twist extends React.Component {
                 </figure>
                 <div className='process-description'>
                   <p className='project-description'>
-                    Since we only had two months to design and build the chair, I knew I needed to hone in on a design very quickly. 
+                    Since we only had two months to design and build the chair, I knew I needed to hone in on a design very quickly.
                   </p>
                   <p className='project-description'>
                     After talking with alumni of the course, I decided I would choose one component of my process that I already had experience with and one component that was totally new.
@@ -146,3 +150,5 @@ class Twist extends React.Component {
     )
   }
 }
+
+export default Twist;

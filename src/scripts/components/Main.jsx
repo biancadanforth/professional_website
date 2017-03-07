@@ -1,3 +1,7 @@
+// Main.jsx
+
+import React from 'react';
+
 class Main extends React.Component {
   
   render() {
@@ -10,3 +14,5 @@ class Main extends React.Component {
     );
   }
 }
+
+export default Main;

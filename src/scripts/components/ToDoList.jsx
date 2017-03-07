@@ -1,3 +1,7 @@
+// ToDoList.jsx
+
+import React from 'react';
+
 const searchFilterCodePen = "<iframe height='410' scrolling='no' title='Search Filter V2' src='//codepen.io/biancadanforth/embed/LRrEGp/?height=410&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/biancadanforth/pen/LRrEGp/'>Search Filter V2</a> by biancadanforth (<a href='http://codepen.io/biancadanforth'>@biancadanforth</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>";
 
 class ToDoList extends React.Component {
@@ -11,8 +15,8 @@ class ToDoList extends React.Component {
             <h3 className='project-subsubheader'>UX Design | Visual Design | Front-End Development</h3>
             <div className='project-hero-wrapper'>
               <div className='glamour-shot-wrapper'>
-                <a 
-                  href='/work/to-do-list/live' 
+                <a
+                  href='/work/to-do-list/live'
                   title='See it live'
                   target='_blank' 
                   aria-label='Go to live site'>
@@ -100,7 +104,7 @@ class ToDoList extends React.Component {
                 <img 
                   className='project-thumbnail' 
                   src='/images/to-do-list-prototype.jpg' 
-                  alt='' 
+                  alt=''
                 />
                 <div className='process-description'>
                   <p className='project-description'>
@@ -129,7 +133,7 @@ class ToDoList extends React.Component {
                 <img 
                   className='project-thumbnail' 
                   src='/images/to-do-list-refine.jpg' 
-                  alt='High fidelity Photoshop mock-up' 
+                  alt='High fidelity Photoshop mock-up'
                 />
                 <div className='process-description'>
                   <p className='project-description'>
@@ -148,15 +152,15 @@ class ToDoList extends React.Component {
               <h2 className='project-subheader'>Final Product</h2>
               <div className='project'>
                 <div className='project-glamour-shot-wrapper'>
-                  <a                    
-                    href='/work/to-do-list/live' 
+                  <a
+                    href='/work/to-do-list/live'
                     title='See it live'
                     target='_blank' 
                     aria-label='See it live'>
                     <img 
                       className='wrap-up' 
                       src='/images/to-do-list-glamour.png' 
-                      alt='Final design on different devices' 
+                      alt='Final design on different devices'
                     />
                   </a>
                   <a
@@ -189,3 +193,5 @@ class ToDoList extends React.Component {
     )
   }
 }
+
+export default ToDoList;

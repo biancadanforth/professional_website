@@ -1,3 +1,8 @@
+// Dropdown.jsx
+
+import React      from 'react';
+import { Link }   from 'react-router';
+
 // The Dropdown component goes inside the Header component
 class Dropdown extends React.Component {
 
@@ -7,14 +12,14 @@ class Dropdown extends React.Component {
         {this.props.isOpen ? 'submenu' : 'submenu hidden'}>
         <li className='submenu-item'>
           <Link
-            className='submenu-link' 
+            className='submenu-link'
             to='to-do-list'
             onClick={this.props.onClick} >
               To-Do List
           </Link>
         </li>
         <li className='submenu-item'>
-          <Link 
+          <Link
             className='submenu-link'
             to='e-mail-sign-up'
             onClick={this.props.onClick} >
@@ -22,7 +27,7 @@ class Dropdown extends React.Component {
           </Link>
         </li>
         <li className='submenu-item past-projects'>
-          <Link 
+          <Link
             className='submenu-link'
             to='ferrofluid-pool'
             onClick={this.props.onClick} >
@@ -30,7 +35,7 @@ class Dropdown extends React.Component {
           </Link>
         </li>
         <li className='submenu-item past-projects'>
-          <Link 
+          <Link
             className='submenu-link'
             to='twist'
             onClick={this.props.onClick} >
@@ -41,3 +46,5 @@ class Dropdown extends React.Component {
     );
   }
 }
+
+export default Dropdown;

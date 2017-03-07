@@ -1,3 +1,7 @@
+// FerrofluidPool.jsx
+
+import React from 'react';
+
 class FerrofluidPool extends React.Component {
   
   render() {
@@ -9,9 +13,9 @@ class FerrofluidPool extends React.Component {
             <h3 className='project-subsubheader'>Engineering Design | Production</h3>
             <div className='project-hero-wrapper'>
               <div className='glamour-shot-wrapper'>
-                <a 
+                <a
                   className='wrap-up'
-                  href='/work/ferrofluid-pool/ferrofluid-pool-final-drawing.pdf' 
+                  href='/work/ferrofluid-pool/ferrofluid-pool-final-drawing.pdf'
                   target='_blank'
                   title='View final assembly drawing' 
                   aria-label='See final drawing'>
@@ -65,7 +69,7 @@ class FerrofluidPool extends React.Component {
                 />
                 <div className='process-description'>
                   <p className='project-description'>
-                    I received a preliminary design guide with outside dimensions, materials and finishes from an industrial design firm. 
+                    I received a preliminary design guide with outside dimensions, materials and finishes from an industrial design firm.
                   </p>
                   <p className='project-description'>
                     Unlike many exhibits that the Exploratorium has produced in the past, we had never built anything like this one before. I had to figure out from scratch how to reproduce the phenomenon.
@@ -121,8 +125,7 @@ class FerrofluidPool extends React.Component {
                 <img 
                   className='project-thumbnail' 
                   src='/images/ferrofluid-pool-development.jpg' 
-                  alt='The hand crank subassembly' 
-                />
+                  alt='The hand crank subassembly'/>
                 <div className='process-description'>
                   <p className='project-description'>
                     After figuring out the technical details, I had to finalize production drawings and either get parts made outside or make them myself.
@@ -139,8 +142,7 @@ class FerrofluidPool extends React.Component {
                 <img 
                   className='project-thumbnail' 
                   src='/images/ferrofluid-pool-final-product.jpg' 
-                  alt='Final product' 
-                />
+                  alt='Final product'/>
                 <div className='process-description'>
                   <p className='project-description'>
                     I made all or part of nearly 10 exhibits in my years at the Exploratorium, and this one is by far my favorite.
@@ -157,3 +159,5 @@ class FerrofluidPool extends React.Component {
     )
   }
 }
+
+export default FerrofluidPool;

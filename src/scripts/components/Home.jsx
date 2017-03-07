@@ -1,7 +1,11 @@
+// Home.jsx
+
+import React from 'react';
+
 class Home extends React.Component {
-  
+
   componentDidMount() {
-      
+
       //PROGRESSIVE IMAGE LOADING
       var placeholder = document
         .querySelector('.welcome-placeholder');
@@ -31,8 +35,8 @@ class Home extends React.Component {
       <div className='home-page-wrapper'>
         <section className='primary'>
           <div className='primary-wrapper'>
-            <div 
-              className='welcome-placeholder' 
+            <div
+              className='welcome-placeholder'
               data-large='images/biancaWeld.jpg'
               ref='placeholder'>
               <img 
@@ -66,9 +70,9 @@ class Home extends React.Component {
                 className='home-project-link' 
                 href='#to-do-list'>
                 <img
-                  className='home-project-image' 
-                  src='images/to-do-list.jpg' 
-                  alt='To Do List application' 
+                  className='home-project-image'
+                  src='images/to-do-list.jpg'
+                  alt='To Do List application'
                 />
               </a>
             </div>
@@ -86,8 +90,8 @@ class Home extends React.Component {
                 href='#e-mail-sign-up'>
               <img 
                 className='home-project-image'
-                src='images/e-mail-sign-up.jpg' 
-                alt='E-mail Sign Up Page' 
+                src='images/e-mail-sign-up.jpg'
+                alt='E-mail Sign Up Page'
               />
               </a>
             </div>
@@ -111,7 +115,7 @@ class Home extends React.Component {
                   href='#ferrofluid-pool'>
                 <img 
                   className='home-project-image'
-                  src='images/ferrofluid-pool.jpg' 
+                  src='images/ferrofluid-pool.jpg'
                   alt='Ferrofluid Pool science exhibit' />
                 </a>
               </div>
@@ -129,8 +133,8 @@ class Home extends React.Component {
                   href='#twist'>
                   <img 
                     className='home-project-image'
-                    src='images/twist.jpg' 
-                    alt='Base of Twist chair' 
+                    src='images/twist.jpg'
+                    alt='Base of Twist chair'
                   />
                 </a>
               </div>
@@ -141,3 +145,5 @@ class Home extends React.Component {
     )
   }
 }
+
+export default Home;
