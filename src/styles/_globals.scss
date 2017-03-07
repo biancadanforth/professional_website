@@ -133,7 +133,7 @@ a {
 	}
 
 	&:visited {
-		color: darken($blue, 10%);
+		color: $blue;
 	}
 }
 
@@ -159,7 +159,7 @@ h2 {
 			weight: 400;
 		}
 		letter-spacing: $letter-spacing;
-		margin-bottom: 0;
+		margin-bottom: 10px;
 		line-height: 1.25;
 	}
 

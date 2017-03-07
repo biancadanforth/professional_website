@@ -76,11 +76,13 @@ class Header extends React.Component {
             <a
               className='header-logo-link'
               href='http://www.biancadanforth.com'
-              className='icon-link'
               aria-label="Go to Bianca Danforth's website">
               <div dangerouslySetInnerHTML={{__html: svgElement}} />
             </a>
-            <h1 className="header-name">Bianca Danforth</h1>
+            <a href='http://www.biancadanforth.com'
+              aria-label="Go to Bianca Danforth's website">
+              <h1 className="header-name">Bianca Danforth</h1>
+            </a>
           </span>
            <nav role="navigation">
             <ul className="menu">

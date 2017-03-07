@@ -68,7 +68,8 @@ class Home extends React.Component {
               </div>
               <a 
                 className='home-project-link' 
-                href='#to-do-list'>
+                href='#to-do-list'
+                title='Go to project'>
                 <img
                   className='home-project-image'
                   src='images/to-do-list.jpg'
@@ -87,7 +88,8 @@ class Home extends React.Component {
               </div>
               <a 
                 className='home-project-link' 
-                href='#e-mail-sign-up'>
+                href='#e-mail-sign-up'
+                title='Go to project'>
               <img 
                 className='home-project-image'
                 src='images/e-mail-sign-up.jpg'
@@ -112,7 +114,8 @@ class Home extends React.Component {
                 </div>
                 <a 
                   className='home-project-link' 
-                  href='#ferrofluid-pool'>
+                  href='#ferrofluid-pool'
+                  title='Go to project'>
                 <img 
                   className='home-project-image'
                   src='images/ferrofluid-pool.jpg'
@@ -130,7 +133,8 @@ class Home extends React.Component {
                 </div>
                 <a 
                   className='home-project-link' 
-                  href='#twist'>
+                  href='#twist'
+                  title='Go to project'>
                   <img 
                     className='home-project-image'
                     src='images/twist.jpg'

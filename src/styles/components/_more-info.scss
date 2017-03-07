@@ -119,7 +119,7 @@
 	  @include buttoned;
 
 	  &:disabled {
-	  	color: darken($light-grey, 15%);
+	  	color: $grey;
 	  	background-color: $light-grey;
 	  	box-shadow: none;
 	  	border-color: darken($light-grey, 15%);
