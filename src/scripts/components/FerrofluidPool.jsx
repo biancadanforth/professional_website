@@ -3,6 +3,7 @@
 import React from 'react';
 
 class FerrofluidPool extends React.Component {
+  
   render() {
     return(
       <div>
@@ -16,21 +17,19 @@ class FerrofluidPool extends React.Component {
                   className='wrap-up'
                   href='/work/ferrofluid-pool/ferrofluid-pool-final-drawing.pdf'
                   target='_blank'
-                  title='View final assembly drawing'
-                  aria-label='See final drawing'
-                >
-                  <img
-                    className='portrait'
-                    src='../../images/ferrofluid-pool-glamour.png'
+                  title='View final assembly drawing' 
+                  aria-label='See final drawing'>
+                  <img 
+                    className='portrait' 
+                    src='/images/ferrofluid-pool-glamour.png' 
                     alt='Final design'
                   />
                 </a>
                 <a
                   className='button-wrapper'
-                  href='/work/ferrofluid-pool/final-drawing.pdf'
-                  target='_blank'
-                  aria-label='See final drawing'
-                >
+                  href='/work/ferrofluid-pool/ferrofluid-pool-final-drawing.pdf' 
+                  target='_blank' 
+                  aria-label='See final drawing'>
                   <button className='project-button'>See final drawing</button>
                 </a>
               </div>
@@ -63,10 +62,10 @@ class FerrofluidPool extends React.Component {
             <div className='project-wrapper'>
               <h2 className='project-subheader'>Gather Information</h2>
               <div className='project'>
-                <img
-                  className='project-thumbnail'
-                  src='../../images/ferrofluid-pool-gather-information.jpg'
-                  alt='Industrial design requirements for the exhibit'
+                <img 
+                  className='project-thumbnail' 
+                  src='/images/ferrofluid-pool-gather-information.jpg'
+                  alt='Industrial design requirements for the exhibit' 
                 />
                 <div className='process-description'>
                   <p className='project-description'>
@@ -84,10 +83,10 @@ class FerrofluidPool extends React.Component {
             <div className='project-wrapper'>
               <h2 className='project-subheader'>Ideation</h2>
               <div className='project'>
-                <img
-                  className='project-thumbnail'
-                  src='../../images/ferrofluid-pool-ideation.jpg'
-                  alt='Sketching out solutions'
+                <img 
+                  className='project-thumbnail' 
+                  src='/images/ferrofluid-pool-ideation.jpg' 
+                  alt='Sketching out solutions' 
                 />
                 <div className='process-description'>
                   <p className='project-description'>
@@ -102,10 +101,10 @@ class FerrofluidPool extends React.Component {
             <div className='project-wrapper'>
               <h2 className='project-subheader'>Prototype</h2>
               <div className='project'>
-                <img
-                  className='project-thumbnail'
-                  src='../../images/ferrofluid-pool-prototype.jpg'
-                  alt='Early proof-of-concept to magnetize sculptures'
+                <img 
+                  className='project-thumbnail' 
+                  src='/images/ferrofluid-pool-prototype.jpg' 
+                  alt='Early proof-of-concept to magnetize sculptures' 
                 />
                 <div className='process-description'>
                   <p className='project-description'>
@@ -123,11 +122,10 @@ class FerrofluidPool extends React.Component {
             <div className='project-wrapper'>
               <h2 className='project-subheader'>Development</h2>
               <div className='project'>
-                <img
-                  className='project-thumbnail'
-                  src='../../images/ferrofluid-pool-development.jpg'
-                  alt='The hand crank subassembly'
-                />
+                <img 
+                  className='project-thumbnail' 
+                  src='/images/ferrofluid-pool-development.jpg' 
+                  alt='The hand crank subassembly'/>
                 <div className='process-description'>
                   <p className='project-description'>
                     After figuring out the technical details, I had to finalize production drawings and either get parts made outside or make them myself.
@@ -141,11 +139,10 @@ class FerrofluidPool extends React.Component {
             <div className='project-wrapper'>
               <h2 className='project-subheader'>Final Product</h2>
               <div className='project'>
-                <img
-                  className='project-thumbnail'
-                  src='../../images/ferrofluid-pool-final-product.jpg'
-                  alt='Final product'
-                />
+                <img 
+                  className='project-thumbnail' 
+                  src='/images/ferrofluid-pool-final-product.jpg' 
+                  alt='Final product'/>
                 <div className='process-description'>
                   <p className='project-description'>
                     I made all or part of nearly 10 exhibits in my years at the Exploratorium, and this one is by far my favorite.

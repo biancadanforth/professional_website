@@ -30,17 +30,11 @@ class App extends React.Component {
     pageName += '-page';
     return (
     	<div ref='page'>
-	    	<Header
-          currentPage={currentPath === '/' ? 'home-page' : pageName}
-          />
-	    	<Main
-          currentPage={currentPath === '/' ? 'home-page' : pageName}
-	    	>
+	    	<Header currentPage={currentPath === '/' ? 'home-page' : pageName} />
+	    	<Main currentPage={currentPath === '/' ? 'home-page' : pageName} >
           {currentPath === '/' ? <Home /> : this.props.children}
         </Main>
-	      <Footer
-          currentPage={currentPath === '/' ? 'home-page' : pageName}
-          />
+	      <Footer currentPage={currentPath === '/' ? 'home-page' : pageName} />
       </div>
     );
   }

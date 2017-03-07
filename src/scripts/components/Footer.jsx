@@ -20,20 +20,18 @@ class Footer extends React.Component {
         <span className='footer-wrapper'>
           <a
             className='footer-link'
-            href='http://codepen.io/biancadanforth/'
-            target='_blank'
-            aria-label='Codepen'
-            title='Codepen'
-            >
+            href='http://codepen.io/biancadanforth/' 
+            target='_blank' 
+            aria-label='Codepen' 
+            title='Codepen'>
             <div dangerouslySetInnerHTML={{__html: codepenSVG}} />
           </a>
           <a
             className='footer-link'
-            href='https://www.linkedin.com/in/bianca-danforth-62b18439'
-            target='_blank'
-            aria-label='LinkedIn'
-            title='LinkedIn'
-            >
+            href='https://www.linkedin.com/in/bianca-danforth-62b18439' 
+            target='_blank' 
+            aria-label='LinkedIn' 
+            title='LinkedIn'>
             <div dangerouslySetInnerHTML={{__html: linkedInSVG}} />
           </a>
           <a
@@ -41,17 +39,15 @@ class Footer extends React.Component {
             href='/#/more-info'
             aria-label='E-mail'
             title='E-mail'
-            onClick={() => this.props.onPageChange('more-info-page')}
-            >
+            onClick={() => this.props.onPageChange('more-info-page')}>
             <div dangerouslySetInnerHTML={{__html: emailSVG}} />
           </a>
           <a
             className='footer-link'
-            href='https://twitter.com/biancadanforth'
-            target='_blank'
-            aria-label='Twitter'
-            title='Twitter'
-            >
+            href='https://twitter.com/biancadanforth' 
+            target='_blank' 
+            aria-label='Twitter' 
+            title='Twitter'>
             <div dangerouslySetInnerHTML={{__html: twitterSVG}} />
           </a>
           <a
@@ -59,8 +55,7 @@ class Footer extends React.Component {
             href='https://github.com/biancadanforth'
             target='_blank'
             aria-label='GitHub'
-            title='GitHub'
-            >
+            title='GitHub'>
             <div dangerouslySetInnerHTML={{__html: gitHubSVG}} />
           </a>
         </span>

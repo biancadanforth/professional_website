@@ -82,6 +82,8 @@ main {
 	$header-height: $header-padding-top + $header-padding-bottom + $content-height;
 	header {
 		padding-bottom: $header-padding-bottom;
+		padding-left: $padding-default;
+		padding-right: $padding-default;
 	}
 	main {
 		padding-top: $header-height;
@@ -106,9 +108,11 @@ main {
 
 @media (max-width: 400px) {
 	$content-height: 70px;
+	$header-padding-top: $padding-small;
+	$header-padding-bottom: $padding-small;
 	$header-height: $header-padding-top + $header-padding-bottom + $content-height;
 	header {
-		padding: $padding-small;
+		padding: 20px;
 	}
 
 	main {

@@ -5,6 +5,7 @@ import React from 'react';
 const searchFilterCodePen = "<iframe height='410' scrolling='no' title='Search Filter V2' src='//codepen.io/biancadanforth/embed/LRrEGp/?height=410&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/biancadanforth/pen/LRrEGp/'>Search Filter V2</a> by biancadanforth (<a href='http://codepen.io/biancadanforth'>@biancadanforth</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>";
 
 class ToDoList extends React.Component {
+  
   render() {
     return(
       <div>
@@ -17,21 +18,19 @@ class ToDoList extends React.Component {
                 <a
                   href='/work/to-do-list/live'
                   title='See it live'
-                  target='_blank'
-                  aria-label='Go to live site'
-                >
-                  <img
-                    className= 'wrap-up'
-                    src='../../images/to-do-list-glamour.png'
+                  target='_blank' 
+                  aria-label='Go to live site'>
+                  <img 
+                    className= 'wrap-up' 
+                    src='/images/to-do-list-glamour.png' 
                     alt='Final design on different devices'
                   />
                 </a>
                 <a
                   className='button-wrapper'
-                  href='/work/to-do-list/live'
-                  target='_blank'
-                  aria-label='Go to live site'
-                >
+                  href='/work/to-do-list/live' 
+                  target='_blank' 
+                  aria-label='Go to live site'>
                   <button className='project-button'>See it live</button>
                 </a>
               </div>
@@ -62,9 +61,9 @@ class ToDoList extends React.Component {
               <h2 className='project-subheader'>Gather Information</h2>
               <div className='project'>
               <figure>
-                  <img
-                    src='../../images/to-do-list-gather-information.jpg'
-                    alt='Benchmarking other to do list applications'
+                  <img 
+                    src='/images/to-do-list-gather-information.jpg' 
+                    alt='Benchmarking other to do list applications' 
                   />
                   <figcaption>Source: Todoist </figcaption>
                 </figure>
@@ -84,10 +83,10 @@ class ToDoList extends React.Component {
             <div className='project-wrapper'>
               <h2 className='project-subheader'>Ideation</h2>
               <div className='project'>
-                <img
-                  className='project-thumbnail'
-                  src='../../images/to-do-list-ideation.jpg'
-                  alt='Benchmarking other To Do Lists'
+                <img 
+                  className='project-thumbnail' 
+                  src='/images/to-do-list-ideation.jpg' 
+                  alt='Benchmarking other To Do Lists' 
                 />
                 <div className='process-description'>
                   <p className='project-description'>
@@ -102,9 +101,9 @@ class ToDoList extends React.Component {
             <div className='project-wrapper'>
               <h2 className='project-subheader'>Wireframe</h2>
               <div className='project'>
-                <img
-                  className='project-thumbnail'
-                  src='../../images/to-do-list-prototype.jpg'
+                <img 
+                  className='project-thumbnail' 
+                  src='/images/to-do-list-prototype.jpg' 
                   alt=''
                 />
                 <div className='process-description'>
@@ -131,9 +130,9 @@ class ToDoList extends React.Component {
             <div className='project-wrapper'>
               <h2 className='project-subheader'>Mock-Up & Development</h2>
               <div className='project'>
-                <img
-                  className='project-thumbnail'
-                  src='../../images/to-do-list-refine.jpg'
+                <img 
+                  className='project-thumbnail' 
+                  src='/images/to-do-list-refine.jpg' 
                   alt='High fidelity Photoshop mock-up'
                 />
                 <div className='process-description'>
@@ -156,21 +155,19 @@ class ToDoList extends React.Component {
                   <a
                     href='/work/to-do-list/live'
                     title='See it live'
-                    target='_blank'
-                    aria-label='See it live'
-                  >
-                    <img
-                      className='wrap-up'
-                      src='../../images/to-do-list-glamour.png'
+                    target='_blank' 
+                    aria-label='See it live'>
+                    <img 
+                      className='wrap-up' 
+                      src='/images/to-do-list-glamour.png' 
                       alt='Final design on different devices'
                     />
                   </a>
                   <a
                     className='button-wrapper'
-                    href='/work/to-do-list/live'
-                    target='_blank'
-                    aria-label='See it live'
-                  >
+                    href='/work/to-do-list/live' 
+                    target='_blank' 
+                    aria-label='See it live'>
                     <button className='project-button'>See it live</button>
                   </a>
                 </div>

@@ -5,39 +5,46 @@ import React from 'react';
 const fluidGridCodepen = "<iframe height='400' scrolling='no' title='Fluid Grid' src='//codepen.io/biancadanforth/embed/wWLGRK/?height=400&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/biancadanforth/pen/wWLGRK/'>Fluid Grid</a> by biancadanforth (<a href='http://codepen.io/biancadanforth'>@biancadanforth</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>";
 
 class EmailSignUp extends React.Component {
+  
   render() {
     return(
       <div>
         <section className='primary'>
           <div className='primary-wrapper'>
             <h1 className='project-header'>E-mail Sign-Up</h1>
-            <h3 className='project-subsubheader'>Front-End Development</h3>
+            <h3 className='project-subsubheader'>
+              Front-End Development
+            </h3>
             <div className='project-hero-wrapper'>
               <div className='glamour-shot-wrapper'>
                 <a
                   href='/work/e-mail-sign-up/live'
                   title='See it live'
                   target='_blank'
-                  aria-label='Go to live site'
-                >
-                  <img
-                    className='wrap-up'
-                    src='../../images/e-mail-sign-up-glamour.png'
+                  aria-label='Go to live site'>
+                  <img 
+                    className='wrap-up' 
+                    src='/images/e-mail-sign-up-glamour.png' 
                     alt='Final design on different devices'
                   />
                 </a>
                 <a
                   className='button-wrapper'
-                  href='/work/e-mail-sign-up/live'
-                  target='_blank'
-                  aria-label='Go to live site'
-                >
-                  <button className='project-button'>See it live</button>
+                  href='/work/e-mail-sign-up/live' 
+                  target='_blank' 
+                  aria-label='Go to live site'>
+                  <button className='project-button'>
+                    See it live
+                  </button>
                 </a>
               </div>
               <div className='project-overview-wrapper'>
-                <h2 className='project-overview-header'>Overview</h2>
-                <h4 className='project-overview-subheader'>Project goals</h4>
+                <h2 className='project-overview-header'>
+                  Overview
+                </h2>
+                <h4 className='project-overview-subheader'>
+                  Project goals
+                </h4>
                 <p className='project-overview-description'>
                   My goal was to make a static webpage based on a provided Photoshop mock-up.
                 </p>
@@ -64,9 +71,9 @@ class EmailSignUp extends React.Component {
             <div className='project-wrapper'>
               <h2 className='project-subheader'>Gather Information</h2>
               <div className='project'>
-                <img
-                  className='project-thumbnail'
-                  src='../../images/e-mail-sign-up-gather-information.png'
+                <img 
+                  className='project-thumbnail' 
+                  src='/images/e-mail-sign-up-gather-information.png' 
                   alt='Photoshop mock-up of page'
                 />
                 <div className='process-description'>
@@ -102,10 +109,10 @@ class EmailSignUp extends React.Component {
             <div className='project-wrapper'>
               <h2 className='project-subheader'>Development</h2>
               <div className='project'>
-                <img
-                  className='project-thumbnail'
-                  src='../../images/e-mail-sign-up-development.jpg'
-                  alt='Excerpt of final CSS'
+                <img 
+                  className='project-thumbnail' 
+                  src='/images/e-mail-sign-up-development.jpg'
+                  alt='Excerpt of final CSS' 
                 />
                 <div className='process-description'>
                   <p className='project-description'>
@@ -127,21 +134,19 @@ class EmailSignUp extends React.Component {
                   <a
                     href='/work/e-mail-sign-up/live'
                     title='Go to live site'
-                    target='_blank'
-                    aria-label='Go to live site'
-                  >
-                    <img
-                      className='wrap-up'
-                      src='../../images/e-mail-sign-up-glamour.png'
+                    target='_blank' 
+                    aria-label='Go to live site'>
+                    <img 
+                      className='wrap-up' 
+                      src='/images/e-mail-sign-up-glamour.png'
                       alt='Final design on different devices'
                     />
                   </a>
                   <a
                     className='button-wrapper'
-                    href='/work/e-mail-sign-up/live'
-                    target='_blank'
-                    aria-label='See it live'
-                  >
+                    href='/work/e-mail-sign-up/live' 
+                    target='_blank' 
+                    aria-label='See it live'>
                     <button className='project-button'>See it live</button>
                   </a>
                 </div>
