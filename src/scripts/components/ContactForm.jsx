@@ -1,6 +1,7 @@
 // ContactForm.jsx
 
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 // The ContactForm component goes inside the MoreInfo component
 class ContactForm extends React.Component {
