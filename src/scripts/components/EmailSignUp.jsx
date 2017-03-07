@@ -1,5 +1,7 @@
 // EmailSignUp.jsx
 
+import React from 'react';
+
 const fluidGridCodepen = "<iframe height='400' scrolling='no' title='Fluid Grid' src='//codepen.io/biancadanforth/embed/wWLGRK/?height=400&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/biancadanforth/pen/wWLGRK/'>Fluid Grid</a> by biancadanforth (<a href='http://codepen.io/biancadanforth'>@biancadanforth</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>";
 
 class EmailSignUp extends React.Component {
@@ -12,22 +14,22 @@ class EmailSignUp extends React.Component {
             <h3 className='project-subsubheader'>Front-End Development</h3>
             <div className='project-hero-wrapper'>
               <div className='glamour-shot-wrapper'>
-                <a 
-                  href='/work/e-mail-sign-up/live' 
+                <a
+                  href='/work/e-mail-sign-up/live'
                   title='See it live'
                   target='_blank'
                   aria-label='Go to live site'
                 >
-                  <img 
-                    className='wrap-up' 
-                    src='../../images/e-mail-sign-up-glamour.png' 
+                  <img
+                    className='wrap-up'
+                    src='../../images/e-mail-sign-up-glamour.png'
                     alt='Final design on different devices'
                   />
                 </a>
                 <a
                   className='button-wrapper'
-                  href='/work/e-mail-sign-up/live' 
-                  target='_blank' 
+                  href='/work/e-mail-sign-up/live'
+                  target='_blank'
                   aria-label='Go to live site'
                 >
                   <button className='project-button'>See it live</button>
@@ -62,9 +64,9 @@ class EmailSignUp extends React.Component {
             <div className='project-wrapper'>
               <h2 className='project-subheader'>Gather Information</h2>
               <div className='project'>
-                <img 
-                  className='project-thumbnail' 
-                  src='../../images/e-mail-sign-up-gather-information.png' 
+                <img
+                  className='project-thumbnail'
+                  src='../../images/e-mail-sign-up-gather-information.png'
                   alt='Photoshop mock-up of page'
                 />
                 <div className='process-description'>
@@ -92,7 +94,7 @@ class EmailSignUp extends React.Component {
                     I did not want to use any third-party frameworks (Bootstrap, Foundation, Skeleton, etc.), since I wanted to make sure I was comfortable working in pure CSS first.
                   </p>
                   <p className='project-description'>
-                    I experimented with a fluid grid approach on Codepen that used <code>float</code> and percentage-based widths to adjust the size of content. 
+                    I experimented with a fluid grid approach on Codepen that used <code>float</code> and percentage-based widths to adjust the size of content.
                   </p>
                 </div>
               </div>
@@ -100,10 +102,10 @@ class EmailSignUp extends React.Component {
             <div className='project-wrapper'>
               <h2 className='project-subheader'>Development</h2>
               <div className='project'>
-                <img 
-                  className='project-thumbnail' 
+                <img
+                  className='project-thumbnail'
                   src='../../images/e-mail-sign-up-development.jpg'
-                  alt='Excerpt of final CSS' 
+                  alt='Excerpt of final CSS'
                 />
                 <div className='process-description'>
                   <p className='project-description'>
@@ -122,22 +124,22 @@ class EmailSignUp extends React.Component {
               <h2 className='project-subheader'>Final Product</h2>
               <div className='project'>
                 <div className='project-glamour-shot-wrapper'>
-                  <a 
-                    href='/work/e-mail-sign-up/live' 
+                  <a
+                    href='/work/e-mail-sign-up/live'
                     title='Go to live site'
-                    target='_blank' 
+                    target='_blank'
                     aria-label='Go to live site'
                   >
-                    <img 
-                      className='wrap-up' 
-                      src='../../images/e-mail-sign-up-glamour.png' 
+                    <img
+                      className='wrap-up'
+                      src='../../images/e-mail-sign-up-glamour.png'
                       alt='Final design on different devices'
                     />
                   </a>
                   <a
                     className='button-wrapper'
-                    href='/work/e-mail-sign-up/live' 
-                    target='_blank' 
+                    href='/work/e-mail-sign-up/live'
+                    target='_blank'
                     aria-label='See it live'
                   >
                     <button className='project-button'>See it live</button>
@@ -159,3 +161,5 @@ class EmailSignUp extends React.Component {
     )
   }
 }
+
+export default EmailSignUp;

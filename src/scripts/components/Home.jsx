@@ -1,13 +1,15 @@
 // Home.jsx
 
+import React from 'react';
+
 class Home extends React.Component {
-  
+
   componentDidMount() {
-      
+
       //PROGRESSIVE IMAGE LOADING
       var placeholder = document.querySelector('.welcome-placeholder');
       var small = placeholder.querySelector('.img-small');
-  
+
       // 1: load small image and show it
       var imgSmall = new Image();
       imgSmall.src = small.src;
@@ -15,11 +17,11 @@ class Home extends React.Component {
        small.classList.add('loaded');
        placeholder.classList.add('img-small-loaded');
       };
-  
+
       // 2: load large image
       var imgLarge = new Image();
       imgLarge.src = placeholder.getAttribute('data-large');
-      imgLarge.classList.add('welcome-img'); 
+      imgLarge.classList.add('welcome-img');
       imgLarge.onload = function () {
         imgLarge.classList.add('loaded');
       };
@@ -31,15 +33,15 @@ class Home extends React.Component {
       <div className='home-page-wrapper'>
         <section className='primary'>
           <div className='primary-wrapper'>
-            <div 
-              className='welcome-placeholder' 
+            <div
+              className='welcome-placeholder'
               data-large='images/biancaWeld.jpg'
               ref='placeholder'
               >
-              <img 
-                className='welcome-img img-small' 
-                src='images/biancaWeldSmall.jpg' 
-                alt='Bianca Danforth' 
+              <img
+                className='welcome-img img-small'
+                src='images/biancaWeldSmall.jpg'
+                alt='Bianca Danforth'
               />
               <div style={{paddingBottom: '66.67%'}}></div>
               <div className='welcome-message-wrapper'>
@@ -63,14 +65,14 @@ class Home extends React.Component {
                   A single page application where users can add, edit, delete, complete, undo and filter tasks.
                 </p>
               </div>
-              <a 
-                className='home-project-link' 
+              <a
+                className='home-project-link'
                 href='#to-do-list'
               >
                 <img
-                  className='home-project-image' 
-                  src='images/to-do-list.jpg' 
-                  alt='To Do List application' 
+                  className='home-project-image'
+                  src='images/to-do-list.jpg'
+                  alt='To Do List application'
                 />
               </a>
             </div>
@@ -83,14 +85,14 @@ class Home extends React.Component {
                   A static page where users can subscribe to a newsletter, contact, and learn more about Skillcrush.
                 </p>
               </div>
-              <a 
-                className='home-project-link' 
+              <a
+                className='home-project-link'
                 href='#e-mail-sign-up'
               >
-              <img 
+              <img
                 className='home-project-image'
-                src='images/e-mail-sign-up.jpg' 
-                alt='E-mail Sign Up Page' 
+                src='images/e-mail-sign-up.jpg'
+                alt='E-mail Sign Up Page'
               />
               </a>
             </div>
@@ -109,13 +111,13 @@ class Home extends React.Component {
                     A science exhibit where visitors can turn a hand crank to watch ferrofluid rise up different sculptures.
                   </p>
                 </div>
-                <a 
-                  className='home-project-link' 
+                <a
+                  className='home-project-link'
                   href='#ferrofluid-pool'
                 >
-                <img 
+                <img
                   className='home-project-image'
-                  src='images/ferrofluid-pool.jpg' 
+                  src='images/ferrofluid-pool.jpg'
                   alt='Ferrofluid Pool science exhibit' />
                 </a>
               </div>
@@ -128,14 +130,14 @@ class Home extends React.Component {
                    An ergonomic chair, inspired by M.C. Escher, made of arc-welded steel and lycra.
                   </p>
                 </div>
-                <a 
-                  className='home-project-link' 
+                <a
+                  className='home-project-link'
                   href='#twist'
                 >
-                  <img 
+                  <img
                     className='home-project-image'
-                    src='images/twist.jpg' 
-                    alt='Base of Twist chair' 
+                    src='images/twist.jpg'
+                    alt='Base of Twist chair'
                   />
                 </a>
               </div>
@@ -146,3 +148,5 @@ class Home extends React.Component {
     )
   }
 }
+
+export default Home;

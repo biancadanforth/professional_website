@@ -1,5 +1,7 @@
 // Twist.jsx
 
+import React from 'react';
+
 class Twist extends React.Component {
   render() {
     return(
@@ -9,9 +11,9 @@ class Twist extends React.Component {
             <h1 className='project-header'>Twist</h1>
             <h3 className='project-subsubheader'>Visual Design | Engineering Design | Production </h3>
             <div className='project-hero-wrapper'>
-              <img 
-                className='portrait no-button' 
-                src='../../images/twist-glamour.jpg' 
+              <img
+                className='portrait no-button'
+                src='../../images/twist-glamour.jpg'
                 alt='Final product'
               />
               <div className='project-overview-wrapper'>
@@ -41,15 +43,15 @@ class Twist extends React.Component {
               <h2 className='project-subheader'>Gather Information</h2>
               <div className='project'>
               <figure>
-                <img  
-                  src='../../images/twist-gather-information.jpg' 
+                <img
+                  src='../../images/twist-gather-information.jpg'
                   alt='Drawing with anthropometry for the average American male, year 2000'
                 />
                 <figcaption>Source: NASA</figcaption>
                 </figure>
                 <div className='process-description'>
                   <p className='project-description'>
-                    Since we only had two months to design and build the chair, I knew I needed to hone in on a design very quickly. 
+                    Since we only had two months to design and build the chair, I knew I needed to hone in on a design very quickly.
                   </p>
                   <p className='project-description'>
                     After talking with alumni of the course, I decided I would choose one component of my process that I already had experience with and one component that was totally new.
@@ -63,10 +65,10 @@ class Twist extends React.Component {
             <div className='project-wrapper'>
               <h2 className='project-subheader'>Ideation</h2>
               <div className='project'>
-                <img 
-                  className='project-thumbnail' 
-                  src='../../images/twist-ideation.jpg' 
-                  alt='Brainstorming sketches'  
+                <img
+                  className='project-thumbnail'
+                  src='../../images/twist-ideation.jpg'
+                  alt='Brainstorming sketches'
                 />
                 <div className='process-description'>
                   <p className='project-description'>
@@ -84,10 +86,10 @@ class Twist extends React.Component {
             <div className='project-wrapper'>
               <h2 className='project-subheader'>Prototype</h2>
               <div className='project'>
-                <img 
-                  className='project-thumbnail' 
-                  src='../../images/twist-prototype.jpg' 
-                  alt='Practice welds' 
+                <img
+                  className='project-thumbnail'
+                  src='../../images/twist-prototype.jpg'
+                  alt='Practice welds'
                 />
                 <div className='process-description'>
                   <p className='project-description'>
@@ -102,10 +104,10 @@ class Twist extends React.Component {
             <div className='project-wrapper'>
               <h2 className='project-subheader'>Development</h2>
               <div className='project'>
-                <img 
-                  className='project-thumbnail' 
-                  src='../../images/twist-development.jpg' 
-                  alt='Welding the base'  
+                <img
+                  className='project-thumbnail'
+                  src='../../images/twist-development.jpg'
+                  alt='Welding the base'
                 />
                 <div className='process-description'>
                   <p className='project-description'>
@@ -123,10 +125,10 @@ class Twist extends React.Component {
             <div className='project-wrapper'>
               <h2 className='project-subheader'>Final Product</h2>
               <div className='project'>
-                <img 
-                  className='project-thumbnail' 
-                  src='../../images/twist-glamour.jpg' 
-                  alt='Final product' 
+                <img
+                  className='project-thumbnail'
+                  src='../../images/twist-glamour.jpg'
+                  alt='Final product'
                 />
                 <div className='process-description'>
                   <p className='project-description'>
@@ -147,3 +149,5 @@ class Twist extends React.Component {
     )
   }
 }
+
+export default Twist;
