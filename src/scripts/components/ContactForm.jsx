@@ -90,7 +90,7 @@ class ContactForm extends React.Component {
                 onKeyUp={ () => this.setState({messageIsValid: this.refs.message.checkValidity()}) }>
               </textarea>
             </label>
-            <div ref="recaptchaTarget" />
+            <div className="grecaptcha" ref="recaptchaTarget" />
             <input
               className="contact-form-input"
               type="submit"

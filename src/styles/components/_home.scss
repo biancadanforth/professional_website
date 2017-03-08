@@ -96,6 +96,11 @@
 		color: $grey;
 		opacity: 1;
 	}
+
+	@media (max-width: 400px) {
+		padding-left: $padding-small;
+		padding-right: $padding-small;
+	}
 }
 
 .welcome-message-subheader {
@@ -156,6 +161,10 @@
 
 	@media(max-width: 900px) {
 		color: $blue;
+
+		&:visited {
+			color: $blue;
+		}
 	}
 }
 
@@ -238,15 +247,15 @@
 		padding-right: 0;
 
 		h1 {
-				margin: $margin-default auto 0;
+				margin: $margin-small auto 0;
 		}
 
 		h2,
 		h3,
 		h4,
 		.home-project-description {
-			margin-left: $margin-default;
-			margin-right: $margin-default;
+			margin-left: $margin-small;
+			margin-right: $margin-small;
 		}
 
 		.home-project-image {

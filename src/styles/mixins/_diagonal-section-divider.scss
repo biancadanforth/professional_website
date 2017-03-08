@@ -16,7 +16,7 @@
     padding-bottom: $v-pad;
     // have to add a margin to the last child in <section> (of any type), because it's an absolute value in px versus a % like v-pad, so it cannot be directly added to the <section>'s padding-bottom as "padding-bottom: $v-pad + $padding-default" are different units! One is relative, %, and the other is absolute (px).
     & > :last-child {
-    	padding-bottom: (2 * $padding-default);
+    	padding-bottom: (2 * $padding-small);
 
       @media(max-width: 900px) {
         padding-bottom: $padding-default;
@@ -58,7 +58,11 @@
 	padding-top: $v-pad;
     // have to add a margin to the last child in <section> (of any type), because it's an absolute value in px versus a % like v-pad, so it cannot be directly added to the <section>'s padding-bottom as "padding-bottom: $v-pad + $padding-default"
     & > :first-child {
-    	padding-top: $padding-default;
+    	padding-top: (2 * $padding-small);
+
+      @media (max-width: 1250px) {
+        padding-top: 50px;
+      }
     }
     &::before {
     	position: absolute;

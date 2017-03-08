@@ -35,14 +35,13 @@ class Footer extends React.Component {
             title='LinkedIn'>
             <div dangerouslySetInnerHTML={{__html: linkedInSVG}} />
           </a>
-          <a
+          <Link
+            to='more-info'
             className='footer-link'
-            href='/#/more-info'
             aria-label='E-mail'
-            title='E-mail'
-            onClick={() => this.props.onPageChange('more-info-page')}>
+            title='E-mail'>
             <div dangerouslySetInnerHTML={{__html: emailSVG}} />
-          </a>
+          </Link>
           <a
             className='footer-link'
             href='https://twitter.com/biancadanforth' 

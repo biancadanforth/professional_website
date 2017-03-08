@@ -49,9 +49,6 @@ class FerrofluidPool extends React.Component {
                 <p className='project-overview-description'>
                   While most parts were produced by outside vendors, I made and modified some parts myself using a number of traditional and CNC (computer numerical control) manufacturing processes.
                 </p>
-                <p className='project-overview-description'>
-                  At the time of this project, my name was Bianca Morales.
-                </p>
               </div>
             </div>
           </div>
