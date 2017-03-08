@@ -13,7 +13,7 @@ footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: $margin-default 0;
+	margin-bottom: $margin-default;
 }
 
 .footer-link {
@@ -59,9 +59,9 @@ footer.twist-page {
 }
 
 
-// These pages do NOT have a .secondary <section>
+// These pages do NOT have or are not directly next to a .secondary <section>
 footer.thank-you-page,
-footer.more-info-page {
+footer.more-info-page, footer.home-page {
 	margin-top: (2 * $margin-default);
 	text-align: center;
 }

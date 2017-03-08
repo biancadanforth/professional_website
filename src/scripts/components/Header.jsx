@@ -14,6 +14,7 @@ class Header extends React.Component {
     this.state = {
       dropdownOpen: false,
       minimize: false,
+      isMobile: false,
     };
   }
 
@@ -65,6 +66,14 @@ class Header extends React.Component {
     this.setState({dropdownOpen: !(this.state.dropdownOpen)});
   }
 
+  handleMouseOver() {
+    this.state.isMobile ? null : this.setState({dropdownOpen: true});
+  }
+
+  handleMouseOut() {
+    this.state.isMobile ? null : this.setState({dropdownOpen: false});
+  }
+
   render() {
     return (
     	<header
@@ -94,12 +103,13 @@ class Header extends React.Component {
               <li
                 className="menu-item"
                 ref= "workListItem"
-                onMouseOver={() => this.setState({dropdownOpen: true})}
-                onMouseOut={() => this.setState({dropdownOpen: false})}>
+                onMouseOver={this.handleMouseOver.bind(this)}
+                onMouseOut={this.handleMouseOut.bind(this)}>
                 <a
                   className="menu-link"
                   href="javascript:void(0)"
                   onClick={this.handleClick.bind(this)}
+                  onTouchStart={() => this.setState({isMobile: true})}
                   aria-label='Work'>
                   Work
                 </a>
