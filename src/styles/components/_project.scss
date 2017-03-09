@@ -117,7 +117,7 @@
 	.project-overview-header {
 		margin: 0 0 $margin-small;
 		padding-bottom: 5px;
-		text-align: start;
+		text-align: left;
 		border-bottom: 1px solid $grey;
 	}
 
@@ -160,7 +160,7 @@
 		display: flex;
 		align-items: flex-start;
 		margin-top: $margin-default;
-		text-align: start;
+		text-align: left;
 
 		@media (max-width: 1260px) {
 			flex-direction: column;
@@ -264,5 +264,5 @@
 		font-family: 'Merriweather';
 		font-size: .75em;
 		font-weight: 300;
-		text-align: start;
+		text-align: left;
 	}

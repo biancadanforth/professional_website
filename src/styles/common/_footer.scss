@@ -16,6 +16,7 @@ footer {
 	margin-bottom: $margin-default;
 	@media (max-width: 400px) {
 		justify-content: space-between;
+		ms-justify-content: space-between;
 	}
 }
 

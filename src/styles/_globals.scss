@@ -37,7 +37,8 @@ html { box-sizing: border-box; }
 
 *, *:before, *:after { box-sizing: inherit; }
 
-*:-moz-focusring {
+// Gets rid of undesirable dotted line around clicked elements
+*:-moz-focusring , a:focus {
 	outline: none;
 }
 
@@ -94,10 +95,10 @@ main {
 	}
 }
 
-@media (max-width: 620px) {
+@media (max-width: 560px) {
+	$content-height: 75px;
 	$header-padding-top: $padding-small;
 	$header-padding-bottom: $padding-small;
-	$content-height: 76px;
 	$header-height: $header-padding-top + $header-padding-bottom + $content-height;
 
 	header {
@@ -111,16 +112,10 @@ main {
 }
 
 @media (max-width: 400px) {
-	$content-height: 70px;
-	$header-padding-top: $padding-small;
-	$header-padding-bottom: $padding-small;
-	$header-height: $header-padding-top + $header-padding-bottom + $content-height;
-	header {
-		padding: 20px;
-	}
 
-	main {
-		padding-top: $header-height;
+	header {
+		padding-left: $padding-small;
+		padding-right: $padding-small;
 	}
 }
 

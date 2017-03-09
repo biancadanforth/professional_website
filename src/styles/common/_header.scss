@@ -35,15 +35,15 @@ header {
 		.header-brand-wrapper {
 			justify-content: center;
 			align-items: flex-end;
-			
-			.header-logo {
-				margin-bottom: 20px;
-				width: 40px;
-			}
+		}
 
-			.header-name {
-				line-height: 1em;
-			}
+		.header-logo {
+			margin-bottom: 20px;
+			width: 40px;
+		}
+
+		.header-name {
+			line-height: 1em;
 		}
 	}
 }
@@ -108,6 +108,7 @@ nav {
 		transform: uppercase;
 	}
 	color: $grey;
+	transition: font-size .25s linear;
 
 	@media (max-width: 400px) {
 		justify-content: space-between;
@@ -229,7 +230,7 @@ header.minimize {
 
 	.header-name {
 		font-size: 1.25em;
-		transition: font-size .25s linear;
+		transition: width .25s linear, margin-bottom .25s linear;
 	}
 
 	.header-logo {
@@ -239,5 +240,16 @@ header.minimize {
 
 	@media (max-width: 560px) {
 		padding-bottom: 10px;
+
+		.header-logo {
+			width: 35px;
+			margin-bottom: 15px;
+			transition: width .25s linear, margin-bottom .25s linear;
+		}
+
+		.menu {
+			font-size: .9em;
+			transition: font-size .25s linear;
+		}
 	}
 }

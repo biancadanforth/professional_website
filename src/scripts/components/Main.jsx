@@ -9,7 +9,7 @@ class Main extends React.Component {
       <main 
         className={this.props.currentPage} 
         role='main'>
-        {this.props.children}
+        {React.cloneElement(this.props.children, { currentPage: this.props.currentPage })}
       </main>
     );
   }
