@@ -37,6 +37,10 @@ html { box-sizing: border-box; }
 
 *, *:before, *:after { box-sizing: inherit; }
 
+*:-moz-focusring {
+	outline: none;
+}
+
 body {
 	margin: 0;
 	color: $dark-grey;
