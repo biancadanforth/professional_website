@@ -11,7 +11,7 @@
     // so we give the element a padding-top instead, since padding with % units bases it off of the width of the element itself.
     // Note: to add/remove units to a calculated result, you have to multiply or divide.
     // to work out the height as a percentage of the width, simply solve for x in (H/W) = (x/100), a basic proportion equivalence:
-    $v-pad: (($height / $width) * 100) * 1%;
+    $v-pad: ((($height / $width) * 100) * 1%) + .5%;
     // add height of diagonal divider section as padding-bottom to <section>
     padding-bottom: $v-pad;
     // have to add a margin to the last child in <section> (of any type), because it's an absolute value in px versus a % like v-pad, so it cannot be directly added to the <section>'s padding-bottom as "padding-bottom: $v-pad + $padding-default" are different units! One is relative, %, and the other is absolute (px).
@@ -54,7 +54,7 @@
 // better to specify a fixed $height than an angle so top/bottom whitespace (margin/padding) doesn't change with viewport width
 @mixin diagonal-background-bottom($width: 1000px, $height: 60px, $color: $blue) {
 	position: relative;
-	$v-pad: (($height / $width) * 100) * 1%;
+	$v-pad: ((($height / $width) * 100) * 1%) + .5%;
 	padding-top: $v-pad;
     // have to add a margin to the last child in <section> (of any type), because it's an absolute value in px versus a % like v-pad, so it cannot be directly added to the <section>'s padding-bottom as "padding-bottom: $v-pad + $padding-default"
     & > :first-child {

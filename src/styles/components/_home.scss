@@ -182,13 +182,11 @@
 
 .home-work-wrapper {
 	display: flex;
-	flex-direction: column;
 	max-width: $layout-width;
 	margin: 0 auto;
 
-	@media (min-width: 1000px) {
-		flex-flow: row wrap;
-		justify-content: flex-start;
+	@media (max-width: 1000px) {
+		display: block;
 	}
 }
 

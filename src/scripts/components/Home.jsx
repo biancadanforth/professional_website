@@ -100,8 +100,8 @@ class Home extends React.Component {
           </div>
         </section>
         <section className='tertiary'>
-          <div className='home-work-wrapper'>
-            <h1>Past Projects</h1>
+          <h1>Past Projects</h1>
+          <div className='home-work-wrapper'>            
             <div className='home-work-wrapper'>
               <div className='home-project'>
                 <div className='home-project-details'>
