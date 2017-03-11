@@ -17,14 +17,16 @@ class ContactForm extends React.Component {
   }
 
   componentDidMount() {
-    grecaptcha.render(ReactDOM
-      .findDOMNode(this.refs.recaptchaTarget),
-      {sitekey: '6LeAxRUUAAAAANzTjjVyoz8ZMVQHhX20-PwIwLl5',
-      callback: 'handleReCaptcha'});
-
     // Map global function pointed to by grecaptcha data-callback
     // attribute to the handleReCaptcha method in this React component
     window.handleReCaptcha = this.handleReCaptcha.bind(this);
+  }
+
+  componentWillReceiveProps() {
+    grecaptcha.render(ReactDOM
+    .findDOMNode(this.refs.recaptchaTarget),
+    {sitekey: '6LeAxRUUAAAAANzTjjVyoz8ZMVQHhX20-PwIwLl5',
+    callback: 'handleReCaptcha'});
   }
 
   handleReCaptcha() {
