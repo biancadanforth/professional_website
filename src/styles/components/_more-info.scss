@@ -76,7 +76,10 @@
 }
 
 .contact-form-wrapper {
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  flex-grow: 1;
   padding: $padding-default;
   text-align: left;
 	font-family: 'Montserrat';
@@ -98,7 +101,8 @@
 .contact-form {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  align-self: stretch;
+  flex-grow: 1;
 }
 
 .contact-form-input {
@@ -158,11 +162,12 @@
 
 .contact-form-textarea {
 	display: block;
+	align-self: stretch;
+	flex-grow: 1;
 	margin-top: (.33 * $margin-default);
   width: 100%;
   resize: none;
-	height: 100%;
-	min-height: 150px;
+	min-height: 300px;
 	margin-bottom: $margin-small;
   font-size: 1em;
   line-height: 1.5em;
@@ -203,7 +208,8 @@
   &.textarea-label {
 		display: flex;
 		flex-direction: column;
-		height: 100%;
+		align-self: stretch;
+		flex-grow: 1;
 	}
 }
 
