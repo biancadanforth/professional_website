@@ -40,7 +40,7 @@
       // if the pseudo-element has no content, it won't display at all
       content: '';
       // draw the <svg> based on coordinates and interpolation set by triangle $width and $height. The enclosed area becomes a polygon (our triangle in this case)
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='#{$w-int}' height='#{$h-int}'%3E%3Cpolygon points='0,#{$h-int} #{$w-int},0 #{$w-int},#{$h-int}' style='fill:rgb(41,128,185);stroke:rgb(41,128,185);stroke-width:0'%3E%3C/polygon%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='#{$w-int}' height='#{$h-int}'%3E%3Cpolygon points='0,#{$h-int} #{$w-int},0 #{$w-int},#{$h-int}' style='fill:%232980b9;stroke:%232980b9;stroke-width:0'%3E%3C/polygon%3E%3C/svg%3E");
       background-repeat: no-repeat;
       // Scales the image as large as possible and maintains image aspect ratio
       // (image doesn't get squished). The image "covers" the entire width or height of the container.
@@ -75,7 +75,7 @@
     	padding-top: $v-pad;
       width: 100%;
       content: '';
-    	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='#{$w-int}' height='#{$h-int}'%3E%3Cpolygon points='0,#{$h-int} #{$w-int},0 0,0' fill='rgb(41,128,185)' stroke = 'rgb(41,128,185)'%3E%3C/polygon%3E%3C/svg%3E");
+    	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='#{$w-int}' height='#{$h-int}'%3E%3Cpolygon points='0,#{$h-int} #{$w-int},0 0,0' fill='%232980b9' stroke = '%232980B9'%3E%3C/polygon%3E%3C/svg%3E");
     	background-repeat: no-repeat;
     	background-size: cover;
     	background-position: center;	

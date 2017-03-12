@@ -61,7 +61,7 @@ class Home extends React.Component {
               <div className='home-project-details'>
                 <h4>2016 | Self-Initiated</h4>
                 <h2>To Do List</h2>
-                <h3>Tools: pure JavaScript, HTML5, CSS5, Photoshop</h3>
+                <h3>Tools: vanilla JavaScript, HTML5, CSS5, Photoshop</h3>
                 <p className='home-project-description'>
                   A single page application where users can add, edit, delete, complete, undo and filter tasks.
                 </p>

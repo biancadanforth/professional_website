@@ -29,7 +29,7 @@ class Footer extends React.Component {
           </a>
           <a
             className='footer-link'
-            href='https://www.linkedin.com/in/bianca-danforth-62b18439' 
+            href='http://www.linkedin.com/in/biancadanforth' 
             target='_blank' 
             aria-label='LinkedIn' 
             title='LinkedIn'>

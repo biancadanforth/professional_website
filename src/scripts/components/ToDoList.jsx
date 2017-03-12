@@ -42,7 +42,7 @@ class ToDoList extends React.Component {
                 </p>
                 <h4 className='project-overview-subheader'>Tools and Methods</h4>
                  <p className='project-overview-description'>
-                  I used Photoshop, UXPin and InVision for the design. I used pure JavaScript ES5, HTML5 and CSS3 for the development.
+                  I used Photoshop, UXPin and InVision for the design. I used vanilla JavaScript ES5, HTML5 and CSS3 for the development.
                 </p>
                 <p className='project-overview-description'>
                   I had never used any of these tools extensively before (HTML and CSS excepted), so I was learning them as I went.
