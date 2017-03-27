@@ -11,7 +11,7 @@
     // so we give the element a padding-top instead, since padding with % units bases it off of the width of the element itself.
     // Note: to add/remove units to a calculated result, you have to multiply or divide.
     // to work out the height as a percentage of the width, simply solve for x in (H/W) = (x/100), a basic proportion equivalence:
-    $v-pad: (($height / $width) * 100) * 1%;
+    $v-pad: ((($height / $width) * 100) * 1%) + .5%;
     // add height of diagonal divider section as padding-bottom to <section>
     padding-bottom: $v-pad;
     // have to add a margin to the last child in <section> (of any type), because it's an absolute value in px versus a % like v-pad, so it cannot be directly added to the <section>'s padding-bottom as "padding-bottom: $v-pad + $padding-default" are different units! One is relative, %, and the other is absolute (px).
@@ -40,7 +40,7 @@
       // if the pseudo-element has no content, it won't display at all
       content: '';
       // draw the <svg> based on coordinates and interpolation set by triangle $width and $height. The enclosed area becomes a polygon (our triangle in this case)
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='#{$w-int}' height='#{$h-int}'%3E%3Cpolygon points='0,#{$h-int} #{$w-int},0 #{$w-int},#{$h-int}' style='fill:rgb(41,128,185);stroke:rgb(41,128,185);stroke-width:0'%3E%3C/polygon%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='#{$w-int}' height='#{$h-int}'%3E%3Cpolygon points='0,#{$h-int} #{$w-int},0 #{$w-int},#{$h-int}' style='fill:%232980b9;stroke:%232980b9;stroke-width:0'%3E%3C/polygon%3E%3C/svg%3E");
       background-repeat: no-repeat;
       // Scales the image as large as possible and maintains image aspect ratio
       // (image doesn't get squished). The image "covers" the entire width or height of the container.
@@ -54,11 +54,15 @@
 // better to specify a fixed $height than an angle so top/bottom whitespace (margin/padding) doesn't change with viewport width
 @mixin diagonal-background-bottom($width: 1000px, $height: 60px, $color: $blue) {
 	position: relative;
-	$v-pad: (($height / $width) * 100) * 1%;
+	$v-pad: ((($height / $width) * 100) * 1%) + .5%;
 	padding-top: $v-pad;
     // have to add a margin to the last child in <section> (of any type), because it's an absolute value in px versus a % like v-pad, so it cannot be directly added to the <section>'s padding-bottom as "padding-bottom: $v-pad + $padding-default"
     & > :first-child {
-    	padding-top: $padding-default;
+    	padding-top: (2 * $padding-small);
+
+      @media (max-width: 1250px) {
+        padding-top: 50px;
+      }
     }
     &::before {
     	position: absolute;
@@ -71,7 +75,7 @@
     	padding-top: $v-pad;
       width: 100%;
       content: '';
-    	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='#{$w-int}' height='#{$h-int}'%3E%3Cpolygon points='0,#{$h-int} #{$w-int},0 0,0' fill='rgb(41,128,185)' stroke = 'rgb(41,128,185)'%3E%3C/polygon%3E%3C/svg%3E");
+    	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='#{$w-int}' height='#{$h-int}'%3E%3Cpolygon points='0,#{$h-int} #{$w-int},0 0,0' fill='%232980b9' stroke = '%232980B9'%3E%3C/polygon%3E%3C/svg%3E");
     	background-repeat: no-repeat;
     	background-size: cover;
     	background-position: center;	

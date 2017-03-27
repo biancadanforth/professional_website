@@ -24,6 +24,25 @@ const render = ReactDOM.render;
 
 class App extends React.Component {
 
+  constructor() {
+    super();
+    this.state = {
+      isRecaptchaScriptLoaded: false,
+    }
+  }
+
+  componentDidMount() {
+    window.recaptchaCallback = this.recaptchaCallback.bind(this);
+  }
+
+  componentWillUnmount() {
+    window.recaptchaCallback = null;
+  }
+
+  recaptchaCallback() {
+    this.setState({isRecaptchaScriptLoaded: true});
+  }
+
   render() {
     const currentPath = this.props.router.location.pathname;
     let pageName = currentPath.replace('\/', '');
@@ -31,7 +50,9 @@ class App extends React.Component {
     return (
     	<div ref='page'>
 	    	<Header currentPage={currentPath === '/' ? 'home-page' : pageName} />
-	    	<Main currentPage={currentPath === '/' ? 'home-page' : pageName} >
+	    	<Main 
+          currentPage={currentPath === '/' ? 'home-page' : pageName}
+          isRecaptchaScriptLoaded={this.state.isRecaptchaScriptLoaded}>
           {currentPath === '/' ? <Home /> : this.props.children}
         </Main>
 	      <Footer currentPage={currentPath === '/' ? 'home-page' : pageName} />

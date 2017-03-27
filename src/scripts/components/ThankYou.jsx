@@ -1,6 +1,8 @@
 // ThankYou.jsx
 
 import React from 'react';
+let timer;
+let interval;
 
 class ThankYou extends React.Component {
 
@@ -13,14 +15,19 @@ class ThankYou extends React.Component {
 
   componentDidMount() {
 
-    let interval = setInterval(() => {
+    interval = setInterval(() => {
       this.setState({countDown: (this.state.countDown-1)})
       if (this.state.countDown <= 1) {
         clearInterval(interval);
       }
     }, 1000);
 
-    setTimeout(() => window.location = '/#/more-info', 5000);
+    timer = setTimeout(() => window.location = '/#/more-info', 5000);
+  }
+
+  componentWillUnmount() {
+    window.clearTimeout(timer);
+    window.clearInterval(interval);
   }
 
   render() {

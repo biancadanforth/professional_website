@@ -133,7 +133,7 @@ class EmailSignUp extends React.Component {
                 <div className='project-glamour-shot-wrapper'>
                   <a
                     href='/work/e-mail-sign-up/live'
-                    title='Go to live site'
+                    title='See it live'
                     target='_blank' 
                     aria-label='Go to live site'>
                     <img 

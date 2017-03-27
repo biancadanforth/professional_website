@@ -37,6 +37,11 @@ html { box-sizing: border-box; }
 
 *, *:before, *:after { box-sizing: inherit; }
 
+// Gets rid of undesirable dotted line around clicked elements
+*:-moz-focusring , a:focus {
+	outline: none;
+}
+
 body {
 	margin: 0;
 	color: $dark-grey;
@@ -90,10 +95,10 @@ main {
 	}
 }
 
-@media (max-width: 620px) {
+@media (max-width: 560px) {
+	$content-height: 75px;
 	$header-padding-top: $padding-small;
 	$header-padding-bottom: $padding-small;
-	$content-height: 76px;
 	$header-height: $header-padding-top + $header-padding-bottom + $content-height;
 
 	header {
@@ -107,16 +112,10 @@ main {
 }
 
 @media (max-width: 400px) {
-	$content-height: 70px;
-	$header-padding-top: $padding-small;
-	$header-padding-bottom: $padding-small;
-	$header-height: $header-padding-top + $header-padding-bottom + $content-height;
-	header {
-		padding: 20px;
-	}
 
-	main {
-		padding-top: $header-height;
+	header {
+		padding-left: $padding-small;
+		padding-right: $padding-small;
 	}
 }
 
@@ -133,8 +132,12 @@ a {
 	}
 
 	&:visited {
-		color: darken($blue, 10%);
+		color: $blue;
 	}
+}
+
+img {
+	display: block;
 }
 
 // ------------ TYPOGRAPHY -------------
@@ -159,7 +162,7 @@ h2 {
 			weight: 400;
 		}
 		letter-spacing: $letter-spacing;
-		margin-bottom: 0;
+		margin-bottom: 10px;
 		line-height: 1.25;
 	}
 
@@ -178,7 +181,7 @@ h3 {
 h4 {
 	font: {
 		size: .875em;
-		weight: 400;
+		weight: 600;
 		family: 'Montserrat', sans-serif;
 	}
 	letter-spacing: (1.5 * $letter-spacing);

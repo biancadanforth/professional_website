@@ -28,6 +28,10 @@
 			padding-left: $padding-small;
 			padding-right: $padding-small;
 		}
+
+		.glamour-shot-wrapper {
+			margin-bottom: (2 * $margin-small);
+		}
 	}
 
 	.button-wrapper {
@@ -79,7 +83,7 @@
 			}
 
 			& > div:last-child {
-				max-width: 600px;
+				max-width: 700px;
 			}
 
 			.project-overview-description,
@@ -113,7 +117,7 @@
 	.project-overview-header {
 		margin: 0 0 $margin-small;
 		padding-bottom: 5px;
-		text-align: start;
+		text-align: left;
 		border-bottom: 1px solid $grey;
 	}
 
@@ -141,6 +145,10 @@
 		max-width: $layout-width;
 		margin: 0 auto;
 		padding-bottom: (2 * $padding-default);
+
+		&:last-child {
+			padding-bottom: 0;
+		}
 	}
 
 	.project-subheader {
@@ -152,7 +160,7 @@
 		display: flex;
 		align-items: flex-start;
 		margin-top: $margin-default;
-		text-align: start;
+		text-align: left;
 
 		@media (max-width: 1260px) {
 			flex-direction: column;
@@ -239,6 +247,7 @@
 
 	.project-description {
 		margin: 0 auto (.75 *$margin-small);
+		max-width: 700px;
 
 		&:last-child {
 			margin-bottom: 0;
@@ -255,5 +264,5 @@
 		font-family: 'Merriweather';
 		font-size: .75em;
 		font-weight: 300;
-		text-align: start;
+		text-align: left;
 	}

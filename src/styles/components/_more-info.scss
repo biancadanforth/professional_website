@@ -10,17 +10,18 @@
 		margin-right: $margin-default;
 	}
 
-	@media (max-width: 900px) {
-		flex-direction: column;
+	@media (max-width: 1000px) {
+		text-align: center;
+		display: block;
 		margin: 0 auto;
 
 		.contact-body,
 		.about-body {
-			flex-basis: 100%;
+			width: 100%;
+			text-align: center;
 		}
 
 		.about-body {
-			order: -1;
 			margin-bottom: $margin-default;
 			align-items: center;
 			padding: 0 $padding-default $padding-default;
@@ -33,8 +34,16 @@
 
 	@media (max-width: 600px) {
 		.contact-body {
-			padding: 0;
 			border: 0;
+		}
+	}
+
+	@media (max-width: 400px) {
+		
+		.about-body, .contact-body {
+			padding-left: $padding-small;
+			padding-right: $padding-small;
+			padding-bottom: 0;
 		}
 	}
 }
@@ -46,11 +55,12 @@
   flex: 0 1 50%;
   align-self: stretch;
  	flex-direction: column;
-	margin-right: $margin-default;
 
-	@media(max-width: 900px) {
-		margin-right: 0;
-	}
+	// @media (max-width: 400px) {
+	// 	padding-left: $padding-small;
+	// 	padding-right: $padding-small;
+	// 	padding-bottom: 0;
+	// }
 }
 
 .contact-header {
@@ -62,25 +72,33 @@
 }
 
 .contact-form-wrapper {
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  flex-grow: 1;
   padding: $padding-default;
-  text-align: start;
+  text-align: left;
 	font-family: 'Montserrat';
 	border: 1px solid lighten($grey, 40%);
   border-radius: 2px;
 
-	@media (max-width: 900px) {
+	@media (max-width: 1000px) {
 		max-width: 600px;
 		margin: 0 auto;
 		width: 100%;
 		border: none;
+	}
+
+	@media (max-width: 400px) {
+		padding: 0;
 	}
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  align-self: stretch;
+  flex-grow: 1;
 }
 
 .contact-form-input {
@@ -119,7 +137,7 @@
 	  @include buttoned;
 
 	  &:disabled {
-	  	color: darken($light-grey, 15%);
+	  	color: $grey;
 	  	background-color: $light-grey;
 	  	box-shadow: none;
 	  	border-color: darken($light-grey, 15%);
@@ -130,19 +148,22 @@
 	  	}
 	  }
 
-	  @media (max-width: 500px) {
+	  @media (max-width: 400px) {
 	  	width: 100%;
+	  	// .435 is half of recaptcha transform scale for mobile (.87)
+	  	margin-top: (.435 * $margin-small);
 	  }
   }
 }
 
 .contact-form-textarea {
 	display: block;
+	align-self: stretch;
+	flex-grow: 1;
 	margin-top: (.33 * $margin-default);
   width: 100%;
   resize: none;
-	height: 100%;
-	min-height: 150px;
+	min-height: 300px;
 	margin-bottom: $margin-small;
   font-size: 1em;
   line-height: 1.5em;
@@ -183,7 +204,20 @@
   &.textarea-label {
 		display: flex;
 		flex-direction: column;
-		height: 100%;
+		align-self: stretch;
+		flex-grow: 1;
+	}
+}
+
+.grecaptcha {
+
+	display: block;
+
+	@media (max-width: 400px) {
+		               transform:scale(0.87);
+		       -webkit-transform:scale(0.87);
+		        transform-origin:0 0;
+		-webkit-transform-origin:0 0;
 	}
 }
 
@@ -196,6 +230,11 @@
 	align-items: flex-start;
 	max-width: $layout-width;
 	flex: 0 1 50%;
+	margin-right: $margin-default;
+
+	@media(max-width: 1000px) {
+		margin-right: 0;
+	}
 }
 
 .about-header-wrapper {
@@ -211,6 +250,7 @@
 .about-hero {
 	width: 100%;
 	max-width: 300px;
+	margin: 0 auto;
 	@include rounded(50%);
 	@include shadowed;
 }
@@ -233,7 +273,7 @@
 .about-project-description {
 	max-width: 600px;
 	margin: 0 auto (.75 * $margin-small);
-	text-align: start;
+	text-align: left;
 
 	&:last-child {
 		margin-bottom: 0;
@@ -264,7 +304,7 @@ blockquote {
 	padding: 5px (2 * $padding-small);
 	color: $dark-grey;
 	font-size: 1.25em;
-	text-align: start;
+	text-align: left;
 	border-top: 2px solid lighten($grey, 40%);
 	border-bottom: 2px solid lighten($grey, 40%);
 	

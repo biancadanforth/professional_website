@@ -6,7 +6,7 @@ header {
 	left: 50%;
 	transform: translateX(-50%);
 	z-index: 2;
-	width: 100vw;
+	width: 100%;
 	background:
 	/* top, transparent $off-white, faked with gradient */ 
 	linear-gradient(
@@ -27,7 +27,7 @@ header {
 	max-width: $layout-width;
 	width: 100%;
 
-	@media (max-width: 620px) {
+	@media (max-width: 560px) {
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
@@ -35,15 +35,15 @@ header {
 		.header-brand-wrapper {
 			justify-content: center;
 			align-items: flex-end;
-			
-			.header-logo {
-				margin-bottom: 20px;
-				width: 40px;
-			}
+		}
 
-			.header-name {
-				line-height: 1em;
-			}
+		.header-logo {
+			margin-bottom: 20px;
+			width: 40px;
+		}
+
+		.header-name {
+			line-height: 1em;
 		}
 	}
 }
@@ -52,6 +52,13 @@ header {
 	display: flex;
 	align-items: baseline;
 	justify-content: flex-start;
+}
+
+nav {
+	max-width: 400px;
+	width: 100%;
+	display: inline-flex;
+	justify-content: space-between;
 }
 
 
@@ -86,8 +93,9 @@ header {
 }
 
 .menu {
-	display: flex;
+	display: inline-flex;
 	justify-content: space-between;
+	width: 100%;
 	list-style: none;
 	padding-left: 0;
 	margin: 0;
@@ -100,15 +108,15 @@ header {
 		transform: uppercase;
 	}
 	color: $grey;
+	transition: font-size .25s linear;
 
 	@media (max-width: 400px) {
-		font-size: .875em;
+		justify-content: space-between;
 	}
 }
 
 .menu-item {
 	padding-bottom: 5px;
-	margin: 0 1em;
 	border-bottom: 3px transparent solid;
 	
 	&:first-child {	
@@ -118,6 +126,11 @@ header {
 
 	&:last-child {
 		margin-right: 0;
+	}
+
+	@media (max-width: 400px) {
+		margin: 0;
+		font-size: .875em;
 	}
 }
 
@@ -135,7 +148,7 @@ header {
 		letter-spacing: 5px;
 		transition: letter-spacing .5s;
 
-		@media (max-width: 500px) {
+		@media (max-width: 560px) {
 			letter-spacing: $letter-spacing;
 			transition: none;
 		}
@@ -156,7 +169,7 @@ header {
 		overflow: hidden;
 		visibility: hidden;
 
-		@media(max-width: 500px) {
+		@media(max-width: 560px) {
 			display: none;
 		}
 	}
@@ -217,15 +230,26 @@ header.minimize {
 
 	.header-name {
 		font-size: 1.25em;
-		transition: font-size .25s linear;
+		transition: width .25s linear, margin-bottom .25s linear;
 	}
 
 	.header-logo {
-		width: 30px;
+		width: 40px;
 		transition: width .25s linear;
 	}
 
-	@media (max-width: 500px) {
+	@media (max-width: 560px) {
 		padding-bottom: 10px;
+
+		.header-logo {
+			width: 35px;
+			margin-bottom: 15px;
+			transition: width .25s linear, margin-bottom .25s linear;
+		}
+
+		.menu {
+			font-size: .9em;
+			transition: font-size .25s linear;
+		}
 	}
 }

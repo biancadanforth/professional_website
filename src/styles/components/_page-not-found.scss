@@ -18,7 +18,7 @@ header.page-not-found-page {
 .page-not-found-img {
 	max-width: 600px;
 	width: 100%;
-	margin-bottom: $margin-default;
+	margin: 0 auto $margin-default;
 	@include rounded(2px);
 	@include shadowed;
 }

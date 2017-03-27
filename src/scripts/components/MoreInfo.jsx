@@ -11,7 +11,6 @@ class MoreInfo extends React.Component {
     return(
       <div>
         <section className='primary'>
-          <ContactForm />
           <div className='about-body'>
             <div className='about-header-wrapper'>
               <h2 className='about-header'>Say What?</h2>
@@ -44,6 +43,7 @@ class MoreInfo extends React.Component {
               </p>
             </div>
           </div>
+          <ContactForm isRecaptchaScriptLoaded={ this.props.isRecaptchaScriptLoaded } />
         </section>
       </div>
     )

@@ -61,14 +61,15 @@ class Home extends React.Component {
               <div className='home-project-details'>
                 <h4>2016 | Self-Initiated</h4>
                 <h2>To Do List</h2>
-                <h3>Tools: pure JavaScript, HTML5, CSS5, Photoshop</h3>
+                <h3>Tools: vanilla JavaScript, HTML5, CSS5, Photoshop</h3>
                 <p className='home-project-description'>
                   A single page application where users can add, edit, delete, complete, undo and filter tasks.
                 </p>
               </div>
               <a 
                 className='home-project-link' 
-                href='#to-do-list'>
+                href='#to-do-list'
+                title='Go to project'>
                 <img
                   className='home-project-image'
                   src='images/to-do-list.jpg'
@@ -87,7 +88,8 @@ class Home extends React.Component {
               </div>
               <a 
                 className='home-project-link' 
-                href='#e-mail-sign-up'>
+                href='#e-mail-sign-up'
+                title='Go to project'>
               <img 
                 className='home-project-image'
                 src='images/e-mail-sign-up.jpg'
@@ -98,8 +100,8 @@ class Home extends React.Component {
           </div>
         </section>
         <section className='tertiary'>
-          <div className='home-work-wrapper'>
-            <h1>Past Projects</h1>
+          <h1>Past Projects</h1>
+          <div className='home-work-wrapper'>            
             <div className='home-work-wrapper'>
               <div className='home-project'>
                 <div className='home-project-details'>
@@ -112,7 +114,8 @@ class Home extends React.Component {
                 </div>
                 <a 
                   className='home-project-link' 
-                  href='#ferrofluid-pool'>
+                  href='#ferrofluid-pool'
+                  title='Go to project'>
                 <img 
                   className='home-project-image'
                   src='images/ferrofluid-pool.jpg'
@@ -130,7 +133,8 @@ class Home extends React.Component {
                 </div>
                 <a 
                   className='home-project-link' 
-                  href='#twist'>
+                  href='#twist'
+                  title='Go to project'>
                   <img 
                     className='home-project-image'
                     src='images/twist.jpg'

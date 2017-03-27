@@ -2,11 +2,16 @@
 
 // bottom page <section>
 .secondary {
-	padding: $padding-default $padding-default 0;
+	padding: $padding-default $padding-default 2*$padding-default;
 	color: $off-white;
 	background-color: $blue;
 
 	h1 { padding-bottom: (1.5 * $padding-default); }
 
 	h4 { border-bottom-color: $off-white; }
+
+	@media (max-width: 1250px) {
+		padding-top: (2 * $padding-small);
+		padding-bottom: (2 * $padding-small);
+	}
 }
