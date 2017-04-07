@@ -19,6 +19,7 @@ import MoreInfo         from './components/MoreInfo.jsx';
 import ThankYou         from './components/ThankYou.jsx';
 import ToDoList         from './components/ToDoList.jsx';
 import Twist            from './components/Twist.jsx';
+import Lightbeam        from './components/Lightbeam.jsx';
 
 const render = ReactDOM.render;
 
@@ -71,6 +72,7 @@ render((
       <Route path='e-mail-sign-up' component={EmailSignUp} />
       <Route path='ferrofluid-pool' component={FerrofluidPool} />
       <Route path='twist' component={Twist} />
+      <Route path='lightbeam' component={Lightbeam} />
     </Route>
   </Router>
   ), document.getElementById('root')

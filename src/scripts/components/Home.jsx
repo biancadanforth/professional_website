@@ -79,6 +79,26 @@ class Home extends React.Component {
             </div>
             <div className='home-project'>
               <div className='home-project-details'>
+                <h4>2017 | Self-Initiated</h4>
+                <h2>Lightbeam</h2>
+                <h3>Tools: vanilla JavaScript, HTML5, CSS5, Inkscape</h3>
+                <p className='home-project-description'>
+                  A visualization prototype for Mozilla Firefox's Lightbeam privacy add-on.
+                </p>
+              </div>
+              <a 
+                className='home-project-link' 
+                href='#lightbeam'
+                title='Go to project'>
+                <img
+                  className='home-project-image'
+                  src='images/lightbeam.png'
+                  alt='Lightbeam visualization prototype'
+                />
+              </a>
+            </div>
+            <div className='home-project'>
+              <div className='home-project-details'>
                 <h4>2016 | Self-Initiated</h4>
                 <h2>E-mail Sign-up</h2>
                 <h3>Tools: HTML5, CSS3, Photoshop</h3>
@@ -94,6 +114,26 @@ class Home extends React.Component {
                 className='home-project-image'
                 src='images/e-mail-sign-up.jpg'
                 alt='E-mail Sign Up Page'
+              />
+              </a>
+            </div>
+            <div className='home-project'>
+              <div className='home-project-details'>
+                <h4>2017 | Self-Initiated</h4>
+                <h2>React Widget</h2>
+                <h3>Tools: JavaScript (React), HTML5, CSS3 (Sass)</h3>
+                <p className='home-project-description'>
+                  Ask me what I'm working on next!
+                </p>
+              </div>
+              <a 
+                className='home-project-link' 
+                href='#more-info'
+                title='Contact me!'>
+              <img 
+                className='home-project-image'
+                src='images/next-project.png'
+                alt='Contact me'
               />
               </a>
             </div>
