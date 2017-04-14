@@ -223,6 +223,11 @@
 
 .home-project-description {
 	margin-bottom: (.75 * $margin-small);
+	min-height: 60px;
+
+	@media (max-width: 900px) {
+		min-height: 0;
+	}
 }
 
 .home-project-link {
