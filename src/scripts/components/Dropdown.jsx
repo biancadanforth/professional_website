@@ -21,6 +21,14 @@ class Dropdown extends React.Component {
         <li className='submenu-item'>
           <Link
             className='submenu-link'
+            to='lightbeam'
+            onClick={this.props.onClick} >
+              Lightbeam
+          </Link>
+        </li>
+        <li className='submenu-item'>
+          <Link
+            className='submenu-link'
             to='e-mail-sign-up'
             onClick={this.props.onClick} >
               E-mail Sign-up

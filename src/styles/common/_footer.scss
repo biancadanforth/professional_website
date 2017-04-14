@@ -74,14 +74,16 @@ footer {
 footer.to-do-list-page,
 footer.e-mail-sign-up-page,
 footer.ferrofluid-pool-page,
-footer.twist-page {
+footer.twist-page,
+footer.lightbeam-page {
 	@include diagonal-background-bottom;
 }
 
 
 // These pages do NOT have or are not directly next to a .secondary <section>
 footer.thank-you-page,
-footer.more-info-page, footer.home-page {
+footer.more-info-page,
+footer.home-page {
 	margin-top: (2 * $margin-default);
 	text-align: center;
 }
