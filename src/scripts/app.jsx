@@ -53,7 +53,7 @@ class App extends React.Component {
 	    	<Header currentPage={currentPath === '/' ? 'home-page' : pageName} />
 	    	<Main 
           currentPage={currentPath === '/' ? 'home-page' : pageName}
-          isRecaptchaScriptLoaded={this.state.isRecaptchaScriptLoaded}
+          isRecaptchaScriptLoaded={this.state.isRecaptchaScriptLoaded}>
           {currentPath === '/' ? <Home /> : this.props.children}
         </Main>
 	      <Footer currentPage={currentPath === '/' ? 'home-page' : pageName} />
