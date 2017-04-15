@@ -84,7 +84,7 @@
   flex-direction: column;
   align-self: stretch;
   flex-grow: 1;
-  padding: $padding-default;
+  padding: $padding-default 0;
   text-align: left;
 	font-family: 'Montserrat';
 	border: 1px solid lighten($grey, 40%);
@@ -259,7 +259,7 @@
 	justify-content: center;
 	margin: 0 auto;
 
-	@media (max-width: 1000px) {
+	@media (max-width: 1100px) {
 		flex-direction: column;
 
 		.about-hero-wrapper, .about-copy {
@@ -281,12 +281,11 @@
 	margin-right: $margin-default;
 	flex-basis: 34%;
 	flex-grow: 1;
-	align-self: stretch;
 	@include rounded(2px);
 	@include shadowed;
 
 	@media (max-width: 600px) {
-		max-width: 250px;
+		max-width: 100%;
 	}
 }
 
@@ -309,7 +308,7 @@
 
 .about-project-description {
 	box-sizing: border-box;
-	max-width: 600px;
+	max-width: $max-text-width;
 	margin: (.75 * $margin-small) 0;
 	text-align: left;
 
@@ -318,61 +317,10 @@
 	}
 }
 
-.blockquote-wrapper {
-	margin: $margin-default (2 * $margin-small);
+.software-perks {
+	margin-left: (1.5 * $margin-small);
 
-	@media (max-width: 550px) {
-		margin: $margin-small;
-
-		blockquote {
-			padding: 5px 0;
-			font-size: 1em;
-
-			svg {
-				display: none;
-			}
-		}
+	li {
+		text-indent: (.5 * $margin-small);
 	}
-}
-
-blockquote {
-	position: relative;
-	top: 0;
-	left: 0;
-	padding: 5px (2 * $padding-small);
-	color: $dark-grey;
-	font-size: 1.25em;
-	text-align: left;
-	border-top: 2px solid lighten($grey, 40%);
-	border-bottom: 2px solid lighten($grey, 40%);
-	
-	@media (max-width: $max-img-width) {
-		font-size: 1.125em;
-	}
-}
-
-/* Using React, have to wrap <svg> in another
-* element when using dangerouslySetInnerHTML
-* attribute; I used a <div>
-*/
-.open-quote,
-.close-quote {
-	position: absolute;
-	width: 30px;
-	fill: lighten($grey, 40%);
-}
-
-.open-quote {
-	top: 0;
-	left: 0;
-	z-index: -1;
-	//mirror about x-axis
-	transform: scaleY(-1);
-}
-
-.close-quote {
-	bottom: 0;
-	right: 0;
-	z-index: -1;
-	transform: rotate(180deg);
 }

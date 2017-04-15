@@ -20,10 +20,18 @@ class MoreInfo extends React.Component {
             <div className="about-copy">
               <h4 className="about-subsubheader">How I got here</h4>
               <p className='about-project-description'>
-                <span className="emphasis">I love a challenge</span>, which is why I chose to study mechanical engineering in college. Now, I have found something equally challenging, but that I enjoy even more: web design and development.
+                <span className="emphasis">I have always loved a challenge.</span> A few years ago, I enrolled in an online web design course while working full-time as a mechanical engineer.
               </p>
               <p className='about-project-description'>
-                In many ways, I'm doing what I have always done: thinking critically and creatively, solving problems, and rolling up my sleeves to get the work done.
+                What drew me to software (in contrast to hardware) is that, often:
+                  <ul className="software-perks about-project-description">
+                  <li>Design cycles are shorter</li>
+                  <li>Experimentation is less risky</li>
+                  <li>The impact can be much, much greater</li>
+                  </ul>
+              </p>
+              <p className='about-project-description'>
+                About one year ago, my hobby became a passion, and I decided to put my full weight behind learning web design and development. With the help of two mentors and a lot of elbow grease, I have now built several of my own web projects, and more are in the works!
               </p>
               <h4 className="about-subsubheader second">Other interests</h4>
               <p className='about-project-description'>
