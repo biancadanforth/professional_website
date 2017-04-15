@@ -1,19 +1,9 @@
-// about.scss
+// more-info.scss
 
 .more-info-page .primary {
-	display: flex;
-	margin: 0 auto (2 * $margin-default);
-	max-width: $layout-width;
-
-	@media (max-width: 1260px) {
-		margin-left: $margin-default;
-		margin-right: $margin-default;
-	}
+	margin: 0 auto;
 
 	@media (max-width: 1000px) {
-		text-align: center;
-		display: block;
-		margin: 0 auto;
 
 		.contact-body,
 		.about-body {
@@ -48,7 +38,18 @@
 	}
 }
 
+.emphasis {
+	font-weight: 700;
+}
+
 // CONTACT SECTION
+
+.secondary {
+	@media (max-width:400px) {
+		padding-left: $padding-small;
+		padding-right: $padding-small;
+	}
+}
 
 .contact-body {
   display: flex;
@@ -63,12 +64,19 @@
 	// }
 }
 
-.contact-header {
-	color: $dark-grey;
+.secondary .contact-header {
+	padding-bottom: 0;
+	text-align: center;
+}
+
+.contact-subheader {
+	text-align: center;
 }
 
 .contact-subsubheader {
 	border-bottom: none;
+	text-align: center;
+	margin-bottom: 0;
 }
 
 .contact-form-wrapper {
@@ -81,16 +89,13 @@
 	font-family: 'Montserrat';
 	border: 1px solid lighten($grey, 40%);
   border-radius: 2px;
-
-	@media (max-width: 1000px) {
-		max-width: 600px;
-		margin: 0 auto;
-		width: 100%;
-		border: none;
-	}
+	max-width: 600px;
+	margin: 0 auto;
+	width: 100%;
+	border: none;
 
 	@media (max-width: 400px) {
-		padding: 0;
+		padding: $padding-default 0 0;
 	}
 }
 
@@ -114,17 +119,17 @@
   @include rounded(2px);
 
   &::-webkit-input-placeholder {
-		color: lighten($grey, 20%);
+		color: darken($off-white, 5%);
 	}
 
   &[type="text"], &[type="email"] {
 		font-family: 'Montserrat', sans-serif;
 		background-color: rgba(255, 255, 255, .3);
 		border: .5px solid lighten($grey, 40%);
-		box-shadow: inset 1px 1px 0 .5px rgba(0,0,0,.3);
+		box-shadow: inset 1px 1px 0 .5px rgba(0,0,0,.01);
 
 		&:focus {
-			outline: .5px solid $blue;
+			outline: .5px solid $off-white;
 		}
   }
 
@@ -172,11 +177,11 @@
 	text-indent: 0;
 	background-color: rgba(255, 255, 255, .3);
 	border: .5px solid lighten($grey, 40%);
-	box-shadow: inset 1px 1px 0 .5px rgba(0,0,0,.3);
+	box-shadow: inset 1px 1px 0 .5px rgba(0,0,0,.05);
 	@include rounded(2px);
 	
 	&:focus {
-		outline: .5px solid $blue;
+		outline: .5px solid $off-white;
 	}
 
 	&:placeholder-shown {
@@ -185,7 +190,7 @@
 	}
 
 	&::-webkit-input-placeholder {
-		color: lighten($grey, 20%);
+		color: darken($off-white, 5%);
 	}
 }
 
@@ -224,17 +229,9 @@
 // ABOUT SECTION
 
 .about-body {
-	display: flex;
-	justify-content: center;
-	flex-flow: column wrap;
-	align-items: flex-start;
 	max-width: $layout-width;
-	flex: 0 1 50%;
-	margin-right: $margin-default;
-
-	@media(max-width: 1000px) {
-		margin-right: 0;
-	}
+	margin: 0 auto;
+	padding: 0 $padding-default;
 }
 
 .about-header-wrapper {
@@ -244,35 +241,76 @@
 
 .about-header {
 	margin-top: 0;
-	color: $dark-grey;
-}
-
-.about-hero {
-	width: 100%;
-	max-width: 300px;
-	margin: 0 auto;
-	@include rounded(50%);
-	@include shadowed;
-}
-
-.about-resume {
 	margin-bottom: $margin-default;
-}
+	color: $dark-grey;
 
-.about-copy {
-	margin-top: $margin-default;
-
-	@media (max-width: 1000px) {
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
+	@media(max-width: 400px) {
+		margin-bottom: (.5 * $margin-small);
 	}
 }
 
+.about-resume {
+	font-style: normal;
+}
+
+.about-content {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+
+	@media (max-width: 1000px) {
+		flex-direction: column;
+
+		.about-hero-wrapper, .about-copy {
+			flex-basis: 100%;
+		}
+
+		.about-hero {
+			margin-right: 0;
+			align-self: center;
+		}
+
+		.about-copy {
+			margin-top: $margin-default;
+		}
+	}
+}
+
+.about-hero {
+	margin-right: $margin-default;
+	flex-basis: 34%;
+	flex-grow: 1;
+	align-self: stretch;
+	@include rounded(2px);
+	@include shadowed;
+
+	@media (max-width: 600px) {
+		max-width: 250px;
+	}
+}
+
+.about-subsubheader {
+	text-align: left;
+	margin-bottom: 0;
+	border-bottom: 0;
+}
+
+.about-subsubheader.second {
+	box-sizing: border-box;
+	margin-top: $margin-default;
+}
+
+.about-copy {
+	flex-basis: 66%;
+	flex-grow: 1;
+	flex-shrink: 1;
+}
+
 .about-project-description {
+	box-sizing: border-box;
 	max-width: 600px;
-	margin: 0 auto (.75 * $margin-small);
+	margin: (.75 * $margin-small) 0;
 	text-align: left;
 
 	&:last-child {
