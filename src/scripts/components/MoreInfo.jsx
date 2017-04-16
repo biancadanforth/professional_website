@@ -12,38 +12,37 @@ class MoreInfo extends React.Component {
       <div>
         <section className='primary'>
           <div className='about-body'>
-            <div className='about-header-wrapper'>
-              <h2 className='about-header'>Say What?</h2>
-              <h3 className='about-subheader'>I am a<br/>designer, developer & engineer.</h3>
-              <p className='about-resume'><a target='_blank' href='/work/bianca-danforth-resume.pdf'>View my resume</a></p>
-              <img
-                className='about-hero'
-                src='../images/bianca.jpg'
-              />
-            </div>
-            <div className='about-copy'>
+            <h1 className="about-header">About</h1>
+            <h2>Bianca, Wearer of Multiple Hats*</h2>
+            <h3 className="about-subheader"> *Hats not shown | <a className="about-resume" target='_blank' href='/work/bianca-danforth-resume.pdf'>View my resume</a></h3>
+          <div className="about-content">
+            <img className="about-hero" src="images/bianca.jpg" />
+            <div className="about-copy">
+              <h4 className="about-subsubheader">How I got here</h4>
               <p className='about-project-description'>
-                When I went to college, like most students, I had no idea what I wanted to do. All I knew was that I wanted to do <strong>something challenging and worthwhile</strong>. I chose to study mechanical engineering.
+                <span className="emphasis">I have always loved a challenge.</span> A few years ago, I enrolled in an online web design course while working full-time as a mechanical engineer.
               </p>
               <p className='about-project-description'>
-                Several years later I have found something that is not only challenging and worthwhile, but <strong>that I enjoy doing</strong> even more: web design and development.
-              </p>
-              <div className='blockquote-wrapper'>
-                <blockquote>
-                  <div className='open-quote' dangerouslySetInnerHTML={{__html: quoteSVG}} />
-                  In many ways, I'm doing what I have always done: thinking critically and creatively, solving problems, and rolling up my sleeves to get the work done.
-                  <div className='close-quote' dangerouslySetInnerHTML={{__html: quoteSVG}} />
-                </blockquote>
-              </div>
-              <p className='about-project-description'>
-                In many ways, I'm doing what I have always done: thinking critically and creatively, solving problems, and rolling up my sleeves to get the work done.
+                What drew me to software (in contrast to hardware) is that, often:
+                  <ul className="software-perks about-project-description">
+                  <li>Design cycles are shorter</li>
+                  <li>Experimentation is less risky</li>
+                  <li>The impact can be much, much greater</li>
+                  </ul>
               </p>
               <p className='about-project-description'>
-                Other things I find challenging and worthwhile include: <strong>hiking</strong> with my dog, Mia, <strong>fixing things</strong> around the house and <strong>volunteering</strong> for political organizations whose ideas I believe in.
+                About one year ago, my hobby became a passion, and I decided to put my full weight behind learning web design and development. With the help of two mentors and a lot of elbow grease, I have now built several of my own web projects, and more are in the works!
+              </p>
+              <h4 className="about-subsubheader second">Other interests</h4>
+              <p className='about-project-description'>
+                I enjoy <span className="emphasis">hiking</span> with my dog, Mia, <span className="emphasis">fixing things</span> around the house and <span className="emphasis">volunteering</span> for community outreach organizations like Women Who Code.
               </p>
             </div>
           </div>
-          <ContactForm isRecaptchaScriptLoaded={ this.props.isRecaptchaScriptLoaded } />
+        </div>
+        </section>
+        <section className="secondary">
+        <ContactForm isRecaptchaScriptLoaded={ this.props.isRecaptchaScriptLoaded } />
         </section>
       </div>
     )

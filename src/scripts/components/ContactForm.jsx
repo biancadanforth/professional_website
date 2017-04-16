@@ -48,7 +48,7 @@ class ContactForm extends React.Component {
 
     return(
       <div className='contact-body' ref='contact-form'>
-        <h2 className='contact-header'>Say Hello!</h2>
+        <h1 className='contact-header'>Contact</h1>
         <h3 className='contact-subheader'>
           biancadanforth at gmail dot com
         </h3>
