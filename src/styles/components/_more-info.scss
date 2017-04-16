@@ -251,6 +251,7 @@
 
 .about-resume {
 	font-style: normal;
+	letter-spacing: 0;
 }
 
 .about-content {
@@ -278,7 +279,6 @@
 
 .about-hero {
 	margin-right: $margin-default;
-	flex-basis: 34%;
 	flex-grow: 1;
 	@include rounded(2px);
 	@include shadowed;

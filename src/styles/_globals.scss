@@ -70,7 +70,7 @@ body {
 $header-padding-top: $margin-default;
 $header-padding-bottom: 2*$header-padding-top;
 $header-padding-400px: $padding-small;
-$content-height: 45px;
+$content-height: 58px;
 $header-height: $header-padding-top + $header-padding-bottom + $content-height;
 
 header {
@@ -95,8 +95,8 @@ main {
 	}
 }
 
-@media (max-width: 560px) {
-	$content-height: 75px;
+@media (max-width: 950px) {
+	$content-height: 99px;
 	$header-padding-top: $padding-small;
 	$header-padding-bottom: $padding-small;
 	$header-height: $header-padding-top + $header-padding-bottom + $content-height;
@@ -111,11 +111,14 @@ main {
 	}
 }
 
-@media (max-width: 400px) {
+@media (max-width: 550px) {
+	$content-height: 97px;
+	$header-padding-top: $padding-small;
+	$header-padding-bottom: $padding-small;
+	$header-height: $header-padding-top + $header-padding-bottom + $content-height;
 
-	header {
-		padding-left: $padding-small;
-		padding-right: $padding-small;
+	main {
+		padding-top: $header-height;
 	}
 }
 

@@ -17,6 +17,11 @@ header {
 	url("../images/pw_maze_white.png");
 	transition: padding-top .25s linear, padding-bottom .25s linear;
 	@include dropdown-menu;
+
+	@media (max-width: 400px) {
+		padding-left: $padding-small;
+		padding-right: $padding-small;
+	}
 }
 
 .header-wrapper {
@@ -27,18 +32,19 @@ header {
 	max-width: $layout-width;
 	width: 100%;
 
-	@media (max-width: 560px) {
+	@media (max-width: 950px) {
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 
 		.header-brand-wrapper {
 			justify-content: center;
-			align-items: flex-end;
+			align-items: center;
+			margin-bottom: $margin-small;
+			transition: margin-bottom .25s linear;
 		}
 
 		.header-logo {
-			margin-bottom: 20px;
 			width: 40px;
 		}
 
@@ -50,8 +56,24 @@ header {
 
 .header-brand-wrapper {
 	display: flex;
-	align-items: baseline;
+	align-items: center;
 	justify-content: flex-start;
+
+	@media (max-width: 550px) {
+
+		.header-name {
+			font-size: 1.125em;
+		}
+
+		.header-role {
+			font-size: .875em;
+			transition: font-size .25s linear;
+
+			span {
+				display: none;
+			}
+		}
+	}
 }
 
 nav {
@@ -73,12 +95,33 @@ nav {
 	path {
 		stroke: $blue;
 	}
+
+	@media(max-width: 400px) {
+		width: 30px !important;
+	}
+}
+
+.header-id-link {
+	text-decoration: none;
+	display: inline-block;
+	margin-left: $margin-small;
+
+	@media(max-width: 400px) {
+		margin-left: (.5 * $margin-small);
+	}
+}
+
+.header-role.mobile {
+	display: none;
+
+	@media (max-width: 400px) {
+		display: inline;
+	}
 }
 
 .header-name {
-	display: inline-block;
+	text-align: left;
 	margin: 0;
-	margin-left: $margin-small;
 	text-transform: none;
 	color: $dark-grey;
 	letter-spacing: $letter-spacing;
@@ -86,8 +129,16 @@ nav {
 	font-weight: bold;
 	font-family: 'Merriweather', serif;
 	transition: font-size .25s linear;
+}
 
-	@media (max-width: 850px) {
+.header-role {
+	text-align: left;
+	color: $grey;
+	font-size: 1em;
+	transition: font-size .25s linear;
+	margin-bottom: 0;
+
+	@media (max-width: 400px) {
 		display: none;
 	}
 }
@@ -229,8 +280,13 @@ header.minimize {
 							padding-bottom .25s linear;
 
 	.header-name {
-		font-size: 1.25em;
-		transition: width .25s linear, margin-bottom .25s linear;
+		font-size: 1.125em;
+		transition: font-size .25s linear;
+	}
+
+	.header-role {
+		font-size: .875em;
+		transition: font-size .25s linear;
 	}
 
 	.header-logo {
@@ -242,14 +298,25 @@ header.minimize {
 		padding-bottom: 10px;
 
 		.header-logo {
-			width: 35px;
-			margin-bottom: 15px;
-			transition: width .25s linear, margin-bottom .25s linear;
+			width: 40px;
+			transition: width .25s linear;
 		}
 
 		.menu {
 			font-size: .9em;
 			transition: font-size .25s linear;
+		}
+	}
+
+	@media (max-width: 400px)  {
+		.header-logo {
+			width: 30px;
+			transition: width .25s linear;
+		}
+
+		.header-brand-wrapper {
+			margin-bottom: (.5 * $margin-small);
+			transition: margin-bottom .25s linear;
 		}
 	}
 }
