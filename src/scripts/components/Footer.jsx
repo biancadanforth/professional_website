@@ -59,7 +59,7 @@ class Footer extends React.Component {
             <div dangerouslySetInnerHTML={{__html: gitHubSVG}} />
           </a>
         </span>
-        <p className='footer-copyright'>&#169; <Link to="home" aria-label="home">Bianca Danforth</Link> 2017</p>
+        <p className='footer-copyright'>&#169; <Link to="home" aria-label="home">Bianca Danforth</Link> 2020</p>
       </footer>
     );
   }

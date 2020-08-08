@@ -99,8 +99,7 @@ class Header extends React.Component {
               className="header-id-link"
               aria-label="Go to Bianca Danforth's website">
               <h1 className="header-name">Bianca Danforth</h1>
-              <h2 className="header-role">Web Designer & <span>Front-End </span>Developer</h2>
-              <h2 className="header-role mobile">Web Designer/Developer</h2>
+              <h2 className="header-role">Web Developer</h2>
             </Link>
           </span>
            <nav role="navigation">
