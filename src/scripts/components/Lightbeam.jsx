@@ -10,43 +10,46 @@ class Lightbeam extends React.Component {
         <section className='primary'>
           <div className='primary-wrapper'>
             <h1 className='project-header'>Lightbeam</h1>
-            <h3 className='project-subsubheader'>UX Design | Visual Design | Front-End Development</h3>
+            <h3 className='project-subsubheader'>Front-End Development</h3>
             <div className='project-hero-wrapper'>
               <div className='glamour-shot-wrapper'>
                 <a
-                  href='/work/lightbeam/live'
-                  title='See it live'
+                  href='https://github.com/mozilla/lightbeam-we'
+                  title='Go to project'
                   target='_blank' 
-                  aria-label='Go to live site'>
+                  aria-label='Go to project site'>
                   <img 
                     className= 'wrap-up' 
-                    src='/images/lightbeam-glamour.png' 
-                    alt='Final design on different devices'
+                    src='/images/originals/lightbeam.png'
+                    alt='Final user interface'
                   />
                 </a>
                 <a
                   className='button-wrapper'
-                  href='/work/lightbeam/live' 
+                  href='https://github.com/mozilla/lightbeam-we'
                   target='_blank' 
-                  aria-label='Go to live site'>
-                  <button className='project-button'>See it live</button>
+                  aria-label='Go to project site'>
+                  <button className='project-button'>Go to project</button>
                 </a>
               </div>
               <div className='project-overview-wrapper'>
                 <h2 className='project-overview-header'>Overview</h2>
                 <h4 className='project-overview-subheader'>Project goals</h4>
                 <p className='project-overview-description'>
-                  I was asked to create a visualization prototype for a Mozilla Firefox privacy and security add-on called <a target="_blank" href="https://www.mozilla.org/en-US/lightbeam/">Lightbeam</a>.
+                  As an intern at Mozilla through the <a target="_blank" href="https://www.outreachy.org/">Outreachy</a> program, my project was to re-implement the popular legacy add-on, Lightbeam, as a browser extension.
                 </p>
                 <p className='project-overview-description'>
-                  This mini project was part of an application for an open-source <a target="_blank" href="https://www.gnome.org/outreachy/">Outreachy</a> internship. It was built from scratch in 2 days.
+                  Lightbeam is a privacy add-on that helps visualize the relationship between third party trackers and the sites you visit.
+                </p>
+                <p className='project-overview-description'>
+                  This was a three-month project, from May to August 2017.
                 </p>
                 <h4 className='project-overview-subheader'>Tools and Methods</h4>
                  <p className='project-overview-description'>
-                  I used Inkscape for the design. I used pure JavaScript ES6, HTML5 and CSS3 for the development.
+                  I used JavaScript (including <a target="_blank" href="https://d3js.org/">D3</a> and <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API">browser extensions APIs</a>), HTML and CSS for the development.
                 </p>
                 <p className='project-overview-description'>
-                  I completed this work independently with feedback from a mentor at Mozilla.
+                  I completed this work together with another Outreachy intern and mentorship from Mozilla staff.
                 </p>
               </div>
             </div>

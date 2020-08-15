@@ -79,11 +79,11 @@ class Home extends React.Component {
             </div>
             <div className='home-project'>
               <div className='home-project-details'>
-                <h4>2017 | Self-Initiated</h4>
+                <h4>2017 | Mozilla</h4>
                 <h2>Lightbeam</h2>
-                <h3>Tools: vanilla JavaScript, HTML5, CSS5, Inkscape</h3>
+                <h3>Tools: JavaScript, HTML, CSS</h3>
                 <p className='home-project-description'>
-                  A visualization prototype for Mozilla Firefox's Lightbeam privacy add-on.
+                  Porting Mozilla Firefox's Lightbeam privacy add-on to a browser extension.
                 </p>
               </div>
               <a 

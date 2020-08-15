@@ -23,7 +23,7 @@ class Dropdown extends React.Component {
             className='submenu-link'
             to='lightbeam'
             onClick={this.props.onClick} >
-              Lightbeam
+              Lightbeam (2017)
           </Link>
         </li>
         <li className='submenu-item'>
