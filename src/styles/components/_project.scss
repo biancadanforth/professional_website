@@ -244,6 +244,14 @@
 
 	.process-description {
 		width: 50%;
+
+		a {
+			color: $yellow;
+		}
+
+		a:visited {
+			color: lighten($yellow, 30%);
+		}
 	}
 
 	.project-description {

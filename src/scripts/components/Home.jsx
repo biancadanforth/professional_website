@@ -92,7 +92,7 @@ class Home extends React.Component {
                 title='Go to project'>
                 <img
                   className='home-project-image'
-                  src='images/lightbeam.png'
+                  src='images/originals/lightbeam.png'
                   alt='Lightbeam visualization prototype'
                 />
               </a>
