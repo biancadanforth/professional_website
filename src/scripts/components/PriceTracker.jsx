@@ -1,40 +1,38 @@
-// EmailSignUp.jsx
+// PriceTracker.jsx
 
 import React from 'react';
 
-const fluidGridCodepen = "<iframe height='400' scrolling='no' title='Fluid Grid' src='//codepen.io/biancadanforth/embed/wWLGRK/?height=400&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/biancadanforth/pen/wWLGRK/'>Fluid Grid</a> by biancadanforth (<a href='http://codepen.io/biancadanforth'>@biancadanforth</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>";
-
-class EmailSignUp extends React.Component {
+class PriceTracker extends React.Component {
   
   render() {
     return(
       <div>
         <section className='primary'>
           <div className='primary-wrapper'>
-            <h1 className='project-header'>E-mail Sign-Up</h1>
+            <h1 className='project-header'>Price Tracker</h1>
             <h3 className='project-subsubheader'>
-              Front-End Development
+              Front-End & Browser Extension Development
             </h3>
             <div className='project-hero-wrapper'>
               <div className='glamour-shot-wrapper'>
                 <a
-                  href='/work/e-mail-sign-up/live'
-                  title='See it live'
+                  href='https://github.com/mozilla/price-tracker'
+                  title='Go to project'
                   target='_blank'
-                  aria-label='Go to live site'>
+                  aria-label='Go to project'>
                   <img 
                     className='wrap-up' 
-                    src='/images/e-mail-sign-up-glamour.png' 
-                    alt='Final design on different devices'
+                    src='/images/originals/price-tracker-glamour.png' 
+                    alt='Final user interface'
                   />
                 </a>
                 <a
                   className='button-wrapper'
-                  href='/work/e-mail-sign-up/live' 
+                  href='https://github.com/mozilla/price-tracker' 
                   target='_blank' 
-                  aria-label='Go to live site'>
+                  aria-label='Go to project'>
                   <button className='project-button'>
-                    See it live
+                    Go to project
                   </button>
                 </a>
               </div>
@@ -73,7 +71,7 @@ class EmailSignUp extends React.Component {
               <div className='project'>
                 <img 
                   className='project-thumbnail' 
-                  src='/images/e-mail-sign-up-gather-information.png' 
+                  src='/images/price-tracker-gather-information.png' 
                   alt='Photoshop mock-up of page'
                 />
                 <div className='process-description'>
@@ -92,10 +90,14 @@ class EmailSignUp extends React.Component {
             <div className='project-wrapper'>
               <h2 className='project-subheader'>Prototype</h2>
               <div className='project'>
-                <div className='codepen-embed'dangerouslySetInnerHTML={{__html: fluidGridCodepen}} />
+                <img 
+                  className='project-thumbnail' 
+                  src='/images/price-tracker-prototype.png' 
+                  alt='Photoshop mock-up of page'
+                />
                 <div className='process-description'>
                   <p className='project-description'>
-                    Since this was my first foray into front-end development, I had to research what approach to use to layout the page in CSS.
+                    We used Open Graph meta tags as our initial approach to identify products on web pages. Unfortunately, we soon found out that this method relied on widespread adoption by e-commerce merchants, and we were hard-pressed to find any other merchants that used these tags outside of Crate and Barrel.
                   </p>
                   <p className='project-description'>
                     I did not want to use any third-party frameworks (Bootstrap, Foundation, Skeleton, etc.), since I wanted to make sure I was comfortable working in pure CSS first.
@@ -111,7 +113,7 @@ class EmailSignUp extends React.Component {
               <div className='project'>
                 <img 
                   className='project-thumbnail' 
-                  src='/images/e-mail-sign-up-development.jpg'
+                  src='/images/price-tracker-development.png'
                   alt='Excerpt of final CSS' 
                 />
                 <div className='process-description'>
@@ -132,22 +134,22 @@ class EmailSignUp extends React.Component {
               <div className='project'>
                 <div className='project-glamour-shot-wrapper'>
                   <a
-                    href='/work/e-mail-sign-up/live'
-                    title='See it live'
+                    href='https://github.com/mozilla/price-tracker'
+                    title='Go to project'
                     target='_blank' 
-                    aria-label='Go to live site'>
+                    aria-label='Go to project'>
                     <img 
                       className='wrap-up' 
-                      src='/images/e-mail-sign-up-glamour.png'
-                      alt='Final design on different devices'
+                      src='/images/price-tracker-glamour.png'
+                      alt='Final user interface'
                     />
                   </a>
                   <a
                     className='button-wrapper'
-                    href='/work/e-mail-sign-up/live' 
+                    href='https://github.com/mozilla/price-tracker' 
                     target='_blank' 
-                    aria-label='See it live'>
-                    <button className='project-button'>See it live</button>
+                    aria-label='Go to project'>
+                    <button className='project-button'>Go to project</button>
                   </a>
                 </div>
                 <div className='process-description'>
@@ -167,4 +169,4 @@ class EmailSignUp extends React.Component {
   }
 }
 
-export default EmailSignUp;
+export default PriceTracker;

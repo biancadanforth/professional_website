@@ -9,7 +9,7 @@ import { hashHistory }  from 'react-router';
 
 import ContactForm      from './components/ContactForm.jsx';
 import Dropdown         from './components/Dropdown.jsx';
-import EmailSignUp      from './components/EmailSignUp.jsx';
+import PriceTracker      from './components/PriceTracker.jsx';
 import FerrofluidPool   from './components/FerrofluidPool.jsx';
 import Footer           from './components/Footer.jsx';
 import Header           from './components/Header.jsx';
@@ -69,7 +69,7 @@ render((
       <Route path='more-info' component={MoreInfo} />
       <Route path='thank-you' component={ThankYou} />
       <Route path='to-do-list' component={ToDoList} />
-      <Route path='e-mail-sign-up' component={EmailSignUp} />
+      <Route path='price-tracker' component={PriceTracker} />
       <Route path='ferrofluid-pool' component={FerrofluidPool} />
       <Route path='twist' component={Twist} />
       <Route path='lightbeam' component={Lightbeam} />

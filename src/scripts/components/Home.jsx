@@ -99,20 +99,20 @@ class Home extends React.Component {
             </div>
             <div className='home-project'>
               <div className='home-project-details'>
-                <h4>2016 | Self-Initiated</h4>
-                <h2>E-mail Sign-up</h2>
-                <h3>Tools: HTML5, CSS3, Photoshop</h3>
+                <h4>2018 | Mozilla</h4>
+                <h2>Price Tracker</h2>
+                <h3>Tools: React, Webpack, Machine Learning</h3>
                 <p className='home-project-description'>
-                  A static page where users can subscribe to a newsletter, contact, and learn more about Skillcrush.
+                  A Firefox browser extension that spots price drops on products the user is interested in.
                 </p>
               </div>
               <a 
                 className='home-project-link' 
-                href='#e-mail-sign-up'
+                href='#price-tracker'
                 title='Go to project'>
               <img 
                 className='home-project-image'
-                src='images/e-mail-sign-up.jpg'
+                src='images/price-tracker-glamour.png'
                 alt='E-mail Sign Up Page'
               />
               </a>
