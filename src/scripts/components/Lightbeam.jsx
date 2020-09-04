@@ -105,7 +105,7 @@ class Lightbeam extends React.Component {
                 />
                 <div className='process-description'>
                   <p className='project-description'>
-                    My contributions were primarily to the collection, processing and storage of the incoming browsing data used by the visualization.
+                    My <a href="https://github.com/mozilla/lightbeam-we/pulls?q=is%3Apr+is%3Aclosed+author%3Abiancadanforth" target="_blank">contributions</a> were primarily to the collection, processing and storage of the incoming browsing data used by the visualization.
                   </p>
                 </div>
               </div>

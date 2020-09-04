@@ -83,7 +83,7 @@ class Home extends React.Component {
                 <h2>Lightbeam</h2>
                 <h3>Tools: JavaScript, HTML, CSS</h3>
                 <p className='home-project-description'>
-                  Porting Mozilla Firefox's Lightbeam privacy add-on to a browser extension.
+                  Porting Firefox's Lightbeam privacy add-on to a browser extension.
                 </p>
               </div>
               <a 
@@ -101,7 +101,7 @@ class Home extends React.Component {
               <div className='home-project-details'>
                 <h4>2018 | Mozilla</h4>
                 <h2>Price Tracker</h2>
-                <h3>Tools: React, Webpack, Machine Learning</h3>
+                <h3>Tools: React, Redux, Webpack, Machine Learning</h3>
                 <p className='home-project-description'>
                   A Firefox browser extension that spots price drops on products the user is interested in.
                 </p>

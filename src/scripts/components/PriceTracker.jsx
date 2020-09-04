@@ -11,7 +11,7 @@ class PriceTracker extends React.Component {
           <div className='primary-wrapper'>
             <h1 className='project-header'>Price Tracker</h1>
             <h3 className='project-subsubheader'>
-              Front-End & Browser Extension Development
+              Front-End & Browser Extension Development | Machine Learning
             </h3>
             <div className='project-hero-wrapper'>
               <div className='glamour-shot-wrapper'>
@@ -54,10 +54,10 @@ class PriceTracker extends React.Component {
                 </p>
                 <h4 className='project-overview-subheader'>Tools and Methods</h4>
                  <p className='project-overview-description'>
-                  Price Tracker is a browser extension with some extra privileges to enable us to record <a href="https://github.com/mozilla/price-tracker/blob/master/docs/METRICS.md" target="_blank">telemetry</a> using Firefox's data infrastructure.
+                  Price Tracker is a <a href="https://wiki.mozilla.org/Test_Pilot" target="_blank">Test Pilot</a> browser extension with some extra privileges to enable us to record <a href="https://github.com/mozilla/price-tracker/blob/master/docs/METRICS.md" target="_blank">telemetry</a> using Firefox's data infrastructure.
                 </p>
                 <p className='project-overview-description'>
-                  The source files are written with React and are transpiled and bundled using Webpack.
+                  The source files are written with React and Redux; they are transpiled and bundled using Webpack.
                 </p>
                 <p className='project-overview-description'>
                   Product information is extracted from web content using a machine learning model developed with <a href="https://mozilla.github.io/fathom/intro.html#" target="_blank">Fathom</a>.
@@ -78,20 +78,19 @@ class PriceTracker extends React.Component {
             <div className='project-wrapper'>
               <h2 className='project-subheader'>Gather Information</h2>
               <div className='project'>
-                <img 
-                  className='project-thumbnail' 
-                  src='/images/price-tracker-gather-information.png' 
-                  alt='Photoshop mock-up of page'
-                />
+                <figure>
+                  <img
+                    src='/images/price-tracker-gather-information.png'
+                    alt='Photoshop mock-up of page'
+                  />
+                  <figcaption>Source: addons.mozilla.org</figcaption>
+                </figure>
                 <div className='process-description'>
                   <p className='project-description'>
-                     The first thing I did was organize the layers in Photoshop into groups that would mirror the major HTML container elements on the page.
+                    The first two months were largely explorations in the existing e-commerce space including studies led by our user researcher.
                   </p>
                   <p className='project-description'>
-                    I then identified all of the assets to extract from the mock-up. For example, I needed the Wisdom Script font and the background pattern image.
-                  </p>
-                  <p className='project-description'>
-                    <strong>I learned that</strong> style guides are very handy, and that there's a lot a designer can do to make sure their design is not lost in translation. For example, this mock-up did not tell me what the buttons should look like in hover or pressed states.
+                    We also spent some time talking to potential external partners and building the scaffolding of the project in GitHub.
                   </p>
                 </div>
               </div>
@@ -106,13 +105,13 @@ class PriceTracker extends React.Component {
                 />
                 <div className='process-description'>
                   <p className='project-description'>
-                    We used Open Graph meta tags as our initial approach to identify products on web pages. Unfortunately, we soon found out that this method relied on widespread adoption by e-commerce merchants, and we were hard-pressed to find any other merchants that used these tags outside of Crate and Barrel.
+                    To identify products on web pages, we initially used <a href="https://ogp.me/" target="_blank">Open Graph</a>, though we soon learned it is not widely adopted by e-commerce sites.
                   </p>
                   <p className='project-description'>
-                    I did not want to use any third-party frameworks (Bootstrap, Foundation, Skeleton, etc.), since I wanted to make sure I was comfortable working in pure CSS first.
+                    Looking for alternatives, I spent two weeks prototyping a machine learning model.
                   </p>
                   <p className='project-description'>
-                    I experimented with a fluid grid approach on Codepen that used <code>float</code> and percentage-based widths to adjust the size of content.
+                    Given the options we had available, including leveraging an external partner's APIs, the team went with my recommendation to use the model.
                   </p>
                 </div>
               </div>
@@ -127,13 +126,10 @@ class PriceTracker extends React.Component {
                 />
                 <div className='process-description'>
                   <p className='project-description'>
-                    While floating left and right can get the job done, there can be many unexpected behaviors and display issues associated with floated elements.
+                    We met with an engineering program manager once a week to triage bugs, prioritize work and communicate out to the rest of the team.
                   </p>
                   <p className='project-description'>
-                    Though it wasn't covered in the course, I came across a very useful new alternative to <code>float</code> released in CSS3 called Flexbox. After completing an excellent tutorial called Flexbox Froggy, I decided to use it.
-                  </p>
-                  <p className='project-description'>
-                    Once I had the structure planned out, I had to put it all together, linking the assets, establishing layout breakpoints and filling in the gaps for information that wasn't provided, like placeholder text styles in the form input fields.
+                    My biggest <a href="https://github.com/mozilla/price-tracker/pulls?q=is%3Apr+author%3Abiancadanforth+is%3Aclosed" target="_blank">contributions</a> were to develop and integrate the machine learning model and instrument the extension with custom telemetry.
                   </p>
                 </div>
               </div>
@@ -163,10 +159,10 @@ class PriceTracker extends React.Component {
                 </div>
                 <div className='process-description'>
                   <p className='project-description'>
-                    Since this was my first web development project, I learned a lot about the myriad approaches that I could take. Each developer has their own process, and my own began to form and evolve.
-                  </p>
-                  <p className='project-description'>
-                    I also started to get a sense for just how much can be done with HTML and CSS on their own (i.e. without JavaScript). For example, I made the ribbon for the tagline at the top of the page with CSS.
+                    I'm really proud of what we accomplished on such a short timeline. As one of two engineers, I got to work on virtually every aspect of the project. Our product manager was also very impressed with our work:
+                    <blockquote>
+                      "I think this is the 11th Test Pilot launch I've been on, and by far it has been the smoothest engineering process we've had."
+                    </blockquote>
                   </p>
                 </div>
               </div>
