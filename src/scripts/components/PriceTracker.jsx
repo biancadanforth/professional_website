@@ -44,20 +44,29 @@ class PriceTracker extends React.Component {
                   Project goals
                 </h4>
                 <p className='project-overview-description'>
-                  My goal was to make a static webpage based on a provided Photoshop mock-up.
+                  The goal of this project was to ship a novel e-commerce product in Firefox by Cyber Monday.
                 </p>
                 <p className='project-overview-description'>
-                  This was an extra credit project for a web design course I took from Skillcrush.com.
+                  <a href="https://www.youtube.com/watch?v=UpRLjTQmkW4" target="_blank">Price Wise</a>, later renamed Price Tracker, is a shopping assistant that helps users find the best time to buy products they are interested in.
+                </p>
+                <p className='project-overview-description'>
+                  We managed to ship the product two weeks early, and it was featured in several press articles at the time, including <a href="https://www.nytimes.com/2018/11/13/smarter-living/how-to-tell-if-black-friday-deals-are-worth-buying.html" target="_blank">The New York Times</a>, <a href="https://techcrunch.com/2018/11/12/firefoxs-newest-test-pilot-experiments-help-you-track-prices-and-email-links/" target="_blank">Tech Crunch</a> and <a href="https://venturebeat.com/2018/11/12/firefox-debuts-experimental-price-tracking-feature-for-consumers/" target="_blank">Venture Beat</a>.
                 </p>
                 <h4 className='project-overview-subheader'>Tools and Methods</h4>
                  <p className='project-overview-description'>
-                  This page is written in HTML5 and CSS3.
+                  Price Tracker is a browser extension with some extra privileges to enable us to record <a href="https://github.com/mozilla/price-tracker/blob/master/docs/METRICS.md" target="_blank">telemetry</a> using Firefox's data infrastructure.
                 </p>
                 <p className='project-overview-description'>
-                  I used a modified fluid grid framework along with CSS3 Flexbox to layout elements on the page.
+                  The source files are written with React and are transpiled and bundled using Webpack.
                 </p>
                 <p className='project-overview-description'>
-                  There is no back-end component for the forms.
+                  Product information is extracted from web content using a machine learning model developed with <a href="https://mozilla.github.io/fathom/intro.html#" target="_blank">Fathom</a>.
+                </p>
+                <p className='project-overview-description'>
+                  CircleCI was used to run tests and deploy new releases of the extension.
+                </p>
+                <p className='project-overview-description'>
+                I completed this work along with one other engineer and a small, cross-functional team.
                 </p>
               </div>
             </div>
