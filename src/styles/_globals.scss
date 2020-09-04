@@ -193,13 +193,18 @@ h4 {
 	border-bottom: 1px solid $grey;
 }
 
-p {
+p, blockquote {
 	font: {
 		size: 1em;
 		weight: 300;
 		family: 'Merriweather';
 	}
 	line-height: 1.6;
+}
+
+blockquote {
+	margin: (0.5 * $margin-small) 0 $margin-default $margin-default !important;
+	font-style: italic;
 }
 
 @media (max-width: 800px) {
@@ -216,7 +221,8 @@ p {
 	}
 
 	h4,
-	p {
+	p,
+	blockquote {
 		font-size: .9em;
 	}
 }

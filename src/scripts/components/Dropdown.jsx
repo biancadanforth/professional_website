@@ -34,6 +34,14 @@ class Dropdown extends React.Component {
               Price Tracker
           </Link>
         </li>
+        <li className='submenu-item'>
+          <Link
+            className='submenu-link'
+            to='extension-storage'
+            onClick={this.props.onClick} >
+              Extension Storage
+          </Link>
+        </li>
         <li className='submenu-item past-projects'>
           <Link
             className='submenu-link'

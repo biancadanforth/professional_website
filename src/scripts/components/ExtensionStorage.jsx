@@ -1,34 +1,34 @@
-// PriceTracker.jsx
+// ExtensionStorage.jsx
 
 import React from 'react';
 
-class PriceTracker extends React.Component {
+class ExtensionStorage extends React.Component {
   
   render() {
     return(
       <div>
         <section className='primary'>
           <div className='primary-wrapper'>
-            <h1 className='project-header'>Price Tracker</h1>
+            <h1 className='project-header'>Extension Storage</h1>
             <h3 className='project-subsubheader'>
-              Front-End & Browser Extension Development | Machine Learning
+              Front-End & Browser Development | Developer Tools
             </h3>
             <div className='project-hero-wrapper'>
               <div className='glamour-shot-wrapper'>
                 <a
-                  href='https://github.com/mozilla/price-tracker'
+                  href='https://bugzilla.mozilla.org/show_bug.cgi?id=1542035'
                   title='Go to project'
                   target='_blank'
                   aria-label='Go to project'>
                   <img 
                     className='wrap-up' 
-                    src='/images/originals/price-tracker-glamour.png' 
-                    alt='Final user interface'
+                    src='/images/originals/extension-storage-glamour.png' 
+                    alt='The Extension Storage actor in Firefox Developer Tools'
                   />
                 </a>
                 <a
                   className='button-wrapper'
-                  href='https://github.com/mozilla/price-tracker' 
+                  href='https://bugzilla.mozilla.org/show_bug.cgi?id=1542035' 
                   target='_blank' 
                   aria-label='Go to project'>
                   <button className='project-button'>
@@ -161,7 +161,7 @@ class PriceTracker extends React.Component {
                   <p className='project-description'>
                     I'm really proud of what we accomplished on such a short timeline. As one of two engineers, I got to work on virtually every aspect of the project. Our product manager was also very impressed with our work:
                   </p>
-                  <blockquote className="project-description">
+                  <blockquote>
                     "I think this is the 11th Test Pilot launch I've been on, and by far it has been the smoothest engineering process we've had."
                   </blockquote>
                 </div>
@@ -174,4 +174,4 @@ class PriceTracker extends React.Component {
   }
 }
 
-export default PriceTracker;
+export default ExtensionStorage;

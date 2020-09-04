@@ -119,21 +119,21 @@ class Home extends React.Component {
             </div>
             <div className='home-project'>
               <div className='home-project-details'>
-                <h4>2017 | Self-Initiated</h4>
-                <h2>React Widget</h2>
-                <h3>Tools: JavaScript (React), HTML5, CSS3 (Sass)</h3>
+                <h4>2019 | Mozilla</h4>
+                <h2>Extension Storage</h2>
+                <h3>Tools: JavaScript</h3>
                 <p className='home-project-description'>
-                  Ask me what I'm working on next!
+                  Implementing a storage actor in Firefox Developer Tools to read from and write to extension storage.
                 </p>
               </div>
               <a 
                 className='home-project-link' 
-                href='#more-info'
-                title='Contact me!'>
+                href='#extension-storage'
+                title='Extension Storage in Firefox Developer Tools'>
               <img 
                 className='home-project-image'
-                src='images/next-project.png'
-                alt='Contact me'
+                src='images/extension-storage-glamour.png'
+                alt='Extension Storage in Firefox Developer Tools'
               />
               </a>
             </div>

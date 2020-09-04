@@ -4,7 +4,8 @@
 .price-tracker-page,
 .ferrofluid-pool-page,
 .twist-page,
-.lightbeam-page {
+.lightbeam-page,
+.extension-storage-page {
 
 /*
 * Styles used by both .primary and .secondary <sections>
@@ -229,7 +230,7 @@
 		text-align: center;
 	}
 
-	figure > img, .codepen-embed iframe {
+	figure > img {
 		margin: 0;
 		width: 100%;
 		max-width: $max-img-width;
@@ -260,12 +261,6 @@
 
 		&:last-child {
 			margin-bottom: 0;
-		}
-
-		blockquote {
-			margin: (0.5 * $margin-small) 0 $margin-default $margin-default;
-			font-size: 1em;
-			font-style: italic;
 		}
 	}
 
