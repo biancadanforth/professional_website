@@ -57,7 +57,7 @@ class ExtensionStorage extends React.Component {
                   This work was in Javascript, where unit, integration and functional tests used Mozilla's <a href="https://developer.mozilla.org/en-US/docs/Mozilla/QA/Writing_xpcshell-based_unit_tests" target="_blank">XPCShell</a> and <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Mochitest" target="_blank">Mochitest</a> frameworks.
                 </p>
                 <p className='project-overview-description'>
-                I completed this work with weekly mentorship from an engineer on the WebExtensions team.
+                I completed this work with weekly mentorship from an engineer on the WebExtensions team, <a href="https://people.mozilla.org/p/rpl" target="_blank">Luca Greco</a>. I am very grateful to him for his time and expertise.
                 </p>
               </div>
             </div>
@@ -71,14 +71,14 @@ class ExtensionStorage extends React.Component {
               <div className='project'>
                 <figure>
                   <img
-                    src='/images/price-tracker-gather-information.png'
+                    src='/images/extension-storage-gather-information.png'
                     alt='Photoshop mock-up of page'
                   />
-                  <figcaption>Source: addons.mozilla.org</figcaption>
+                  <figcaption>Source: firefox-source-docs.mozilla.org</figcaption>
                 </figure>
                 <div className='process-description'>
                   <p className='project-description'>
-                    There was a research spike at the beginning as I had to orient myself with the DevTools code base, which has evolved separately from Firefox and has its own architecture and terminology.
+                    There was a research spike at the beginning, as I had to orient myself with the DevTools code base.
                   </p>
                   <p className='project-description'>
                     Specifically, Firefox's Developer Tools has a client-server architecture where entities called "actors" on the server exchange JSON packets with the client using the <a href="https://firefox-source-docs.mozilla.org/devtools/backend/protocol.html" target="_blank">Remote Debugging Protocol</a>.
@@ -91,16 +91,15 @@ class ExtensionStorage extends React.Component {
               <div className='project'>
                 <img 
                   className='project-thumbnail' 
-                  src='/images/price-tracker-prototype.png' 
+                  src='/images/extension-storage-prototype.png'
                   alt='Photoshop mock-up of page'
                 />
                 <div className='process-description'>
                   <p className='project-description'>
-                    I had to create a new Extension Storage actor that interfaced with the IndexedDB storage back-end used by the extension <code>storage.local</code> API and ensure that it was loaded and populated correctly in the client.
+                    The first step was to register a new Extension Storage actor, so that it would be initialized and its methods would be called as part of the existing framework.
                   </p>
                   <p className='project-description'>
-                  </p>
-                  <p className='project-description'>
+                    I also needed to make sure that I could open the IndexedDB database for a given test extension and access its data from my new actor.
                   </p>
                 </div>
               </div>
@@ -110,15 +109,15 @@ class ExtensionStorage extends React.Component {
               <div className='project'>
                 <img 
                   className='project-thumbnail' 
-                  src='/images/price-tracker-development.png'
+                  src='/images/extension-storage-development.png'
                   alt='Excerpt of final CSS' 
                 />
                 <div className='process-description'>
                   <p className='project-description'>
-                    We met with an engineering program manager once a week to triage bugs, prioritize work and communicate out to the rest of the team.
+                    Since this was the first storage actor for extensions as debugging targets (as opposed to web pages), there were some assumptions made by the existing storage actor framework that were broken that we had to address.
                   </p>
                   <p className='project-description'>
-                    My biggest <a href="https://github.com/mozilla/price-tracker/pulls?q=is%3Apr+author%3Abiancadanforth+is%3Aclosed" target="_blank">contributions</a> were to develop and integrate the machine learning model and instrument the extension with custom telemetry.
+                    For example, web pages always have a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window" target="_blank"><code>window</code></a> that loads in a tab while extensions do not.
                   </p>
                 </div>
               </div>
@@ -128,19 +127,19 @@ class ExtensionStorage extends React.Component {
               <div className='project'>
                 <div className='project-glamour-shot-wrapper'>
                   <a
-                    href='https://github.com/mozilla/price-tracker'
+                    href='https://bugzilla.mozilla.org/show_bug.cgi?id=1542035'
                     title='Go to project'
                     target='_blank' 
                     aria-label='Go to project'>
                     <img 
                       className='wrap-up' 
-                      src='/images/price-tracker-glamour.png'
-                      alt='Final user interface'
+                      src='images/extension-storage-glamour.png'
+                      alt='Extension Storage in Firefox Developer Tools'
                     />
                   </a>
                   <a
                     className='button-wrapper'
-                    href='https://github.com/mozilla/price-tracker' 
+                    href='https://bugzilla.mozilla.org/show_bug.cgi?id=1542035' 
                     target='_blank' 
                     aria-label='Go to project'>
                     <button className='project-button'>Go to project</button>
@@ -148,11 +147,11 @@ class ExtensionStorage extends React.Component {
                 </div>
                 <div className='process-description'>
                   <p className='project-description'>
-                    I'm really proud of what we accomplished on such a short timeline. As one of two engineers, I got to work on virtually every aspect of the project. Our product manager was also very impressed with our work:
+                    This was the first time I landed production code in Firefox and consequently, the first time I wrote extensive tests for my code.
                   </p>
-                  <blockquote>
-                    "I think this is the 11th Test Pilot launch I've been on, and by far it has been the smoothest engineering process we've had."
-                  </blockquote>
+                  <p className='project-description'>
+                    The extra effort to complete this project in my free time paid off, as it not only added valuable debugging support for extension developers, but it laid the foundation for my future contributions to Firefox.
+                  </p>
                 </div>
               </div>
             </div>
