@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify src/scripts/app.jsx -o src/build/bundle.js",
+    "build": "browserify src/scripts/app.jsx -o src/build/bundle.js && sass src/styles/bundle.scss src/build/bundle.css",
     "watch": "watchify src/scripts/app.jsx -vo src/build/bundle.js"
   },
   "repository": {
@@ -39,6 +39,7 @@
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-router": "^3.0.2",
+    "sass": "^1.63.6",
     "watchify": "^3.9.0"
   }
 }
