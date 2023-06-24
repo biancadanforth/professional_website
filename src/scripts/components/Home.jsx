@@ -46,8 +46,7 @@ class Home extends React.Component {
               />
               <div className="welcome-spaceholder"></div>
               <div className='welcome-message-wrapper'>
-                <h2 className='welcome-message-header'>Front-end web nerd. Former mechanical engineer.</h2>
-                <h3 className='welcome-message-subheader'><span className='welcome-message-span'>Tools:</span> JavaScript, Sass, Mild Steel</h3>
+                <h2 className='welcome-message-header'>Software engineer & former mechanical engineer</h2>
                 <a href='#more-info'><button className='welcome-button'>Let's work together</button></a>
                 <p className='welcome-message-paragraph'><a className='welcome-message-link' target='_blank' href='/work/bianca-danforth-resume.pdf'>View my resume</a></p>
               </div>

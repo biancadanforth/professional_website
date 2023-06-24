@@ -89,45 +89,20 @@ class Header extends React.Component {
         <div className='header-wrapper'>
           <span className='header-brand-wrapper'>
             <Link
-              className='header-logo-link'
-              to='home'
-              aria-label="Go to Bianca Danforth's website">
-              <div dangerouslySetInnerHTML={{__html: svgElement}} />
-            </Link>
-            <Link
               to='home'
               className="header-id-link"
               aria-label="Go to Bianca Danforth's website">
               <h1 className="header-name">Bianca Danforth</h1>
-              <h2 className="header-role">Web Designer & <span>Front-End </span>Developer</h2>
-              <h2 className="header-role mobile">Web Designer/Developer</h2>
+              <h2 className="header-role">Software Engineer</h2>
+              <h2 className="header-role mobile">Software Engineer</h2>
             </Link>
           </span>
            <nav role="navigation">
             <ul className="menu">
               <li className="menu-item">
                 <Link className="menu-link" to="home" aria-label="home">
-                  Home
-                </Link>
-              </li>
-              <li
-                className="menu-item"
-                ref= "workListItem"
-                onMouseOver={this.handleMouseOver.bind(this)}
-                onMouseOut={this.handleMouseOut.bind(this)}>
-                <a
-                  className="menu-link"
-                  href="javascript:void(0)"
-                  onClick={this.handleClick.bind(this)}
-                  onTouchStart={() => this.setState({isMobile: true})}
-                  aria-label='Work'>
                   Work
-                </a>
-                <Dropdown
-                  isOpen={this.state.dropdownOpen}
-                  onPageChange={(pageClicked) => this.props.onPageChange(pageClicked)}
-                  onClick = {() => this.handleClick()}
-                />
+                </Link>
               </li>
               <li className="menu-item">
                 <Link className="menu-link" to="more-info" aria-label="more info">
