@@ -16,7 +16,6 @@ header {
 	/* bottom, image */
 	url("../images/pw_maze_white.png");
 	transition: padding-top .25s linear, padding-bottom .25s linear;
-	@include dropdown-menu;
 
 	@media (max-width: 400px) {
 		padding-left: $padding-small;

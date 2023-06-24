@@ -8,18 +8,12 @@ import { Route }        from 'react-router';
 import { hashHistory }  from 'react-router';
 
 import ContactForm      from './components/ContactForm.jsx';
-import Dropdown         from './components/Dropdown.jsx';
-import EmailSignUp      from './components/EmailSignUp.jsx';
-import FerrofluidPool   from './components/FerrofluidPool.jsx';
 import Footer           from './components/Footer.jsx';
 import Header           from './components/Header.jsx';
 import Home             from './components/Home.jsx';
 import Main             from './components/Main.jsx';
 import MoreInfo         from './components/MoreInfo.jsx';
 import ThankYou         from './components/ThankYou.jsx';
-import ToDoList         from './components/ToDoList.jsx';
-import Twist            from './components/Twist.jsx';
-import Lightbeam        from './components/Lightbeam.jsx';
 
 const render = ReactDOM.render;
 
@@ -68,11 +62,6 @@ render((
       <Route path='home' component={Home} />
       <Route path='more-info' component={MoreInfo} />
       <Route path='thank-you' component={ThankYou} />
-      <Route path='to-do-list' component={ToDoList} />
-      <Route path='e-mail-sign-up' component={EmailSignUp} />
-      <Route path='ferrofluid-pool' component={FerrofluidPool} />
-      <Route path='twist' component={Twist} />
-      <Route path='lightbeam' component={Lightbeam} />
     </Route>
   </Router>
   ), document.getElementById('root')
