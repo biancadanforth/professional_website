@@ -89,7 +89,7 @@ class Home extends React.Component {
                     className='home-project-link' 
                     href='https://searchfox.org/mozilla-central/source/toolkit/components/passwordmgr/'
                     title='Go to source code'>
-                      component source code
+                      repository
                   </a>
                   .
                 </p>

@@ -64,6 +64,14 @@
 	// }
 }
 
+.contact-body {
+	margin-bottom: $margin-small;
+}
+
+.secondary .contact-body {
+	margin-bottom: 0;
+}
+
 .secondary .contact-header {
 	padding-bottom: 0;
 	text-align: center;
