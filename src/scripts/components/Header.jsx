@@ -35,30 +35,11 @@ class Header extends React.Component {
   }
 
   componentDidMount() {
-    //let clicking outside of the Work <nav> link and its
-    // dropdown menu close the dropdown menu
-    document.addEventListener('click', (event) => {
-      let isClickInside = this.refs.workListItem
-      .contains(event.target);
-      // if the user clicks anywhere other than the
-      // workListItem element, hide the dropdown menu
-      if (!isClickInside) {
-        this.setState({dropdownOpen: false});
-      }
-    });
-
     window.addEventListener('scroll', this.minimizeHeader
       .bind(this));
   }
 
   componentWillUnmount() {
-    document.removeEventListener('click', (event) => {
-      let isClickInside = this.refs.workListItem.contains(event.target);
-      if (!isClickInside) {
-        this.setState({dropdownOpen: false});
-      }
-    });
-
     window.removeEventListener('scroll', this.minimizeHeader.bind(this));
   }
 

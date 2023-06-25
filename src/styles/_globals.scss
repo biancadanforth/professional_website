@@ -165,7 +165,7 @@ h2 {
 			weight: 400;
 		}
 		letter-spacing: $letter-spacing;
-		margin-bottom: 10px;
+		margin-bottom: $margin-small;
 		line-height: 1.25;
 	}
 
@@ -178,7 +178,7 @@ h3 {
   }
   line-height: 1.25;
   letter-spacing: $letter-spacing;
-  margin-bottom: $margin-default;
+  margin-bottom: $margin-small;
 }
 
 h4 {
@@ -188,7 +188,7 @@ h4 {
 		family: 'Montserrat', sans-serif;
 	}
 	letter-spacing: (1.5 * $letter-spacing);
-	margin-bottom: $margin-default;
+	margin-bottom: $margin-small;
 	text-transform: uppercase;
 	border-bottom: 1px solid $grey;
 }
