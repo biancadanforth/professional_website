@@ -20,7 +20,7 @@ class MoreInfo extends React.Component {
             <div className="about-copy">
               <h4 className="about-subsubheader">How I got here</h4>
               <p className='about-project-description'>
-                <span className="emphasis">I have always loved a challenge.</span> A few years ago, I enrolled in an online web design course while working full-time as a mechanical engineer.
+                <span className="emphasis">I have always loved a challenge.</span> Back in 2016, I enrolled in an online web development course while working full-time as a mechanical engineer.
               </p>
               <p className='about-project-description'>
                 What drew me to software (in contrast to hardware) is that, often:
@@ -31,11 +31,11 @@ class MoreInfo extends React.Component {
                   </ul>
               </p>
               <p className='about-project-description'>
-                About one year ago, my hobby became a passion, and I decided to put my full weight behind learning web design and development. With the help of two mentors and a lot of elbow grease, I have now built several of my own web projects, and more are in the works!
+                Eventually, my hobby became a passion, and I decided to put my full weight behind software engineering. In 2017, I got an internship at Mozilla, and the rest is history.
               </p>
               <h4 className="about-subsubheader second">Other interests</h4>
               <p className='about-project-description'>
-                I enjoy <span className="emphasis">hiking</span> with my dog, Mia, <span className="emphasis">fixing things</span> around the house and <span className="emphasis">volunteering</span> for community outreach organizations like Women Who Code.
+                I enjoy <span className="emphasis">hiking</span> with my dog, Mia, <span className="emphasis">fixing things</span> around the house and <span className="emphasis">exploring</span> new places with friends and family.
               </p>
             </div>
           </div>

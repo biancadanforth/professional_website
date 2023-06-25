@@ -48,7 +48,7 @@ class ContactForm extends React.Component {
 
     return(
       <div className='contact-body' ref='contact-form'>
-        <h1 className='contact-header'>Contact</h1>
+        <h1 id="contact" className='contact-header'>Contact</h1>
         <h3 className='contact-subheader'>
           biancadanforth at gmail dot com
         </h3>
@@ -65,7 +65,7 @@ class ContactForm extends React.Component {
                 type='text' 
                 name='Name' 
                 ref='name'
-                placeholder='Joe Schmoe' 
+                placeholder='Enter your full name here.' 
                 required
                 onKeyUp={ () => this.setState({nameIsValid: this.refs.name.checkValidity()}) }
               />
@@ -76,7 +76,7 @@ class ContactForm extends React.Component {
                 type="email"
                 name="E-mail"
                 ref="email"
-                placeholder="joeschmoe@example.com"
+                placeholder="Enter your email address here."
                 required
                 onKeyUp={ () => this.setState({emailIsValid: this.refs.email.checkValidity()}) }
               />
@@ -86,7 +86,7 @@ class ContactForm extends React.Component {
               <textarea 
                 className='contact-form-textarea'
                 name='Message' 
-                placeholder="I'd like to hire you."
+                placeholder="Enter your message here."
                 required
                 ref='message'
                 onKeyUp={ () => this.setState({messageIsValid: this.refs.message.checkValidity()}) }>

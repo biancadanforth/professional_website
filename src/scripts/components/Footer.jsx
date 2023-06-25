@@ -21,14 +21,6 @@ class Footer extends React.Component {
         <span className='footer-wrapper'>
           <a
             className='footer-link'
-            href='http://codepen.io/biancadanforth/' 
-            target='_blank' 
-            aria-label='Codepen' 
-            title='Codepen'>
-            <div dangerouslySetInnerHTML={{__html: codepenSVG}} />
-          </a>
-          <a
-            className='footer-link'
             href='http://www.linkedin.com/in/biancadanforth' 
             target='_blank' 
             aria-label='LinkedIn' 
@@ -44,14 +36,6 @@ class Footer extends React.Component {
           </Link>
           <a
             className='footer-link'
-            href='https://twitter.com/biancadanforth' 
-            target='_blank' 
-            aria-label='Twitter' 
-            title='Twitter'>
-            <div dangerouslySetInnerHTML={{__html: twitterSVG}} />
-          </a>
-          <a
-            className='footer-link'
             href='https://github.com/biancadanforth'
             target='_blank'
             aria-label='GitHub'
@@ -59,7 +43,7 @@ class Footer extends React.Component {
             <div dangerouslySetInnerHTML={{__html: gitHubSVG}} />
           </a>
         </span>
-        <p className='footer-copyright'>&#169; <Link to="home" aria-label="home">Bianca Danforth</Link> 2017</p>
+        <p className='footer-copyright'>&#169; <Link to="home" aria-label="home">Bianca Danforth</Link> 2023</p>
       </footer>
     );
   }
