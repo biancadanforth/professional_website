@@ -159,10 +159,6 @@ nav {
 	}
 	color: $grey;
 	transition: font-size .25s linear;
-
-	@media (max-width: 400px) {
-		justify-content: space-between;
-	}
 }
 
 .menu-item {

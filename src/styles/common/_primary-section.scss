@@ -3,6 +3,8 @@
 .primary {
 	margin: 0 auto;
 	text-align: center;
+	padding-left: $margin-default;
+	padding-right: $margin-default;
 
 	h1 { color: $dark-grey; }
 }
